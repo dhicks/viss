@@ -1,6 +1,27 @@
 ---
-title: "Title"
-author: Daniel J. Hicks
+title: "Developing Measures of Public Perceptions of Values in Science"
+author: 
+    - name: Daniel J. Hicks
+      orcid: 0000-0001-7945-4416
+      email: dhicks4@ucmerced.edu
+      affiliations:
+          - ref: ucm
+      attributes:
+          corresponding: true
+    - name: Emilio Lobato
+      orcid: 0000-0002-3066-2932
+      email: elobato@ucmerced.edu
+      affiliations: 
+        - ref: ucm
+
+affiliations: 
+    - id: ucm
+      name: University of California, Merced
+      address: 5200 N Lake Road
+      city: Merced
+      state: CA
+      postal-code: 95343
+    
 date: Typeset \today
 abstract: |
 	abstract
@@ -8,9 +29,76 @@ abstract: |
 <!--bibliography: ../bibfile.bib-->
 ---
 
+<!--
+PUS submission guidelines: <https://journals.sagepub.com/author-instructions/PUS>
+Research Article (max. 8,000 words and 5 figures or tables)
+Research Note (max. 4,000 words and 5 figures or tables)
+
+OA agreement: library covers first $1k, 20% off remaining APC
+-->
+
+
 # Introduction #
 
+Historians, philosophers, and sociologists of science who study public scientific controversies often put forward explanations for these controversies that refer to views of publics on the relationship (actual or normative) between science, values, and policy.  *[examples]*
+
+However, in the citations above, there is little empirical evidence to support key claims about the views of publics.  Historians are carefully tracking the activities of scientists or industry actors, and assume, for example, that public acceptance of climate science or policy depends on perceptions of a scientific consensus *[Oreskes]*.  The sociologists cited above are providing rich accounts of particular cases, rooted in ethnographic fieldwork.  But these cases don't obviously generalize to other cases or the general public.  And, at best, philosophers are candid about offering speculation and empirical research questions.  *[notable exceptions are Weisberg et al. and Elliott et al.]*
+
+The aim of the current study is to begin to develop a Values in Science Scale (VISS) that could be used to measure public views on the relationship between science, values, and policy.  While some intriguing patterns are identified, we also find evidence that more work needs to be done to refine the wording of the prompts used.  
+
+
+# Materials and Methods #
+
+## Values in Science Scale Items ##
+
+Draft items for the Values in Science Scale (VISS items) were prepared by [author 1], a philosopher of science specializing in these issues.  [author 1] reviewed the instrument used by *[Weisberg et al.]* along with the text of *[Kovaka]* to create an initial list of items.  These items were grouped into "areas," corresponding to views and ideas discussed in the philosophy of science literature.  Each area was given 3 items.  Additional areas were added, with items written by [author 1], to cover a wide range of views and ideas from the philosophical literature.  Importantly, we did not hypothesize that responses within each area would be correlated.  On the contrary, we expected that the views of the general public would not line up with the positions defended or critiqued by philosophers.  
+
+Each item was a descriptive sentence of approximately 15-20 words, and participants were asked to agree or disagree with each item on a 5-point Likert scale. *[do better words]*
+
+A total of 36 items, for 12 areas, were used in the current study.  These items, their areas, and short labels used in reporting results, are shown in table *[x]*.  *[could walk through the areas here, but let's see how much space we have first]*
+
+
+## Participants ##
+
+Data was collected concurrently with a closely related project [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  Participants were recruited using the online survey platform Prolific, and the survey was administered in a web browser using Qualtrics.  Prolific has an option to draw samples that are balanced to be representative by age, binary gender, and a 5-category race variable (taking values Asian, Black, Mixed, Other, and White) for US adults [@RepresentativeSamplesFAQ2022].  A recent analysis finds that Prolific produces substantially higher quality data than Amazon Mechanical Turk for online survey studies, though three of the five authors are affiliated with Prolific [@PeerDataQualityPlatforms2021].  
+
+
+<!-- Text below was copied and pasted from the other paper -->
+<!-- 
+Participants were recruited using the online survey platform Prolific, and the survey was administered in a web browser using Qualtrics.  Prolific has an option to draw samples that are balanced to be representative by age, binary gender, and a 5-category race variable (taking values Asian, Black, Mixed, Other, and White) for US adults [@RepresentativeSamplesFAQ2022].  A recent analysis finds that Prolific produces substantially higher quality data than Amazon Mechanical Turk for online survey studies, though three of the five authors are affiliated with Prolific [@PeerDataQualityPlatforms2021].  Preliminary power analysis recommended a sample of approximately 1,000 participants to reliably detect non-interaction effects (H1-4).  
+
+After excluding participants who declined consent after opening the survey or did not complete the survey, we had 988 participants in the full analysis sample ($M_{age}$ = 44-years-old, $SD_{age}$ = 16-years, Woman/Female = 498, Man/Male = 458, White = 712, Black = 124, Asian or Pacific Islander = 63, Hispanic = 33, American Indian or Alaskan Native = 5, Mixed or Other = 51).  Participants were randomly assigned to condition, with 163 assigned to the No Disclosure + Causes Harm condition, 165 assigned to the No Disclosure + Does Not Cause Harm condition, 165 assigned to the Economic Growth + Causes Harm condition, 165 assigned to the Economic Growth + Does Not Cause Harm condition, 168 assigned to the Public Health + Causes Harm condition, and 162 assigned to the Public Health + Does Not Cause Harm condition (@tbl-condition). Due to researcher error a question about participants' values was not included in the original survey. Of the full 988 participants, 844 participants (85%) responded to the followup question about their own values (participant prioritizes economic growth or public health).  Consequently, subsamples for hypotheses 4 and 5 were substantially smaller than the full analysis sample.  
+
+```{r}
+#| label: tbl-condition
+#| tbl-cap: "Assignment of participants to conditions"
+readRDS(here(out_dir, '03_condition_tbl.Rds')) |> 
+	print_tbl()
+```
+
+--> 
+
+The study was approved by the UC Merced IRB on August 17, 2021, and data collection ran October 18-20, 2021.  
+
+
+## Software and reproducibility ##
+
+<!--
+Data cleaning and analysis was conducted in R version 4.1.2 [@RCoreTeamLanguageEnvironmentStatistical2021], with extensive use of the `tidyverse` suite of packages version 1.3.1 [@WickhamWelcomeTidyverse2019].  Regression tables were generated using the packages `gt` version 0.5.0 [@IannoneGtEasilyCreate2022] and `gtsummary` version 1.6.0 [@SjobergReproducibleSummaryTables2021]. 
+
+Anonymized original data and reproducible code are available at <https://github.com/dhicks/transparency>.  Instructions in that repository explain how to automatically reproduce our analysis. 
+ -->
+
+## Methods ##
+
+
 # Results #
+
+Despite the efforts undertaken by Prolific to provide a representative sample, exploratory data analysis indicated that our data are unlikely to be representative by education level and political ideology.  In 2021, about 9% of US adults 25 or older had a less than high school education, and 38% had a Bachelor's degree or higher [@CPSHistoricalTime2022 fig. 2].  Only 1% of our participants reported a less than high school education, and 57% reported a Bachelor's degree or higher.  For political ideology, the General Social Survey has consistently found over several decades that about 30% of US adults identify as liberal, about 30% identify as conservative, and about 40% as moderate [@GSSDataExplorer2022].  Among our participants, liberals (574) heavily outnumber conservatives (248; @fig-part-values).  Both overrepresentation of college graduates and underrepresentation of conservatives (especially conservatives with strong anti-institutional views) are known issues in public opinion polling [@KennedyEvaluation2016Election2018].  
+
+In particular, because political partisanship plays a significant role in many prominent public scientific controversies [though not all\; @FunkAmericansPoliticsScience2015], we believe it will be important to validate a VISS across the political spectrum before using it to understand the dynamics of a controversy.  
+
+
 
 ## Validation of Values in Science Scale ##
 

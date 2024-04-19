@@ -22,7 +22,7 @@ orient = function(count_df, level_col = response, ref_level = 3, value_col = n) 
         mutate(plot_value = -{{value_col}}/2)
     
     count_df |> 
-        mutate({{value_col}} := as.numeric({{value_col}}),
+        mutate({{value_col}} := as_numeric({{value_col}}),
                plot_value     = case_when({{level_col}}  <  ref_level ~ -{{value_col}}, 
                                           {{level_col}} == ref_level  ~ {{value_col}}/2, 
                                           {{level_col}}  >  ref_level ~ {{value_col}})) |> 

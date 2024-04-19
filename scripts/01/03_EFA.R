@@ -14,7 +14,7 @@ library(plotly)
 
 library(here)
 
-data_dir = here("data")
+data_dir = here('data', '01')
 
 source(here('R', 'vis_labels.R'))
 source(here('R', 'loading_table.R'))
@@ -173,8 +173,8 @@ six_corr_out = six_corr_plot +
 
 six_corr_out
 
-ggsave(here('out', '02_six_corr_matrix.png'), 
-       plot = six_corr_out,
+ggsave(here('out', '03_six_corr_matrix.png'), 
+       plot = six_corr_out, bg = 'white',
        height = 5, width = 10, scale = 1)
 
 
@@ -239,7 +239,7 @@ ggplot(six_discrete, aes(fa_scientism)) +
     labs(x = 'scientism', 
          y = '')
 
-ggsave(here('out', '02_scientism.png'), 
+ggsave(here('out', '03_scientism.png'), 
        height = 3, width = 4, scale = 1)
 
 ggplot(six_discrete, aes(fa_cynicism)) +
@@ -249,5 +249,5 @@ ggplot(six_discrete, aes(fa_cynicism)) +
     labs(x = 'cynicism', 
          y = '')
 
-ggsave(here('out', '02_cynicism.png'), 
+ggsave(here('out', '03_cynicism.png'), 
        height = 3, width = 4, scale = 1)
