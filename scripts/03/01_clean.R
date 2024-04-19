@@ -107,14 +107,15 @@ dataf = dataf_raw |>
                 as_numeric()},
         party,
         ## Reverse code parts of RWA
-        TODO: finish fixing this
-        across(c(`conservatism.1`, `rwa.conservatism.3`, 
-                 `conservatism.6`, 
-                 `traditionalism.1`, `rwa.traditionalism.4`, 
-                 `traditionalism.6`))
+        across(c(`conservatism-1`, `conservatism-3`, 
+                 `conservatism-6`, 
+                 `traditionalism-1`, `traditionalism-4`, 
+                 `traditionalism-6`, 
+                 `authoritarianism-1`, `authoritarianism-3`, 
+                 `authoritarianism-5`), 
+               fct_rev),
         across(`conservatism-1`:`authoritarianism-6`,
                ~ {.x |> 
-                       fct_rev() |> 
                        as_numeric()})
     ) |> 
     ## Renaming

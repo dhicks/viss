@@ -119,6 +119,8 @@ demo_cont = expr(c(religious, politics,
 demo_cat = expr(c(gender_id, gender_lived, race_ethnicity, 
                   party))
 
+## Clear negative corr btwn right-wing measures and trust measures
+## Prestige and OSI generally weakly positive
 ggplot(dataf) +
     geom_autopoint(alpha = .1) +
     stat_smooth(aes(.panel_x, .panel_y),

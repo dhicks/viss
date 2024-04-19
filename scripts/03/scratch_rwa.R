@@ -1,11 +1,3 @@
-## Politics ----
-count(dataf, politics)
-
-dataf |> 
-    mutate(politics = fct_recode(politics, 
-                                 NULL = 'Other (please specify)')) |> 
-    count(politics)
-
 ## RWA ----
 ## alpha of combined RWA scale is 0.94
 dataf |> 
@@ -32,3 +24,17 @@ dataf |>
 dataf |> 
     select(starts_with('rwa')) |> 
     visdat::vis_cor()
+
+ggplot(dataf) +
+    geom_autopoint(alpha = .1) +
+    stat_smooth(aes(.panel_x, .panel_y), 
+                method = 'lm') +
+    # geom_autohistogram() +
+    facet_matrix(vars(religious, politics, 
+                      rwa.conservatism, 
+                      rwa.traditionalism, 
+                      rwa.authoritarianism, 
+                      rwa), 
+                 layer.diag = 3, 
+                 grid.y.diag = FALSE)
+    
