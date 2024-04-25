@@ -23,9 +23,10 @@ data_dir = here('data', '03')
 ## Retrieve Qualtrics responses ---
 source(here(data_dir, 'survey_id.R'))
 
-fetch_survey(survey_id, limit = 1, add_column_map = TRUE) |> 
-    extract_colmap() |> 
-    view('colmap')
+## Get column map
+# fetch_survey(survey_id, limit = 1, add_column_map = TRUE) |>
+#     extract_colmap() |>
+#     view('colmap')
 
 dataf_raw = fetch_survey(survey_id, 
                          label = TRUE, 
@@ -52,8 +53,8 @@ occ_prestige = here(data_dir, 'occ_prestige_scores.csv') |>
 prolific_df = here(data_dir, 'prolific_export_65fb2530deeba5f1ef0d945b.csv') |> 
     read_csv() |> 
     transmute(PROLIFIC_PID = `Participant id`, 
-           party = `U.s. political affiliation`, 
-           age = as_numeric(Age))
+              party = `U.s. political affiliation`, 
+              age = as_numeric(Age))
 
 ## Clean ----
 dataf = dataf_raw |> 
@@ -68,9 +69,16 @@ dataf = dataf_raw |>
         across(aims.1:wait.policy, as_numeric), 
         ## Credibility of Science Scale
         across(starts_with('COSS', ignore.case = FALSE), 
-               ~ {.x |> 
+               list(clean = ~ {.x |> 
+                       factor(levels = c('Strongly disagree', 
+                                         'Disagree', 
+                                         'Somewhat disagree', 
+                                         'Neither agree nor disagree', 
+                                         'Somewhat agree', 
+                                         'Agree', 
+                                         'Strongly agree')) |> 
                        fct_rev() |> 
-                       as_numeric()}), 
+                       as_numeric(keep.labels = TRUE)})), 
         ## GSS-like "confidence in institutions"
         across(starts_with('GSS Confidence'), 
                ~ factor(.x, 
@@ -96,9 +104,19 @@ dataf = dataf_raw |>
         across(starts_with('osi')),
         ## Demographics
         age, 
-        gender_id = GenderIdentity,
-        gender_lived = GenderLived,
-        race_ethnicity = `Race/Ethnicity`,
+        gender_id = str_split(GenderIdentity, ','),
+        gender_lived = str_split(GenderLived, ','), 
+        gender = {map2(gender_id, gender_lived, union) |> 
+                map_chr(~ str_c(.x, collapse = '; '))},
+        race_ethnicity = {map(`Race/Ethnicity`, 
+                              ~ {.x |> 
+                                      str_split(',') |> 
+                                      flatten_chr()}) |> 
+                map(~ str_extract(.x, '^.*[:\\(]+'))  |> 
+                map(~ keep(.x, ~ !is.na(.x))) |> 
+                map(~ str_remove(.x, '[:\\(]+')) |> 
+                map(~ str_c(.x, collapse = '; ')) |> 
+                flatten_chr()}, 
         religious = as_numeric(ReligiousServ),
         occupation = `occupation-status _2`,
         ## Politics

@@ -2,23 +2,27 @@ library(tidyverse)
 theme_set(theme_bw())
 library(sjlabelled)
 library(ggforce)
+library(ggpubr)
 
 library(here)
 
+source(here('R', 'vars.R'))
+
 data_dir = here('data', '03')
+
+viss_scores = read_rds(here(data_dir, '03_scores_3.Rds')) |> 
+    magrittr::set_colnames(c('prolific_id', 
+                             'viss_cynicism', 
+                             'viss_textbook', 
+                             'viss_objectivity'))
+
 dataf = read_rds(here(data_dir, '01_data.Rds')) |> 
-    rowwise() |> 
-    mutate(coss_var = mean(c_across(c(coss.1, 
-                                      coss.2, 
-                                      coss.3, 
-                                      coss.6)))) |> 
-    ungroup()
+    left_join(viss_scores, by = 'prolific_id')
 
-trust_vars = expr(c(coss, coss_var, gss_science, effect, scientism))
 
+    
 ## Trust measures EDA ----
 ## CoSS ----
-## CoSS 4 and 5 are negatively correlated w/ other items?????
 dataf |> 
     select(starts_with('coss.')) |> 
     cor(use = 'pairwise.complete.obs')
@@ -28,14 +32,12 @@ ggplot(dataf) +
     stat_smooth(aes(.panel_x, .panel_y), 
                 method = 'lm') +
     facet_matrix(vars(starts_with('coss')))
-## Reversing these, alpha is in the mid-.70s
+## Alpha > .9
 dataf |> 
     select(starts_with('coss.')) |> 
     psych::alpha(check.keys = TRUE)
 
 ggplot(dataf, aes(coss)) +
-    geom_density()
-ggplot(dataf, aes(coss_var)) +
     geom_density()
 
 ## GSS ----
@@ -89,8 +91,7 @@ ggplot(dataf, aes(scientism)) +
     geom_rug()
 
 ## Correlations among trust measures ----
-## Generally moderate; 
-## CoSS and the variant are highly correlated
+## Generally moderate 
 dataf |> 
     select(!!trust_vars) |> 
     cor(use = 'pairwise.complete.obs')
@@ -110,15 +111,6 @@ dataf |>
 
 
 ## Demographics against trust measures ----
-demo_cont = expr(c(religious, politics, 
-                   rwa.conservatism, rwa.traditionalism, 
-                   rwa.authoritarianism, rwa, 
-                   occ_prestige, osi_score))
-
-## TODO: construct combined gender var
-demo_cat = expr(c(gender_id, gender_lived, race_ethnicity, 
-                  party))
-
 ## Clear negative corr btwn right-wing measures and trust measures
 ## Prestige and OSI generally weakly positive
 ggplot(dataf) +
@@ -144,3 +136,20 @@ ggplot(dataf) +
     facet_matrix(rows = vars(!!trust_vars),
                  cols = vars(viss_items[11:19]))
 
+## VISS factors against trust measures ----
+ggplot(dataf) +
+    geom_autopoint(alpha = .1, position = 'jitter') +
+    stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
+    stat_cor(aes(.panel_x, .panel_y,
+                 label = after_stat(r.label)), 
+             geom = 'label',
+             label.y = 2, 
+             digits = 1) +
+    facet_matrix(rows = vars(!!trust_vars),
+                 cols = vars(!!viss_vars))
+
+## Regressions ----
+## NB due to high missingness, exclude `occ_prestige`
+lm(coss ~ gender + age + religious + rwa.conservatism + rwa.traditionalism + rwa.authoritarianism + osi_score + viss_cynicism + viss_textbook + viss_objectivity, 
+   data = dataf) |> 
+    summary()

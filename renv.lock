@@ -596,6 +596,16 @@
       "Hash": "177475892cf4a55865868527654a7741",
       "Requirements": []
     },
+    "ggeffects": {
+      "Package": "ggeffects",
+      "Version": "1.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "102de38da5e1e5e04edab3df98c80af5",
+      "Requirements": [
+        "insight"
+      ]
+    },
     "ggforce": {
       "Package": "ggforce",
       "Version": "0.3.3",
@@ -921,10 +931,10 @@
     },
     "insight": {
       "Package": "insight",
-      "Version": "0.17.0",
+      "Version": "0.19.10",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "1d3b65d1cb9ee56a3df596e2012e0fb2",
+      "Hash": "c15a38c9655cba66f5f5537a14c1bef4",
       "Requirements": []
     },
     "isoband": {
@@ -1196,6 +1206,17 @@
       "Requirements": [
         "Rcpp",
         "digest"
+      ]
+    },
+    "patchwork": {
+      "Package": "patchwork",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c446b30cb33ec125ff02588b60660ccb",
+      "Requirements": [
+        "ggplot2",
+        "gtable"
       ]
     },
     "pbivnorm": {

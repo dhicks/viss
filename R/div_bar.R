@@ -19,6 +19,6 @@ orient = function(count_df, level_col = response, ref_level = 3, value_col = n) 
 }
 
 ## Sum of values of `vec` satisfying `condition`, eg, vec > 4
-sum_if = function(vec, condition) {
-    sum(vec[condition])
+sum_if = function(vec, condition, ...) {
+    sum(vec[condition], ...)
 }
