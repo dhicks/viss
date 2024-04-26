@@ -5,6 +5,7 @@ library(ggforce)
 library(patchwork)
 library(ggpubr)
 library(gt)
+library(ggExtra)
 
 library(here)
 library(glue)
@@ -138,6 +139,20 @@ topbottom_gt
 gtsave(topbottom_gt, here(out_dir, '02_topbottom.tex'))
 gtsave(topbottom_gt, here(out_dir, '02_topbottom.pdf'))
 
+## COI ----
+coi_plot = {ggplot(viss_df, aes(coi.1, coi.2)) +
+        geom_point(position = 'jitter') +
+        geom_smooth(method = 'lm') +
+        stat_cor(aes(label = after_stat(r.label)), 
+                 digits = 1, 
+                 label.x = 6, label.y = 2,
+                 geom = 'label')} |>   
+    ggMarginal(type = 'histogram', binwidth = 1, 
+               fill = 'transparent')
+coi_plot
+
+ggsave(here(out_dir, '02_coi.png'), coi_plot,
+       height = 4, width = 4, bg = 'transparent')
 
 ## VFI and critiques ----
 vfi = expr(c(nonsubj.1, 
@@ -203,3 +218,33 @@ top_gg + center_gg + side_gg +
 
 ggsave(here(out_dir, '02_vfi.png'), 
        height = 9, width = 16, bg = 'white')
+
+
+## VFI and trust ----
+vfi_trust_gg = dataf |> 
+    rename_with(~ str_remove(.x, 'viss.')) |> 
+    ggplot() +
+    geom_autopoint(position = 'jitter', alpha = .2) +
+    stat_smooth(aes(.panel_x, .panel_y), 
+                method = 'lm') +
+    stat_cor(aes(.panel_x, .panel_y,
+                 label = after_stat(r.label)), 
+             geom = 'label',
+             label.y = 1, 
+             digits = 1) +
+    facet_matrix(rows = vars(coss, gss_science), 
+                 cols = vars(!!vfi, !!crits))
+vfi_trust_gg
+
+trust_hist_gg = dataf |> 
+    select(coss, gss_science) |> 
+    pivot_longer(everything(), names_to = 'item', values_to = 'response') |> 
+    ggplot(aes(response)) +
+    geom_histogram(binwidth = .25) +
+    coord_flip() +
+    facet_grid(rows = vars(item), scales = 'free_y')
+trust_hist_gg
+
+vfi_trust_gg + trust_hist_gg + plot_layout(widths = c(6, 1))
+ggsave(here(out_dir, '02_trust.png'), 
+       height = 3, width = 8, bg = 'white', scale = 1.5)

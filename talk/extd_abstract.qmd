@@ -1,0 +1,119 @@
+---
+title: "Developing a Values in Science Scale (VISS)"
+author: "Dan Hicks, Emilio Lobato, Cosmo Campbell, Joseph Dad"
+institute: "UC Merced"
+date: "today"
+
+format:
+  pdf: 
+    fig-pos: "tp"
+    include-in-header:
+      text: |
+        \usepackage{booktabs, caption, longtable, colortbl, array}
+---
+
+Scholars in the history, philosophy, and social studies of science (HPSTS) often explain public scientific controversies by appealing to views of the general public on issues of science and values.  For example, Kovaka (2021) has hypothesized that the climate controversy might be explained by the mismatch between public expectations of value-free science and the value-laden reality.  Other scholars offer explanations that appeal to public views about scientific consensus and dissent (Oreskes 2004; John 2017); paternalism, technocracy, or elitism (Wynne 1989; Largent 2012); conflicts of interest and manufacturing doubt and/or certainty (Fernández Pinto 2017); and science's historical and/or contemporary roles in perpetrating and/or redressing injustice and oppression (Warren et al. 2020).  However, evidence whether and to what extent members of the public actually hold these views is limited.  *[make cites]*
+
+The Values in Science Scale (VISS) project is an interdisciplinary collaboration between a cognitive psychologist and a philosopher of science that aims to develop a survey instrument that can be used to assess public views on values in science.  In this talk, we describe the methods used by the project, present the finalized list of VISS items, discuss some implications of survey results for HPSTS scholarship, and preview some exploratory analyses that relate VISS responses to demographic groups and general trust in science. 
+
+# Project methods
+
+Work on the VISS began in Fall 2021.  DH prepared an initial list of 36 items, based on ideas from the science, values, and policy literature and HPSTS scholarship on public scientific controversies.  All items are declarative sentences, and participants indicate to what extent they agree/disagree with the item on a 1-5 (study 1) or 1-7 (study 3) scale.  Using the online survey platform Prolific, for study 1 in Fall 2021, we collected responses from 980 US adults.  Summarizing the responses produced some intriguing findings; for example, respondents seem to endorse fallibilism about scientific results.  But further analysis suggested that respondents might regard some of the prompts as confusing or ambiguous. 
+
+In March 2024, for study 2, we narrowed the list down to 19 items, and ran a series of qualitative studies — again, using US adults via Prolific — in which each item received 10 short text responses.  Based on these, we reviewed and rewrote the items until we were satisfied that we had achieved construct validity, that is, that the participants' understanding of the items corresponded to our intended meaning.  
+
+In April 2024, for study 3, we recruited 502 US adults using Prolific.  These participants gave quantitative responses to the 19 items, along with various other measures such as general trust in science, science literacy, and right-wing authoritarianism.  
+
+# VISS items and implications for HPSTS
+
+| item id     | item text                                                                                                                              | item id        | item text                                                                                                            |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------|
+| aims.1      | A primary aim of science is to improve our knowledge and understanding of the world.                                                   | nonsubj.1      | When analyzing data, scientists should let the data speak for itself rather than offering their own interpretation.  |
+| aims.2      | A primary aim of science is to improve our understanding of threats to human health and the environment.                               | nonsubj.2      | Good scientific research is always free of assumptions and speculation.                                              |
+| aims.3      | A primary aim of science is to stimulate economic growth with new technology.                                                          | pluralism.1    | Scientific investigations always require laboratory experiments.                                                     |
+| coi.1       | Scientists will report conclusions that they think will get them more funding even if the data does not fully support that conclusion. | pluralism.3    | All scientists use the same strict requirements for determining when empirical data confirms a tested hypothesis.    |
+| coi.2       | Special interests can always find a scientist-for-hire who will support their point of view.                                           | stdpt          | Scientists from marginalized backgrounds can provide valuable insights that other scientists are likely to miss.     |
+| consensus.1 | The consensus of the scientific community is based on social status and prestige rather than evidence.                                 | value.conflict | When scientific findings conflict with my core values, it's appropriate to be especially skeptical.                  |
+| consensus.2 | Scientists never disagree with each other about the answers to scientific questions.                                                   | vfi.1          | The evaluation and acceptance of scientific results must not be influenced by social and ethical values.             |
+| fallible.1  | Once a scientific theory has been established, it is never changed.                                                                    | vfi.2          | Scientists do not use imagination or creativity because doing so interferes with objectivity.                        |
+| fallible.2  | When a scientific theory changes or is revised, it means that the research that went into it initially was flawed.                     | wait.policy    | Public policy should wait until all relevant scientific questions have been settled.                                 |
+| ir          | Scientists should be more cautious about accepting a hypothesis when doing so could have serious social consequences.                  |                |                                                                                                                      |
+
+table: Finalized Values in Science Scale (VISS) items {#tbl-viss tbl-colwidths="[25,50,25,50]"}
+
+![Responses to VISS items. Study 3, N = 503 US adults.](../out/03/02_likert.png){#fig-likert}
+
+```{r}
+#| tbl-cap: "Top and bottom VISS items by total agreement"
+#| label: "tbl-topbottom"
+#| tbl-pos: "tp"
+#| echo: false
+#| message: false
+library(dplyr)
+library(here)
+library(readr)
+library(gt)
+
+topbottom = read_rds(here('out', '03', '02_topbottom.Rds'))
+
+topbottom |> 
+    group_by(group) |> 
+    gt() |> 
+    cols_width(agree_share ~ pct(15),
+               item ~ pct(15),
+               prompt ~ pct(60)) |>
+    cols_label(agree_share = md('**agreement**'), 
+               item = md('**item**'), 
+               prompt = md('**prompt**')) |> 
+    fmt_percent(agree_share, decimals = 0) #|>     
+#    tab_style(cell_fill(color = 'blue', alpha = .25), 
+#              cells_body(rows = group == 'top 5')) |> 
+#    tab_style(cell_fill(color = 'red', alpha = .25), 
+#              cells_body(rows = group == 'bottom 5'))
+```
+
+
+The finalized VISS items are listed in @tbl-viss. A breakdown of responses to each item is in given @fig-likert, and @tbl-topbottom shows the top and bottom items by total agreement. 
+
+Especially in the context of climate change, HPSTS scholars have emphasized and debated the importance of scientific consensus *[cites]*.  Respondents overwhelmingly recognize disagreement within the scientific community, with almost all rejecting the claim that "Scientists never disagree with each other about the answers to scientific questions" (consensus.2).  And a strong supermajority view scientific consensus as epistemic [@MillerWhenConsensusKnowledge2013], with 70% disagreeing with the idea that "The consensus of the scientific community is based on social status and prestige rather than evidence" (consensus.1).  Note that @SlaterPublicConceptionsScientific2024 give some qualitative evidence that members of the public might not connect consensus to trust.  
+
+Practicing scientists often explain public scientific controversies or general distrust in science by appealing to infallibilism among the public.  For example, in a recent editorial in *Science*, H. Holden Thorp speculated^[Contrary to evidence that he himself had provided in the previous paragraph.] that "whenever science becomes important in the public eye, as with climate change and the pandemic, the continuous revision can become a target for those who wish to undermine scientific knowledge" [@ThorpTeachPhilosophyScience2024].  And anecdotally, when they worked in science policy, DH often interacted with scientists who complained that the public or laymakers inappropriately demanded certainty from policy-relevant science.  
+
+As with consensus, almost all respondents recognize that science is not static (fallible.1), and about two-thirds of respondents reject the claim that "When a scientific theory changes or is revised, it means that the research that went into it initially was flawed" (fallible.2).  Respondents are almost perfectly split on the claim that "Public policy should wait until all relevant scientific questions have been settled" (wait.policy).  
+
+Concerns about conflicts of interest are more complicated.  @fig-coi shows the relationship between the claim that (coi.1) "Scientists will report conclusions that they think will get them more funding even if the data does not fully support that conclusion" and (coi.2) "Special interests can always find a scientist-for-hire who will support their point of view."  Nearly 90% of respondents agree that there are "scientists-for-hire" or merchants of doubt (coi.2).  But participants do not agree on whether this means scientists tend to align their conclusions with conflicts-of-interest (coi.1), with a roughly even spread ranging from "disagree" to "somewhat agree."  While these items are correlated, almost all participants have stronger agreement with coi.2.  This may be because the existence of scientists-for-hire is a prerequisite for anti-epistemic effects of conflicts of interest. 
+
+![Scatterplot and linear regression between coi.1 ("Scientists will report conclusions that they think will get them more funding even if the data does not fully support that conclusion.") and coi.2 ("Special interests can always find a scientist-for-hire who will support their point of view.")](../out/03/02_coi.png){#fig-coi width=50%}
+
+VISS includes multiple items related to the science, value, and policy literature, including at least two items with versions of the value-free ideal (VFI)^[nonsubj.2 and vfi.2 might also be read as statements of VFI.] and four items that represent philosophical challenges to VFI; see @tbl-vfi and @fig-vfi.  Overall, there is strong agreement with the idea that science has practical as well as epistemic aims [aims.2; cf. *[aims approach cites]*] and both versions of the value-free ideal (vfi.1, nonsubj.1); there is also general agreement with key premises from the argument from inductive risk [ir; *[cites]*] and standpoint epistemology's epistemic advantage claim [stdpt; *[Crasnow]*].  Most participants reject the claim that, when science clashes with "core values," we should be more skeptical of science *[Plantinga; Yap; me]*.  
+
+|                |           |
+|----------------|------------------------------------------------------------------------------------------------------------------------|---|
+| **VFI items**      |                                                                                                                        |   |
+| vfi.1          | The evaluation and acceptance of scientific results must not be influenced by social and ethical values.               |   |
+| nonsubj.1      | When analyzing data, scientists should let the data speak for itself rather than offering their own interpretation.    |   |
+| **VFI criticisms** |                                                                                                                        |   |
+| aims.2         | A primary aim of science is to improve our understanding of threats to human health and the environment.               |   |
+| ir             | Scientists should be more cautious about accepting a hypothesis when doing so could have serious social consequences.  |   |
+| stdpt          | Scientists from marginalized backgrounds can provide valuable insights that other scientists are likely to miss.       |   |
+| value.conflict | When scientific findings conflict with my core values, it's appropriate to be especially skeptical.                    |   |
+
+table: VFI items and challenges {#tbl-vfi}
+
+![Relationships among VFI items and challenges](../out/03/02_vfi.png){#fig-vfi}
+
+@fig-vfi shows the relationships among these items.  To put it briefly, there are no practically significant relationships here.  Many participants accept both VFI and some important philosophical criticisms of it.  
+
+It may be tempting to diagnose this as inconsistency or some other form of irrationality.  We suggest an alternative, Deweyan framing.  Most participants, we assume, have never taken a philosophy of science course, and thus have never had the occasion to think through these kinds of ideas.  Instead, for most participants, VISS items might be "activating" cultural "scripts," habitual modes of thought that are deployed in various circumstances *[Dewey HNC]*.  *[st about Elliott & X on sci comm]  So long as two "scripts" aren't "activated" in the same context in a way that brings them into conflict, there's no problematic situation and thus no reason to try to reconcile them *[DL; MB]*.  While philosophers have predicted that VFI violations might undermine trust in science *[Kovaka, John, Bright]*, violations that activate other accepted "scripts" — such as the aims approach, inductive risk, or even standpoint epistemology — might be taken by the public to be perfectly acceptable *[Hicks and Lobato]*.  This is an important direction for future research.  
+
+
+# VISS and generalized trust in science
+
+For study 3, participants also filled out several scales designed to measure generalized trust in science.  @fig-trust focuses on two, the Credibility of Science Scale [CoSS; *[cite]*] and a question based on the General Social Survey's "confidence in science" question.^[The GSS version has just three steps, for "a great deal" of confidence, "only some," and "none at all."  This version has five steps, labelled "a great deal," "a lot," "a moderate amount," "a little," and "none at all."]  Both of these are designed to assess trust in "science" generally, rather than any specific field or organization or with respect to specific issues. 
+
+![Relationships among VFI items and criticisms and two measures of generalized trust in science](../out/03/02_trust.png){#fig-trust}
+
+For both measures, median trust in science is moderately high.  For each VISS item, correlations are nearly the same for both trust measures; and none of the VISS items is a strong predictor of trust.  The most notable thing here is the heterogeneity of these correlations: "let the data speak for itself" (nonsubj.1) is negatively correlated with trust, while VFI (vfi.1) is almost perfectly uncorrelated; "protect health" (aims.2) and standpoint epistemology (stdpt) are positively correlated, while inductive risk (ir) is negatively correlated.  
+
+Some of this heterogeneity might be explained by common cause confounding.  For example, if political conservatives are both more likely to endorse the "let the data speak for itself" version of VFI and have reduced trust in science, then without statistically controlling for political ideology nonsubj.1 and trust would be correlated.  When preparing this paper for publication, we plan to use a combination of exploratory factor analysis and causal graph techniques to examine this further. 
+
