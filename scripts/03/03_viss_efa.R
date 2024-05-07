@@ -1,5 +1,8 @@
 library(tidyverse)
 theme_set(theme_bw())
+library(ggforce)
+library(ggpubr)
+library(broom)
 library(sjlabelled)
 library(visdat)
 
@@ -215,6 +218,11 @@ check_cfa = function(this_efa, threshold = 0.3) {
 # debugonce(check_cfa)
 # check_cfa(efa_fits[[5]]) |> str()
 ## FWIW 3 also just barely has the best fit statistics
+## Common thresholds: 
+## CFI: >=0.95 (x - way below)
+## AGFI: >=0.9 (✓)
+## RMSEA: <=0.06 (x - a bit above)
+## SRMR: <= 0.08 (✓)
 map(efa_fits, check_cfa) |> 
     bind_rows(.id = 'n_factors')
 

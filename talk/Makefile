@@ -1,9 +1,13 @@
-all: talk site
+all: talk publish
 
 talk: talk.html
-talk.html: talk.qmd
+talk.html: talk.qmd custom.scss
 	quarto render talk.qmd
 
-site: ../docs/index.html
-../docs/index.html: talk.html
-	cp talk.html ../docs/index.html
+.PHONY: publish
+publish: talk.html
+	quarto publish netlify --id ce1dbe42-3251-4b3a-8e1d-ebb5bcb07afb
+
+abstract: extd_abstract.pdf
+extd_abstract.pdf: extd_abstract.qmd
+	quarto render extd_abstract.qmd
