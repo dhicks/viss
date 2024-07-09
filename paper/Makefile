@@ -1,17 +1,23 @@
-all: pdf
+SOURCE = paper.qmd
 
-pdf: paper.odf
-paper.pdf: paper.md
-	pandoc header.yaml paper.md \
-                     -o paper.pdf \
-                     --filter=pandoc-citeproc \ 
-                     --filter=pandoc-crossref \
-                     --pdf-engine=lualatex
+all: html
 
-docx: paper.docx
-paper.docx: paper.md
-	pandoc header.yaml paper.md \
-                    -o paper.docx \
-                    --filter=pandoc-citeproc \
-                    --filter=pandoc-crossref
+html: $(SOURCE)
+	quarto render $< --to apaquarto-html
 
+pdf: pdf-jou
+
+pdf-man: $(SOURCE)
+	quarto render $< --to apaquarto-pdf \
+	-M documentmode:man
+
+pdf-doc: $(SOURCE)
+	quarto render $< --to apaquarto-pdf \
+	-M documentmode:doc
+
+pdf-jou: $(SOURCE)
+	quarto render $< --to apaquarto-pdf \
+	-M documentmode:jou
+
+docx: $(SOURCE)
+	quarto render $< --to apaquarto-docx

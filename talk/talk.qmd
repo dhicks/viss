@@ -1,7 +1,8 @@
 ---
 title: "Developing a Values in Science Scale (VISS)"
-author: "Dan Hicks, Emilio Lobato, Cosmo Campbell, Joseph Dad"
+author: "Dan Hicks (they/them), Emilio Lobato (he/him),<br>Cosmo Campbell, Joseph Dad (he/him)"
 institute: |
+  | 
   | University of California, Merced
   | [`values-in-science-scale.netlify.app`](https://values-in-science-scale.netlify.app)
 
@@ -127,7 +128,8 @@ topbottom |>
               cells_body(rows = group == 'top 5')) |> 
     tab_style(cell_fill(color = 'red', alpha = .25), 
               cells_body(rows = group == 'bottom 5')) |>
-    tab_options(table.font.size = pct(60))
+    tab_options(table.font.size = pct(57), 
+                table.width = pct(90))
 ```
 
 ## Agreement/disagreement: </br> Interpretation {.smallish}
@@ -180,7 +182,7 @@ value.conflict
 - No correlation between statements of VFI and critiques
 - [***Not***]{.red}: \
    Public is irrational, inconsistent, etc.
-- [***Rather***]{.blue}: \
+- [***Rather***]{.blue}: Dewey model\
     - Cultural "scripts," habitual modes of thought [@DeweyHumanNatureConduct2008]
     - "Activated" in particular cases for interpretation or meaning-making [@HalpernScienceExperienceDeweyan2022]
     - So long as two "scripts" aren't "activated" in the same context in a way that brings them into conflict, there's no problematic situation and thus no reason to try to reconcile them [@DeweyLogicTheoryInquiry2008; @BrownScienceMoralImagination2020].
@@ -219,7 +221,10 @@ value.conflict
 ## Future work
 
 ::: {.v-center}
-Applications to
+- VFI & testing "Deweyan model"
+- Relationship between VFI items and politics
+
+VISS items in the context of
 
 - Dueling expert scenarios
 - Trust in science-policy institutions (EPA) rather than individual scientists or "science" [@BrownTrustExpertiseScientific2022]

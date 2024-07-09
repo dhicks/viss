@@ -1,5 +1,3 @@
-# Study 2
-
 In reviewing the results of study 1, we noted some counterintuitive combinations of items in the EFA.  For example, item `ir.1`, "Standards of scientific evidence are different in different situations," was intended to express the argument from inductive risk.  This argument has been highly influential in recent philosophy of science *[cites]*.  It claims that *[summary]*.  From this perspective, *legitimate* standards of evidence can be *appropriately* different in different situations, because of factors like different downstream non-epistemic consequences.  
 
 However, in the EFA, `ir.1` was positively correlated with items such as 
@@ -21,7 +19,7 @@ Items were arranged into 3 blocks of 5-7 items each.  In Qualtrics, we prepared 
 
 For study 2, besides participant responses to the items, no other data was collected or used.  
 
-*[IRB exempt]*
+This study was to determined to be exempt from IRB review under Category 2.(i) by DJH, and self-exempt determination was acknowledged by the UC Merced IRB on February 27, 2024 (protocol #UCM2024-30). 
 
 ## Data
 

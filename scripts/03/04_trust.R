@@ -3,6 +3,7 @@ theme_set(theme_bw())
 library(sjlabelled)
 library(ggforce)
 library(ggpubr)
+library(ggeffects)
 
 library(here)
 
@@ -120,6 +121,7 @@ ggplot(dataf) +
     facet_matrix(rows = vars(!!trust_vars), 
                  cols = vars(!!demo_cont))
 
+
 ## ViSS items against trust measures ----
 ## These are very hard to read; probably better to use EFA factors
 viss_items = dataf |>
@@ -153,3 +155,41 @@ ggplot(dataf) +
 lm(coss ~ gender + age + religious + rwa.conservatism + rwa.traditionalism + rwa.authoritarianism + osi_score + viss_cynicism + viss_textbook + viss_objectivity, 
    data = dataf) |> 
     summary()
+
+
+## Focusing on RWA ----
+## Scatterplots suggest more conservative -> lower trust
+ggplot(dataf) +
+    geom_autopoint(alpha = .2) +
+    stat_smooth(aes(.panel_x, .panel_y),
+                method = 'lm', na.rm = TRUE) +
+    facet_matrix(rows = vars(coss), 
+                 cols = vars(c(rwa.conservatism, 
+                               rwa.traditionalism, 
+                               rwa.authoritarianism, 
+                               rwa)))
+
+## But separate the 3 dimensions of conservatism
+rwa_fit = lm(coss ~ rwa.conservatism + rwa.traditionalism + 
+                 rwa.authoritarianism, 
+             data = dataf)
+summary(rwa_fit)
+
+## Marginal effects plot shows conservatism (deference to establishment) is *positively* correlated w/ trust
+## Traditionalism ("social conservatism," incld religion) has largest negative correlation 
+lst('rwa.conservatism', 
+    'rwa.traditionalism', 
+    'rwa.authoritarianism') |> 
+    map(~ predict_response(rwa_fit, 
+                           terms = .x, 
+                           margin = 'empirical')) |> 
+    bind_rows(.id = 'focal_var') |> 
+    ggplot(aes(x, predicted)) + 
+    geom_ribbon(aes(ymin = conf.low, 
+                    ymax = conf.high), 
+                alpha = .4) +
+    geom_line() +
+    facet_wrap(vars(focal_var)) +
+    xlab('') +
+    ylim(1, 7)
+
