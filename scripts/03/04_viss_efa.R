@@ -4,8 +4,9 @@ library(ggforce)
 library(ggpubr)
 library(broom)
 library(sjlabelled)
-library(visdat)
+library(gt)
 
+library(visdat)
 library(psych)
 library(lavaan)
 
@@ -96,7 +97,7 @@ efa_labels[[3]] = c('MR2_3' = 'cynicism_3', 'MR1_3' = 'textbook_3', 'MR3_3' ='ob
 ## 4: textbook; cynicism?; (4) objectivity; (3) ??? (aims + stdpt)
 loadings(efa_fits[[4]]) |> 
     print(cutoff = .3)
-efa_labels[[4]] = c('MR1_4' = 'textbook_4', 'MR2_4' = 'cynicism_4', 
+efa_labels[[4]] = c('MR1_4' = 'textbook + aims.3_4', 'MR2_4' = 'cynicism_4', 
                     'MR4_4' = 'objectivity_4', 'MR3_4' = '?(aims + stdpt)_4')
 
 ## 5: (2) cynicism; (1) textbook + aims.3; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.3
@@ -116,6 +117,7 @@ efa_labels[[6]] = c('MR2_6' = 'cynicism_6', 'MR1_6' = 'textbook_6',
 efa_labels_df = efa_labels[2:6] |> 
     map(enframe, name = 'term', value = 'label') |> 
     bind_rows()
+
 
 ## Scores ----
 ## Fitted EDAs include a `scores` element with the right dimensions
@@ -159,15 +161,32 @@ loadings_df = efa_fits |>
                              .fn = ~ glue('{.x}_{y}'))) |> 
     reduce(~ full_join(.x, .y, by = 'variable'))
 
-## TODO: output as a publishable table
 loadings_df |> 
     pivot_longer(!variable, names_to = 'latent', values_to = 'value') |> 
-    filter(abs(value) > .3) |> 
+    filter(abs(value) > .3) |>
     inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
     select(!latent) |> 
-    pivot_wider(names_from = 'label', values_fro = 'value', names_sort = TRUE) |> 
-    view()
-
+    pivot_wider(names_from = 'label', values_fro = 'value', 
+                names_sort = TRUE) |> 
+    relocate(contains('aims.3'), .after = textbook_3) |> 
+    gt() |> 
+    fmt_number(columns = !variable, 
+               decimals = 2) |> 
+    ## Surprisingly, gt doesn't seem to have any way to apply conditional formatting to individual cells based on their content! 
+    # tab_style(
+    #     style = cell_text(weight = "bold"),  # apply bold style
+    #     locations = cells_body(
+    #         columns = !variable, 
+    #         rows = everything())
+    # )
+    sub_missing(missing_text = '') |> 
+    tab_spanner_delim(delim = '_') |> 
+    tab_style(
+        style = cell_borders(
+            sides = c('left'),
+            # weight = px(.5)
+        ),
+        locations = cells_body(columns = c(5, 10, 11, 15, 17)))
 
 ## Scores and demographics ----
 ## TODO: more to separate script
