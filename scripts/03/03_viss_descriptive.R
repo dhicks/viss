@@ -6,7 +6,9 @@ library(patchwork)
 library(ggpubr)
 library(gt)
 library(ggExtra)
+library(ggtext)
 
+library(rlang)
 library(here)
 library(glue)
 
@@ -63,47 +65,63 @@ counts_df |>
     geom_col(color = 'black', size = .25) +
     geom_hline(yintercept = c(.2, .5, .8), linetype = 'dashed') +
     scale_x_discrete(guide = guide_axis(n.dodge = 2), 
-                     name = '') +
+                     name = '', 
+                     labels = \(x) {label_wrap_gen()(x) %>% 
+                         gsub('\\n', '<br>', x = .)}) +
     scale_y_continuous(labels = scales::percent_format()) +
     scale_fill_brewer(palette = 'RdBu') +
-    coord_flip() +
+    ## Extend axis ticks to left-dodged boxes
+    ## NB modify yend to adjust length of tick
+    ## <https://stackoverflow.com/questions/78722254/ggplot-extending-axis-ticks-and-putting-boxes-around-axis-items?noredirect=1#comment138794892_78722254>
+    coord_flip(clip = 'off', ylim = c(0, NA), expand = FALSE) +
+    annotate('segment', 
+             y = 0, yend = -.125, 
+             x = seq(2, 19, 2), 
+             xend = seq(2, 19, 2), 
+             linewidth = .5) +
     theme(legend.position = 'bottom', 
-          plot.margin = margin(15, 10, 10, 10))
+          plot.margin = margin(15, 10, 10, 10), 
+          axis.text.y = element_markdown(
+              box.color = 'black', 
+              linetype = 1, 
+              padding = unit(2, 'pt'), 
+              linewidth = .25
+          ))
 
 ggsave(here(out_dir, '02_likert.png'), 
-       height = 9, width = 16, bg = 'white')
+       height = 10, width = 16, bg = 'white')
 
 ## "Diverging" style
-counts_df |> 
-    filter(!is.na(response)) |> 
-    mutate(response = ordered(response)) |> 
-    # filter(item == 'viss.stdpt') |> 
-    orient(level_col = response, 
-           value_col = share, 
-           ref_level = 'Neither agree nor disagree') |> 
-    group_by(item) |> 
-    mutate(agree_share = sum_if(share, 
-                                response >= "Somewhat agree")) |> 
-    ungroup() |> 
-    arrange(agree_share, item, response, plot_value) |> 
-    mutate(item = fct_inorder(prompt_wrap), 
-           share = scales::percent(share, accuracy = 1)) |> 
-    filter(response != 'Neither agree nor disagree') |> 
-    ggplot(aes(item, 
-               plot_value, 
-               fill = response, 
-               group = plot_order,
-               label = share,
-               text = prompt)) +
-    geom_col(position = position_stack(reverse = TRUE)) +
-    scale_x_discrete(name = 'ViSS item',
-                     guide = guide_axis(n.dodge = 2)) +
-    scale_y_continuous(labels = scales::label_percent(),
-                       breaks = scales::pretty_breaks(n = 8),
-                       name = 'share of respondents') +
-    scale_fill_brewer(palette = 'RdBu') +
-    coord_flip() +
-    theme(legend.position = 'bottom')
+# counts_df |> 
+#     filter(!is.na(response)) |> 
+#     mutate(response = ordered(response)) |> 
+#     # filter(item == 'viss.stdpt') |> 
+#     orient(level_col = response, 
+#            value_col = share, 
+#            ref_level = 'Neither agree nor disagree') |> 
+#     group_by(item) |> 
+#     mutate(agree_share = sum_if(share, 
+#                                 response >= "Somewhat agree")) |> 
+#     ungroup() |> 
+#     arrange(agree_share, item, response, plot_value) |> 
+#     mutate(item = fct_inorder(prompt_wrap), 
+#            share = scales::percent(share, accuracy = 1)) |> 
+#     filter(response != 'Neither agree nor disagree') |> 
+#     ggplot(aes(item, 
+#                plot_value, 
+#                fill = response, 
+#                group = plot_order,
+#                label = share,
+#                text = prompt)) +
+#     geom_col(position = position_stack(reverse = TRUE)) +
+#     scale_x_discrete(name = 'ViSS item',
+#                      guide = guide_axis(n.dodge = 2)) +
+#     scale_y_continuous(labels = scales::label_percent(),
+#                        breaks = scales::pretty_breaks(n = 8),
+#                        name = 'share of respondents') +
+#     scale_fill_brewer(palette = 'RdBu') +
+#     coord_flip() +
+#     theme(legend.position = 'bottom')
 # plotly::ggplotly()
 
 ## Top and bottom table ----
@@ -155,39 +173,30 @@ ggsave(here(out_dir, '02_coi.png'), coi_plot,
        height = 4, width = 4, bg = 'transparent')
 
 ## VFI and critiques ----
-vfi = expr(c(nonsubj.1, 
-             vfi.1))
-crits = expr(c(aims.2, 
-               ir,
-               stdpt, 
-               value.conflict))
+vfi = exprs(nonsubj.1, nonsubj.2,
+            vfi.1, vfi.2)
+crits = exprs(aims.2, 
+              ir,
+              stdpt, 
+              value.conflict)
 
-# corrr
-# corr_df = viss_df |> 
-#     select(!!vfi, !!crits) |> 
-#     correlate() |> 
-#     focus(!!crits)
-
-## TODO: table
-# corr_df |> 
-#     gt()
-    
 
 center_gg = ggplot(viss_df) +
     geom_autopoint(position = 'jitter', alpha = .2) +
     stat_smooth(aes(.panel_x, .panel_y), 
-                 method = 'lm') +
+                method = 'lm') +
     stat_cor(aes(.panel_x, .panel_y,
-                         label = after_stat(r.label)), 
-                     geom = 'label',
-                     label.y = 1, 
+                 label = after_stat(label)), 
+             alternative = 'less',
+             geom = 'label',
+             label.y = 1, 
              digits = 1) +
-    facet_matrix(rows = vars(!!vfi), 
-                 cols = vars(!!crits))
+    facet_matrix(rows = vars(!!!vfi), 
+                 cols = vars(!!!crits))
 center_gg
 
 side_gg = viss_df |> 
-    select(!!vfi) |> 
+    select(!!!vfi) |> 
     pivot_longer(everything(), 
                  names_to = 'item', 
                  values_to = 'resp') |> 
@@ -199,7 +208,7 @@ side_gg = viss_df |>
 side_gg
 
 top_gg = viss_df |> 
-    select(!!crits) |> 
+    select(!!!crits) |> 
     pivot_longer(everything(), 
                  names_to = 'item', 
                  values_to = 'resp') |> 
@@ -212,39 +221,99 @@ top_gg
 design = 
     'AAAA#
      BBBBC
+     BBBBC
+     BBBBC
      BBBBC'
 top_gg + center_gg + side_gg +
     plot_layout(design = design)
 
 ggsave(here(out_dir, '02_vfi.png'), 
-       height = 9, width = 16, bg = 'white')
+       height = 16, width = 16, bg = 'white')
+
+
+## Table of CIs on correlations
+cor_ci = function(col1, col2, data = viss_df) {
+    col1 <- enquo(col1)
+    col2 <- enquo(col2)
+    
+    col1_vec <- as.vector(eval_tidy(col1, data))
+    col2_vec <- as.vector(eval_tidy(col2, data))
+    
+    cor.test(col1_vec, col2_vec) |> 
+        broom::tidy() |> 
+        mutate(col1 = as_label(col1), 
+               col2 = as_label(col2)) |> 
+        select(col1, col2, everything())
+}
+# cor_ci(vfi.1, aims.2)
+
+cross2(vfi, crits) |> 
+    map(~ cor_ci(!!.x[[1]], !!.x[[2]])) |> 
+    bind_rows() |> 
+    select(vfi = col1, critique = col2, estimate, conf.low, conf.high)
+
+count(viss_df, vfi.1 > 4, ir > 4) |> 
+    mutate(share = n / sum(n))
+count(viss_df, nonsubj.1 > 4, stdpt > 4) |> 
+    mutate(share = n / sum(n))
 
 
 ## VFI and trust ----
-vfi_trust_gg = dataf |> 
-    rename_with(~ str_remove(.x, 'viss.')) |> 
-    ggplot() +
-    geom_autopoint(position = 'jitter', alpha = .2) +
-    stat_smooth(aes(.panel_x, .panel_y), 
-                method = 'lm') +
-    stat_cor(aes(.panel_x, .panel_y,
-                 label = after_stat(r.label)), 
-             geom = 'label',
-             label.y = 1, 
-             digits = 1) +
-    facet_matrix(rows = vars(coss, gss_science), 
-                 cols = vars(!!vfi, !!crits))
-vfi_trust_gg
+trust_vars = exprs(coss)
+# vfi_trust_gg = dataf |> 
+#     rename_with(~ str_remove(.x, 'viss.')) |> 
+#     ggplot() +
+#     geom_autopoint(position = 'jitter', alpha = .2) +
+#     stat_smooth(aes(.panel_x, .panel_y), 
+#                 method = 'lm') +
+#     stat_cor(aes(.panel_x, .panel_y,
+#                  label = after_stat(label)), 
+#              geom = 'label',
+#              label.y = 1, 
+#              digits = 1) +
+#     facet_matrix(rows = vars(!!!trust_vars), 
+#                  cols = vars(!!!vfi, !!!crits))
+# vfi_trust_gg
+
+## Alternate version for COSS alone
+coss_plot = function(col_vars) {
+    dataf |> 
+        rename_with(~ str_remove(., 'viss.')) |> 
+        ggplot() +
+        geom_autopoint(position = 'jitter', alpha = .2) +
+        stat_smooth(aes(.panel_x, .panel_y), 
+                    method = 'lm') +
+        stat_cor(aes(.panel_x, .panel_y, 
+                     label = after_stat(label)), 
+                 geom = 'label', 
+                 label.y = 1, 
+                 digits = 1) +
+        facet_matrix(rows = vars(coss), 
+                     cols = vars(!!! col_vars))
+}
+coss_plot(vfi)
+coss_plot(crits)
 
 trust_hist_gg = dataf |> 
-    select(coss, gss_science) |> 
+    select(!!!trust_vars) |> 
     pivot_longer(everything(), names_to = 'item', values_to = 'response') |> 
     ggplot(aes(response)) +
     geom_histogram(binwidth = .25) +
     coord_flip() +
+    labs(x = '') +
     facet_grid(rows = vars(item), scales = 'free_y')
 trust_hist_gg
 
-vfi_trust_gg + trust_hist_gg + plot_layout(widths = c(6, 1))
-ggsave(here(out_dir, '02_trust.png'), 
-       height = 3, width = 8, bg = 'white', scale = 1.5)
+# vfi_trust_gg + trust_hist_gg + plot_layout(widths = c(length(c(vfi, crits)), 1))
+# ggsave(here(out_dir, '02_trust.png'), 
+#        height = 2, width = length(c(vfi, crits)) + 1, bg = 'white', scale = 1.5)
+
+coss_plot(vfi) + trust_hist_gg + 
+    coss_plot(crits) + trust_hist_gg +
+    plot_layout(design = 'AAAAB
+                          CCCCD', 
+                axes = 'collect')
+ggsave(here(out_dir, '03_trust.png'), 
+       height = 4, width = 9, bg = 'white', scale = 1.5)
+
+summary(dataf$coss)

@@ -74,29 +74,48 @@ communalities = map(efa_fits, ~ {.x |>
         rowSums() %>%
         {1 - .}})
 
-write_rds(efa_fits, here(data_dir, '03_efa_fits.Rds'))
+write_rds(efa_fits, here(data_dir, '04_efa_fits.Rds'))
 
 ## Inspect loadings ----
+## Lables for the latent variables
+## NB follow the order presented, not numbered
+efa_labels = list()
+efa_labels[[1]] = c('')
+
 ## 2 sort of looks like textbook and cynicism
 loadings(efa_fits[[2]]) |> 
     print(cutoff = .3)
+efa_labels[[2]] = c('MR1_2' = 'textbook_2', 'MR2_2' = 'cynicism_2')
 
 ## 3: (2) cynicism; (1) textbook; objectivity
 ## 3 seems more conceptually coherent than 4
 loadings(efa_fits[[3]]) |> 
     print(cutoff = .3)
+efa_labels[[3]] = c('MR2_3' = 'cynicism_3', 'MR1_3' = 'textbook_3', 'MR3_3' ='objectivity_3')
 
 ## 4: textbook; cynicism?; (4) objectivity; (3) ??? (aims + stdpt)
 loadings(efa_fits[[4]]) |> 
     print(cutoff = .3)
+efa_labels[[4]] = c('MR1_4' = 'textbook_4', 'MR2_4' = 'cynicism_4', 
+                    'MR4_4' = 'objectivity_4', 'MR3_4' = '?(aims + stdpt)_4')
 
 ## 5: (2) cynicism; (1) textbook + aims.3; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.3
 loadings(efa_fits[[5]]) |> 
     print(cutoff = .3)
+efa_labels[[5]] = c('MR2_5' = 'cynicism_5', 'MR1_5' = 'textbook + aims.3_5', 
+                    'MR4_5' = 'objectivity_5', 'MR3_5' = '?(aims + stdpt)_5', 
+                    'MR5_5' = 'pluralism.3_5')
 
 ## 6: (2) cynicism; (1) textbook; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.3; (6) ir
 loadings(efa_fits[[6]]) |> 
     print(cutoff = .3)
+efa_labels[[6]] = c('MR2_6' = 'cynicism_6', 'MR1_6' = 'textbook_6', 
+                    'MR4_6' = 'objectivity_6', 'MR3_6' = '?(aims + stdpt)_6',
+                    'MR5_6' = 'pluralism.3_6', 'MR6_6' = 'ir_6')
+
+efa_labels_df = efa_labels[2:6] |> 
+    map(enframe, name = 'term', value = 'label') |> 
+    bind_rows()
 
 ## Scores ----
 ## Fitted EDAs include a `scores` element with the right dimensions
@@ -124,7 +143,31 @@ scores = function(this_efa, efa_name = 'test', threshold = 0.3) {
 
 efa_scores = imap(efa_fits, scores) |> 
     imap(~ write_rds(.x, here(data_dir, 
-                              glue('03_scores_{.y}.Rds'))))
+                              glue('04_scores_{.y}.Rds'))))
+
+## Big combined loadings table ----
+loadings_to_df = function(fit) {
+    fit |> 
+        loadings() |> 
+        magrittr::set_class('matrix') |> 
+        as_tibble(rownames = 'variable')
+}
+loadings_df = efa_fits |> 
+    map(loadings_to_df) |> 
+    imap(\(x, y) rename_with(x, 
+                             .cols = !variable,
+                             .fn = ~ glue('{.x}_{y}'))) |> 
+    reduce(~ full_join(.x, .y, by = 'variable'))
+
+## TODO: output as a publishable table
+loadings_df |> 
+    pivot_longer(!variable, names_to = 'latent', values_to = 'value') |> 
+    filter(abs(value) > .3) |> 
+    inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
+    select(!latent) |> 
+    pivot_wider(names_from = 'label', values_fro = 'value', names_sort = TRUE) |> 
+    view()
+
 
 ## Scores and demographics ----
 ## TODO: more to separate script
@@ -179,6 +222,23 @@ tidy(lm_fit) |>
     geom_hline(yintercept = 0) +
     # facet_wrap(vars(response)) +
     coord_flip()
+
+## Regress COSS against each latent variable and extract coefficients ----
+coss_coefs = efa_scores[2:6] |> 
+    map(~ {.x |> 
+            inner_join(dataf, by = 'prolific_id') |> 
+            select(starts_with('MR'), coss) %>%
+            lm(coss ~ ., data = .) |> 
+            tidy(conf.int = TRUE)}) |> 
+    map(~ filter(.x, term != '(Intercept)')) |> 
+    bind_rows() |> 
+    left_join(efa_labels_df, by = 'term')
+
+## cynicism is consistently negative, ~ -0.18
+## pluralism and (aims + stdpt) consitently weak positive, ~ 0.09
+## others all negligible
+arrange(coss_coefs, label)
+
 
 ## CFA ----
 check_cfa = function(this_efa, threshold = 0.3) {
