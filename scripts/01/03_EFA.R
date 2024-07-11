@@ -7,6 +7,8 @@ library(gvlma)
 library(tables)
 library(gghighlight)
 library(lavaan)
+library(ggpubr)
+library(ggforce)
 
 library(visdat)
 library(grid)
@@ -48,6 +50,7 @@ cor.matrix <- cor(d_vis_efa)
 bartlett <- bartlett.test(d_vis_efa) #testing whether correlation matrix is significantly different from identity matrix
 kmo <- KMO(d_vis_efa) #checking adequacy of sample size
 det <- det(cor.matrix) #checking for possible multicollinearity
+
 
 
 ## EFA ----

@@ -5,7 +5,7 @@ all: html
 html: $(SOURCE)
 	quarto render $< --to apaquarto-html
 
-pdf: pdf-jou
+pdf: pdf-man
 
 pdf-man: $(SOURCE)
 	quarto render $< --to apaquarto-pdf \

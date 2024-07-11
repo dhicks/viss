@@ -27,6 +27,7 @@ viss_df = dataf |>
     rename_with(~ str_remove(.x, 'viss.')) |> 
     column_to_rownames('prolific_id')
 
+set.seed(2024-07-11)
 datafs = viss_df |> 
     mutate(split = rbinom(n(), 1, 0.5)) %>%
     split(.$split) |> 
@@ -48,6 +49,7 @@ plot(hclust_fit)
 ## Check EFA assumptions ----
 ## Correlation matrix sig. diff. from identity
 bartlett.test(efa_df)
+bartlett.test(viss_df)
 
 ## Determinant / multicollinearity
 efa_df |> 
@@ -75,13 +77,24 @@ communalities = map(efa_fits, ~ {.x |>
         rowSums() %>%
         {1 - .}})
 
+## Total variance explained
+efa_fits[[1]]$Vaccounted
+2map_dbl(efa_fits[2:6], 
+    ~ .$Vaccounted %>%
+        .['Cumulative Var',] |> 
+        max()) |> 
+    print(digits = 2)
+
 write_rds(efa_fits, here(data_dir, '04_efa_fits.Rds'))
 
 ## Inspect loadings ----
 ## Lables for the latent variables
 ## NB follow the order presented, not numbered
 efa_labels = list()
-efa_labels[[1]] = c('')
+
+loadings(efa_fits[[1]]) |> 
+    print(cutoff = .3)
+efa_labels[[1]] = c('MR1_1' = 'textbook + cynicism_1')
 
 ## 2 sort of looks like textbook and cynicism
 loadings(efa_fits[[2]]) |> 
@@ -114,7 +127,7 @@ efa_labels[[6]] = c('MR2_6' = 'cynicism_6', 'MR1_6' = 'textbook_6',
                     'MR4_6' = 'objectivity_6', 'MR3_6' = '?(aims + stdpt)_6',
                     'MR5_6' = 'pluralism.3_6', 'MR6_6' = 'ir_6')
 
-efa_labels_df = efa_labels[2:6] |> 
+efa_labels_df = efa_labels[1:6] |> 
     map(enframe, name = 'term', value = 'label') |> 
     bind_rows()
 
@@ -189,7 +202,7 @@ loadings_df |>
         locations = cells_body(columns = c(5, 10, 11, 15, 17)))
 
 ## Scores and demographics ----
-## TODO: more to separate script
+## TODO: move to separate script
 demo_cont = expr(c(age, religious, politics, 
                    rwa.conservatism, rwa.traditionalism, 
                    rwa.authoritarianism, rwa, 
@@ -243,7 +256,7 @@ tidy(lm_fit) |>
     coord_flip()
 
 ## Regress COSS against each latent variable and extract coefficients ----
-coss_coefs = efa_scores[2:6] |> 
+coss_coefs = efa_scores[1:6] |> 
     map(~ {.x |> 
             inner_join(dataf, by = 'prolific_id') |> 
             select(starts_with('MR'), coss) %>%
@@ -257,6 +270,15 @@ coss_coefs = efa_scores[2:6] |>
 ## pluralism and (aims + stdpt) consitently weak positive, ~ 0.09
 ## others all negligible
 arrange(coss_coefs, label)
+
+ggplot(coss_coefs, aes(fct_rev(label), estimate)) +
+    geom_hline(yintercept = c(0, -1/7, 1/7),
+               linetype = 'dashed') +
+    geom_pointrange(aes(ymin = conf.low, 
+                        ymax = conf.high)) +
+    coord_flip() +
+    labs(x = 'factor', y = 'regression coefficient')
+    
 
 
 ## CFA ----
