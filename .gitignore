@@ -1,4 +1,4 @@
-# What should go in here? 
+# What should go in here?
 # 1. Non-public data (ignored by default)
 # 2. Access keys, tokens, passwords
 # 3. Binary files > 25 MB
@@ -15,3 +15,5 @@ replication_preference.csv
 .Rproj.user
 Box
 
+
+/.quarto/

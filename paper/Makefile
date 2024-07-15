@@ -5,7 +5,7 @@ all: html
 html: $(SOURCE)
 	quarto render $< --to apaquarto-html
 
-pdf: pdf-man
+pdf: pdf-man wc
 
 pdf-man: $(SOURCE)
 	quarto render $< --to apaquarto-pdf \
@@ -21,3 +21,8 @@ pdf-jou: $(SOURCE)
 
 docx: $(SOURCE)
 	quarto render $< --to apaquarto-docx
+
+.PHONY: wc
+wc:
+	pdftotext paper.pdf - | wc
+

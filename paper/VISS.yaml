@@ -40,6 +40,155 @@ references:
   type: article-journal
   URL: https://doi.org/10.1177/10755470231221770
 
+- id: AndersonUsesValueJudgments2004
+  abstract: >-
+    The underdetermination argument establishes that scientists may use
+    political values to guide inquiry, without providing criteria for
+    distinguishing legitimate from illegitimate guidance. This paper supplies
+    such criteria. Analysis of the confused arguments against value-laden
+    science reveals the fundamental criterion of illegitimate guidance: when
+    value judgments operate to drive inquiry to a predetermined conclusion. A
+    case study of feminist research on divorce reveals numerous legitimate ways
+    that values can guide science without violating this standard.
+  author:
+    - family: Anderson
+      given: Elizabeth S
+  citation-key: AndersonUsesValueJudgments2004
+  container-title: 'Hypatia: A Journal of Feminist Philosophy'
+  container-title-short: Hypatia
+  DOI: 10.1111/j.1527-2001.2004.tb01266.x
+  ISSN: 1527-2001
+  issue: '1'
+  issued:
+    - year: 2004
+  language: en
+  license: 2004 by Hypatia, Inc.
+  page: 1-24
+  source: Wiley Online Library
+  title: >-
+    Uses of Value Judgments in Science: A General Argument, with Lessons from a
+    Case Study of Feminist Research on Divorce
+  title-short: Uses of Value Judgments in Science
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1527-2001.2004.tb01266.x
+  volume: '19'
+
+- id: BauerTransgenderinclusiveMeasuresSex2017
+  abstract: >-
+    Given that an estimated 0.6% of the U.S. population is transgender (trans)
+    and that large health disparities for this population have been documented,
+    government and research organizations are increasingly expanding measures of
+    sex/gender to be trans inclusive. Options suggested for trans community
+    surveys, such as expansive check-all-that-apply gender identity lists and
+    write-in options that offer maximum flexibility, are generally not
+    appropriate for broad population surveys. These require limited questions
+    and a small number of categories for analysis. Limited evaluation has been
+    undertaken of trans-inclusive population survey measures for sex/gender,
+    including those currently in use. Using an internet survey and follow-up of
+    311 participants, and cognitive interviews from a maximum-diversity
+    sub-sample (n = 79), we conducted a mixed-methods evaluation of two existing
+    measures: a two-step question developed in the United States and a
+    multidimensional measure developed in Canada. We found very low levels of
+    item missingness, and no indicators of confusion on the part of cisgender
+    (non-trans) participants for both measures. However, a majority of interview
+    participants indicated problems with each question item set. Agreement
+    between the two measures in assessment of gender identity was very high (K =
+    0.9081), but gender identity was a poor proxy for other dimensions of sex or
+    gender among trans participants. Issues to inform measure development or
+    adaptation that emerged from analysis included dimensions of sex/gender
+    measured, whether non-binary identities were trans, Indigenous and cultural
+    identities, proxy reporting, temporality concerns, and the inability of a
+    single item to provide a valid measure of sex/gender. Based on this
+    evaluation, we recommend that population surveys meant for multi-purpose
+    analysis consider a new Multidimensional Sex/Gender Measure for testing that
+    includes three simple items (one asked only of a small sub-group) to assess
+    gender identity and lived gender, with optional additions. We provide
+    considerations for adaptation of this measure to different contexts.
+  accessed:
+    - year: 2021
+      month: 6
+      day: 15
+  author:
+    - family: Bauer
+      given: Greta R.
+    - family: Braimoh
+      given: Jessica
+    - family: Scheim
+      given: Ayden I.
+    - family: Dharma
+      given: Christoffer
+  citation-key: BauerTransgenderinclusiveMeasuresSex2017
+  container-title: PLOS ONE
+  container-title-short: PLOS ONE
+  DOI: 10.1371/journal.pone.0178043
+  ISSN: 1932-6203
+  issue: '5'
+  issued:
+    - year: 2017
+      month: 5
+      day: 25
+  language: en
+  page: e0178043
+  publisher: Public Library of Science
+  source: PLoS Journals
+  title: >-
+    Transgender-inclusive measures of sex/gender for population surveys:
+    Mixed-methods evaluation and recommendations
+  title-short: Transgender-inclusive measures of sex/gender for population surveys
+  type: article-journal
+  URL: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178043
+  volume: '12'
+
+- id: BiddleClimateSkepticismManufacture2015
+  abstract: >-
+    The aim of this paper is to address the neglected but important problem of
+    differentiating between epistemically beneficial and epistemically
+    detrimental dissent. By “dissent,” we refer to the act of objecting to a
+    particular conclusion, especially one that is widely held. While dissent in
+    science can clearly be beneficial, there might be some instances of dissent
+    that not only fail to contribute to scientific progress, but actually impede
+    it. Potential examples of this include the tobacco industry’s funding of
+    studies that questioned the link between smoking and lung cancer, and the
+    attempt by the petroleum industry and other groups to cast doubt upon the
+    conclusion that human consumption of fossil fuels contributes to global
+    climate change. The problem of distinguishing between good and bad dissent
+    is important because of the growing tendency of some stakeholders to attempt
+    to delay political action by ’manufacturing doubt’ (Oreskes & Conway 2010).
+    Our discussion in this paper focuses on climate science. This field, in our
+    view, is rife with instances of bad dissent. On the basis of our discussion
+    of climate science, we articulate a set of sufficient conditions for
+    epistemically problematic dissent in general, which we call “the inductive
+    risk account of epistemically detrimental dissent.”
+  accessed:
+    - year: 2016
+      month: 2
+      day: 13
+  author:
+    - family: Biddle
+      given: Justin B.
+    - family: Leuschner
+      given: Anna
+  citation-key: BiddleClimateSkepticismManufacture2015
+  container-title: European Journal for Philosophy of Science
+  container-title-short: Euro Jnl Phil Sci
+  DOI: 10.1007/s13194-014-0101-x
+  ISSN: 1879-4912, 1879-4920
+  issue: '3'
+  issued:
+    - year: 2015
+      month: 6
+      day: 19
+  language: en
+  page: 261-278
+  source: link.springer.com.proxy1.lib.uwo.ca
+  title: >-
+    Climate skepticism and the manufacture of doubt: can dissent in science be
+    epistemically detrimental?
+  title-short: Climate skepticism and the manufacture of doubt
+  type: article-journal
+  URL: http://link.springer.com/article/10.1007/s13194-014-0101-x
+  volume: '5'
+
 - id: BoutylineImprovingMeasurementShared2017
   abstract: >-
     Measurement of shared cultural schemas is a central methodological challenge
@@ -115,6 +264,41 @@ references:
   type: article-journal
   URL: >-
     https://link-springer-com.proxy1.lib.uwo.ca/article/10.1007/s11229-017-1333-z
+
+- id: BrownDisconnectProblemScientific2016
+  abstract: >-
+    The disconnect problem arises wherever there is ongoing and severe
+    discordance between the scientific assessment of a politically relevant
+    issue, and the politics and legislation of said issue. Here, we focus on the
+    disconnect problem as it arises in the case of climate change, diagnosing a
+    failure to respect the necessary tradeoff between authority and autonomy
+    within a public institution like science. After assessing the problematic
+    deployment of scientific authority in this arena, we offer suggestions for
+    how to mitigate climate change’s particular disconnect problem, as well as
+    more general proposals for reforming science advising.
+  accessed:
+    - year: 2016
+      month: 11
+      day: 2
+  author:
+    - family: Brown
+      given: Matthew J.
+    - family: Havstad
+      given: Joyce C.
+  citation-key: BrownDisconnectProblemScientific2016
+  container-title: Perspectives on Science
+  container-title-short: Perspectives on Science
+  DOI: 10.1162/POSC_a_00235
+  ISSN: 1063-6145
+  issued:
+    - year: 2016
+      month: 11
+      day: 1
+  page: 67-94
+  source: MIT Press Journals
+  title: The Disconnect Problem, Scientific Authority, and Climate Policy
+  type: article-journal
+  URL: http://dx.doi.org/10.1162/POSC_a_00235
 
 - id: BrownScienceMoralImagination2020
   abstract: >-
@@ -218,6 +402,52 @@ references:
   type: article-journal
   URL: https://doi.org/10.1177/09636625231183115
 
+- id: CloughUsingValuesEvidence2020
+  abstract: >-
+    I have argued that political values are beliefs informed, more or less well,
+    by the evidence of experience and that, where relevant and well-supported by
+    evidence, the inclusion of political values in scientific theorizing can
+    increase the objectivity of research (e.g., Clough 2003, 2004, 2011). The
+    position I endorse has been called the “values-as-evidence” approach
+    (Goldenberg 2013). In this essay I respond to three kinds of resistance to
+    this approach, using examples of feminist political values. Solomon (2012)
+    questions whether values are beliefs that can be tested, Alcoff (2006)
+    argues that even if our values are beliefs that can be tested, testing them
+    might not be desirable because doing so assigns these important values a
+    contingency that weakens their normative force, and Yap (2016) argues that
+    the approach is too idealistic in its articulation of the role of evidence
+    in our political deliberations. In response, I discuss the ways that values
+    can be tested, I analyze the evidential strength of feminist values in
+    science, and I argue that the evidence-based nature of these values is
+    neither a weakness nor an idealization. Problems with political values
+    affecting science properly concern the dogmatic ways that evaluative beliefs
+    are sometimes held—a problem that arises with dogmatism toward descriptive
+    beliefs as well. I conclude that scientists, as with the rest of us, ought
+    to adopt a pragmatically-inclined appreciation of the fallible, inductive
+    process by which we gather evidence in support of any of our beliefs,
+    whether they are described as evaluative or descriptive.
+  accessed:
+    - year: 2021
+      month: 3
+      day: 2
+  author:
+    - family: Clough
+      given: Sharyn
+  citation-key: CloughUsingValuesEvidence2020
+  container-title: Philosophy in the Contemporary World
+  DOI: 10.5840/pcw2020261/21
+  ISSN: 1077-1999
+  issue: '1'
+  issued:
+    - year: 2020
+  page: 5-37
+  source: DOI.org (Crossref)
+  title: Using Values as Evidence When There’s Evidence for Your Values
+  type: article-journal
+  URL: >-
+    http://www.pdcnet.org/oom/service?url_ver=Z39.88-2004&rft_val_fmt=&rft.imuse_id=pcw_2020_0026_0001_0005_0037&svc_id=info:www.pdcnet.org/collection
+  volume: '26'
+
 - id: CookQuantifyingConsensusAnthropogenic2013
   abstract: >-
     We analyze the evolution of the scientific consensus on anthropogenic global
@@ -276,6 +506,87 @@ references:
     literature
   type: article-journal
   URL: https://doi.org/10.1088/1748-9326/8/2/024024
+  volume: '8'
+
+- id: CPSHistoricalTime2022
+  accessed:
+    - year: 2022
+      month: 7
+      day: 13
+  citation-key: CPSHistoricalTime2022
+  container-title: United States Census Bureau
+  issued:
+    - year: 2022
+      month: 3
+      day: 12
+  title: CPS Historical Time Series Visualizations
+  type: webpage
+  URL: >-
+    https://web.archive.org/web/20220312234236/https://www.census.gov/library/visualizations/time-series/demo/cps-historical-time-series.html
+
+- id: CranorHowLawPromotes2020
+  author:
+    - family: Cranor
+      given: Carl F.
+  citation-key: CranorHowLawPromotes2020
+  container-title: >-
+    Science and the Production of Ignorance: When the Quest for Knowledge Is
+    Thwarted
+  editor:
+    - family: Kourany
+      given: Janet
+    - family: Carrier
+      given: Martin
+  ISBN: 978-0-262-35715-9
+  issued:
+    - year: 2020
+      month: 1
+      day: 24
+  language: en
+  page: 165-192
+  publisher: MIT Press
+  source: Google Books
+  title: >-
+    How the Law Promotes Ignorance: The Case of Industrial Chemicals and Their
+    Risks
+  type: chapter
+
+- id: CrasnowFeministPhilosophyScience2013
+  abstract: >-
+    Feminist philosophy of science appears to present problems for the ideal of
+    value-free science. These difficulties also challenge a traditional
+    understanding of the objectivity of science. However, feminist philosophers
+    of science have good reasons for desiring to retain some concept of
+    objectivity. The present essay considers several recent and influential
+    feminist approaches to the role of social and political values in science,
+    with particular focus on feminist empiricism and feminist standpoint theory.
+    The similarities and difference, as well as the strengths and weaknesses of
+    these approaches are explored. The essay concludes with suggestions for
+    future research in the area of feminist epistemology and philosophy of
+    science.
+  accessed:
+    - year: 2016
+      month: 9
+      day: 27
+  author:
+    - family: Crasnow
+      given: Sharon
+  citation-key: CrasnowFeministPhilosophyScience2013
+  container-title: Philosophy Compass
+  DOI: 10.1111/phc3.12023
+  ISSN: 1747-9991
+  issue: '4'
+  issued:
+    - year: 2013
+      month: 4
+      day: 1
+  language: en
+  page: 413-423
+  source: Wiley Online Library
+  title: 'Feminist Philosophy of Science: Values and Objectivity'
+  title-short: Feminist Philosophy of Science
+  type: article-journal
+  URL: http://onlinelibrary.wiley.com/doi/10.1111/phc3.12023/abstract
   volume: '8'
 
 - id: CrasnowFeministStandpointTheory2014
@@ -387,6 +698,108 @@ references:
   title: Science, policy, and the value-free ideal
   type: book
 
+- id: DuckittTripartiteApproachRightWing2010
+  abstract: >-
+    Right-Wing Authoritarianism (RWA) has been conceptualized and measured as a
+    unidimensional personality construct comprising the covariation of the three
+    traits of authoritarian submission, authoritarian aggression, and
+    conventionalism. However, new approaches have criticized this
+    conceptualization and instead viewed these three “traits” as three distinct,
+    though related, social attitude dimensions. Here we extend this approach
+    providing clear definitions of these three dimensions as ideological
+    attitude constructs of Authoritarianism, Conservatism, and Traditionalism.
+    These dimensions are seen as attitudinal expressions of basic social values
+    or motivational goals that represent different, though related, strategies
+    for attaining collective security at the expense of individual autonomy. We
+    report data from five samples and three different countries showing that
+    these three dimensions could be reliably measured and were factorially
+    distinct. The three dimensions also differentially predicted interpersonal
+    behaviour, social policy support, and political party support. It is argued
+    that conceptualizing and measuring RWA as a set of three related ideological
+    attitude dimensions may better explain complex sociopolitical phenomena than
+    the currently dominant unidimensional personality based model.
+  accessed:
+    - year: 2022
+      month: 8
+      day: 12
+  author:
+    - family: Duckitt
+      given: John
+    - family: Bizumic
+      given: Boris
+    - family: Krauss
+      given: Stephen W.
+    - family: Heled
+      given: Edna
+  citation-key: DuckittTripartiteApproachRightWing2010
+  container-title: Political Psychology
+  DOI: 10.1111/j.1467-9221.2010.00781.x
+  ISSN: 1467-9221
+  issue: '5'
+  issued:
+    - year: 2010
+  language: en
+  page: 685-715
+  source: Wiley Online Library
+  title: >-
+    A Tripartite Approach to Right-Wing Authoritarianism: The
+    Authoritarianism-Conservatism-Traditionalism Model
+  title-short: A Tripartite Approach to Right-Wing Authoritarianism
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9221.2010.00781.x
+  volume: '31'
+
+- id: DurantIgnoranceLoopsHow2020
+  abstract: >-
+    In this article, I examine the knowledge politics around pesticides in the
+    United States and the role it plays in honey bee declines. Since 2006, US
+    beekeepers have lost an average of one-third of their colonies each year.
+    Though a number of factors influence bee health, beekeepers, researchers and
+    policymakers cite pesticides as a primary contributor. In the US, pesticide
+    registration is overseen by the US Environmental Protection Agency (EPA),
+    with the required tests conducted by chemical companies applying for
+    registration. Until 2016, the EPA only required chemical companies to
+    measure acute toxicity for non-target species, which means that many
+    pesticides with sublethal toxicities are not labeled bee-toxic, and farmers
+    can apply them without penalty while bees are on their farms or orchards. In
+    addition, California state and county regulators will typically only
+    investigate a bee kill caused by a labeled bee-toxic pesticide, and so
+    emergent data on non-labeled, sublethal pesticides goes uncollected. These
+    gaps in data collection frustrate beekeepers and disincentivize them from
+    reporting colony losses to regulatory agencies – thus reinforcing ignorance
+    about which chemicals are toxic to bees. I term the iterative cycle of
+    non-knowledge co-constituted by regulatory shortfalls and stakeholder
+    regulatory disengagement an ‘ignorance loop’. I conclude with a discussion
+    of what this dynamic can tell us about the politics of knowledge production
+    and pesticide governance and the consequences of ‘ignorance loops’ for
+    stakeholders and the environment.
+  accessed:
+    - year: 2020
+      month: 5
+      day: 27
+  author:
+    - family: Durant
+      given: Jennie L
+  citation-key: DurantIgnoranceLoopsHow2020
+  container-title: Social Studies of Science
+  container-title-short: Soc Stud Sci
+  DOI: 10.1177/0306312720923390
+  ISSN: 0306-3127
+  issued:
+    - year: 2020
+      month: 5
+      day: 13
+  language: en
+  page: '0306312720923390'
+  publisher: SAGE Publications Ltd
+  source: SAGE Journals
+  title: >-
+    Ignorance loops: How non-knowledge about bee-toxic agrochemicals is
+    iteratively produced
+  title-short: Ignorance loops
+  type: article-journal
+  URL: https://doi.org/10.1177/0306312720923390
+
 - id: ElliottNonepistemicValuesMultiple2014
   author:
     - family: Elliott
@@ -485,6 +898,29 @@ references:
   type: article-journal
   URL: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0186049
   volume: '12'
+
+- id: EpsteinImpureScience1996
+  abstract: >-
+    Epstein shows the extent to which AIDS research has been a social and
+    political phenomenon and how the AIDS movement has transformed biomedical
+    research practices through its capacity to garner credibility by novel
+    strategies.
+  author:
+    - family: Epstein
+      given: Steven
+  citation-key: EpsteinImpureScience1996
+  collection-title: AIDS, Activism, and the Politics of Knowledge
+  event-place: Berkeley, Los Angeles, and Oxford
+  ISBN: 978-0-520-21445-3
+  issued:
+    - year: 1996
+  number-of-pages: '466'
+  publisher: University of California Press
+  publisher-place: Berkeley, Los Angeles, and Oxford
+  title: Impure Science
+  type: book
+  URL: >-
+    http://books.google.ca/books?id=kZOso0FMsrMC&pg=PA39&dq=intitle:Impure+Science+inauthor:epstein&hl=&cd=1&source=gbs_api
 
 - id: EvansWhoDoesnTrust2020
   abstract: >-
@@ -636,6 +1072,68 @@ references:
   URL: https://ehp.niehs.nih.gov/doi/full/10.1289/EHP3317
   volume: '127'
 
+- id: FrickelUndoneScienceCharting2010
+  accessed:
+    - year: 2016
+      month: 10
+      day: 23
+  author:
+    - family: Frickel
+      given: S.
+    - family: Gibbon
+      given: S.
+    - family: Howard
+      given: J.
+    - family: Kempner
+      given: J.
+    - family: Ottinger
+      given: G.
+    - family: Hess
+      given: D. J.
+  citation-key: FrickelUndoneScienceCharting2010
+  container-title: Science, Technology & Human Values
+  DOI: 10.1177/0162243909345836
+  ISSN: 0162-2439, 1552-8251
+  issue: '4'
+  issued:
+    - year: 2010
+      month: 7
+      day: 1
+  language: en
+  page: 444-473
+  source: CrossRef
+  title: >-
+    Undone Science: Charting Social Movement and Civil Society Challenges to
+    Research Agenda Setting
+  title-short: Undone Science
+  type: article-journal
+  URL: http://sth.sagepub.com/cgi/doi/10.1177/0162243909345836
+  volume: '35'
+
+- id: FunkAmericansPoliticsScience2015
+  abstract: >-
+    The public’s political views are strongly linked to attitudes on climate and
+    energy issues but are less important on biomedical, food safety, and space
+    issues.
+  accessed:
+    - year: 2015
+      month: 7
+      day: 2
+  author:
+    - family: Funk
+      given: Cary
+    - family: Rainie
+      given: Lee
+  citation-key: FunkAmericansPoliticsScience2015
+  issued:
+    - year: 2015
+      month: 7
+      day: 1
+  publisher: Pew Research Center
+  title: Americans, Politics and Science Issues
+  type: report
+  URL: http://www.pewinternet.org/2015/07/01/americans-politics-and-science-issues/
+
 - id: FunkScienceScientistsHeld2020
   abstract: >-
     Majorities across 20 publics say government investments in scientific
@@ -692,6 +1190,54 @@ references:
   type: post-weblog
   URL: >-
     https://www.pewresearch.org/science/2020/05/21/trust-in-medical-scientists-has-grown-in-u-s-but-mainly-among-democrats/
+
+- id: GierynBoundaryWorkDemarcationScience1983
+  abstract: >-
+    The demarcation of science from other intellectual activities-long an
+    analytic problem for philosophers and sociologists-is here examined as a
+    practical problem for scientists. Construction of a boundary between science
+    and varieties of non-science is useful for scientists' pursuit of
+    professional goals: acquisition of intellectual authority and career
+    opportunities; denial of these resources to "pseudoscientists"; and
+    protection of the autonomy of scientific research from political
+    interference. "Boundary-work" describes an ideological style found in
+    scientists' attempts to create a public image for science by contrasting it
+    favorably to non-scientific intellectual or technical activities.
+    Alternative sets of characteristics available for ideological attribution to
+    science reflect ambivalences or strains within the institution: science can
+    be made to look empirical or theoretical, pure or applied. However,
+    selection of one or another description depends on which characteristics
+    best achieve the demarcation in a way that justifies scientists' claims to
+    authority or resources. Thus, "science" is no single thing: its boundaries
+    are drawn and redrawn inflexible, historically changing and sometimes
+    ambiguous ways.
+  accessed:
+    - year: 2015
+      month: 5
+      day: 9
+  author:
+    - family: Gieryn
+      given: Thomas F.
+  citation-key: GierynBoundaryWorkDemarcationScience1983
+  container-title: American Sociological Review
+  container-title-short: American Sociological Review
+  DOI: 10.2307/2095325
+  ISSN: 0003-1224
+  issue: '6'
+  issued:
+    - year: 1983
+      month: 12
+      day: 1
+  license: Copyright © 1983 American Sociological Association
+  page: 781-795
+  source: JSTOR
+  title: >-
+    Boundary-Work and the Demarcation of Science from Non-Science: Strains and
+    Interests in Professional Ideologies of Scientists
+  title-short: Boundary-Work and the Demarcation of Science from Non-Science
+  type: article-journal
+  URL: http://www.jstor.org/stable/2095325
+  volume: '48'
 
 - id: GoldenbergVaccineHesitancyPublic2021
   abstract: >-
@@ -773,6 +1319,22 @@ references:
     https://www.cambridge.org/core/journals/royal-institute-of-philosophy-supplements/article/understanding-epistemic-trust-injustices-and-their-harms/F95E3B4AF30573ADBEAE8F0759302AE7
   volume: '84'
 
+- id: GSSDataExplorer2022
+  accessed:
+    - year: 2022
+      month: 7
+      day: 13
+  citation-key: GSSDataExplorer2022
+  container-title: NORC at the University of Chicago
+  issued:
+    - year: 2022
+      month: 6
+      day: 29
+  title: GSS Data Explorer
+  type: webpage
+  URL: >-
+    https://web.archive.org/web/20220629231111/https://gssdataexplorer.norc.org/variables/178/vshow
+
 - id: HalpernScienceExperienceDeweyan2022
   abstract: |-
     Abstract
@@ -804,6 +1366,24 @@ references:
   URL: >-
     https://direct.mit.edu/posc/article/30/4/621/107108/Science-as-Experience-A-Deweyan-Model-of-Science
   volume: '30'
+
+- id: HardingWhoseScienceWhose1991
+  author:
+    - family: Harding
+      given: Sandra G.
+  call-number: Q130 .H37 1991
+  citation-key: HardingWhoseScienceWhose1991
+  event-place: Ithaca, N.Y
+  ISBN: 978-0-8014-2513-4 978-0-8014-9746-9
+  issued:
+    - year: 1991
+  number-of-pages: '319'
+  publisher: Cornell University Press
+  publisher-place: Ithaca, N.Y
+  source: Library of Congress ISBN
+  title: 'Whose science? Whose knowledge?: thinking from women''s lives'
+  title-short: Whose science?
+  type: book
 
 - id: HartmanModelingAttitudesScience2017
   abstract: >-
@@ -853,6 +1433,24 @@ references:
   type: article-journal
   URL: https://www.tandfonline.com/doi/full/10.1080/01973533.2017.1372284
   volume: '39'
+
+- id: HavstadNeutralityRelevancePrescription2017
+  author:
+    - family: Havstad
+      given: Joyce C.
+    - family: Brown
+      given: Matthew J.
+  citation-key: HavstadNeutralityRelevancePrescription2017
+  container-title: Public Affairs Quarterly
+  issue: '4'
+  issued:
+    - year: 2017
+  page: 303-324
+  source: Google Scholar
+  title: Neutrality, Relevance, Prescription, and the IPCC
+  type: article-journal
+  URL: https://www.jstor.org/stable/44732800
+  volume: '31'
 
 - id: HavstadSensationalScienceArchaic2021
   abstract: >-
@@ -1121,6 +1719,161 @@ references:
   URL: http://www.journals.uchicago.edu/doi/abs/10.1086/694037?af=R
   volume: '84'
 
+- id: HolmanNewDemarcationProblem2022
+  abstract: >-
+    There is now a general consensus amongst philosophers in the values in
+    science literature that values necessarily play a role in core areas of
+    scientific inquiry. We argue that attention should now be turned from
+    debating the value-free ideal to delineating legitimate from illegitimate
+    influences of values in science, a project we dub “The New Demarcation
+    Problem.” First, we review past attempts to demarcate the uses of values and
+    propose a categorization of the strategies by where they seek to draw
+    legitimacy from. Next, we propose a set of desiderata for what we take to be
+    a satisfactory solution and present a case study where conflicting sets of
+    values clearly impinge on science, but where the legitimacy of their
+    influence is ambiguous. We use these desiderata and the case study to
+    illustrate what we take to be the strengths and weaknesses of current
+    strategies. To be clear, our goal is not to answer the question we pose, but
+    to articulate a framework within which a solution can be judged.
+  accessed:
+    - year: 2021
+      month: 12
+      day: 29
+  author:
+    - family: Holman
+      given: Bennett
+    - family: Wilholt
+      given: Torsten
+  citation-key: HolmanNewDemarcationProblem2022
+  container-title: Studies in History and Philosophy of Science
+  container-title-short: Studies in History and Philosophy of Science
+  DOI: 10.1016/j.shpsa.2021.11.011
+  ISSN: 0039-3681
+  issued:
+    - year: 2022
+      month: 2
+      day: 1
+  language: en
+  page: 211-220
+  source: ScienceDirect
+  title: The new demarcation problem
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0039368121001886
+  volume: '91'
+
+- id: HolmanPromisePerilsIndustryfunded2018
+  abstract: >-
+    Private companies provide by far the most funding for scientific research
+    and development. Nevertheless, relatively little attention has been paid to
+    the dynamics of industry-funded research by philosophers of science. This
+    paper addresses this gap by providing an overview of the major strengths and
+    weaknesses of industry research funding, together with the existing
+    recommendations for addressing the weaknesses. It is designed to provide a
+    starting point for future philosophical work that explores the features of
+    industry-funded research, avenues for addressing concerns, and strategies
+    for making research funded by the private sector as fruitful as possible.
+  accessed:
+    - year: 2018
+      month: 8
+      day: 4
+  author:
+    - family: Holman
+      given: Bennett
+    - family: Elliott
+      given: Kevin C.
+  citation-key: HolmanPromisePerilsIndustryfunded2018
+  container-title: Philosophy Compass
+  DOI: 10.1111/phc3.12544
+  ISSN: 1747-9991
+  issue: '11'
+  issued:
+    - year: 2018
+      month: 7
+      day: 29
+  language: en
+  license: © 2018 The Author(s) Philosophy Compass © 2018 John Wiley & Sons Ltd
+  page: e12544
+  source: Wiley Online Library
+  title: The promise and perils of industry-funded science
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/phc3.12544
+  volume: '13'
+
+- id: HoNatureSocialDominance2015
+  abstract: >-
+    A new conceptualization and measurement of social dominance
+    orientation—individual differences in the preference for group based
+    hierarchy and inequality—is introduced. In contrast to previous measures of
+    social dominance orientation that were designed to be unidimensional, the
+    new measure (SDO7) embeds theoretically grounded subdimensions of
+    SDO—SDO-Dominance (SDO-D) and SDO-Egalitarianism (SDO-E). SDO-D constitutes
+    a preference for systems of group-based dominance in which high status
+    groups forcefully oppress lower status groups. SDO-E constitutes a
+    preference for systems of group-based inequality that are maintained by an
+    interrelated network of subtle hierarchy-enhancing ideologies and social
+    policies. Confirmatory factor and criterion validity analyses confirmed that
+    SDO-D and SDO-E are theoretically distinct and dissociate in terms of the
+    intergroup outcomes they best predict. For the first time, distinct
+    personality and individual difference bases of SDO-D and SDO-E are outlined.
+    We clarify the construct validity of SDO by strictly assessing a preference
+    for dominance hierarchies in general, removing a possible confound relating
+    to support for hierarchy benefitting the ingroup. Consistent with this,
+    results show that among members of a disadvantaged ethnic minority group
+    (African Americans), endorsement of SDO7 is inversely related to ingroup
+    identity. We further demonstrate these effects using nationally
+    representative samples of U.S. Blacks and Whites, documenting the
+    generalizability of these findings. Finally, we introduce and validate a
+    brief 4-item measure of each dimension. This article importantly extends our
+    theoretical understanding of one of the most generative constructs in social
+    psychology, and introduces powerful new tools for its measurement. (PsycInfo
+    Database Record (c) 2020 APA, all rights reserved) (Source: journal
+    abstract)
+  accessed:
+    - year: 2022
+      month: 8
+      day: 12
+  author:
+    - family: Ho
+      given: Arnold K.
+    - family: Sidanius
+      given: Jim
+    - family: Kteily
+      given: Nour
+    - family: Sheehy-Skeffington
+      given: Jennifer
+    - family: Pratto
+      given: Felicia
+    - family: Henkel
+      given: Kristin E.
+    - family: Foels
+      given: Rob
+    - family: Stewart
+      given: Andrew L.
+  citation-key: HoNatureSocialDominance2015
+  container-title: Journal of Personality and Social Psychology
+  DOI: 10.1037/pspi0000033
+  event-place: Washington, US
+  ISSN: 0022-3514
+  issue: '6'
+  issued:
+    - year: 2015
+      month: 12
+  language: English
+  license: © 2015, American Psychological Association
+  note: (US)
+  number-of-pages: 1003-1028
+  page: 1003-1028
+  publisher: American Psychological Association
+  publisher-place: Washington, US
+  source: ProQuest
+  title: >-
+    The nature of social dominance orientation: Theorizing and measuring
+    preferences for intergroup inequality using the new SDO₇ scale
+  title-short: The nature of social dominance orientation
+  type: article-journal
+  URL: https://www.proquest.com/docview/1724322925/abstract/7A214611108743D4PQ/1
+  volume: '109'
+
 - id: HuFitIndicesCovariance1998
   accessed:
     - year: 2022
@@ -1149,6 +1902,63 @@ references:
   type: article-journal
   URL: http://doi.apa.org/getdoi.cfm?doi=10.1037/1082-989X.3.4.424
   volume: '3'
+
+- id: HughesOccupationalPrestigeStatus2024
+  abstract: >-
+    The relationship between life outcomes and an individual’s standing in the
+    social and economic hierarchy of society is an important topic across the
+    social sciences. Foundational to this work is assessing an individual’s
+    standing in this hierarchy, often referred to as socioeconomic status (SES).
+    One component of an individual’s SES, often overlooked in the psychological
+    literature, is occupational prestige – the amount of status accorded to them
+    based on their occupational role. In this research, we collected and
+    validated a new index of occupational prestige for 1029 specific
+    occupations, including all jobs in the US Department of Labor’s O*NET
+    database, and 22 broader occupational families. In Study 1, we collected a
+    comprehensive set of occupational prestige ratings from an online
+    convenience sample, and demonstrated their high reliability. In Study 2, we
+    developed a crosswalk between the ratings collected in Study 1 and prior
+    ratings of occupations listed in the US Census and show convergent validity
+    with previous indices. In Studies 3 and 4 we used additional data to
+    evaluate the construct validity of occupational prestige more broadly. In
+    Study 3, we established convergent and discriminant validity with other
+    indicators of SES: income and educational attainment. In Study 4, we use the
+    O*NET database to identify the characteristics of occupations most strongly
+    associated with prestige. These results support the validity of the index
+    and suggest occupations with high prestige require skills traditionally
+    emphasized in liberal arts education (e.g., critical thinking, reading
+    comprehension).
+  accessed:
+    - year: 2024
+      month: 3
+      day: 23
+  author:
+    - family: Hughes
+      given: Bradley T.
+    - family: Srivastava
+      given: Sanjay
+    - family: Leszko
+      given: Magdalena
+    - family: Condon
+      given: David M.
+  citation-key: HughesOccupationalPrestigeStatus2024
+  container-title: 'Collabra: Psychology'
+  DOI: 10.1525/collabra.92882
+  ISSN: 2474-7394
+  issue: '1'
+  issued:
+    - year: 2024
+      month: 2
+      day: 16
+  language: en
+  page: '92882'
+  source: DOI.org (Crossref)
+  title: 'Occupational Prestige: The Status Component of Socioeconomic Status'
+  title-short: Occupational Prestige
+  type: article-journal
+  URL: >-
+    https://online.ucpress.edu/collabra/article/10/1/92882/200020/Occupational-Prestige-The-Status-Component-of
+  volume: '10'
 
 - id: HuxsterUnderstandingUnderstandingPublic2017
   abstract: >-
@@ -1205,6 +2015,37 @@ references:
   title: Understanding “understanding” in Public Understanding of Science
   type: article-journal
   URL: https://doi.org/10.1177/0963662517735429
+
+- id: IannoneGtEasilyCreate2022
+  abstract: >-
+    Build display tables from tabular data with an easy-to-use set of functions.
+    With its progressive approach, we can construct display tables with a
+    cohesive set of table parts. Table values can be formatted using any of the
+    included formatting functions. Footnotes and cell styles can be precisely
+    added through a location targeting system. The way in which 'gt' handles
+    things for you means that you don't often have to worry about the fine
+    details.
+  accessed:
+    - year: 2022
+      month: 7
+      day: 13
+  author:
+    - family: Iannone
+      given: Richard
+    - family: Cheng
+      given: Joe
+    - family: Schloerke
+      given: Barret
+  citation-key: IannoneGtEasilyCreate2022
+  issued:
+    - year: 2022
+  license: MIT + file LICENSE
+  source: R-Packages
+  title: 'gt: Easily Create Presentation-Ready Display Tables'
+  title-short: gt
+  type: software
+  URL: https://CRAN.R-project.org/package=gt
+  version: 0.5.0
 
 - id: IntemannDistinguishingLegitimateIllegitimate2015
   abstract: >-
@@ -1301,6 +2142,119 @@ references:
   type: chapter
   URL: >-
     http://books.google.ca/books?id=ZvqLRu30ipsC&pg=PA149&dq=intitle:Shifting+Ground+inauthor:scheman&hl=&cd=1&source=gbs_api
+
+- id: KahanOrdinaryScienceIntelligence2017
+  abstract: >-
+    This paper describes the ‘ordinary science intelligence’ scale (OSI_2.0).
+    Designed for use in the empirical study of risk perception and science
+    communication, OSI_2.0 comprises items intended to measure a latent capacity
+    to recognize and make use of valid scientific evidence in everyday
+    decision-making. The derivation of the items, the relationship of them to
+    the knowledge and skills OSI requires, and the psychometric properties of
+    the scale are examined. Evidence of the external validity of OSI_2.0 is also
+    presented. Finally, the utility of OSI_2.0 is briefly illustrated by its use
+    to assess standard survey items on evolution and global warming: when
+    administered to members of a US general population sample, these items are
+    more convincingly viewed as indicators of one or another latent cultural
+    identity than as indicators of science comprehension.
+  accessed:
+    - year: 2024
+      month: 4
+      day: 9
+  author:
+    - family: Kahan
+      given: Dan M.
+  citation-key: KahanOrdinaryScienceIntelligence2017
+  container-title: Journal of Risk Research
+  DOI: 10.1080/13669877.2016.1148067
+  ISSN: 1366-9877
+  issue: '8'
+  issued:
+    - year: 2017
+      month: 8
+      day: 3
+  page: 995–1016
+  publisher: Routledge
+  source: Taylor and Francis+NEJM
+  title: >-
+    ‘Ordinary science intelligence’: a science-comprehension measure for study
+    of risk and science communication, with notes on evolution and climate
+    change
+  title-short: ‘Ordinary science intelligence’
+  type: article-journal
+  URL: https://doi.org/10.1080/13669877.2016.1148067
+  volume: '20'
+
+- id: KennedyEvaluation2016Election2018
+  abstract: >-
+    The 2016 presidential election was a jarring event for polling in the United
+    States. Preelection polls fueled high-profile predictions that Hillary
+    Clinton’s likelihood of winning the presidency was about 90 percent, with
+    estimates ranging from 71 to over 99 percent. When Donald Trump was declared
+    the winner of the presidency, there was a widespread perception that the
+    polls failed. But did the polls fail? And if so, why? Those are among the
+    central questions addressed by an American Association for Public Opinion
+    Research (AAPOR) ad hoc committee. This paper presents the committee’s
+    analysis of the performance of preelection polls in 2016, how that
+    performance compares to polling in prior elections, and the extent to which
+    performance varied by poll design. In addition, the committee examined
+    several theories as to why many polls, particularly in the Upper Midwest,
+    underestimated support for Trump. The explanations for which the most
+    evidence exists are a late swing in vote preference toward Trump and a
+    pervasive failure to adjust for overrepresentation of college graduates (who
+    favored Clinton). In addition, there is clear evidence that voter turnout
+    changed from 2012 to 2016 in ways that favored Trump, though there is only
+    mixed evidence that misspecified likely voter models were a major cause of
+    the systematic polling error. Finally, there is little evidence that
+    socially desirable (Shy Trump) responding was an important contributor to
+    poll error.
+  accessed:
+    - year: 2022
+      month: 7
+      day: 8
+  author:
+    - family: Kennedy
+      given: Courtney
+    - family: Blumenthal
+      given: Mark
+    - family: Clement
+      given: Scott
+    - family: Clinton
+      given: Joshua D
+    - family: Durand
+      given: Claire
+    - family: Franklin
+      given: Charles
+    - family: McGeeney
+      given: Kyley
+    - family: Miringoff
+      given: Lee
+    - family: Olson
+      given: Kristen
+    - family: Rivers
+      given: Douglas
+    - family: Saad
+      given: Lydia
+    - family: Witt
+      given: G Evans
+    - family: Wlezien
+      given: Christopher
+  citation-key: KennedyEvaluation2016Election2018
+  container-title: Public Opinion Quarterly
+  container-title-short: Public Opinion Quarterly
+  DOI: 10.1093/poq/nfx047
+  ISSN: 0033-362X
+  issue: '1'
+  issued:
+    - year: 2018
+      month: 3
+      day: 6
+  page: 1-33
+  source: Silverchair
+  title: An Evaluation of the 2016 Election Polls in the United States
+  type: article-journal
+  URL: https://doi.org/10.1093/poq/nfx047
+  volume: '82'
 
 - id: KovakaClimateChangeDenial2021
   abstract: >-
@@ -1426,6 +2380,27 @@ references:
   title-short: Vaccine
   type: book
 
+- id: LaudanDemiseDemarcationProblem1983
+  author:
+    - family: Laudan
+      given: Larry
+  citation-key: LaudanDemiseDemarcationProblem1983
+  container-title: Physics, Philosophy, and Psychoanalysis
+  editor:
+    - family: Cohen
+      given: R S
+    - family: Laudan
+      given: L
+  ISBN: 94-009-7057-9
+  issued:
+    - year: 1983
+  page: 111-127
+  publisher: Springer Netherlands
+  title: The Demise of the Demarcation Problem
+  type: chapter
+  URL: http://dx.doi.org/10.1007/978-94-009-7055-7_6
+  volume: '76'
+
 - id: LeePartyPolarizationTrust2021
   abstract: >-
     Research has documented the decline of trust in science among Republicans,
@@ -1469,6 +2444,25 @@ references:
   URL: https://doi.org/10.1177/23780231211010101
   volume: '7'
 
+- id: LexchinThoseWhoHave2011
+  author:
+    - family: Lexchin
+      given: Joel
+  citation-key: LexchinThoseWhoHave2011
+  container-title: Science and Engineering Ethics
+  container-title-short: Sci Eng Ethics
+  DOI: 10.1007/s11948-011-9265-3
+  issue: '2'
+  issued:
+    - year: 2011
+  page: 247-261
+  title: >-
+    Those Who Have the Gold Make the Evidence: How the Pharmaceutical Industry
+    Biases the Outcomes of Clinical Trials of Medications
+  type: article-journal
+  URL: http://link.springer.com/10.1007/s11948-011-9265-3
+  volume: '18'
+
 - id: LiangStudentUnderstandingScience2006
   accessed:
     - year: 2022
@@ -1508,6 +2502,139 @@ references:
   type: paper-conference
   URL: >-
     https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.8030&rep=rep1&type=pdf
+
+- id: LloydClimateModellingPhilosophical2017
+  citation-key: LloydClimateModellingPhilosophical2017
+  contributor:
+    - family: Oreskes
+      given: Naomi
+    - family: Lloyd
+      given: Elisabeth A.
+    - family: Santer
+      given: Ben
+    - family: Thorne
+      given: Peter
+    - family: Haimberger
+      given: Leo
+    - family: Taylor
+      given: Karl
+    - family: Wigley
+      given: Tom
+    - family: Lanzante
+      given: John
+    - family: Solomon
+      given: Susan
+    - family: Free
+      given: Melissa
+    - family: Gleckler
+      given: Peter
+    - family: Jones
+      given: Phil
+    - family: Karl
+      given: Tom
+    - family: Klein
+      given: Steve
+    - family: Mears
+      given: Carl
+    - family: Nychka
+      given: Doug
+    - family: Schmidt
+      given: Gavin
+    - family: Sherwood
+      given: Steve
+    - family: Wentz
+      given: Frank
+    - family: Mann
+      given: Michael E.
+    - family: Mearns
+      given: L. O.
+    - family: Bukovsky
+      given: M.
+    - family: Pryor
+      given: S. C.
+    - family: Magaña
+      given: V.
+    - family: Parker
+      given: Wendy S.
+    - family: Odenbaugh
+      given: Jay
+    - family: Knutti
+      given: Reto
+    - family: Rougier
+      given: Jonathan
+    - family: Crucifix
+      given: Michel
+    - family: Winsberg
+      given: Eric
+    - family: Frisch
+      given: Mathias
+    - family: Marcellesi
+      given: Alexandre
+    - family: Cartwright
+      given: Nancy
+  editor:
+    - family: Lloyd
+      given: Elisabeth Anne
+    - family: Winsberg
+      given: Eric
+  event-place: Cham
+  ISBN: 978-3-319-65057-9 978-3-319-65058-6
+  issued:
+    - year: 2017
+  language: en
+  note: 'OCLC: 1014115184'
+  number-of-pages: '497'
+  publisher: Palgrave MacMillan
+  publisher-place: Cham
+  source: Gemeinsamer Bibliotheksverbund ISBN
+  title: 'Climate modelling: philosophical and conceptual issues'
+  title-short: Climate modelling
+  type: book
+  URL: https://link.springer.com/book/10.1007%2F978-3-319-65058-6
+
+- id: LloydObjectivityDoubleStandard1995
+  abstract: >-
+    The emphasis on the limitations of objectivity, in specific guises and
+    networks, has been a continuing theme of contemporary analytic philosophy
+    for the past few decades. The popular sport of baiting feminist philosophers
+    -- into pointing to what's left out of objective knowledge, or into
+    describing what methods, exactly, they would offer to replace the powerful
+    "objective" methods grounding scientific knowledge -- embodies a blatant
+    double standard which has the effect of constantly putting feminist
+    epistemologists on the defensive, on the fringes, on the run. This strategy
+    can only work if 'objectivity' is transparent, simple, stable, and clear in
+    its meaning. It most certainly is not. In fact, taking 'objectivity' as a
+    sort of beautiful primitive, self-evident in its value, and all-powerful in
+    its revelatory power, requires careless philosophy, and the best workers in
+    metaphysics, epistemology, and philosophy of science have made reworked
+    definitions of 'objectivity' absolutely central to their own projects. In
+    fact, classic feminist concerns with exploring the impact of sex and gender
+    on knowledge, understanding, and other relations between human beings and
+    the rest of the world fall squarely within the sort of human and social
+    settings that are already considered central in most current analytic
+    metaphysics, episteomology, and philosophy of science. I argue that the
+    burden of proof is clearly on those who wish to reject the centrality and
+    relevance of sex and gender to our most fundamental philosophical work on
+    knowledge and reality.
+  accessed:
+    - year: 2017
+      month: 12
+      day: 2
+  author:
+    - family: Lloyd
+      given: Elisabeth A.
+  citation-key: LloydObjectivityDoubleStandard1995
+  container-title: Synthese
+  ISSN: 0039-7857
+  issue: '3'
+  issued:
+    - year: 1995
+  page: 351-381
+  source: JSTOR
+  title: Objectivity and the Double Standard for Feminist Epistemologies
+  type: article-journal
+  URL: http://www.jstor.org/stable/20117438
+  volume: '104'
 
 - id: LombrozoImportanceUnderstandingNature2008
   abstract: >-
@@ -1622,6 +2749,34 @@ references:
   title-short: Delineating between scientism and science enthusiasm
   type: article-journal
   URL: https://doi.org/10.1177/09636625231217900
+
+- id: McCrightInfluencePoliticalIdeology2013
+  author:
+    - family: McCright
+      given: Aaron M
+    - family: Dentzman
+      given: Katherine
+    - family: Charters
+      given: Meghan
+    - family: Dietz
+      given: Thomas
+  citation-key: McCrightInfluencePoliticalIdeology2013
+  container-title: Environmental Research Letters
+  container-title-short: Environ. Res. Lett.
+  DOI: 10.1088/1748-9326/8/4/044029
+  ISSN: 1748-9326
+  issue: '4'
+  issued:
+    - year: 2013
+      month: 11
+      day: 13
+  page: '044029'
+  publisher: IOP Publishing
+  source: iopscience.iop.org
+  title: The influence of political ideology on trust in science
+  type: article-journal
+  URL: https://iopscience.iop.org/article/10.1088/1748-9326/8/4/044029/meta
+  volume: '8'
 
 - id: McHughMoreSkinDeep2011
   abstract: >-
@@ -1749,6 +2904,25 @@ references:
   type: article-journal
   URL: http://pus.sagepub.com/content/early/2016/05/04/0963662516645040
 
+- id: MichaelsDoubtTheirProduct2008
+  author:
+    - family: Michaels
+      given: David
+  citation-key: MichaelsDoubtTheirProduct2008
+  event-place: Oxford
+  ISBN: 978-0-19-530067-3 0-19-530067-X 978-0-19-530067-3
+  issued:
+    - year: 2008
+  language: eng
+  number-of-pages: '372'
+  publisher: Oxford Univ. Press
+  publisher-place: Oxford
+  source: Gemeinsamer Bibliotheksverbund ISBN
+  title: >-
+    Doubt is their product how industry's assault on science threatens your
+    health
+  type: book
+
 - id: MillerWhenConsensusKnowledge2013
   abstract: >-
     Scientific consensus is widely deferred to in public debates as a social
@@ -1781,6 +2955,44 @@ references:
   type: article-journal
   URL: https://link.springer.com/article/10.1007/s11229-012-0225-5
   volume: '190'
+
+- id: MizrahiWhatBadScientism2017
+  abstract: >-
+    In their attempt to defend philosophy from accusations of uselessness made
+    by prominent scientists, such as Stephen Hawking, some philosophers respond
+    with the charge of ‘scientism.’ This charge makes endorsing a scientistic
+    stance, a mistake by definition. For this reason, it begs the question
+    against these critics of philosophy, or anyone who is inclined to endorse a
+    scientistic stance, and turns the scientism debate into a verbal dispute. In
+    this paper, I propose a different definition of scientism, and thus a new
+    way of looking at the scientism debate. Those philosophers who seek to
+    defend philosophy against accusations of uselessness would do philosophy a
+    much better service, I submit, if they were to engage with the definition of
+    scientism put forth in this paper, rather than simply make it analytic that
+    scientism is a mistake.
+  accessed:
+    - year: 2021
+      month: 2
+      day: 16
+  author:
+    - family: Mizrahi
+      given: Moti
+  citation-key: MizrahiWhatBadScientism2017
+  container-title: Social Epistemology
+  DOI: 10.1080/02691728.2017.1297505
+  ISSN: 0269-1728
+  issue: '4'
+  issued:
+    - year: 2017
+      month: 7
+      day: 4
+  page: 351-367
+  publisher: Routledge
+  source: Taylor and Francis+NEJM
+  title: What’s so bad about scientism?
+  type: article-journal
+  URL: https://doi.org/10.1080/02691728.2017.1297505
+  volume: '31'
 
 - id: MyersConsensusRevisitedQuantifying2021
   abstract: >-
@@ -2038,6 +3250,42 @@ references:
   URL: https://doi.org/10.1080/09500693.2010.511297
   volume: '33'
 
+- id: OConnorMisinformationAgeHow2019
+  abstract: >-
+    The social dynamics of "alternative facts": why what you believe depends on
+    who you know  Why should we care about having true beliefs? And why do
+    demonstrably false beliefs persist and spread despite bad, even fatal,
+    consequences for the people who hold them?  Philosophers of science Cailin
+    O'Connor and James Weatherall argue that social factors, rather than
+    individual psychology, are what's essential to understanding the spread and
+    persistence of false beliefs. It might seem that there's an obvious reason
+    that true beliefs matter: false beliefs will hurt you. But if that's right,
+    then why is it (apparently) irrelevant to many people whether they believe
+    true things or not?  The Misinformation Age, written for a political era
+    riven by "fake news," "alternative facts," and disputes over the validity of
+    everything from climate change to the size of inauguration crowds, shows
+    convincingly that what you believe depends on who you know. If social forces
+    explain the persistence of false belief, we must understand how those forces
+    work in order to fight misinformation effectively.
+  author:
+    - family: O'Connor
+      given: Cailin
+    - family: Weatherall
+      given: James Owen
+  citation-key: OConnorMisinformationAgeHow2019
+  ISBN: 978-0-300-23401-5
+  issued:
+    - year: 2019
+      month: 1
+      day: 8
+  language: en
+  number-of-pages: '279'
+  publisher: Yale University Press
+  source: Google Books
+  title: 'The Misinformation Age: How False Beliefs Spread'
+  title-short: The Misinformation Age
+  type: book
+
 - id: OliverRiseTrumpenvolkPopulism2016
   abstract: >-
     Despite the wide application of the label “populist” in the 2016 election
@@ -2081,6 +3329,49 @@ references:
   type: article-journal
   URL: https://doi.org/10.1177/0002716216662639
   volume: '667'
+
+- id: OreskesMerchantsDoubtHow2011
+  abstract: >-
+    The U.S. scientific community has long led the world in research on such
+    areas as public health, environmental science, and issues affecting quality
+    of life. These scientists have produced landmark studies on the dangers of
+    DDT, tobacco smoke, acid rain, and global warming. But at the same time, a
+    small yet potent subset of this community leads the world in vehement denial
+    of these dangers.Merchants of Doubt tells the story of how a loose-knit
+    group of high-level scientists and scientific advisers, with deep
+    connections in politics and industry, ran effective campaigns to mislead the
+    public and deny well-established scientific knowledge over four decades.
+    Remarkably, the same individuals surface repeatedly-some of the same figures
+    who have claimed that the science of global warming is "not settled" denied
+    the truth of studies linking smoking to lung cancer, coal smoke to acid
+    rain, and CFCs to the ozone hole. "Doubt is our product," wrote one tobacco
+    executive. These "experts" supplied it. Naomi Oreskes and Erik M. Conway,
+    historians of science, roll back the rug on this dark corner of the American
+    scientific community, showing how ideology and corporate interests, aided by
+    a too-compliant media, have skewed public understanding of some of the most
+    pressing issues of our era.
+  author:
+    - family: Oreskes
+      given: Naomi
+    - family: Conway
+      given: Erik M.
+  citation-key: OreskesMerchantsDoubtHow2011
+  event-place: New York, NY, USA
+  ISBN: 978-1-4088-2877-9
+  issued:
+    - year: 2011
+      month: 10
+      day: 3
+  language: en
+  number-of-pages: '368'
+  publisher: Bloomsbury
+  publisher-place: New York, NY, USA
+  source: Google Books
+  title: >-
+    Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues
+    from Tobacco Smoke to Global Warming
+  title-short: Merchants of Doubt
+  type: book
 
 - id: OreskesResponseOreskesCounting2017
   author:
@@ -2153,6 +3444,52 @@ references:
   source: Google Books
   title: Why Trust Science?
   type: book
+
+- id: PadillaCorrelationAttenuationDue2012
+  abstract: >-
+    Issues with correlation attenuation due to measurement error are well
+    documented. More than a century ago, Spearman proposed a correction for
+    attenuation. However, this correction has seen very little use since it can
+    potentially inflate the true correlation beyond one. In addition, very
+    little confidence interval (CI) research has been done for correction for
+    attenuation. In the present study, the authors propose a bootstrap procedure
+    for estimating the deattenuated correlation and corresponding CIs. The
+    authors use Monte Carlo simulations to generate data under certain
+    conditions and assess the performance of the bootstrapped deattenuated
+    correlation. The authors investigate for bias and 95% CI coverage. Results
+    indicate that the bootstrap deattenuated correlation provided adequate
+    percentile CI coverage in all but three conditions. The bias-corrected and
+    accelerated CI, however, provided adequate coverage under all simulation
+    conditions.
+  accessed:
+    - year: 2018
+      month: 5
+      day: 30
+  author:
+    - family: Padilla
+      given: Miguel A.
+    - family: Veprinsky
+      given: Anna
+  citation-key: PadillaCorrelationAttenuationDue2012
+  container-title: Educational and Psychological Measurement
+  container-title-short: Educational and Psychological Measurement
+  DOI: 10.1177/0013164412443963
+  ISSN: 0013-1644
+  issue: '5'
+  issued:
+    - year: 2012
+      month: 10
+      day: 1
+  language: en
+  page: 827-846
+  source: SAGE Journals
+  title: >-
+    Correlation Attenuation Due to Measurement Error: A New Approach Using the
+    Bootstrap Procedure
+  title-short: Correlation Attenuation Due to Measurement Error
+  type: article-journal
+  URL: https://doi.org/10.1177/0013164412443963
+  volume: '72'
 
 - id: PearceCountingClimateConsensus2017
   abstract: >-
@@ -2249,6 +3586,60 @@ references:
   type: article-journal
   URL: https://link.springer.com/10.3758/s13428-021-01694-3
 
+- id: PintoEpistemicDiversityIndustrial2023
+  abstract: >-
+    Philosophers of science have argued that epistemic diversity is an asset for
+    the production of scientific knowledge, guarding against the effects of
+    biases, among other advantages. The growing privatization of scientific
+    research, on the contrary, has raised important concerns for philosophers of
+    science, especially with respect to the growing sources of biases in
+    research that it seems to promote. Recently, Holman and Bruner (2017) have
+    shown, using a modified version of Zollman (2010) social network model, that
+    an industrial selection bias can emerge in a scientific community, without
+    corrupting any individual scientist, if the community is epistemically
+    diverse. In this paper, we examine the strength of industrial selection
+    using a reinforcement learning model, which simulates the process of
+    industrial decision-making when allocating funding to scientific projects.
+    Contrary to Holman and Bruner’s model, in which the probability of success
+    of the agents when performing an action is given a priori, in our model the
+    industry learns about the success rate of individual scientists and updates
+    the probability of success on each round. The results of our simulations
+    show that even without previous knowledge of the probability of success of
+    an individual scientist, the industry is still able to disrupt scientific
+    consensus. In fact, the more epistemically diverse the scientific community,
+    the easier it is for the industry to move scientific consensus to the
+    opposite conclusion. Interestingly, our model also shows that having a
+    random funding agent seems to effectively counteract industrial selection
+    bias. Accordingly, we consider the random allocation of funding for research
+    projects as a strategy to counteract industrial selection bias, avoiding
+    commercial exploitation of epistemically diverse communities.
+  accessed:
+    - year: 2023
+      month: 5
+      day: 16
+  author:
+    - family: Pinto
+      given: Manuela Fernández
+    - family: Pinto
+      given: Daniel Fernández
+  citation-key: PintoEpistemicDiversityIndustrial2023
+  container-title: Synthese
+  container-title-short: Synthese
+  DOI: 10.1007/s11229-023-04158-7
+  ISSN: 1573-0964
+  issue: '5'
+  issued:
+    - year: 2023
+      month: 5
+      day: 15
+  language: en
+  page: '182'
+  source: Springer Link
+  title: Epistemic diversity and industrial selection bias
+  type: article-journal
+  URL: https://doi.org/10.1007/s11229-023-04158-7
+  volume: '201'
+
 - id: PlantingaWhenFaithReason2001
   author:
     - family: Plantinga
@@ -2304,6 +3695,69 @@ references:
   type: article-journal
   URL: http://www.sciencedirect.com/science/article/pii/S0039368115000680
   volume: '53'
+
+- id: ProctorGoldenHolocaustOrigins2012
+  abstract: >-
+    The cigarette is the deadliest artifact in the history of human
+    civilization. It is also one of the most beguiling, thanks to more than a
+    century of manipulation at the hands of tobacco industry chemists. In Golden
+    Holocaust, Robert N. Proctor draws on reams of formerly-secret industry
+    documents to explore how the cigarette came to be the most widely-used drug
+    on the planet, with six trillion sticks sold per year. He paints a harrowing
+    picture of tobacco manufacturers conspiring to block the recognition of
+    tobacco-cancer hazards, even as they ensnare legions of scientists and
+    politicians in a web of denial. Proctor tells heretofore untold stories of
+    fraud and subterfuge, and he makes the strongest case to date for a simple
+    yet ambitious remedy: a ban on the manufacture and sale of cigarettes.
+  author:
+    - family: Proctor
+      given: Robert N.
+  citation-key: ProctorGoldenHolocaustOrigins2012
+  ISBN: 978-0-520-95043-6
+  issued:
+    - year: 2012
+      month: 2
+      day: 28
+  language: en
+  number-of-pages: '779'
+  publisher: University of California Press
+  source: Google Books
+  title: >-
+    Golden Holocaust: Origins of the Cigarette Catastrophe and the Case for
+    Abolition
+  title-short: Golden Holocaust
+  type: book
+
+- id: RCoreTeamLanguageEnvironmentStatistical2021
+  accessed:
+    - year: 2018
+      month: 8
+      day: 27
+  author:
+    - literal: R Core Team
+  citation-key: RCoreTeamLanguageEnvironmentStatistical2021
+  issued:
+    - year: 2021
+  publisher: R Foundation for Statistical Computing
+  title: 'R: A Language and Environment for Statistical                   Computing'
+  type: document
+  URL: https://www.r-project.org/
+
+- id: RepresentativeSamplesFAQ2022
+  accessed:
+    - year: 2022
+      month: 7
+      day: 13
+  citation-key: RepresentativeSamplesFAQ2022
+  container-title: Prolific
+  issued:
+    - year: 2022
+      month: 3
+      day: 13
+  title: Representative samples FAQ
+  type: webpage
+  URL: >-
+    https://web.archive.org/web/20220313050153/https://researcher-help.prolific.co/hc/en-gb/articles/360019238413-Representative-samples-FAQ
 
 - id: SaffordFollowScientistsHow2021
   abstract: >-
@@ -2364,6 +3818,37 @@ references:
   type: article-journal
   URL: >-
     http://books.google.com/books?hl=en&lr=&id=CLl5HMhRWBsC&oi=fnd&pg=PA23&dq=epistemology+resuscitated+naomi+scheman&ots=2RBRcsu4dg&sig=h7xRsp8flRZFpsFW3rCfCw9R7C4
+
+- id: SjobergReproducibleSummaryTables2021
+  accessed:
+    - year: 2022
+      month: 7
+      day: 13
+  author:
+    - family: Sjoberg
+      given: Daniel D.
+    - family: Whiting
+      given: Karissa
+    - family: Curry
+      given: Michael
+    - family: Lavery
+      given: Jessica A.
+    - family: Larmarange
+      given: Joseph
+  citation-key: SjobergReproducibleSummaryTables2021
+  container-title: The R Journal
+  DOI: 10.32614/RJ-2021-053
+  ISSN: 2073-4859
+  issue: '1'
+  issued:
+    - year: 2021
+  language: en
+  page: 570-580
+  source: journal.r-project.org
+  title: Reproducible Summary Tables with the gtsummary Package
+  type: article-journal
+  URL: https://journal.r-project.org/archive/2021/RJ-2021-053/index.html
+  volume: '13'
 
 - id: SlaterPublicConceptionsScientific2024
   abstract: >-
@@ -2436,6 +3921,48 @@ references:
   type: article-journal
   URL: http://link.springer.com/10.1007/s10838-019-09447-9
   volume: '50'
+
+- id: SteegenIncreasingTransparencyMultiverse2016
+  abstract: >-
+    Empirical research inevitably includes constructing a data set by processing
+    raw data into a form ready for statistical analysis. Data processing often
+    involves choices among several reasonable options for excluding,
+    transforming, and coding data. We suggest that instead of performing only
+    one analysis, researchers could perform a multiverse analysis, which
+    involves performing all analyses across the whole set of alternatively
+    processed data sets corresponding to a large set of reasonable scenarios.
+    Using an example focusing on the effect of fertility on religiosity and
+    political attitudes, we show that analyzing a single data set can be
+    misleading and propose a multiverse analysis as an alternative practice. A
+    multiverse analysis offers an idea of how much the conclusions change
+    because of arbitrary choices in data construction and gives pointers as to
+    which choices are most consequential in the fragility of the result.
+  author:
+    - family: Steegen
+      given: Sara
+    - family: Tuerlinckx
+      given: Francis
+    - family: Gelman
+      given: Andrew
+    - family: Vanpaemel
+      given: Wolf
+  citation-key: SteegenIncreasingTransparencyMultiverse2016
+  container-title: Perspectives on Psychological Science
+  container-title-short: Perspectives on Psychological Science
+  DOI: 10.1177/1745691616658637
+  ISSN: 1745-6916
+  issue: '5'
+  issued:
+    - year: 2016
+      month: 9
+      day: 1
+  language: en
+  page: 702-712
+  source: SAGE Journals
+  title: Increasing Transparency Through a Multiverse Analysis
+  type: article-journal
+  URL: https://doi.org/10.1177/1745691616658637
+  volume: '11'
 
 - id: ThorpTeachPhilosophyScience2024
   accessed:
@@ -2653,6 +4180,112 @@ references:
     regardless of identity factors
   type: article-journal
   URL: https://doi.org/10.1177/0963662520977700
+
+- id: WickhamWelcomeTidyverse2019
+  abstract: >-
+    Wickham et al., (2019). Welcome to the Tidyverse. Journal of Open Source
+    Software, 4(43), 1686, https://doi.org/10.21105/joss.01686
+  accessed:
+    - year: 2022
+      month: 1
+      day: 30
+  author:
+    - family: Wickham
+      given: Hadley
+    - family: Averick
+      given: Mara
+    - family: Bryan
+      given: Jennifer
+    - family: Chang
+      given: Winston
+    - family: McGowan
+      given: Lucy D'Agostino
+    - family: François
+      given: Romain
+    - family: Grolemund
+      given: Garrett
+    - family: Hayes
+      given: Alex
+    - family: Henry
+      given: Lionel
+    - family: Hester
+      given: Jim
+    - family: Kuhn
+      given: Max
+    - family: Pedersen
+      given: Thomas Lin
+    - family: Miller
+      given: Evan
+    - family: Bache
+      given: Stephan Milton
+    - family: Müller
+      given: Kirill
+    - family: Ooms
+      given: Jeroen
+    - family: Robinson
+      given: David
+    - family: Seidel
+      given: Dana Paige
+    - family: Spinu
+      given: Vitalie
+    - family: Takahashi
+      given: Kohske
+    - family: Vaughan
+      given: Davis
+    - family: Wilke
+      given: Claus
+    - family: Woo
+      given: Kara
+    - family: Yutani
+      given: Hiroaki
+  citation-key: WickhamWelcomeTidyverse2019
+  container-title: Journal of Open Source Software
+  DOI: 10.21105/joss.01686
+  ISSN: 2475-9066
+  issue: '43'
+  issued:
+    - year: 2019
+      month: 11
+      day: 21
+  language: en
+  page: '1686'
+  source: joss.theoj.org
+  title: Welcome to the Tidyverse
+  type: article-journal
+  URL: https://joss.theoj.org/papers/10.21105/joss.01686
+  volume: '4'
+
+- id: WylieComingTermsValues2007
+  abstract: >-
+    It has long been thought that science is our best hope for realizing
+    objective knowledge, but that, to deliver on this promise, it must be value
+    free. Things are not so simple, however, as recent work in science studies
+    makes clear. The contributors to this volume investigate where and how
+    values are involved in science, and examine the implications of this
+    involvement for ideals of objectivity.
+  author:
+    - family: Wylie
+      given: Alison
+    - family: Hankinson Nelson
+      given: Lynn
+  citation-key: WylieComingTermsValues2007
+  container-title: Value-free science?
+  editor:
+    - family: Kincaid
+      given: Harold
+    - family: Dupré
+      given: John
+    - family: Wylie
+      given: Alison
+  issued:
+    - year: 2007
+  page: 58-86
+  publisher: Oxford University Press
+  title: >-
+    Coming to terms with the values of science: Insights from feminist science
+    studies scholarship
+  type: chapter
+  URL: http://books.google.com/books?id=9Nqppv6uq7oC
 
 - id: WynneSheepfarmingChernobylCase1989
   author:

@@ -8,7 +8,7 @@ prompts_gt = read_sheet('https://docs.google.com/spreadsheets/d/1EuQbThPe7XCwU0S
     mutate(modified = 
                if_else(`original text` != `finalized text` &
                            !is.na(`finalized text`), 
-                       '✓', 
+                       'X', 
                        '')) |> 
     gt() |> 
     sub_missing(missing_text = '') |> 
@@ -18,3 +18,4 @@ prompts_gt = read_sheet('https://docs.google.com/spreadsheets/d/1EuQbThPe7XCwU0S
 write_rds(prompts_gt, here('out', '03', '06_prompts.Rds'))
 gtsave(prompts_gt, here('out', '03', '06_prompts.html'))
 gtsave(prompts_gt, here('out', '03', '06_prompts.pdf'))
+gtsave(prompts_gt, here('out', '03', '06_prompts.tex'))

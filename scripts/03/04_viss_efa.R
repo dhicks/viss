@@ -14,7 +14,10 @@ library(here)
 library(glue)
 library(assertthat)
 
+source(here('R', 'highlight_cells.R'))
+
 data_dir = here('data', '03')
+out_dir = here('out', '03')
 
 ## Load data ----
 ## NB KMO and Lavaan errors indicate dataset is too small for EFA/CFA split
@@ -79,7 +82,7 @@ communalities = map(efa_fits, ~ {.x |>
 
 ## Total variance explained
 efa_fits[[1]]$Vaccounted
-2map_dbl(efa_fits[2:6], 
+map_dbl(efa_fits[2:6], 
     ~ .$Vaccounted %>%
         .['Cumulative Var',] |> 
         max()) |> 
@@ -174,24 +177,19 @@ loadings_df = efa_fits |>
                              .fn = ~ glue('{.x}_{y}'))) |> 
     reduce(~ full_join(.x, .y, by = 'variable'))
 
-loadings_df |> 
+loadings_gt = loadings_df |> 
     pivot_longer(!variable, names_to = 'latent', values_to = 'value') |> 
-    filter(abs(value) > .3) |>
+    # filter(abs(value) > .3) |>
     inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
     select(!latent) |> 
     pivot_wider(names_from = 'label', values_fro = 'value', 
                 names_sort = TRUE) |> 
     relocate(contains('aims.3'), .after = textbook_3) |> 
     gt() |> 
-    fmt_number(columns = !variable, 
-               decimals = 2) |> 
-    ## Surprisingly, gt doesn't seem to have any way to apply conditional formatting to individual cells based on their content! 
-    # tab_style(
-    #     style = cell_text(weight = "bold"),  # apply bold style
-    #     locations = cells_body(
-    #         columns = !variable, 
-    #         rows = everything())
-    # )
+    fmt_number(columns = !variable,
+               decimals = 2) |>
+    highlight_cells() |> 
+    highlight_cells(cell_style = cell_fill('#F0F0F0')) |> 
     sub_missing(missing_text = '') |> 
     tab_spanner_delim(delim = '_') |> 
     tab_style(
@@ -199,7 +197,12 @@ loadings_df |>
             sides = c('left'),
             # weight = px(.5)
         ),
-        locations = cells_body(columns = c(5, 10, 11, 15, 17)))
+        locations = cells_body(columns = c(2, 5, 10, 11, 15, 17)))
+loadings_gt
+
+gtsave(loadings_gt, here(out_dir, '04_loadings.html'))
+gtsave(loadings_gt, here(out_dir, '04_loadings.pdf'))
+write_rds(loadings_gt, here(out_dir, '04_loadings.Rds'))
 
 ## Scores and demographics ----
 ## TODO: move to separate script

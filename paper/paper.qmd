@@ -31,7 +31,9 @@ keywords: [keyword1, keyword2, keyword3]
 format:
     apaquarto-html: default
     apaquarto-docx: default
-    apaquarto-pdf: default
+    apaquarto-pdf: 
+        keep-tex: false
+        pdf-engine: xelatex
     apaquarto-typst: default
     
 bibliography: VISS.yaml
@@ -62,8 +64,9 @@ OA agreement: library covers first $1k, 20% off remaining APC
 #| include: false
 library(tidyverse)
 library(knitr)
+library(gt)
+library(here)
 ```
-
 
 # Introduction #
 
@@ -79,7 +82,7 @@ The aim of the current study is to develop a Values in Science Scale (VISS) that
 
 In the twentieth century, philosophy was understood as a purely non-empirical discipline, strictly separated from history, sociology, and psychology *[Reichenbach]* and using either formal methods (logic, probability, game theory) or "armchair" reflection on language.  However, starting in the 1970s, philosophers of science began to engage more closely with sibling empirical fields, giving rise to approaches such as philosophy of science in practice — which often uses ethnographic methods *[cite]* — and integrated history and philosophy of science, based on the conviction that "the common goal of understanding of science can be pursued by dual, interdependent means" *[https://integratedhps.org/about.html]*.  
 
-Perhaps for this reason, contemporary philosophers of science are not shy about basing their analysis on empirical claims about public views of normative relationship between science and society.  For example, philosophers of science have argued that public scientific controversies (e.g., over climate change or vaccinations) can arise, in part, from a mismatch between the widely-held ideal of value-free science (often abbreviated as VFI) and the reality that science is necessarily value-laden [@HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2019; @HolmanNewDemarcationProblem2022].  On the one hand, scientists, policymakers, and members of the general public all (are assumed to) endorse the idea that social, political, and ethical values should not influence the evaluation and acceptance of hypotheses (the so-called "core" of scientific research).  On the other hand, decades of empirical work in history, philosophy, and social studies of science has shown not only that such values have exactly this kind of influence, but that that values have essential and positive roles to play even in the evaluation and acceptance of hypotheses *[cites]*.  "Merchants of doubt" [@OreskesScientificConsensusClimate2004; @FernandezPintoKnowBetterNot2017] exploit this mismatch, pointing to actual influences of values as a way to undermine trust or confidence in scientific findings.  @FernandezPintoLegitimizingValuesRegulatory2019 argue that, in this way, VFI is "self-undermining." 
+Perhaps for this reason, contemporary philosophers of science are not shy about basing their analysis on empirical claims about public views of normative relationship between science and society.  For example, philosophers of science have argued that public scientific controversies (e.g., over climate change or vaccinations) can arise, in part, from a mismatch between the widely-held ideal of value-free science (often abbreviated as VFI) and the reality that science is necessarily value-laden [@HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022].  On the one hand, scientists, policymakers, and members of the general public all (are assumed to) endorse the idea that social, political, and ethical values should not influence the evaluation and acceptance of hypotheses (the so-called "core" of scientific research).  On the other hand, decades of empirical work in history, philosophy, and social studies of science has shown not only that such values have exactly this kind of influence, but that that values have essential and positive roles to play even in the evaluation and acceptance of hypotheses *[cites]*.  "Merchants of doubt" [@OreskesScientificConsensusClimate2004; @FernandezPintoKnowBetterNot2017] exploit this mismatch, pointing to actual influences of values as a way to undermine trust or confidence in scientific findings.  @FernandezPintoLegitimizingValuesRegulatory2019 argue that, in this way, VFI is "self-undermining." 
 
 The scholarly literature on public scientific controversies includes similar appeals to public ideas about consensus and dissent [@OreskesScientificConsensusClimate2004; @CookQuantifyingConsensusAnthropogenic2013; @JohnEpistemicTrustEthics2017; @MyersConsensusRevisitedQuantifying2021]; concerns about paternalism, technocracy, or elitism [@WynneSheepfarmingChernobylCase1989; @JordanTrustworthinessResearchParadigm2011; @LargentVaccineDebateModern2012; @NavinValuesVaccineRefusal2015; @GoldenbergVaccineHesitancyPublic2021]; conflicts of interest, manufacturing doubt or certainty [@ElliottSciencePolicyTransparency2014; @FernandezPintoCommercialInterestsErosion2020; @GoldenbergVaccineHesitancyPublic2021]; and science's historical and/or contemporary role in oppression [@SchemanEpistemologyResuscitatedObjectivity2001; @WashingtonMedicalApartheidDark2008; @McHughMoreSkinDeep2011; @NelsonBodySoulBlack2011; @GrasswickUnderstandingEpistemicTrust2018;  @GoldenbergVaccineHesitancyPublic2021].  Like appeals to the VFI mismatch, these claims are generally made with little or no evidence that members of the public actually hold the views in question.  
 
@@ -92,7 +95,7 @@ The current project aimed to fill the gap by developing a survey instrument to m
 
 Initial development of the list was conducted by [author1], a philosopher of science, who assembled 3 prompts based on each of 12 different major issues or areas of research in the philosophical literature.  We emphasize that these prompts are theoretically-informed but were not developed to capture *a priori* latent variables.  For example the three "aims of science" prompts state that the aims of science are knowledge for its own sake, the protection of human health, and economic growth.  We do not expect responses on these items to be strongly correlated, and so do not expect exploratory factor analysis to indicate that they form a "aims of science" latent variable.  Some prompts were based on other instruments *[Toolbox, Weisberg et al. NOS scale]* or quotations from scholarly sources; others were written by [author1] to capture a key idea.  
 
-Each item was a declarative sentence of approximately 15-20 words, and participants were asked to agree or disagree with each item on a 5-point Likert scale.  
+The first two columns of @tbl-viss contain the original items from the first version of VISS. Each item was a declarative sentence of approximately 15-20 words, and participants were asked to agree or disagree with each item on a 5-point Likert scale.  
 
 We briefly review the relevant philosophy of science literature for each of the 12 issues/areas.  
 
@@ -103,7 +106,7 @@ Conflicts of interest
 : Across numerous controversies, scholars and other analysts have identified and criticized the influence of commercial interests on both academic and government research: tobacco [@ProctorGoldenHolocaustOrigins2012], climate [@OreskesMerchantsDoubtHow2011], pesticides [@DurantIgnoranceLoopsHow2020], chemical safety [@CranorHowLawPromotes2020], pharmaceuticals [@LexchinThoseWhoHave2011], workplace safety [@MichaelsDoubtTheirProduct2008].  Several philosophers of science have studied the effects of conflicts of industry and preferential industry funding on the scientific community as a whole using agent-based models [@HolmanPromisePerilsIndustryfunded2018; @OConnorMisinformationAgeHow2019; @PintoEpistemicDiversityIndustrial2023].  
 
 Consensus
-: Especially in the context of climate change, several authors have observed that climate skeptics have appealed to "Galileo narratives" and otherwise rejected the idea of a consensus as anti-scientific [@BiddleClimateSkepticismManufacture2015; @OreskesResponseOreskesCounting2017; @KovakaClimateChangeDenial2019].  
+: Especially in the context of climate change, several authors have observed that climate skeptics have appealed to "Galileo narratives" and otherwise rejected the idea of a consensus as anti-scientific [@BiddleClimateSkepticismManufacture2015; @OreskesResponseOreskesCounting2017; @KovakaClimateChangeDenial2021].  
 
 Facts vs. values
 : Empiricists have traditionally followed David Hume in making a sharp distinction between "facts" and "values."  Values are often taken to be non-cognitive, that is, logically independent from evidence and reason.  Philosophers of science in the pragmatist, feminist, and Marxist traditions have challenged the fact/value distinction, and argued that it leads to inappropriately treating (supposedly non-cognitive) values as polluting or corrupting science, that is, the value-free ideal [@AndersonUsesValueJudgments2004; @BrownScienceMoralImagination2020; @CloughUsingValuesEvidence2020].  
@@ -121,16 +124,16 @@ Pluralism
 : Students are often still taught the crude model of "the scientific method," and many scientists endorse a simple universalism — the idea that all areas of science use the same method, such as Popper's falsificationism — in their reflections on how science works.  @MercerWhyPopperCan2016 observes both climate scientists and skeptics appealing to Popper in the climate controversy, and Oreskes [@LloydClimateModellingPhilosophical2017 ch. 2] discusses the ways that climate science is an awkward fit for a simple universalist conception of science.  
 
 Scientism
-: Scholars in STS have long observed publics reacting against exaggerated claims of scientific expertise [@WynneSheepfarmingChernobylCase1989; @EpsteinImpureScience1996; @FrickelUndoneScienceCharting2010].  This set of questions includes prompts for both "weak" and "strong" scientism [@MizrahiWhatBadScientism2017a]. 
+: Scholars in STS have long observed publics reacting against exaggerated claims of scientific expertise [@WynneSheepfarmingChernobylCase1989; @EpsteinImpureScience1996; @FrickelUndoneScienceCharting2010].  This set of questions includes prompts for both "weak" and "strong" scientism [@MizrahiWhatBadScientism2017]. 
 
 Standpoint
 : Standpoint epistemology is a longstanding challenge to the value-free ideal, with a history that runs through feminist philosophy of science and critical race theory to Marxist epistemology [@HardingWhoseScienceWhose1991; @WylieComingTermsValues2007; @CrasnowFeministPhilosophyScience2013].  Standpoint is based on two claims, the situated knowledge thesis and idea that marginalized groups are epistemically advantaged.  
 
 Technocracy
-: Technocracy is closely related to scientism.  Where scientism is an epistemological view — science is better/the only way of producing *knowledge* — we understand technocracy as a view about *power*.  
+: Technocracy is closely related to scientism.  Where scientism is an epistemological view — science is better/the only way of producing *knowledge* — we understand technocracy as a view about *power*.  *[todo]*
 
 Value-free ideal
-: These prompts include the value-free ideal, along with another aspect of objectivity — imagination and creativity — and the idea that scientists are especially "objective." 
+: These prompts include the value-free ideal, along with another aspect of objectivity — imagination and creativity — and the idea that scientists are especially "objective." *[todo]*
 
 
 
@@ -152,7 +155,7 @@ Anonymized original data and reproducible code are available at <https://github.
 
 ## Materials
 
-This study used the initial version of the VISS items, as described above.  Data was collected concurrently with a closely related project [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  
+This study used the initial version of the VISS items, as described above and shown in the first two columns of @tbl-viss.  Data was collected concurrently with a closely related project [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  
 
 After giving informed consent, participants were presented sequentially with the VISS instrument, the experiment described in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->], a subset of the OSI 2.0 [@KahanOrdinaryScienceIntelligence2017], and a series of demographic questions: age, gender identity and lived gender [questions 2 and 3 of the Multidimensional Sex/Gender Measure (MSGM)\; @BauerTransgenderinclusiveMeasuresSex2017], race-ethnicity, religious affiliation and frequency of attendance, an 8-step political spectrum scale (3 liberal, 1 centrist, 3 conservative, and a write-in option), partisan political affiliation, and highest degree (less than high school; high school or some college; Bachelor's degree or higher).  Questions were presented in random order for the VISS instrument and OSI 2.0 subset.  
 
@@ -201,7 +204,36 @@ The research team (at that point comprising [author1] and [author2]) discussed t
 
 
 # Study 2
-{{< include "study 2.md" >}}
+
+## Materials
+
+[author1] selected a short list of 18 items to focus on moving forward.  This selection was based, in part, on the EFA results from study 1:  items that did not load on to any factors were dropped, as were items that loaded on to the scientism factor.  The scientism factor was dropped in part because of overlap with a scale intended to measure scientism specifically [@LukicDelineatingScientismScience2023]; and because we came to believe that, for the purposes of understanding the dynamics of public scientific controversies, scientism could be reduced to the idea that science is especially trustworthy.  
+
+[author3] and [author4] joined the project in January 2024, and all four authors authors together reviewed this shorter list, making initial revisions based on our impressions of which items seemed to be vague or otherwise difficult to understand.  Partway through the iterative data collection and analysis process, a 19th item was added to the list. 
+
+For this study, items were arranged into 3 blocks of 5-7 items each, roughly corresponding to latent variables identified in the study 1 EFA.  In Qualtrics, we prepared a survey in which participants were randomly allocated to a single block.  Participants were presented with the item text, a 5-point agree/disagree Likert scale (later expanded to a 7-point scale), and a free text response box.  They were instructed to "Please indicate how much you agree with each of the following statements. Then, in the text box, please write a few sentences explaining why you answered the way you did." 
+
+For study 2, besides participant responses to the items, no other data was collected or used.  
+
+This study was to determined to be exempt from IRB review under Category 2.(i) by [author 1], and self-exempt determination was acknowledged by the UC Merced IRB on February 27, 2024 (protocol #UCM2024-30). 
+
+## Data
+
+Data collection and analysis was conducted iteratively, alternating between collection and analysis, until saturation was reached for all items across two consecutive iterations.  Ultimately, 5 iterations were run, all during March 2024.  
+
+In each iteration, participants were recruited on Prolific.  In iterations 1-3, participants had to be adult US residents; no other screeners were used.  We set the target quota for 10 participants per block; except in iteration 3, which had only a single block (a subset of items that had not yet achieved saturation) and for which 15 participants were recruited.  Iterations proceeded until all items had achieved saturation.  Based on study 1, we knew the platform tended to undersample political conservatives and participants with only a high school education.  Because there is significant interest in conservative trust in science — or lack therefore — we wanted to be confident that the VISS would be useful in studying these groups.  We therefore ran two final iterations, one for each of these groups, using all 3 blocks, 10 participants per block, and an additional screener for the target group, to confirm saturation of all items for these subpopulations. 
+
+Across 5 iterations, we collected a total of 875 text responses from 141 participants.  
+
+## Analysis
+
+After the quota was achieved for a given iteration, responses were retrieved from Qualtrics in spreadsheet form and analyzed by all authors, first independently and together in weekly lab group meetings.  We focused on responses that indicated confusion or uncertainty, either explicit or implied, and responses that deviated from the intended meaning of the item.  
+
+If qualitative analysis indicated that an item was frequently misinterpreted or regarded as confusing, all authors worked together to develop alternative wording.  This rewording was then used in future iterations.  An item was considered to have achieved "saturation" when all four authors agreed that the responses across two iterations indicated that it was understood by the participants as intended.  
+
+## Results
+
+The final items and text are given in the third and fourth columns of @tbl-viss. 
 
 
 # Study 3
@@ -291,3 +323,23 @@ The patterns of correlation in @fig-trust challenge the common idea that VFI pro
 
 
 # References
+
+
+
+# Appendix
+# The Value in Science Scale (VISS) {#sec-viss}
+
+```{r}
+#| label: tbl-viss
+#| tbl-cap: "VISS items. Original item IDs and text as used in Study 1; finalized item IDs and text as refined in Study 2.  Column "modified" indicates that the text was modified in the course of Study 2."
+ref = 100/7
+here('out', '03', '06_prompts.Rds') |>
+    read_rds() |> 
+    cols_width(contains('ID') ~ pct(ref), 
+               contains('text') ~ pct(2*ref), 
+               modified ~ pct(ref)) |>
+    opt_row_striping() |>
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = cells_column_labels())
+```
+
