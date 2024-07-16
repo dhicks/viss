@@ -9,6 +9,7 @@ library(gghighlight)
 library(lavaan)
 library(ggpubr)
 library(ggforce)
+library(gt)
 
 library(visdat)
 library(grid)
@@ -17,10 +18,12 @@ library(plotly)
 library(here)
 
 data_dir = here('data', '01')
+out_dir = here('out', '01')
 
 source(here('R', 'vis_labels.R'))
 source(here('R', 'loading_table.R'))
 source(here('R', 'scores.R'))
+source(here('R', 'highlight_cells.R'))
 
 ## Should the script overwrite existing loadings tables? 
 overwrite_loading_tables = FALSE
@@ -74,6 +77,35 @@ six_clean
 
 communalities <- 1 - apply(six_factor$loadings^2,1,sum)
 communalities
+
+## gt loadings table for paper ----
+loadings_gt = six_factor |> 
+    ## Extract loadings and tidy
+    loadings() |> 
+    unclass() |> 
+    as_tibble(rownames = 'variable') |> 
+    rename('MR1\ncynicism' = MR1, 
+           'MR5\nscientism' = MR5, 
+           'MR4\nVFI' = MR4,
+           'MR2\ntextbook' = MR2,
+           'MR6\nVIS' = MR6,
+           'MR3\npower' = MR3) |> 
+    ## Communalities
+    mutate(communality = communalities) |> 
+    gt() |> 
+    fmt_number(columns = !variable,
+               decimals = 2) |> 
+    ## Cell highlighting helper; 
+    ## uses a default threshold of ±0.3
+    highlight_cells(col_select = starts_with('MR')) |> 
+    highlight_cells(col_select = starts_with('MR'), 
+                    cell_style = cell_fill('#F0F0F0'))
+loadings_gt
+
+write_rds(loadings_gt, here(out_dir, '03_loadings_gt.Rds'))
+gtsave(loadings_gt, here(out_dir, '03_loadings_gt.html'))
+gtsave(loadings_gt, here(out_dir, '03_loadings_gt.pdf'))
+gtsave(loadings_gt, here(out_dir, '03_loadings_gt.tex'))
 
 ## CFA ----
 #lavaan package for CFA

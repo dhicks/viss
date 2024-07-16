@@ -167,7 +167,7 @@ efa_scores = imap(efa_fits, scores) |>
 loadings_to_df = function(fit) {
     fit |> 
         loadings() |> 
-        magrittr::set_class('matrix') |> 
+        unclass() |> 
         as_tibble(rownames = 'variable')
 }
 loadings_df = efa_fits |> 
