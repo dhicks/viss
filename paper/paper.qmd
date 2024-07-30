@@ -1,7 +1,7 @@
 ---
 title: "Developing Measures of Public Perceptions of Values in Science"
 author: 
-    - name: Daniel J. Hicks
+    - name: D. J. Hicks
       corresponding: true
       orcid: 0000-0001-7945-4416
       email: dhicks4@ucmerced.edu
@@ -32,9 +32,12 @@ format:
     apaquarto-html: default
     apaquarto-docx: default
     apaquarto-pdf: 
-        keep-tex: false
+        keep-tex: true
         pdf-engine: xelatex
-    apaquarto-typst: default
+        include-in-header:
+        - text: |
+            \usepackage{pdflscape}
+            \usepackage{adjustbox}
     
 bibliography: VISS.yaml
 ---
@@ -97,43 +100,8 @@ Initial development of the list was conducted by [author1], a philosopher of sci
 
 The first two columns of @tbl-viss contain the original items from the first version of VISS. Each item was a declarative sentence of approximately 15-20 words, and participants were asked to agree or disagree with each item on a 5-point Likert scale.  
 
-We briefly review the relevant philosophy of science literature for each of the 12 issues/areas.  
+We briefly review the relevant philosophy of science literature for each of the 12 issues/areas in @sec-lit-review.  
 
-Aims of science
-: The so-called "aims approach" proposes, as an alternative to the value-free ideal, that the non-epistemic aims of science can legitimately influence the evaluation and acceptance of hypotheses.  [@ElliottNonepistemicValuesMultiple2014; @HicksNewDirectionScience2014; @IntemannDistinguishingLegitimateIllegitimate2015; @PotochnikDiverseAimsScience2015]
-
-Conflicts of interest
-: Across numerous controversies, scholars and other analysts have identified and criticized the influence of commercial interests on both academic and government research: tobacco [@ProctorGoldenHolocaustOrigins2012], climate [@OreskesMerchantsDoubtHow2011], pesticides [@DurantIgnoranceLoopsHow2020], chemical safety [@CranorHowLawPromotes2020], pharmaceuticals [@LexchinThoseWhoHave2011], workplace safety [@MichaelsDoubtTheirProduct2008].  Several philosophers of science have studied the effects of conflicts of industry and preferential industry funding on the scientific community as a whole using agent-based models [@HolmanPromisePerilsIndustryfunded2018; @OConnorMisinformationAgeHow2019; @PintoEpistemicDiversityIndustrial2023].  
-
-Consensus
-: Especially in the context of climate change, several authors have observed that climate skeptics have appealed to "Galileo narratives" and otherwise rejected the idea of a consensus as anti-scientific [@BiddleClimateSkepticismManufacture2015; @OreskesResponseOreskesCounting2017; @KovakaClimateChangeDenial2021].  
-
-Facts vs. values
-: Empiricists have traditionally followed David Hume in making a sharp distinction between "facts" and "values."  Values are often taken to be non-cognitive, that is, logically independent from evidence and reason.  Philosophers of science in the pragmatist, feminist, and Marxist traditions have challenged the fact/value distinction, and argued that it leads to inappropriately treating (supposedly non-cognitive) values as polluting or corrupting science, that is, the value-free ideal [@AndersonUsesValueJudgments2004; @BrownScienceMoralImagination2020; @CloughUsingValuesEvidence2020].  
-
-Fallibilism
-: Historians of science have noted that concerns about demarcating science from pseudo-science arose in connection with both the expansion of science's social authority and fallibilism, the idea that knowledge is never certain [@GierynBoundaryWorkDemarcationScience1983; @LaudanDemiseDemarcationProblem1983].  Uncertainty is a significant factor in questions about scientific authority in the climate controversy [@BrownDisconnectProblemScientific2016] and the argument from inductive risk starts with the recognition that empirical claims are never certain.  
-
-Inductive risk
-: The argument from inductive risk challenges the value-free ideal as follows:  scientists should anticipate the non-epistemic downstream consequences of error (eg, accepting a false hypothesis); this requires appealing to social, political, and ethical values; and so these values should influence the core of inquiry [@DouglasSciencePolicyValuefree2009].  This argument has been enormously influential in philosophy of science over the last decade+, transforming science, values, and policy from a marginal topic into a major one.  The prompts here include a general and specific version of the idea of inductive risk, along with a prompt on the social responsibilities of scientists that @DouglasSciencePolicyValuefree2009 examines in depth.  
-
-Non-subjectivity
-: "Objectivity" is highly polysemous [@LloydObjectivityDoubleStandard1995; @DouglasSciencePolicyValuefree2009 ch. 6].  Douglas defines "value-free objectivity" as "all values (or all subjective or “biasing” influences) are banned from the reasoning process" [@DouglasSciencePolicyValuefree2009 122].  We focus on assumptions, speculation, interpretation, and judgment as subjective aspects of inquiry that might be independent of ethical, social, and political values.  
-
-Pluralism
-: Students are often still taught the crude model of "the scientific method," and many scientists endorse a simple universalism — the idea that all areas of science use the same method, such as Popper's falsificationism — in their reflections on how science works.  @MercerWhyPopperCan2016 observes both climate scientists and skeptics appealing to Popper in the climate controversy, and Oreskes [@LloydClimateModellingPhilosophical2017 ch. 2] discusses the ways that climate science is an awkward fit for a simple universalist conception of science.  
-
-Scientism
-: Scholars in STS have long observed publics reacting against exaggerated claims of scientific expertise [@WynneSheepfarmingChernobylCase1989; @EpsteinImpureScience1996; @FrickelUndoneScienceCharting2010].  This set of questions includes prompts for both "weak" and "strong" scientism [@MizrahiWhatBadScientism2017]. 
-
-Standpoint
-: Standpoint epistemology is a longstanding challenge to the value-free ideal, with a history that runs through feminist philosophy of science and critical race theory to Marxist epistemology [@HardingWhoseScienceWhose1991; @WylieComingTermsValues2007; @CrasnowFeministPhilosophyScience2013].  Standpoint is based on two claims, the situated knowledge thesis and idea that marginalized groups are epistemically advantaged.  
-
-Technocracy
-: Technocracy is closely related to scientism.  Where scientism is an epistemological view — science is better/the only way of producing *knowledge* — we understand technocracy as a view about *power*, namely, that scientists or other experts should have greater political/policymaking power than members of the general public.  Technocratic-like views are often justified by appeal to scientistic-like views, as in some epistemic critiques of democracy [@BrennanDemocracy2017\; for a reply see @ReissExpertiseAgreementNature2019].  Some philosophers have argued that abandoning the value-free ideal would (undesirably) promote technocracy [@MitchellPrescribedProscribedValues2004; @SteeleScientistQuaPolicy2012; @BetzDefenceValueFree2013 207; @KappelProperRoleScience2014\; for a reply see @LuskDoesDemocracyRequire2021]. 
-
-Value-free ideal
-: These prompts include the value-free ideal, along with another aspect of objectivity — imagination and creativity — and the idea that scientists are especially "objective."  As discussed above, many HPSTS scholars have pointed to a purported mismatch between public expectations of the value-free ideal and the value-laden reality to explain public scientific controversies. 
 
 
 
@@ -179,7 +147,9 @@ Despite Prolific claiming to provide a "representative" sample, exploratory data
 In particular, because political partisanship plays a significant role in many prominent public scientific controversies [though not all\; @FunkAmericansPoliticsScience2015], we determined that it would be important to validate a finalized VISS across the political spectrum before putting it to use. 
 
 
-### Descriptive analysis
+### Individual item analysis
+
+The distribution of responses to individual items — e.g., acceptance of the value-free ideal — was of key interest in this study.  For the sake of space, we defer this analysis to study 3, which used the finalized, construct validated VISS items.  @fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  
 
 
 ### Factor analysis
@@ -188,7 +158,17 @@ To examine the underlying dimensionality of the Values in Science scale, we spli
 
 We conducted our factor analysis on the first sub-sample using the psych package (version 2.19) in R. Parallel analysis indicated we should retain six factors for an exploratory factor analysis, although only three factors had eigenvalues greater than 1.0. As such, we computed solutions for a three and a six factor solution using varimax rotation, deciding to retain items that had at least |.3| factor loading on only one of the resulting factors. The six-factor solution explained 33% of the variance and was preferred because the resulting factor structure was more easily interpretable than the three factor solution, which only explained 25% of the variance.
 
-This EFA retained 29 out of the original 36 items. The retained items, factor loadings, and communalities are all shown in *[Table #]*. The first identified factor contains six items that cohere around scientistic perceptions of science, elevating the status of science as superior to other knowledge-production efforts.  We labelled this factor *scientism*.  The second factor identified contains three items that emphasize the role of science within society and *values in science*. The third factor contains eight items that, together, appear to represent participants' level of *cynicism* regarding the credibility of scientists and the scientific community. The fourth factor contains three items that tap into participants' perceptions of the social *power* dynamics within the scientific community. The fifth factor identified contains five items that reflect perceptions of science as constrained to a relatively narrow set of methods and practices in order to be counted as science, i.e., a mythological "the" scientific method as presented in a *textbook*. The final factor identified contains four items that appear to tap into perceptions of science in line with the traditional *value-free ideal*. 
+This EFA retained 29 out of the original 36 items. The retained items, factor loadings, and communalities are all shown in @tbl-efa-1. The first identified factor contains six items that cohere around scientistic perceptions of science, elevating the status of science as superior to other knowledge-production efforts.  We labelled this factor *scientism*.  The second factor identified contains three items that emphasize the role of science within society and *values in science*. The third factor contains eight items that, together, appear to represent participants' level of *cynicism* regarding the credibility of scientists and the scientific community. The fourth factor contains three items that tap into participants' perceptions of the social *power* dynamics within the scientific community. The fifth factor identified contains five items that reflect perceptions of science as constrained to a relatively narrow set of methods and practices in order to be counted as science, i.e., a mythological "the" scientific method as presented in a *textbook*. The final factor identified contains four items that appear to tap into perceptions of science in line with the traditional *value-free ideal*. 
+
+```{r}
+#| label: tbl-efa-1
+#| tbl-cap: 'Factor loadings and communalities from study 1 EFA, six factor solution.'
+here('paper', 'tbl', '03_loadings_gt.Rds') |>
+    read_rds() |>
+    cols_width(everything() ~ pct(100/8)) |>
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = cells_column_labels())
+```
 
 For cross-validation purposes, we ran a CFA on the second sub-sample using the factor structure extracted from the EFA. We carried out the CFA with maximum likelihood estimation using the lavaan package (version 0.6-10) in R. Fit indices, unfortunately, revealed the model was insufficient to adequately fit the data, $\chi^2(308) = 981.10, p < .001$, CFI = .622, AGFI = .817, RMSEA = .071, and SRMR = .086. Typically, values exceeding .90 for CFI and AGFI indicate acceptable fit and values below .05 for RMSEA and SRMR indicate acceptable fit (Hu & Bentler, 1999).
 
@@ -272,6 +252,8 @@ Exploratory data analysis indicated high completion rates (98% or greater) for a
 
 ![Distribution of responses to VISS items, ordered by total agreement.  Vertical dashed lines indicate 20%, 50%, and 80%.](img/02_likert.png){#fig-03-likert}
 
+@fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  Rates of agreement were generally not statistically significant; and even statistically significant differences were small. The largest difference was for aims.2, with 75% agreement in study 1 and 82% in study 3; followed by pluralism.1, with 19% vs. 26%.  All other differences were 5 percentage points or less in absolute value.  
+
 #### The value-free ideal
 
 As discussed in the introduction, the value-free ideal (VFI) plays a significant role in a number of explanations of public scientific controversies put forward by philosophers of science.  VISS contains four items that correspond to the value-free ideal — nonsubj.1 and .2 and vfi.1 and .2.  It also contains four items corresponding to philosophical critiques of this ideal.  aims.2 corresponds to the "aims approach" to values in science, which argues that science has non-epistemic aims — such as protecting human health and the environment — and that such aims can legitimate influence all aspects of research *[cite]*.  ir corresponds to the argument from inductive risk.  According to this argument, because and insofar as science has the potential to cause harmful social consequences, it's appropriate to require greater evidence (or allow weaker evidence) based on the severity of those consequences [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021].  stdpt corresponds to standpoint epistemology, a theory associated with feminist, Marxist, and critical race analyses of science *[cites]*.  According to standpoint epistemology, members of marginalized groups can be in a position to better identify and understand oppressive social phenomena than members of privileged groups.  Finally, value.conflict corresponds to an unusual convergence in two philosophical debates, one in feminist philosophy of science and the other in the relationship between science and religion.  Given that oppressive values (such as misogyny and androcentrism) have and continue to influence some lines of scientific research, some feminist philosophers — though certainly not all — argue that these values provide a sufficient grounds for feminists to question or reject the claims coming out of this research *[cites]*.  @PlantingaWhenFaithReason2001 defends a similar position in the context of debates over religion and evolution, arguing that "There is ... a battle between the Christian community and the forces of unbelief," "that important cultural forces such as science are not neutral with respect to this conflict," and so "we Christians must think about the matter at hand from a Christian perspective; we need Theistic Science" (30).  
@@ -294,6 +276,25 @@ As in study 1, we intended to conduct an EFA and CFA of VISS responses, using th
 Parallel analysis suggested retaining four factors, with two factors having an eigenvalue greater than 1.0.  In the spirit of multiverse analysis [@SteegenIncreasingTransparencyMultiverse2016] we computed solutions with 1 through 6 factors using varimax rotation, analyzing all six solutions in parallel.  In order, the models explained 14% of the variance, followed by 23%, 27%, 32%, 36%, and 37%.  
 
 Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in *[table]*, grouped by interpretive label.  The models retained varying numbers of from items, from 9 (1-factor) to 18 (6-factor).  The only item that did not load onto a latent factor in any model was value.conflict, "When scientific findings conflict with my core values, it's appropriate to be especially skeptical."  *[table should also include communalities?]*
+
+```{=latex}
+\begin{landscape}
+```
+```{r}
+#| label: tbl-efa-3
+#| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors.  Latent factors are grouped by interpretive label across solutions.'
+#| column: page
+here('paper', 'tbl', '04_loadings.Rds') |>
+    read_rds() |>
+    cols_width(starts_with('textbook + c') ~ pct(100/22 + 2)) |>
+    tab_options(table.font.size = 10) |>
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = list(cells_column_labels(), 
+                               cells_column_spanners()))
+```
+```{=latex}
+\end{landscape}
+```
 
 Examining the loadings for all models as once indicated consistent *[clusters]* of items.  The most consistent, occurring in some form across all six models, was the *textbook* perception of science:  uniform agreement (consensus.2), fixed (fallible), based on laboratory experiments (pluralism.1), and not relying on imagination or creativity (vfi.2).  The second most common theme was *cynicism*, which occurred distinctly in five of the six models, and also appeared (mixed with textbook items) in the one-factor model.  This theme consistently included concerns about conflicts of interest (coi.1 and coi.2), the idea that the scientific consensus is non-epistemic (consensus.1), and the idea that scientific change is an indication of error (fallible.2).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1) and that scientists use the "same strict requirements" for assessing hypotheses (pluralism.3).  
 
@@ -326,20 +327,77 @@ The patterns of correlation in @fig-trust challenge the common idea that VFI pro
 
 
 
-# Appendix
-# The Value in Science Scale (VISS) {#sec-viss}
+\appendix
+\clearpage
+\pagenumbering{arabic}
+\renewcommand*{\thepage}{S\arabic{page}}
+\renewcommand\thefigure{S\arabic{figure}}    
+\setcounter{figure}{0} 
+\renewcommand\thetable{S\arabic{table}}    
+\setcounter{table}{0}
+\renewcommand*{\thesection}{S\arabic{section}}
+
+
+Supporting Information for "Developing Measures of Public Perceptions of Values in Science"
+
+D. J. Hicks, Emilio J.C. Lobato, Joseph Dad, Cosmo Campbell
+
+\clearpage
+
+# Philosophy of science issues/areas {#sec-lit-review}
+
+This supplement provides a brief review of the relevant philosophy of science literature for each of the 12 issues/areas used to develop the original version of VISS used in study 1. 
+
+Aims of science
+: The so-called "aims approach" proposes, as an alternative to the value-free ideal, that the non-epistemic aims of science can legitimately influence the evaluation and acceptance of hypotheses.  [@ElliottNonepistemicValuesMultiple2014; @HicksNewDirectionScience2014; @IntemannDistinguishingLegitimateIllegitimate2015; @PotochnikDiverseAimsScience2015]
+
+Conflicts of interest
+: Across numerous controversies, scholars and other analysts have identified and criticized the influence of commercial interests on both academic and government research: tobacco [@ProctorGoldenHolocaustOrigins2012], climate [@OreskesMerchantsDoubtHow2011], pesticides [@DurantIgnoranceLoopsHow2020], chemical safety [@CranorHowLawPromotes2020], pharmaceuticals [@LexchinThoseWhoHave2011], workplace safety [@MichaelsDoubtTheirProduct2008].  Several philosophers of science have studied the effects of conflicts of industry and preferential industry funding on the scientific community as a whole using agent-based models [@HolmanPromisePerilsIndustryfunded2018; @OConnorMisinformationAgeHow2019; @PintoEpistemicDiversityIndustrial2023].  
+
+Consensus
+: Especially in the context of climate change, several authors have observed that climate skeptics have appealed to "Galileo narratives" and otherwise rejected the idea of a consensus as anti-scientific [@BiddleClimateSkepticismManufacture2015; @OreskesResponseOreskesCounting2017; @KovakaClimateChangeDenial2021].  
+
+Facts vs. values
+: Empiricists have traditionally followed David Hume in making a sharp distinction between "facts" and "values."  Values are often taken to be non-cognitive, that is, logically independent from evidence and reason.  Philosophers of science in the pragmatist, feminist, and Marxist traditions have challenged the fact/value distinction, and argued that it leads to inappropriately treating (supposedly non-cognitive) values as polluting or corrupting science, that is, the value-free ideal [@AndersonUsesValueJudgments2004; @BrownScienceMoralImagination2020; @CloughUsingValuesEvidence2020].  
+
+Fallibilism
+: Historians of science have noted that concerns about demarcating science from pseudo-science arose in connection with both the expansion of science's social authority and fallibilism, the idea that knowledge is never certain [@GierynBoundaryWorkDemarcationScience1983; @LaudanDemiseDemarcationProblem1983].  Uncertainty is a significant factor in questions about scientific authority in the climate controversy [@BrownDisconnectProblemScientific2016] and the argument from inductive risk starts with the recognition that empirical claims are never certain.  
+
+Inductive risk
+: The argument from inductive risk challenges the value-free ideal as follows:  scientists should anticipate the non-epistemic downstream consequences of error (eg, accepting a false hypothesis); this requires appealing to social, political, and ethical values; and so these values should influence the core of inquiry [@DouglasSciencePolicyValuefree2009].  This argument has been enormously influential in philosophy of science over the last decade+, transforming science, values, and policy from a marginal topic into a major one.  The prompts here include a general and specific version of the idea of inductive risk, along with a prompt on the social responsibilities of scientists that @DouglasSciencePolicyValuefree2009 examines in depth.  
+
+Non-subjectivity
+: "Objectivity" is highly polysemous [@LloydObjectivityDoubleStandard1995; @DouglasSciencePolicyValuefree2009 ch. 6].  Douglas defines "value-free objectivity" as "all values (or all subjective or “biasing” influences) are banned from the reasoning process" [@DouglasSciencePolicyValuefree2009 122].  We focus on assumptions, speculation, interpretation, and judgment as subjective aspects of inquiry that might be independent of ethical, social, and political values.  
+
+Pluralism
+: Students are often still taught the crude model of "the scientific method," and many scientists endorse a simple universalism — the idea that all areas of science use the same method, such as Popper's falsificationism — in their reflections on how science works.  @MercerWhyPopperCan2016 observes both climate scientists and skeptics appealing to Popper in the climate controversy, and Oreskes [@LloydClimateModellingPhilosophical2017 ch. 2] discusses the ways that climate science is an awkward fit for a simple universalist conception of science.  
+
+Scientism
+: Scholars in STS have long observed publics reacting against exaggerated claims of scientific expertise [@WynneSheepfarmingChernobylCase1989; @EpsteinImpureScience1996; @FrickelUndoneScienceCharting2010].  This set of questions includes prompts for both "weak" and "strong" scientism [@MizrahiWhatBadScientism2017]. 
+
+Standpoint
+: Standpoint epistemology is a longstanding challenge to the value-free ideal, with a history that runs through feminist philosophy of science and critical race theory to Marxist epistemology [@HardingWhoseScienceWhose1991; @WylieComingTermsValues2007; @CrasnowFeministPhilosophyScience2013].  Standpoint is based on two claims, the situated knowledge thesis and idea that marginalized groups are epistemically advantaged.  
+
+Technocracy
+: Technocracy is closely related to scientism.  Where scientism is an epistemological view — science is better/the only way of producing *knowledge* — we understand technocracy as a view about *power*, namely, that scientists or other experts should have greater political/policymaking power than members of the general public.  Technocratic-like views are often justified by appeal to scientistic-like views, as in some epistemic critiques of democracy [@BrennanDemocracy2017\; for a reply see @ReissExpertiseAgreementNature2019].  Some philosophers have argued that abandoning the value-free ideal would (undesirably) promote technocracy [@MitchellPrescribedProscribedValues2004; @SteeleScientistQuaPolicy2012; @BetzDefenceValueFree2013 207; @KappelProperRoleScience2014\; for a reply see @LuskDoesDemocracyRequire2021]. 
+
+Value-free ideal
+: These prompts include the value-free ideal, along with another aspect of objectivity — imagination and creativity — and the idea that scientists are especially "objective."  As discussed above, many HPSTS scholars have pointed to a purported mismatch between public expectations of the value-free ideal and the value-laden reality to explain public scientific controversies. 
+
 
 ```{r}
 #| label: tbl-viss
 #| tbl-cap: 'VISS items. Original item IDs and text as used in Study 1; finalized item IDs and text as refined in Study 2.  Column "modified" indicates that the text was modified in the course of Study 2.'
 ref = 100/7
-here('out', '03', '06_prompts.Rds') |>
+here('paper', 'tbl', '06_prompts.Rds') |>
     read_rds() |> 
     cols_width(contains('ID') ~ pct(ref), 
                contains('text') ~ pct(2*ref), 
                modified ~ pct(ref)) |>
     opt_row_striping() |>
     tab_style(style = cell_text(weight = 'bold'), 
-              locations = cells_column_labels())
+              locations = cells_column_labels()) |> 
+    tab_options(latex.use_longtable = TRUE)
 ```
 
+![Total agreement on VISS items.  Right panel indicates whether the item appeared in study 1, study 3, or both.  In the main panel, point estimates and 95% confidence intervals for rates of total agreement ("somewhat agree" or more).  VISS items are primarily labeled per the finalized versions used in study 3.  Where labels would overlap but the text is different between studies (either due to rewording or relabeling), the version used in study 1 is labeled as '-1'.](img/07_desc_comb.png){#fig-desc-comb}
