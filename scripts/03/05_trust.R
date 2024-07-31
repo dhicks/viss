@@ -4,12 +4,18 @@ library(sjlabelled)
 library(ggforce)
 library(ggpubr)
 library(ggeffects)
+library(gt)
+library(corrr)
+
+library(patchwork)
+
 
 library(here)
 
 source(here('R', 'vars.R'))
 
 data_dir = here('data', '03')
+out_dir = here('out', '03')
 
 viss_scores = read_rds(here(data_dir, '03_scores_3.Rds')) |> 
     magrittr::set_colnames(c('prolific_id', 
@@ -93,17 +99,30 @@ ggplot(dataf, aes(scientism)) +
 
 ## Correlations among trust measures ----
 ## Generally moderate 
-dataf |> 
+corr_gt = dataf |> 
     select(!!trust_vars) |> 
-    cor(use = 'pairwise.complete.obs')
+    # cor(use = 'pairwise.complete.obs')
+    correlate() |> 
+    gt() |> 
+    fmt_number(decimals = 2) |> 
+    fmt_missing(missing_text = '')
+corr_gt
 
 ## No clue why the scales aren't adjusting to accommodate density plots
-ggplot(dataf) +
+corr_gg = ggplot(dataf) +
     geom_autopoint(alpha = .1, position = 'jitter') +
     stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
     geom_autodensity(color = 'black', fill = 'transparent') +
     facet_matrix(vars(!!trust_vars), 
                  layer.diag = 3)
+corr_gg
+
+corr_gg + as_gtable(corr_gt) +
+    plot_layout(ncol = 1, 
+                heights = c(3, 1))
+
+ggsave(here(out_dir, '05_trust_corr.png'), 
+       height = 6, width = 6, bg = 'white', scale = 1.25)
 
 ## TODO: Is Cronbach's alpha even a coherent thing here? 
 dataf |> 

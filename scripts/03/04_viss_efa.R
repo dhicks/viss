@@ -281,7 +281,48 @@ ggplot(coss_coefs, aes(fct_rev(label), estimate)) +
                         ymax = conf.high)) +
     coord_flip() +
     labs(x = 'factor', y = 'regression coefficient')
+
+ggsave(here(out_dir, '04_trust_coefs.png'), 
+       height = 4, width = 5, bg = 'white', scale = 1.25)
     
+## A little scratch work building a combined regression table using gtsummary
+## Problem: gtsummary merges on the variable names, eg, MR1_1, rather than the labels
+# foo = efa_labels |> 
+#     map(~ str_remove(.x, '_.?')) |> 
+#     flatten() |> 
+#     set_names(names(unlist(efa_labels)))
+# 
+# efa_scores |>
+#     map(~ set_variable_labels(.x,
+#                               .labels = foo,
+#                               .strict = FALSE)) |>
+#     map(~ {.x |>
+#             inner_join(dataf, by = 'prolific_id') |>
+#             select(starts_with('MR'), coss) %>%
+#             lm(coss ~ ., data = .) |>
+#             gtsummary::tbl_regression() |> 
+#             gtsummary::add_glance_table()}) |>
+#     gtsummary::tbl_merge() |> 
+#     gtsummary::modify_table_body(~ .x |> 
+#                                      arrange(row_type == 'glance_statistic'))
+# 
+
+## Combined glance table
+trust_glance = efa_scores[1:6] |> 
+    map(~ {.x |> 
+            inner_join(dataf, by = 'prolific_id') |> 
+            select(starts_with('MR'), coss) %>%
+            lm(coss ~ ., data = .) |> 
+            glance()}) |> 
+    bind_rows(.id = 'FA model') |> 
+    gt() |> 
+    fmt_number(columns = !c(p.value, 
+                            df, df.residual, nobs),
+               decimals = 2) |> 
+    fmt_scientific(columns = p.value, 
+                   n_sigfig = 2)
+trust_glance
+write_rds(trust_glance, here(out_dir, '04_trust_glance.Rds'))
 
 
 ## CFA ----

@@ -264,7 +264,7 @@ While one would expect pairs of versions of VFI and critiques to be fairly stron
 
 ![Marginal distributions and scatterplots for VFI items (rows, y-axes of scatterplots) and critiques of VFI (columns, x-axes of scatterplots).  Lines in each scatterplot are OLS regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree.  Point positions in scatterplots are jittered for legibility.  P-values are calculated for the null that $R  \geq 0$, not adjusted for multiple comparisons.](img/02_vfi.png){#fig-vfi}
 
-HPSTS scholars, science communicators, and scientists themselves have often claimed that the value-free ideal provides a foundation for trust in science *[cites]*.  The measures of generalized trust in science that we used here were all *[strongly]* correlated with each other; here we report results for COSS *[why]*.  @fig-trust shows scatterplots and correlation analyses between, on the one hand, the four versions of VFI and the four critiques of VFI, and on the other, COSS.  The correlations for nonsubj.2 and vfi.1 were not statistically significantly different from zero (R = -0.03, p = 0.5 for both); while correlations for nonsubj.1 and vfi.2 were significantly different from zero but were negative rather than positive (nonsubj.1: R = -0.2, p = $3 \times 10^-6$ for the point null $R = 0$; vfi.2: R = -0.2, p = $2 \times 10^-7$).  Without adjusting for multiple comparisons, all correlations for the critiques of VFI were significantly different from zero; correlations were positive for aims.2 (R = 0.2, p = $3 \times 10^-4$), stdpt (R = 0.2, p = $4 \times 10^-4$), and value.conflict (R = 0.1, p = 0.02), but negative for ir (R = -0.3, p = $4 \times 10^-10$). 
+HPSTS scholars, science communicators, and scientists themselves have often claimed that the value-free ideal provides a foundation for trust in science *[@MetzenObjectivitySharedValues2024]*.  The measures of generalized trust in science that we used here were all moderately correlated with each other *[05_trust_corr.png]*.  Here we report results for CoSS *[cite]*, since it has a more continuous distribution of scores and a high Chronbach's *[alpha = .92]*.  @fig-trust shows scatterplots and correlation analyses between, on the one hand, the four versions of VFI and the four critiques of VFI, and on the other, COSS.  The correlations for nonsubj.2 and vfi.1 were not statistically significantly different from zero (R = -0.03, p = 0.5 for both); while correlations for nonsubj.1 and vfi.2 were significantly different from zero but were negative rather than positive (nonsubj.1: R = -0.2, p = $3 \times 10^-6$ for the point null $R = 0$; vfi.2: R = -0.2, p = $2 \times 10^-7$).  Without adjusting for multiple comparisons, all correlations for the critiques of VFI were significantly different from zero; correlations were positive for aims.2 (R = 0.2, p = $3 \times 10^-4$), stdpt (R = 0.2, p = $4 \times 10^-4$), and value.conflict (R = 0.1, p = 0.02), but negative for ir (R = -0.3, p = $4 \times 10^-10$). 
 
 ![Marginal distribution of COSS (rightmost panels) and scatterplots for VFI items (top row) and critiques of VFI (bottom row) (columns, x-axes of scatterplots) against COSS scores (y-axes). Lines in each scatterplot are OLS regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/02_trust.png){#fig-trust}
  
@@ -275,7 +275,7 @@ As in study 1, we intended to conduct an EFA and CFA of VISS responses, using th
 
 Parallel analysis suggested retaining four factors, with two factors having an eigenvalue greater than 1.0.  In the spirit of multiverse analysis [@SteegenIncreasingTransparencyMultiverse2016] we computed solutions with 1 through 6 factors using varimax rotation, analyzing all six solutions in parallel.  In order, the models explained 14% of the variance, followed by 23%, 27%, 32%, 36%, and 37%.  
 
-Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in *[table]*, grouped by interpretive label.  The models retained varying numbers of from items, from 9 (1-factor) to 18 (6-factor).  The only item that did not load onto a latent factor in any model was value.conflict, "When scientific findings conflict with my core values, it's appropriate to be especially skeptical."  *[table should also include communalities?]*
+Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in @tbl-efa-3, grouped by interpretive label.  The models retained varying numbers of from items, from 9 (1-factor) to 18 (6-factor).  The only item that did not load onto a latent factor in any model was value.conflict, "When scientific findings conflict with my core values, it's appropriate to be especially skeptical."  *[table should also include communalities?]*
 
 ```{=latex}
 \begin{landscape}
@@ -296,7 +296,7 @@ here('paper', 'tbl', '04_loadings.Rds') |>
 \end{landscape}
 ```
 
-Examining the loadings for all models as once indicated consistent *[clusters]* of items.  The most consistent, occurring in some form across all six models, was the *textbook* perception of science:  uniform agreement (consensus.2), fixed (fallible), based on laboratory experiments (pluralism.1), and not relying on imagination or creativity (vfi.2).  The second most common theme was *cynicism*, which occurred distinctly in five of the six models, and also appeared (mixed with textbook items) in the one-factor model.  This theme consistently included concerns about conflicts of interest (coi.1 and coi.2), the idea that the scientific consensus is non-epistemic (consensus.1), and the idea that scientific change is an indication of error (fallible.2).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1) and that scientists use the "same strict requirements" for assessing hypotheses (pluralism.3).  
+Examining the loadings for all models indicated consistent loadings of items onto latent factors.  The most consistent, occurring in some form across all six models, was the *textbook* perception of science:  uniform agreement (consensus.2), fixed (fallible), based on laboratory experiments (pluralism.1), and not relying on imagination or creativity (vfi.2).  The second most common theme was *cynicism*, which occurred distinctly in five of the six models, and also appeared (mixed with textbook items) in the one-factor model.  This theme consistently included concerns about conflicts of interest (coi.1 and coi.2), the idea that the scientific consensus is non-epistemic (consensus.1), and the idea that scientific change is an indication of error (fallible.2).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1) and that scientists use the "same strict requirements" for assessing hypotheses (pluralism.3).  
 
 *[pluralism.3 ~> pluralism.2 everywhere]*
 
@@ -306,20 +306,45 @@ Based on the loadings and thematic interpretation, the three-factor solution app
 
 *[report any of the CFA statistics here?]*
 
-## VISS factors and demographics
-
 
 ## VISS factors and trust
+
+To explore potential associations between the latent VISS factors and generalized trust in science, we first calculated discretized or "non-refined" scores for each factor across all six fitted FA models, using a threshold of 0.3 but not excluding VISS items that loaded onto multiple factors.  We then fit a multiple regression model for each FA model, regressing CoSS against the discretized FA scores.  Regression coefficients are shown in *[figure]* (04_trust_coefs.png); fit statistics for each regression model are provided in *[table]* (04_trust_glance.Rds).  
+
+Using ±1/7 as the threshold for practical significance, the regression models do not find evidence of a statistically and practically significant effect for any latent factor except for cynicism.  *[values for cynicism]*   There was also a consistent lack of correlation between the objectivity factor and CoSS.  
+
 
 
 # General Discussion
 
+*[short summary]*
+
+## *[vfi and crits]*
+
+In study 3, we found that there was no correlation between versions of the value-free ideal, on the one hand, and philosophical criticisms of this ideal, on the other; indeed, a number of respondents indicated that they agreed with both VFI and a critique.  
+
+It may be tempting to explain this as irrationality: these respondents have failed to realize that they hold inconsistent beliefs.  Here we sketch an alternative interpretation, drawing on @HalpernScienceExperienceDeweyan2022 and more generally inspired by the work of philosopher John Dewey.  
+
+On this interpretation, VISS items correspond less to beliefs (occurrent or latent) that participants had prior to the survey, and instead evoke rhetorical tropes — patterns of both speech and thought — that are used to interpret experience.  For example, vfi.1 evokes a common contrast between "science" and the "social," which might be deployed to interpret concerns about "political interference" in science.  Critically, these tropes might be context-specific.  For instance, during the Trump administration, several scientific and advocacy organizations deployed aims.2 — the idea that science aims to protect human health and the environment — to challenge a proposed open science rule at the US Environmental Protection Agency [@HicksWhenVirtuesAre2022].  Then, during the Biden administration, many of these same organizations supported a "scientific integrity" policy that evokes vfi.1 and nonsubj.1 *[https://www.whitehouse.gov/wp-content/uploads/2023/01/01-2023-Framework-for-Federal-Scientific-Integrity-Policy-and-Practice.pdf]*.  *[logically inconsistent principles, but used for the same aim: using science to promote progressive public policy]*
+
+*[important area for future research: understand which tropes are deployed when as people navigate public scientific controversies]*
 
 
 
-*[Deweyan "habits of thought": vfi and crits; VFI + crits and trust]*
+## Values in science and generalized trust
 
-The patterns of correlation in @fig-trust challenge the common idea that VFI provides a foundation for trust in science.  Our findings indicate that trust in science is either independent of or *negatively* associated with VFI.   *[Further, in the study 3 EFA, the four versions of VFI and wait.policy consistently comprise the "objectivity" latent variable; and this variable is consistently uncorrelated with trust.]*  
+The patterns of correlation in @fig-trust challenge the common idea that VFI provides a foundation for trust in science.  Our findings indicate that trust in science is either independent of or *negatively* associated with VFI.   Further, in the study 3 EFA, the four versions of VFI and wait.policy consistently comprise the "objectivity" latent factor; and this factor is consistently uncorrelated with trust.  
+
+In contrast, "cynicism" — a construct comprising concerns about conflicts of interest, a sense that scientific consensus is not epistemic, and the belief that revisions to scientific theory indicate flawed research — was consistently negatively correlated with trust.  We note that, given cynicism, reduced trust in science would be warranted.  That is, insofar as it were the case that science was rife with conflicts of interest, prestige effects, and flawed research, then science would be less trustworthy.  
+
+Across the study 3 sample, generalized trust in science was moderately high *[nums from CoSS]*; this is in line with other surveys of generalized trust in science *[big study]*.  So we do not necessarily think that there is an urgent need to increase generalized trust in science among the public as a whole.  *[but if there is, maybe do something about COIs]*
+
+
+## Limitation
+
+A key limitation of this study is the use of a single survey platform, Prolific, to recruit participants.  *[more]*
+
+In addition, VISS has been developed solely in the context of the US.  We cannot make any claims that our findings generalize to other countries.  Even bracketing issues of translation, before using VISS in other contexts it might be useful to replicate study 2 and check whether construct validity still obtains. 
 
 
 
