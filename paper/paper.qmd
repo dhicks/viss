@@ -121,66 +121,15 @@ Anonymized original data and reproducible code are available at <https://github.
 
 # Study 1
 
-## Materials
+Study 1 was conducted concurrently with the replication study reported in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  Analysis of individual items and exploratory factor analysis (EFA) uncovered some intriguing patterns, but exhibited poor fit statistics in confirmatory factor analysis (CFA).  Qualitative review of the six-factor EFA solution also raised concerns about construct validity.  
 
-This study used the initial version of the VISS items, as described above and shown in the first two columns of @tbl-viss.  Data was collected concurrently with a closely related project [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  
+For example, a factor labelled *cynicism* covered a number of items expressing a cynical attitude towards science, with loaded items related to conflicts of interest, the idea that "The consensus of the scientific community is based on social status and prestige rather than evidence," and the idea that "When a scientific theory changes or is revised, it means that the research that went into it initially was flawed."  However, this factor also had the item "Standards of scientific evidence are different in different situations."  We intended this item to articulate the argument from inductive risk [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021], that is, the idea that a hypothesis with serious downstream risks if it turns out to be false — such as a claim that a widely-used pesticide does not cause non-Hodgkins lymphoma — should require significantly more evidence than a hypothesis without such downstream risks — such as a claim about the durability of a certain hiking shoe.  In other words, different standards of evidence can be *appropriately* different in different situations.  
 
-After giving informed consent, participants were presented sequentially with the VISS instrument, the experiment described in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->], a subset of the OSI 2.0 [@KahanOrdinaryScienceIntelligence2017], and a series of demographic questions: age, gender identity and lived gender [questions 2 and 3 of the Multidimensional Sex/Gender Measure (MSGM)\; @BauerTransgenderinclusiveMeasuresSex2017], race-ethnicity, religious affiliation and frequency of attendance, an 8-step political spectrum scale (3 liberal, 1 centrist, 3 conservative, and a write-in option), partisan political affiliation, and highest degree (less than high school; high school or some college; Bachelor's degree or higher).  Questions were presented in random order for the VISS instrument and OSI 2.0 subset.  
-
-The study was approved by the UC Merced IRB on August 17, 2021. 
-
-
-## Data
-
-Data collection was conducted October 18-20, 2021.  Participants were recruited using the online survey platform Prolific, and the survey was administered in a web browser using Qualtrics.  Prolific has an option to draw samples that are balanced to be representative by age, binary gender, and a 5-category race variable (taking values Asian, Black, Mixed, Other, and White) for US adults [@RepresentativeSamplesFAQ2022].  A recent analysis found that Prolific produces substantially higher quality data than Amazon Mechanical Turk for online survey studies, though three of the five authors of that analysis are affiliated with Prolific [@PeerDataQualityPlatforms2021].  We aimed to collect 1000 responses.  After removing incomplete responses, our dataset comprised 988 responses. 
-
-## Analysis
-
-Analysis was conducted in R 4.1 *[cite]* with extensive use of the `tidyverse` suite of R packages *[cite]*.  A cleaned, anonymized dataset and cleaning and analysis scripts are available at *[github repo]*. 
-
-
-
-## Results
-
-Despite Prolific claiming to provide a "representative" sample, exploratory data analysis indicated that our data are not representative, based on education level and political ideology.  In 2021, about 9% of US adults 25 or older had a less than high school education, and 38% had a Bachelor's degree or higher [@CPSHistoricalTime2022 fig. 2].  Only 1% of our participants reported a less than high school education, and 57% reported a Bachelor's degree or higher.  For political ideology, the General Social Survey has consistently found over several decades that about 30% of US adults identify as liberal, about 30% identify as conservative, and about 40% as moderate [@GSSDataExplorer2022].  Among our participants, liberals (574) heavily outnumber conservatives (248).  Both overrepresentation of college graduates and underrepresentation of conservatives (especially conservatives with strong anti-institutional views) are known issues in public opinion polling [@KennedyEvaluation2016Election2018].  
-
-In particular, because political partisanship plays a significant role in many prominent public scientific controversies [though not all\; @FunkAmericansPoliticsScience2015], we determined that it would be important to validate a finalized VISS across the political spectrum before putting it to use. 
-
-
-### Individual item analysis
-
-The distribution of responses to individual items — e.g., acceptance of the value-free ideal — was of key interest in this study.  For the sake of space, we defer this analysis to study 3, which used the finalized, construct validated VISS items.  @fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  
-
-
-### Factor analysis
-
-To examine the underlying dimensionality of the Values in Science scale, we split the sample in half for the purposes of carrying out exploratory factor analysis (EFA) to see what underlying factor structure may be present based on participants' response and confirmatory factor analysis (CFA) to compare models that could be abstracted from the EFA. We created a dummy variable that randomly assigned participants to one of two groups, resulting in two sub-samples of 439 and 467 response sets, respectively. Before conducting the EFA, we checked whether the assumptions necessary for a valid EFA held. Bartlett's test of sphericity was significant, $\chi^2(35) = 307.93, p = 2.20 \times 10^{-45}$. The Kaiser-Meyer-Olkin measure of sampling adequacy was 0.82. The determinant of the correlation matrix was 0.00020, indicating no multicollinearity issues.
-
-We conducted our factor analysis on the first sub-sample using the psych package (version 2.19) in R. Parallel analysis indicated we should retain six factors for an exploratory factor analysis, although only three factors had eigenvalues greater than 1.0. As such, we computed solutions for a three and a six factor solution using varimax rotation, deciding to retain items that had at least |.3| factor loading on only one of the resulting factors. The six-factor solution explained 33% of the variance and was preferred because the resulting factor structure was more easily interpretable than the three factor solution, which only explained 25% of the variance.
-
-This EFA retained 29 out of the original 36 items. The retained items, factor loadings, and communalities are all shown in @tbl-efa-1. The first identified factor contains six items that cohere around scientistic perceptions of science, elevating the status of science as superior to other knowledge-production efforts.  We labelled this factor *scientism*.  The second factor identified contains three items that emphasize the role of science within society and *values in science*. The third factor contains eight items that, together, appear to represent participants' level of *cynicism* regarding the credibility of scientists and the scientific community. The fourth factor contains three items that tap into participants' perceptions of the social *power* dynamics within the scientific community. The fifth factor identified contains five items that reflect perceptions of science as constrained to a relatively narrow set of methods and practices in order to be counted as science, i.e., a mythological "the" scientific method as presented in a *textbook*. The final factor identified contains four items that appear to tap into perceptions of science in line with the traditional *value-free ideal*. 
-
-```{r}
-#| label: tbl-efa-1
-#| tbl-cap: 'Factor loadings and communalities from study 1 EFA, six factor solution.'
-here('paper', 'tbl', '03_loadings_gt.Rds') |>
-    read_rds() |>
-    cols_width(everything() ~ pct(100/8)) |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = cells_column_labels())
-```
-
-For cross-validation purposes, we ran a CFA on the second sub-sample using the factor structure extracted from the EFA. We carried out the CFA with maximum likelihood estimation using the lavaan package (version 0.6-10) in R. Fit indices, unfortunately, revealed the model was insufficient to adequately fit the data, $\chi^2(308) = 981.10, p < .001$, CFI = .622, AGFI = .817, RMSEA = .071, and SRMR = .086. Typically, values exceeding .90 for CFI and AGFI indicate acceptable fit and values below .05 for RMSEA and SRMR indicate acceptable fit (Hu & Bentler, 1999).
-
-<!-- Despite results from the CFA, the strong theoretical coherence of the factor structure suggests ways in which future iterations of a scale to tap into peoples' perceived values about science could improve upon the current Values in Science scale. More precise item wording may be necessary to better capture elements of the aforementioned constructs. Similarly, additional items may be needed to capture more aspects of each the proposed latent constructs. Lastly, there may be additional relevant values and perceptions about science that are not captured at all in the present iteration of the Values in Science scale. Future work should consider each of these suggestions to build upon the preliminary work we report here on the development of a psychometrically valid instrument to capture peoples' values in science. Excepting the comparative fit index (CFI), the fit indices were close to thresholds indicative of acceptable model fit. As such, we have decided to continue with our subsequent analyses using the six-factor structure as a means of examining whether participant responses to the Values in Science scale has any potential predictive validity for participant responses to the perceived credibility of scientists who acknowledge the role of values in their scientific research. Results of any such tests must be interpreted with caution, however, in light of the CFA results.  -->
-
-## Construct validity
-
-Beyond the poor fit statistics in the CFA, qualitative review of the six-factor EFA solution raised concerns about construct validity.  For example, factor 3, *cynicism*, covered a number of items expressing a cynical attitude towards science, with loaded items related to conflicts of interest, the idea that "The consensus of the scientific community is based on social status and prestige rather than evidence," and the idea that "When a scientific theory changes or is revised, it means that the research that went into it initially was flawed."  However, this factor also had the item "Standards of scientific evidence are different in different situations."  We intended this item to articulate the argument from inductive risk [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021], that is, the idea that a hypothesis with serious downstream risks if it turns out to be false — such as a claim that a widely-used pesticide does not cause non-Hodgkins lymphoma — should require significantly more evidence than a hypothesis without such downstream risks — such as a claim about the durability of a certain hiking shoe.  
-
-Trying to understand why the argument from inductive risk might be correlated with cynical views of science, we realized that some unknowable fraction of participants might have interpreted the item as something like "scientists inappropriately manipulate standards of evidence to claim support for convenient claims and suppress inconvenient ones."  This indicated a severe threat to construct validity of at least some VISS items.  We also conjectured that construct validity might be creating a kind of measurement error that was attenuating correlations among the VISS items [@PadillaCorrelationAttenuationDue2012] and thereby weakening the CFA fit statistics.  So addressing construct validity might also improve factor analysis fit.  
+Trying to understand why the argument from inductive risk might be correlated with cynical views of science, we realized that some unknowable fraction of participants might have interpreted the item as something like "scientists *inappropriately* manipulate standards of evidence to claim support for convenient claims and suppress inconvenient ones."  This indicated a severe threat to construct validity of at least some VISS items.  We also conjectured that construct validity might be creating a kind of measurement error that was attenuating correlations among the VISS items [@PadillaCorrelationAttenuationDue2012] and thereby weakening the CFA fit statistics.  So addressing construct validity might also improve factor analysis fit.  
 
 The research team (at that point comprising [author1] and [author2]) discussed this issue among ourselves and solicited feedback from colleagues at conference presentations of preliminary results.  Based on these discussions, we decided that the next step was a qualitative study to secure construct validity.  
+
+For the sake of space, study 1 is reported in detail in the supplement, @sec-study1. 
 
 
 # Study 2
@@ -271,11 +220,11 @@ HPSTS scholars, science communicators, and scientists themselves have often clai
 
 ### Factor analysis
 
-As in study 1, we intended to conduct an EFA and CFA of VISS responses, using the psych package (version 2.19) in R.  Because of the smaller sample size, when splitting the sample in half, the the Kaiser-Meyer-Olkin measure of sampling adequacy was 0.72, "middling."  We therefore chose to conduct only an EFA, using the whole sample.  With the whole sample, Barlett's test was significant, $\chi^2(18) = 455.74, p = 2.2 \times 10^{-16}$, and the Kaiser-Meyer-Olkin measure of sampling adequacy was slightly higher, 0.78.  
+As in study 1, we intended to conduct an EFA and CFA of VISS responses, using the psych package (version 2.19) in R.  Because of the smaller sample size, when splitting the sample in half, the Kaiser-Meyer-Olkin measure of sampling adequacy was 0.72, "middling."  We therefore chose to conduct only an EFA, using the whole sample.  With the whole sample, Barlett's test was significant, $\chi^2(18) = 455.74, p = 2.2 \times 10^{-16}$, and the Kaiser-Meyer-Olkin measure of sampling adequacy was slightly higher, 0.78.  
 
 Parallel analysis suggested retaining four factors, with two factors having an eigenvalue greater than 1.0.  In the spirit of multiverse analysis [@SteegenIncreasingTransparencyMultiverse2016] we computed solutions with 1 through 6 factors using varimax rotation, analyzing all six solutions in parallel.  In order, the models explained 14% of the variance, followed by 23%, 27%, 32%, 36%, and 37%.  
 
-Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in @tbl-efa-3, grouped by interpretive label.  The models retained varying numbers of from items, from 9 (1-factor) to 18 (6-factor).  The only item that did not load onto a latent factor in any model was value.conflict, "When scientific findings conflict with my core values, it's appropriate to be especially skeptical."  *[table should also include communalities?]*
+Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in @tbl-efa-3, grouped by interpretive label, and @tbl-efa-3-bymodel, grouped by model.  Cross-loading was observed for the items aims.3, fallible.2, pluralism.3, vfi.2, and wait.policy; these items were ignored in factor interpretation.  The only item that did not load onto a latent factor in any model was value.conflict.  
 
 ```{=latex}
 \begin{landscape}
@@ -292,36 +241,50 @@ here('paper', 'tbl', '04_loadings.Rds') |>
               locations = list(cells_column_labels(), 
                                cells_column_spanners()))
 ```
+```{r}
+#| label: tbl-efa-3-bymodel
+#| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors. Latent factors are grouped by solution.'
+#| column: page
+here('paper', 'tbl', '04_loadings_bymodel.Rds') |>
+    read_rds() |>
+    cols_width(variable ~ pct(100/22 + 1),
+              everything() ~ pct(100/22 - 1/22)) |>
+    tab_options(table.font.size = 8) |>
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = list(cells_column_labels(), 
+                               cells_column_spanners()))
+```
 ```{=latex}
 \end{landscape}
 ```
 
-Examining the loadings for all models indicated consistent loadings of items onto latent factors.  The most consistent, occurring in some form across all six models, was the *textbook* perception of science:  uniform agreement (consensus.2), fixed (fallible), based on laboratory experiments (pluralism.1), and not relying on imagination or creativity (vfi.2).  The second most common theme was *cynicism*, which occurred distinctly in five of the six models, and also appeared (mixed with textbook items) in the one-factor model.  This theme consistently included concerns about conflicts of interest (coi.1 and coi.2), the idea that the scientific consensus is non-epistemic (consensus.1), and the idea that scientific change is an indication of error (fallible.2).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1) and that scientists use the "same strict requirements" for assessing hypotheses (pluralism.3).  
+Examining the loadings for all models indicated consistent loadings of items onto latent factors.  The most consistent, occurring in some form across all six models, was a *textbook* perception of science:  based on unanimity (consensus.2), fixed (fallible.1), and using laboratory experiments (pluralism.1).  The second consistent factor was *cynicism*, which also occurred across all six models; textbook and cynicism items appeared together in the 1-factor model.  The cynicism factor included concerns about conflicts of interest (coi.1 and coi.2) and the idea that the scientific consensus is non-epistemic (consensus.1).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1).  
 
-*[pluralism.3 ~> pluralism.2 everywhere]*
+A third common factor was *objectivity*, with three versions of VFI (nonsubj.1, nonsubj.2, vfi.1).  Models 4-6 included a factor comprising claims about the aims of science (aims.1, aims.2) and the central claim of standpoint epistemology (stdpt).  It's not clear to us how to interpret these factors.  Models 5 and 6 also include two singleton factors, for pluralism.3 ("same strict requirements") and the argument from inductive risk (ir).  
 
-A third common theme was *objectivity*, with four versions of VFI (nonsubj.1, nonsubj.2, vfi.1, vfi.2), along with the idea that policy should wait until "the science is settled" (wait.policy).  Models 4-6 included a factor comprising three claims about the aims of science (aims.1, aims.2, aims.3) and the central claim of standpoint epistemology (stdpt).  It's not clear to us how to interpret these factors.  Models 5 and 6 also include two singleton factors, for pluralism.3 ("same strict requirements") and the argument from inductive risk (ir).  
-
-Based on the loadings and thematic interpretation, the three-factor solution appears to be the most theoretically coherent.  
-
-*[report any of the CFA statistics here?]*
-
+Based on the loadings and factor interpretation, the three-factor solution appears to be the most theoretically coherent.  
 
 ## VISS factors and trust
 
-To explore potential associations between the latent VISS factors and generalized trust in science, we first calculated discretized or "non-refined" scores for each factor across all six fitted FA models, using a threshold of 0.3 but not excluding VISS items that loaded onto multiple factors.  We then fit a multiple regression model for each FA model, regressing CoSS against the discretized FA scores.  Regression coefficients are shown in *[figure]* (04_trust_coefs.png); fit statistics for each regression model are provided in *[table]* (04_trust_glance.Rds).  
+To explore potential associations between the latent VISS factors and generalized trust in science, we first calculated discretized or "non-refined" scores [@DiStefanoUnderstandingUsingFactor2009] for each factor across all six fitted FA models, using a threshold of 0.3 and excluding VISS items that loaded onto multiple factors.  We then fit a multiple regression model for each FA model, regressing CoSS against the discretized FA scores.  Regression coefficients are shown in *[figure]* (04_trust_coefs.png); fit statistics for each regression model are provided in *[table]* (04_trust_glance.Rds).  
 
-Using ±1/7 as the threshold for practical significance, the regression models do not find evidence of a statistically and practically significant effect for any latent factor except for cynicism.  *[values for cynicism]*   There was also a consistent lack of correlation between the objectivity factor and CoSS.  
+Using ±1/7 as the threshold for practical significance, the regression models do not find evidence of a statistically and practically significant effect for any latent factor except for cynicism.  *[values for cynicism]*   In particular, there was a consistent lack of correlation between the objectivity factor and CoSS.  
 
 
 
 # General Discussion
 
-*[short summary]*
+This project began to develop the Values in Science Scale, an instrument for assessing views of the public on roles for values in science, based on classical and recent work in philosophy of science and HPSTS more broadly.  Factor analysis found theoretically coherent clusters of items that could be treated as subscales; while analyses among VISS items and between subscales and measures of generalized trust in science empirically enrich theoretical discussions in philosophy and other fields.  
 
-## *[vfi and crits]*
+## Subscales
 
-In study 3, we found that there was no correlation between versions of the value-free ideal, on the one hand, and philosophical criticisms of this ideal, on the other; indeed, a number of respondents indicated that they agreed with both VFI and a critique.  
+VISS comprises 19 items.  Exploratory factor analysis identified 3 interpretable latent factors, which can be treated as subscales, *[representing]* *cynicism*, VFI or a traditional conception of *objectivity*, and a simplistic *textbook* view of science.  A fourth factor, comprising two claims about the aims of science and standpoint epistemology, was also identified by EFA; though we are not able to offer a satisfying theoretical interpretation of this factor.  
+
+Several of the VISS items that are not included in any of the identified factors/subscales may still be interesting or important in future research.  These include several of the critiques of VFI, for example.  We therefore retain them in VISS *[xref]*, under the heading "not assigned to subscale."  One line of future work might be to expand VISS, developing additional items that can form theoretically coherent subscales with these unassigned items.  
+
+## The value-free ideal and its critiques
+
+In study 3, we found that there was no correlation between versions of the value-free ideal — the traditional conception of objectivity — on the one hand, and philosophical criticisms of this ideal, on the other; indeed, a number of respondents indicated that they agreed with both VFI and a critique.  
 
 It may be tempting to explain this as irrationality: these respondents have failed to realize that they hold inconsistent beliefs.  Here we sketch an alternative interpretation, drawing on @HalpernScienceExperienceDeweyan2022 and more generally inspired by the work of philosopher John Dewey.  
 
@@ -337,7 +300,7 @@ The patterns of correlation in @fig-trust challenge the common idea that VFI pro
 
 In contrast, "cynicism" — a construct comprising concerns about conflicts of interest, a sense that scientific consensus is not epistemic, and the belief that revisions to scientific theory indicate flawed research — was consistently negatively correlated with trust.  We note that, given cynicism, reduced trust in science would be warranted.  That is, insofar as it were the case that science was rife with conflicts of interest, prestige effects, and flawed research, then science would be less trustworthy.  
 
-Across the study 3 sample, generalized trust in science was moderately high *[nums from CoSS]*; this is in line with other surveys of generalized trust in science *[big study]*.  So we do not necessarily think that there is an urgent need to increase generalized trust in science among the public as a whole.  *[but if there is, maybe do something about COIs]*
+Across the study 3 sample, generalized trust in science was moderately high *[nums from CoSS]*; this is in line with other surveys of generalized trust in science *[big study; @LupiaTrendsUSPublic2024]*.  So we do not necessarily think that there is an urgent need to increase generalized trust in science among the public as a whole.  However, insofar as there is such a need, our findings suggest that reforming funding structures to reduce conflicts of interest might be more effective than stressing fallibilism or the value-free ideal in science communication [@LupiaTrendsUSPublic2024; @ThorpTeachPhilosophyScience2024].  
 
 
 ## Limitation
@@ -410,6 +373,62 @@ Value-free ideal
 : These prompts include the value-free ideal, along with another aspect of objectivity — imagination and creativity — and the idea that scientists are especially "objective."  As discussed above, many HPSTS scholars have pointed to a purported mismatch between public expectations of the value-free ideal and the value-laden reality to explain public scientific controversies. 
 
 
+# Study 1 {#sec-study1}
+
+## Materials
+
+This study used the initial version of the VISS items, as described above and shown in the first two columns of @tbl-viss.  Data was collected concurrently with the replicatin study reported in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->]. 
+
+After giving informed consent, participants were presented sequentially with the VISS instrument, the experiment described in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->], a subset of the OSI 2.0 [@KahanOrdinaryScienceIntelligence2017], and a series of demographic questions: age, gender identity and lived gender [questions 2 and 3 of the Multidimensional Sex/Gender Measure (MSGM)\; @BauerTransgenderinclusiveMeasuresSex2017], race-ethnicity, religious affiliation and frequency of attendance, an 8-step political spectrum scale (3 liberal, 1 centrist, 3 conservative, and a write-in option), partisan political affiliation, and highest degree (less than high school; high school or some college; Bachelor's degree or higher).  Questions were presented in random order for the VISS instrument and OSI 2.0 subset.  
+
+The study was approved by the UC Merced IRB on August 17, 2021. 
+
+
+## Data
+
+Data collection was conducted October 18-20, 2021.  Participants were recruited using the online survey platform Prolific, and the survey was administered in a web browser using Qualtrics.  Prolific has an option to draw samples that are balanced to be representative by age, binary gender, and a 5-category race variable (taking values Asian, Black, Mixed, Other, and White) for US adults [@RepresentativeSamplesFAQ2022].  A recent analysis found that Prolific produces substantially higher quality data than Amazon Mechanical Turk for online survey studies, though three of the five authors of that analysis are affiliated with Prolific [@PeerDataQualityPlatforms2021].  We aimed to collect 1000 responses.  After removing incomplete responses, our dataset comprised 988 responses. 
+
+## Analysis
+
+Analysis was conducted in R 4.1 *[cite]* with extensive use of the `tidyverse` suite of R packages *[cite]*.  A cleaned, anonymized dataset and cleaning and analysis scripts are available at *[github repo]*. 
+
+
+
+## Results
+
+Despite Prolific claiming to provide a "representative" sample, exploratory data analysis indicated that our data are not representative, based on education level and political ideology.  In 2021, about 9% of US adults 25 or older had a less than high school education, and 38% had a Bachelor's degree or higher [@CPSHistoricalTime2022 fig. 2].  Only 1% of our participants reported a less than high school education, and 57% reported a Bachelor's degree or higher.  For political ideology, the General Social Survey has consistently found over several decades that about 30% of US adults identify as liberal, about 30% identify as conservative, and about 40% as moderate [@GSSDataExplorer2022].  Among our participants, liberals (574) heavily outnumber conservatives (248).  Both overrepresentation of college graduates and underrepresentation of conservatives (especially conservatives with strong anti-institutional views) are known issues in public opinion polling [@KennedyEvaluation2016Election2018].  
+
+In particular, because political partisanship plays a significant role in many prominent public scientific controversies [though not all\; @FunkAmericansPoliticsScience2015], we determined that it would be important to validate a finalized VISS across the political spectrum before putting it to use. 
+
+
+### Individual item analysis
+
+The distribution of responses to individual items — e.g., acceptance of the value-free ideal — was of key interest in this study.  For the sake of space, we defer this analysis to study 3, which used the finalized, construct validated VISS items.  @fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  
+
+
+### Factor analysis
+
+To examine the underlying dimensionality of the Values in Science scale, we split the sample in half for the purposes of carrying out exploratory factor analysis (EFA) to see what underlying factor structure may be present based on participants' response and confirmatory factor analysis (CFA) to compare models that could be abstracted from the EFA. We created a dummy variable that randomly assigned participants to one of two groups, resulting in two sub-samples of 439 and 467 response sets, respectively. Before conducting the EFA, we checked whether the assumptions necessary for a valid EFA held. Bartlett's test of sphericity was significant, $\chi^2(35) = 307.93, p = 2.20 \times 10^{-45}$. The Kaiser-Meyer-Olkin measure of sampling adequacy was 0.82. The determinant of the correlation matrix was 0.00020, indicating no multicollinearity issues.
+
+We conducted our factor analysis on the first sub-sample using the psych package (version 2.19) in R. Parallel analysis indicated we should retain six factors for an exploratory factor analysis, although only three factors had eigenvalues greater than 1.0. As such, we computed solutions for a three and a six factor solution using varimax rotation, deciding to retain items that had at least |.3| factor loading on only one of the resulting factors. The six-factor solution explained 33% of the variance and was preferred because the resulting factor structure was more easily interpretable than the three factor solution, which only explained 25% of the variance.
+
+This EFA retained 29 out of the original 36 items. All items, factor loadings, and communalities are all shown in @tbl-efa-1. Two items did not load on to any factor (labeled consensus.1 and pluralism.2 in this study); five items were cross-loaded on to 2 factors (labeled nonsubj.3, scientism.2, scientism.3, technocracy.3, and vfi.1 in this study).  
+
+The first identified factor contains six items that cohere around scientistic perceptions of science, elevating the status of science as superior to other knowledge-production efforts.  We labelled this factor *scientism*.  The second factor identified contains three items that emphasize the role of science within society and *values in science*. The third factor contains eight items that, together, appear to represent participants' level of *cynicism* regarding the credibility of scientists and the scientific community. The fourth factor contains three items that tap into participants' perceptions of the social *power* dynamics within the scientific community. The fifth factor identified contains five items that reflect perceptions of science as constrained to a relatively narrow set of methods and practices in order to be counted as science, i.e., a mythological "the" scientific method as presented in a *textbook*. The final factor identified contains four items that appear to tap into perceptions of science in line with the traditional *value-free ideal*. 
+
+```{r}
+#| label: tbl-efa-1
+#| tbl-cap: 'Factor loadings and communalities from study 1 EFA, six factor solution.'
+here('paper', 'tbl', '03_loadings_gt.Rds') |>
+    read_rds() |>
+    cols_width(everything() ~ pct(100/8)) |>
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = cells_column_labels())
+```
+
+For cross-validation purposes, we ran a CFA on the second sub-sample using the factor structure extracted from the EFA. We carried out the CFA with maximum likelihood estimation using the lavaan package (version 0.6-10) in R. Fit indices, unfortunately, revealed the model was insufficient to adequately fit the data, $\chi^2(308) = 981.10, p < .001$, CFI = .622, AGFI = .817, RMSEA = .071, and SRMR = .086. Typically, values exceeding .90 for CFI and AGFI indicate acceptable fit and values below .05 for RMSEA and SRMR indicate acceptable fit (Hu & Bentler, 1999).
+
+
 ```{r}
 #| label: tbl-viss
 #| tbl-cap: 'VISS items. Original item IDs and text as used in Study 1; finalized item IDs and text as refined in Study 2.  Column "modified" indicates that the text was modified in the course of Study 2.'
@@ -426,3 +445,5 @@ here('paper', 'tbl', '06_prompts.Rds') |>
 ```
 
 ![Total agreement on VISS items.  Right panel indicates whether the item appeared in study 1, study 3, or both.  In the main panel, point estimates and 95% confidence intervals for rates of total agreement ("somewhat agree" or more).  VISS items are primarily labeled per the finalized versions used in study 3.  Where labels would overlap but the text is different between studies (either due to rewording or relabeling), the version used in study 1 is labeled as '-1'.](img/07_desc_comb.png){#fig-desc-comb}
+
+

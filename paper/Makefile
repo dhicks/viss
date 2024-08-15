@@ -1,4 +1,5 @@
 SOURCE = paper.qmd
+split = 16
 
 all: pdf
 
@@ -23,7 +24,6 @@ docx: $(SOURCE)
 	quarto render $< --to apaquarto-docx
 
 .PHONY: wc
-split = 19
 wc:
 	echo "splitting at page $(split)"
 	qpdf paper.pdf --pages . 1-$(split) -- main.pdf
@@ -38,5 +38,6 @@ floats:
 	cp ../out/03/04_trust_coefs.png img/04_trust_coefs.png
 	cp ../out/01/03_loadings_gt.Rds tbl/03_loadings_gt.Rds
 	cp ../out/03/04_loadings.Rds tbl/04_loadings.Rds
+	cp ../out/03/04_loadings_bymodel.Rds tbl/04_loadings_bymodel.Rds
 	cp ../out/03/06_prompts.Rds tbl/06_prompts.Rds
 

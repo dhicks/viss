@@ -44,7 +44,8 @@ vis_cor(viss_df) +
     scale_fill_distiller(palette = 'RdBu', 
                          direction = 1, limits = c(-1, 1))
 
-hclust_fit = cor(viss_df, use = 'pairwise.complete.obs') |> 
+hclust_fit = cor(viss_df, use = 'pairwise.complete.obs') %>%
+    {1 - .^2} |> 
     as.dist() |> 
     hclust()
 plot(hclust_fit)
@@ -83,9 +84,9 @@ communalities = map(efa_fits, ~ {.x |>
 ## Total variance explained
 efa_fits[[1]]$Vaccounted
 map_dbl(efa_fits[2:6], 
-    ~ .$Vaccounted %>%
-        .['Cumulative Var',] |> 
-        max()) |> 
+        ~ .$Vaccounted %>%
+            .['Cumulative Var',] |> 
+            max()) |> 
     print(digits = 2)
 
 write_rds(efa_fits, here(data_dir, '04_efa_fits.Rds'))
@@ -113,13 +114,13 @@ efa_labels[[3]] = c('MR2_3' = 'cynicism_3', 'MR1_3' = 'textbook_3', 'MR3_3' ='ob
 ## 4: textbook; cynicism?; (4) objectivity; (3) ??? (aims + stdpt)
 loadings(efa_fits[[4]]) |> 
     print(cutoff = .3)
-efa_labels[[4]] = c('MR1_4' = 'textbook + aims.3_4', 'MR2_4' = 'cynicism_4', 
+efa_labels[[4]] = c('MR1_4' = 'textbook_4', 'MR2_4' = 'cynicism_4', 
                     'MR4_4' = 'objectivity_4', 'MR3_4' = '?(aims + stdpt)_4')
 
 ## 5: (2) cynicism; (1) textbook + aims.3; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.3
 loadings(efa_fits[[5]]) |> 
     print(cutoff = .3)
-efa_labels[[5]] = c('MR2_5' = 'cynicism_5', 'MR1_5' = 'textbook + aims.3_5', 
+efa_labels[[5]] = c('MR2_5' = 'cynicism_5', 'MR1_5' = 'textbook_5', 
                     'MR4_5' = 'objectivity_5', 'MR3_5' = '?(aims + stdpt)_5', 
                     'MR5_5' = 'pluralism.3_5')
 
@@ -136,6 +137,7 @@ efa_labels_df = efa_labels[1:6] |>
 
 
 ## Scores ----
+## TODO: exclude cross-loaded items
 ## Fitted EDAs include a `scores` element with the right dimensions
 ## But since default for `factanal` is `scores = 'none'` it's not clear what this means
 efa_fits[[3]] %>%
@@ -143,11 +145,18 @@ efa_fits[[3]] %>%
     str()
 
 ## Discretized / "non-refined" scores
+zero_xload <- function(mat) {
+    rows_to_modify <- which(rowSums(mat) > 1)
+    mat[which(rowSums(mat) > 1), ] <- 0
+    return(mat)
+}
+
 scores = function(this_efa, efa_name = 'test', threshold = 0.3) {
     load_mx = this_efa |> 
         loadings() |> 
         magrittr::set_class('matrix') %>%
-        {(abs(.) > threshold) * (sign(.))}
+        {(abs(.) > threshold) * (sign(.))} |> 
+        zero_xload()
     
     dataf_mx = as.matrix(viss_df)
     
@@ -159,9 +168,14 @@ scores = function(this_efa, efa_name = 'test', threshold = 0.3) {
                     .fn = ~ glue('{.x}_{efa_name}'))
 }
 
-efa_scores = imap(efa_fits, scores) |> 
-    imap(~ write_rds(.x, here(data_dir, 
-                              glue('04_scores_{.y}.Rds'))))
+if (!interactive()) {
+    efa_scores = imap(efa_fits, scores, threshold = .30) |> 
+        imap(~ write_rds(.x, here(data_dir, 
+                                  glue('04_scores_{.y}.Rds'))))
+} else {
+    efa_scores = imap(efa_fits, scores, 
+                      threshold = 0.30)
+}
 
 ## Big combined loadings table ----
 loadings_to_df = function(fit) {
@@ -182,14 +196,15 @@ loadings_gt = loadings_df |>
     # filter(abs(value) > .3) |>
     inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
     select(!latent) |> 
-    pivot_wider(names_from = 'label', values_fro = 'value', 
+    pivot_wider(names_from = 'label', values_from = 'value', 
                 names_sort = TRUE) |> 
     relocate(contains('aims.3'), .after = textbook_3) |> 
     gt() |> 
     fmt_number(columns = !variable,
                decimals = 2) |>
-    highlight_cells() |> 
-    highlight_cells(cell_style = cell_fill('#F0F0F0')) |> 
+    highlight_cells(cell_select = ~ abs(.) > 0.3) |> 
+    highlight_cells(cell_style = cell_fill('#F0F0F0'), 
+                    cell_select = ~ abs(.) > 0.3) |> 
     sub_missing(missing_text = '') |> 
     tab_spanner_delim(delim = '_') |> 
     tab_style(
@@ -203,6 +218,43 @@ loadings_gt
 gtsave(loadings_gt, here(out_dir, '04_loadings.html'))
 gtsave(loadings_gt, here(out_dir, '04_loadings.pdf'))
 write_rds(loadings_gt, here(out_dir, '04_loadings.Rds'))
+
+## Loadings table ordered by model
+loadings_bymodel = loadings_df |> 
+    pivot_longer(!variable, names_to = 'latent', values_to = 'value') |> 
+    # filter(abs(value) > .3) |>
+    inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
+    select(!latent) |> 
+    pivot_wider(names_from = 'label', values_from = 'value', 
+                names_sort = TRUE) |> 
+    relocate(variable, 
+             ends_with('_1'), 
+             ends_with('_2'), 
+             ends_with('_3'), 
+             ends_with('_4'), 
+             ends_with('_5'), 
+             ends_with('_6')) |> 
+    gt() |> 
+    fmt_number(columns = !variable,
+               decimals = 2) |>
+    highlight_cells(cell_select = ~ abs(.) > 0.3) |> 
+    highlight_cells(cell_style = cell_fill('#F0F0F0'), 
+                    cell_select = ~ abs(.) > 0.3) |> 
+    sub_missing(missing_text = '') |> 
+    tab_spanner_delim(delim = '_', reverse = TRUE) |> 
+    tab_style(
+        style = cell_borders(
+            sides = c('left'),
+            # weight = px(.5)
+        ),
+        locations = cells_body(columns = c(2, 3, 5, 8, 
+                                           12, 17)))
+loadings_bymodel
+
+gtsave(loadings_bymodel, here(out_dir, '04_loadings_bymodel.html'))
+gtsave(loadings_bymodel, here(out_dir, '04_loadings_bymodel.pdf'))
+write_rds(loadings_bymodel, here(out_dir, '04_loadings_bymodel.Rds'))
+
 
 ## Scores and demographics ----
 ## TODO: move to separate script
@@ -242,7 +294,7 @@ scores_df |>
                  cols = vars(cynicism, textbook, objectivity))
 
 lm_fit = lm(cynicism ~ gender + race_ethnicity + age + religious + politics + rwa.authoritarianism + rwa.conservatism + rwa.traditionalism + osi_score, 
-   data = scores_df)
+            data = scores_df)
 
 summary(lm_fit)
 
@@ -269,8 +321,7 @@ coss_coefs = efa_scores[1:6] |>
     bind_rows() |> 
     left_join(efa_labels_df, by = 'term')
 
-## cynicism is consistently negative, ~ -0.18
-## pluralism and (aims + stdpt) consitently weak positive, ~ 0.09
+## cynicism is consistently negative, ~ -0.2
 ## others all negligible
 arrange(coss_coefs, label)
 
@@ -284,7 +335,7 @@ ggplot(coss_coefs, aes(fct_rev(label), estimate)) +
 
 ggsave(here(out_dir, '04_trust_coefs.png'), 
        height = 4, width = 5, bg = 'white', scale = 1.25)
-    
+
 ## A little scratch work building a combined regression table using gtsummary
 ## Problem: gtsummary merges on the variable names, eg, MR1_1, rather than the labels
 # foo = efa_labels |> 
@@ -333,7 +384,8 @@ check_cfa = function(this_efa, threshold = 0.3) {
     ## Discretize loadings
     load_mx = loadings(this_efa) |> 
         magrittr::set_class('matrix') %>% 
-        {(abs(.) > threshold) * (sign(.))}
+        {(abs(.) > threshold) * (sign(.))} |> 
+        zero_xload()
     
     ## Split into columns (factors) and build lavaan spec
     lavaan_spec = load_mx |> 
@@ -362,13 +414,13 @@ check_cfa = function(this_efa, threshold = 0.3) {
 
 # debugonce(check_cfa)
 # check_cfa(efa_fits[[5]]) |> str()
-## FWIW 3 also just barely has the best fit statistics
+## FWIW 3 and 5 just barely have the best fit statistics
 ## Common thresholds: 
 ## CFI: >=0.95 (x - way below)
-## AGFI: >=0.9 (✓)
+## AGFI: >=0.9 (✓ - barely)
 ## RMSEA: <=0.06 (x - a bit above)
 ## SRMR: <= 0.08 (✓)
-map(efa_fits, check_cfa) |> 
+map(efa_fits, check_cfa, threshold = 0.3) |> 
     bind_rows(.id = 'n_factors')
 
 
