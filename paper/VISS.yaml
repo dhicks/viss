@@ -1,298 +1,5 @@
 ---
 references:
-- id: ElliottNonepistemicValuesMultiple2014
-  author:
-    - family: Elliott
-      given: Kevin C.
-    - family: McKaughan
-      given: "Daniel\_J."
-  citation-key: ElliottNonepistemicValuesMultiple2014
-  container-title: Philosophy of Science
-  container-title-short: Phil Sci
-  DOI: 10.1086/674345
-  issue: '1'
-  issued:
-    - year: 2014
-  page: 1-21
-  title: Nonepistemic Values and the Multiple Goals of Science
-  type: article-journal
-  URL: http://www.jstor.org/stable/info/10.1086/674345
-  volume: '81'
-
-- id: MichaelsDoubtTheirProduct2008
-  author:
-    - family: Michaels
-      given: David
-  citation-key: MichaelsDoubtTheirProduct2008
-  event-place: Oxford
-  ISBN: 978-0-19-530067-3 0-19-530067-X 978-0-19-530067-3
-  issued:
-    - year: 2008
-  language: eng
-  number-of-pages: '372'
-  publisher: Oxford Univ. Press
-  publisher-place: Oxford
-  source: Gemeinsamer Bibliotheksverbund ISBN
-  title: >-
-    Doubt is their product how industry's assault on science threatens your
-    health
-  type: book
-
-- id: PlantingaWhenFaithReason2001
-  author:
-    - family: Plantinga
-      given: A
-  citation-key: PlantingaWhenFaithReason2001
-  container-title: >-
-    Intelligent Design Creationism and Its Critics: Philosophical, Theological,
-    and Scientific Perspectives
-  container-title-short: >-
-    Intelligent Design Creationism and Its Critics: Philosophical, Theological,
-    and Scientific Perspectives
-  issued:
-    - year: 2001
-  page: '113'
-  title: 'When faith and reason clash: evolution and the Bible'
-  type: article-journal
-
-- id: ElliottSciencePolicyTransparency2014
-  accessed:
-    - year: 2014
-      month: 12
-      day: 19
-  author:
-    - family: Elliott
-      given: Kevin C.
-    - family: Resnik
-      given: David B.
-  citation-key: ElliottSciencePolicyTransparency2014
-  container-title: Environmental Health Perspectives
-  DOI: 10.1289/ehp.1408107
-  ISSN: 0091-6765
-  issued:
-    - year: 2014
-      month: 3
-      day: 25
-  language: en
-  source: CrossRef
-  title: Science, Policy, and the Transparency of Values
-  type: article-journal
-  URL: http://ehp.niehs.nih.gov/1408107/
-
-- id: WynneSheepfarmingChernobylCase1989
-  author:
-    - family: Wynne
-      given: Brian
-  citation-key: WynneSheepfarmingChernobylCase1989
-  container-title: 'Environment: Science and Policy for Sustainable Development'
-  container-title-short: 'Environment: Science and Policy for Sustainable Development'
-  DOI: 10.1080/00139157.1989.9928930
-  issue: '2'
-  issued:
-    - year: 1989
-  page: 10-39
-  title: >-
-    Sheepfarming after Chernobyl: A Case Study in Communicating Scientific
-    Information
-  type: article-journal
-  URL: http://www.tandfonline.com/doi/abs/10.1080/00139157.1989.9928930
-  volume: '31'
-
-- id: PotochnikDiverseAimsScience2015
-  abstract: >-
-    There is increasing attention to the centrality of idealization in science.
-    One common view is that models and other idealized representations are
-    important to science, but that they fall short in one or more ways. On this
-    view, there must be an intermediary step between idealized representation
-    and the traditional aims of science, including truth, explanation, and
-    prediction. Here I develop an alternative interpretation of the relationship
-    between idealized representation and the aims of science. I suggest that
-    continuing, widespread idealization calls into question the idea that
-    science aims for truth. If instead science aims to produce understanding,
-    this would enable idealizations to directly contribute to science's
-    epistemic success. I also use the fact of widespread idealization to
-    motivate the idea that science's wide variety aims, epistemic and
-    non-epistemic, are best served by different kinds of scientific products.
-    Finally, I show how these diverse aims—most rather distant from truth—result
-    in the expanded influence of social values on science.
-  accessed:
-    - year: 2015
-      month: 6
-      day: 12
-  author:
-    - family: Potochnik
-      given: Angela
-  citation-key: PotochnikDiverseAimsScience2015
-  container-title: Studies in History and Philosophy of Science Part A
-  container-title-short: Studies in History and Philosophy of Science Part A
-  DOI: 10.1016/j.shpsa.2015.05.008
-  ISSN: 0039-3681
-  issued:
-    - year: 2015
-      month: 10
-  page: 71-80
-  source: ScienceDirect
-  title: The diverse aims of science
-  type: article-journal
-  URL: http://www.sciencedirect.com/science/article/pii/S0039368115000680
-  volume: '53'
-
-- id: LexchinThoseWhoHave2011
-  author:
-    - family: Lexchin
-      given: Joel
-  citation-key: LexchinThoseWhoHave2011
-  container-title: Science and Engineering Ethics
-  container-title-short: Sci Eng Ethics
-  DOI: 10.1007/s11948-011-9265-3
-  issue: '2'
-  issued:
-    - year: 2011
-  page: 247-261
-  title: >-
-    Those Who Have the Gold Make the Evidence: How the Pharmaceutical Industry
-    Biases the Outcomes of Clinical Trials of Medications
-  type: article-journal
-  URL: http://link.springer.com/10.1007/s11948-011-9265-3
-  volume: '18'
-
-- id: EpsteinImpureScience1996
-  abstract: >-
-    Epstein shows the extent to which AIDS research has been a social and
-    political phenomenon and how the AIDS movement has transformed biomedical
-    research practices through its capacity to garner credibility by novel
-    strategies.
-  author:
-    - family: Epstein
-      given: Steven
-  citation-key: EpsteinImpureScience1996
-  collection-title: AIDS, Activism, and the Politics of Knowledge
-  event-place: Berkeley, Los Angeles, and Oxford
-  ISBN: 978-0-520-21445-3
-  issued:
-    - year: 1996
-  number-of-pages: '466'
-  publisher: University of California Press
-  publisher-place: Berkeley, Los Angeles, and Oxford
-  title: Impure Science
-  type: book
-  URL: >-
-    http://books.google.ca/books?id=kZOso0FMsrMC&pg=PA39&dq=intitle:Impure+Science+inauthor:epstein&hl=&cd=1&source=gbs_api
-
-- id: McCrightInfluencePoliticalIdeology2013
-  author:
-    - family: McCright
-      given: Aaron M
-    - family: Dentzman
-      given: Katherine
-    - family: Charters
-      given: Meghan
-    - family: Dietz
-      given: Thomas
-  citation-key: McCrightInfluencePoliticalIdeology2013
-  container-title: Environmental Research Letters
-  container-title-short: Environ. Res. Lett.
-  DOI: 10.1088/1748-9326/8/4/044029
-  ISSN: 1748-9326
-  issue: '4'
-  issued:
-    - year: 2013
-      month: 11
-      day: 13
-  page: '044029'
-  publisher: IOP Publishing
-  source: iopscience.iop.org
-  title: The influence of political ideology on trust in science
-  type: article-journal
-  URL: https://iopscience.iop.org/article/10.1088/1748-9326/8/4/044029/meta
-  volume: '8'
-
-- id: LaudanDemiseDemarcationProblem1983
-  author:
-    - family: Laudan
-      given: Larry
-  citation-key: LaudanDemiseDemarcationProblem1983
-  container-title: Physics, Philosophy, and Psychoanalysis
-  editor:
-    - family: Cohen
-      given: R S
-    - family: Laudan
-      given: L
-  ISBN: 94-009-7057-9
-  issued:
-    - year: 1983
-  page: 111-127
-  publisher: Springer Netherlands
-  title: The Demise of the Demarcation Problem
-  type: chapter
-  URL: http://dx.doi.org/10.1007/978-94-009-7055-7_6
-  volume: '76'
-
-- id: YapFeministRadicalEmpiricism2015
-  abstract: >-
-    Feminist epistemologies consider ways in which gender (among other social
-    factors) influences knowledge. In this article, I want to consider a
-    particular kind of feminist empiricism that has been called feminist radical
-    empiricism (where the empiricism, not the feminism, is radical). I am
-    particularly interested in this view's treatment of values as empirical, and
-    consequently up for revision on the basis of empirical evidence. Proponents
-    of this view cite the fact that it allows us to talk about certain things
-    such as racial and gender equality as objective facts: not just whether we
-    have achieved said equality in our society, but whether we are, in fact, all
-    equal. I will raise the concern that the way in which they model the role of
-    values in epistemology may be a problematic idealization of the
-    open-mindedness of human agents. In some cases, resistance to value-change
-    cannot be diagnosed as a failure to respond adequately to evidence. If so,
-    the strategy of empirically testing our values that some feminist radical
-    empiricists suggest may not be as useful a tool for social change as they
-    think.
-  accessed:
-    - year: 2015
-      month: 11
-      day: 6
-  author:
-    - family: Yap
-      given: Audrey
-  citation-key: YapFeministRadicalEmpiricism2015
-  container-title: Hypatia
-  container-title-short: Hypatia
-  DOI: 10.1111/hypa.12221
-  ISSN: 1527-2001
-  issued:
-    - year: 2015
-      month: 11
-      day: 1
-  language: en
-  license: © by Hypatia, Inc.
-  page: n/a-n/a
-  source: Wiley Online Library
-  title: Feminist Radical Empiricism, Values, and Evidence
-  type: article-journal
-  URL: >-
-    https://www.cambridge.org/core/journals/hypatia/article/abs/feminist-radical-empiricism-values-and-evidence/011BD053CABFAA81484D9F54D7134175
-
-- id: OreskesScientificConsensusClimate2004
-  abstract: >-
-    Summary Policy-makers and the public who are not members of the relevant
-    research community have had to form opinions about the reality of global
-    climate change on the basis of often conflicting descriptions provided by
-    the media regarding the level of scientific  ...
-  author:
-    - family: Oreskes
-      given: 'N'
-  citation-key: OreskesScientificConsensusClimate2004
-  container-title: Science
-  container-title-short: Science
-  DOI: 10.1126/science.1103618
-  issue: '5702'
-  issued:
-    - year: 2004
-  page: '1686'
-  title: The scientific consensus on climate change
-  type: article-journal
-  URL: http://www.sciencemag.org/content/306/5702/1686.short
-  volume: '306'
-
 - id: AndersonUsesValueJudgments2004
   abstract: >-
     The underdetermination argument establishes that scientists may use
@@ -325,6 +32,323 @@ references:
   type: article-journal
   URL: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1527-2001.2004.tb01266.x
   volume: '19'
+
+- id: DeweyLogicTheoryInquiry2008
+  abstract: NB pagination key in the critical edition
+  author:
+    - family: Dewey
+      given: John
+  citation-key: DeweyLogicTheoryInquiry2008
+  collection-title: 'John Dewey: The Later Works, 1925-1953'
+  contributor:
+    - family: Nagel
+      given: Ernest
+  editor:
+    - family: Boydston
+      given: Jo Ann
+    - family: Poulos
+      given: Kathleen
+  event-place: Carbondale, IL
+  ISBN: 978-0-8093-2816-1
+  issued:
+    - year: 2008
+  original-date:
+    - year: 1936
+  publisher: Southern Illinois University Press
+  publisher-place: Carbondale, IL
+  title: Logic, the Theory of Inquiry
+  type: book
+  URL: http://books.google.com/books?id=554tAAAAMAAJ&printsec=frontcover
+  volume: '12'
+
+- id: PlantingaWhenFaithReason2001
+  author:
+    - family: Plantinga
+      given: A
+  citation-key: PlantingaWhenFaithReason2001
+  container-title: >-
+    Intelligent Design Creationism and Its Critics: Philosophical, Theological,
+    and Scientific Perspectives
+  container-title-short: >-
+    Intelligent Design Creationism and Its Critics: Philosophical, Theological,
+    and Scientific Perspectives
+  issued:
+    - year: 2001
+  page: '113'
+  title: 'When faith and reason clash: evolution and the Bible'
+  type: article-journal
+
+- id: SchemanEpistemologyResuscitatedObjectivity2001
+  author:
+    - family: Scheman
+      given: Naomi
+  citation-key: SchemanEpistemologyResuscitatedObjectivity2001
+  container-title: Engendering rationalities
+  issued:
+    - year: 2001
+  page: 23-52
+  title: 'Epistemology resuscitated: Objectivity as trustworthiness'
+  type: article-journal
+  URL: >-
+    http://books.google.com/books?hl=en&lr=&id=CLl5HMhRWBsC&oi=fnd&pg=PA23&dq=epistemology+resuscitated+naomi+scheman&ots=2RBRcsu4dg&sig=h7xRsp8flRZFpsFW3rCfCw9R7C4
+
+- id: EpsteinImpureScience1996
+  abstract: >-
+    Epstein shows the extent to which AIDS research has been a social and
+    political phenomenon and how the AIDS movement has transformed biomedical
+    research practices through its capacity to garner credibility by novel
+    strategies.
+  author:
+    - family: Epstein
+      given: Steven
+  citation-key: EpsteinImpureScience1996
+  collection-title: AIDS, Activism, and the Politics of Knowledge
+  event-place: Berkeley, Los Angeles, and Oxford
+  ISBN: 978-0-520-21445-3
+  issued:
+    - year: 1996
+  number-of-pages: '466'
+  publisher: University of California Press
+  publisher-place: Berkeley, Los Angeles, and Oxford
+  title: Impure Science
+  type: book
+  URL: >-
+    http://books.google.ca/books?id=kZOso0FMsrMC&pg=PA39&dq=intitle:Impure+Science+inauthor:epstein&hl=&cd=1&source=gbs_api
+
+- id: ElliottNonepistemicValuesMultiple2014
+  author:
+    - family: Elliott
+      given: Kevin C.
+    - family: McKaughan
+      given: "Daniel\_J."
+  citation-key: ElliottNonepistemicValuesMultiple2014
+  container-title: Philosophy of Science
+  container-title-short: Phil Sci
+  DOI: 10.1086/674345
+  issue: '1'
+  issued:
+    - year: 2014
+  page: 1-21
+  title: Nonepistemic Values and the Multiple Goals of Science
+  type: article-journal
+  URL: http://www.jstor.org/stable/info/10.1086/674345
+  volume: '81'
+
+- id: McCrightInfluencePoliticalIdeology2013
+  author:
+    - family: McCright
+      given: Aaron M
+    - family: Dentzman
+      given: Katherine
+    - family: Charters
+      given: Meghan
+    - family: Dietz
+      given: Thomas
+  citation-key: McCrightInfluencePoliticalIdeology2013
+  container-title: Environmental Research Letters
+  container-title-short: Environ. Res. Lett.
+  DOI: 10.1088/1748-9326/8/4/044029
+  ISSN: 1748-9326
+  issue: '4'
+  issued:
+    - year: 2013
+      month: 11
+      day: 13
+  page: '044029'
+  publisher: IOP Publishing
+  source: iopscience.iop.org
+  title: The influence of political ideology on trust in science
+  type: article-journal
+  URL: https://iopscience.iop.org/article/10.1088/1748-9326/8/4/044029/meta
+  volume: '8'
+
+- id: LexchinThoseWhoHave2011
+  author:
+    - family: Lexchin
+      given: Joel
+  citation-key: LexchinThoseWhoHave2011
+  container-title: Science and Engineering Ethics
+  container-title-short: Sci Eng Ethics
+  DOI: 10.1007/s11948-011-9265-3
+  issue: '2'
+  issued:
+    - year: 2011
+  page: 247-261
+  title: >-
+    Those Who Have the Gold Make the Evidence: How the Pharmaceutical Industry
+    Biases the Outcomes of Clinical Trials of Medications
+  type: article-journal
+  URL: http://link.springer.com/10.1007/s11948-011-9265-3
+  volume: '18'
+
+- id: HicksNewDirectionScience2014
+  author:
+    - family: Hicks
+      given: Daniel J.
+  citation-key: HicksNewDirectionScience2014
+  container-title: Synthese
+  container-title-short: Synthese
+  DOI: 10.1007/s11229-014-0447-9
+  issue: '14'
+  issued:
+    - year: 2014
+      month: 9
+  page: 3271-3295
+  title: A new direction for science and values
+  type: article-journal
+  URL: http://link.springer.com/10.1007/s11229-014-0447-9
+  volume: '191'
+
+- id: LaudanDemiseDemarcationProblem1983
+  author:
+    - family: Laudan
+      given: Larry
+  citation-key: LaudanDemiseDemarcationProblem1983
+  container-title: Physics, Philosophy, and Psychoanalysis
+  editor:
+    - family: Cohen
+      given: R S
+    - family: Laudan
+      given: L
+  ISBN: 94-009-7057-9
+  issued:
+    - year: 1983
+  page: 111-127
+  publisher: Springer Netherlands
+  title: The Demise of the Demarcation Problem
+  type: chapter
+  URL: http://dx.doi.org/10.1007/978-94-009-7055-7_6
+  volume: '76'
+
+- id: OreskesScientificConsensusClimate2004
+  abstract: >-
+    Summary Policy-makers and the public who are not members of the relevant
+    research community have had to form opinions about the reality of global
+    climate change on the basis of often conflicting descriptions provided by
+    the media regarding the level of scientific  ...
+  author:
+    - family: Oreskes
+      given: 'N'
+  citation-key: OreskesScientificConsensusClimate2004
+  container-title: Science
+  container-title-short: Science
+  DOI: 10.1126/science.1103618
+  issue: '5702'
+  issued:
+    - year: 2004
+  page: '1686'
+  title: The scientific consensus on climate change
+  type: article-journal
+  URL: http://www.sciencemag.org/content/306/5702/1686.short
+  volume: '306'
+
+- id: WynneSheepfarmingChernobylCase1989
+  author:
+    - family: Wynne
+      given: Brian
+  citation-key: WynneSheepfarmingChernobylCase1989
+  container-title: 'Environment: Science and Policy for Sustainable Development'
+  container-title-short: 'Environment: Science and Policy for Sustainable Development'
+  DOI: 10.1080/00139157.1989.9928930
+  issue: '2'
+  issued:
+    - year: 1989
+  page: 10-39
+  title: >-
+    Sheepfarming after Chernobyl: A Case Study in Communicating Scientific
+    Information
+  type: article-journal
+  URL: http://www.tandfonline.com/doi/abs/10.1080/00139157.1989.9928930
+  volume: '31'
+
+- id: ElliottSciencePolicyTransparency2014
+  accessed:
+    - year: 2014
+      month: 12
+      day: 19
+  author:
+    - family: Elliott
+      given: Kevin C.
+    - family: Resnik
+      given: David B.
+  citation-key: ElliottSciencePolicyTransparency2014
+  container-title: Environmental Health Perspectives
+  DOI: 10.1289/ehp.1408107
+  ISSN: 0091-6765
+  issued:
+    - year: 2014
+      month: 3
+      day: 25
+  language: en
+  source: CrossRef
+  title: Science, Policy, and the Transparency of Values
+  type: article-journal
+  URL: http://ehp.niehs.nih.gov/1408107/
+
+- id: IntemannDistinguishingLegitimateIllegitimate2015
+  abstract: >-
+    While it is widely acknowledged that science is not “free” of non-epistemic
+    values, there is disagreement about the roles that values can appropriately
+    play. Several have argued that non-epistemic values can play important roles
+    in modeling decisions, particularly in addressing uncertainties (Moss and
+    Schneider 2000; Kandlikar et al. (C.R. Geoscience 337:443-455, 2005); Risbey
+    2007; Biddle and Winsberg 2010; Winsberg (Kennedy Institute of Ethics
+    Journal 22(2): 111-137, 2012); van der Sluijs (Climatic Change 75 (3)
+    359-389, 2012). On the other hand, such values can (even unconsciously) lead
+    to bias (Pielke 2007; Oppenhiemer et al. (Science 317:1505-1506, 2007); Bray
+    (Environmental Science & Policy 13:340-350, 2010); Oreskes and Conway 2010).
+    Thus, it is important to identify when it is legitimate to appeal to
+    non-epistemic values in modeling decisions. An approach is defended here
+    whereby such value judgments are legitimate when they promote democratically
+    endorsed epistemological and social aims of research. This framework
+    accounts for why it is legitimate to appeal to non-epistemic values in a
+    range of modeling decisions, while addressing concerns that the presence of
+    such values will lead to bias or give scientists disproportionate power in
+    deciding what values ought to be endorsed.
+  accessed:
+    - year: 2015
+      month: 1
+      day: 31
+  author:
+    - family: Intemann
+      given: Kristen
+  citation-key: IntemannDistinguishingLegitimateIllegitimate2015
+  container-title: European Journal for Philosophy of Science
+  container-title-short: Euro Jnl Phil Sci
+  DOI: 10.1007/s13194-014-0105-6
+  ISSN: 1879-4912, 1879-4920
+  issue: '2'
+  issued:
+    - year: 2015
+      month: 5
+  language: en
+  page: 217-32
+  source: link.springer.com
+  title: >-
+    Distinguishing between legitimate and illegitimate values in climate
+    modeling
+  type: article-journal
+  URL: http://link.springer.com/article/10.1007/s13194-014-0105-6
+  volume: '5'
+
+- id: MichaelsDoubtTheirProduct2008
+  author:
+    - family: Michaels
+      given: David
+  citation-key: MichaelsDoubtTheirProduct2008
+  event-place: Oxford
+  ISBN: 978-0-19-530067-3 0-19-530067-X 978-0-19-530067-3
+  issued:
+    - year: 2008
+  language: eng
+  number-of-pages: '372'
+  publisher: Oxford Univ. Press
+  publisher-place: Oxford
+  source: Gemeinsamer Bibliotheksverbund ISBN
+  title: >-
+    Doubt is their product how industry's assault on science threatens your
+    health
+  type: book
 
 - id: GierynBoundaryWorkDemarcationScience1983
   abstract: >-
@@ -374,65 +398,111 @@ references:
   URL: http://www.jstor.org/stable/2095325
   volume: '48'
 
-- id: IntemannDistinguishingLegitimateIllegitimate2015
+- id: PotochnikDiverseAimsScience2015
   abstract: >-
-    While it is widely acknowledged that science is not “free” of non-epistemic
-    values, there is disagreement about the roles that values can appropriately
-    play. Several have argued that non-epistemic values can play important roles
-    in modeling decisions, particularly in addressing uncertainties (Moss and
-    Schneider 2000; Kandlikar et al. (C.R. Geoscience 337:443-455, 2005); Risbey
-    2007; Biddle and Winsberg 2010; Winsberg (Kennedy Institute of Ethics
-    Journal 22(2): 111-137, 2012); van der Sluijs (Climatic Change 75 (3)
-    359-389, 2012). On the other hand, such values can (even unconsciously) lead
-    to bias (Pielke 2007; Oppenhiemer et al. (Science 317:1505-1506, 2007); Bray
-    (Environmental Science & Policy 13:340-350, 2010); Oreskes and Conway 2010).
-    Thus, it is important to identify when it is legitimate to appeal to
-    non-epistemic values in modeling decisions. An approach is defended here
-    whereby such value judgments are legitimate when they promote democratically
-    endorsed epistemological and social aims of research. This framework
-    accounts for why it is legitimate to appeal to non-epistemic values in a
-    range of modeling decisions, while addressing concerns that the presence of
-    such values will lead to bias or give scientists disproportionate power in
-    deciding what values ought to be endorsed.
+    There is increasing attention to the centrality of idealization in science.
+    One common view is that models and other idealized representations are
+    important to science, but that they fall short in one or more ways. On this
+    view, there must be an intermediary step between idealized representation
+    and the traditional aims of science, including truth, explanation, and
+    prediction. Here I develop an alternative interpretation of the relationship
+    between idealized representation and the aims of science. I suggest that
+    continuing, widespread idealization calls into question the idea that
+    science aims for truth. If instead science aims to produce understanding,
+    this would enable idealizations to directly contribute to science's
+    epistemic success. I also use the fact of widespread idealization to
+    motivate the idea that science's wide variety aims, epistemic and
+    non-epistemic, are best served by different kinds of scientific products.
+    Finally, I show how these diverse aims—most rather distant from truth—result
+    in the expanded influence of social values on science.
   accessed:
     - year: 2015
-      month: 1
-      day: 31
+      month: 6
+      day: 12
   author:
-    - family: Intemann
-      given: Kristen
-  citation-key: IntemannDistinguishingLegitimateIllegitimate2015
-  container-title: European Journal for Philosophy of Science
-  container-title-short: Euro Jnl Phil Sci
-  DOI: 10.1007/s13194-014-0105-6
-  ISSN: 1879-4912, 1879-4920
-  issue: '2'
+    - family: Potochnik
+      given: Angela
+  citation-key: PotochnikDiverseAimsScience2015
+  container-title: Studies in History and Philosophy of Science Part A
+  container-title-short: Studies in History and Philosophy of Science Part A
+  DOI: 10.1016/j.shpsa.2015.05.008
+  ISSN: 0039-3681
   issued:
     - year: 2015
-      month: 5
-  language: en
-  page: 217-32
-  source: link.springer.com
-  title: >-
-    Distinguishing between legitimate and illegitimate values in climate
-    modeling
+      month: 10
+  page: 71-80
+  source: ScienceDirect
+  title: The diverse aims of science
   type: article-journal
-  URL: http://link.springer.com/article/10.1007/s13194-014-0105-6
-  volume: '5'
+  URL: http://www.sciencedirect.com/science/article/pii/S0039368115000680
+  volume: '53'
 
-- id: SchemanEpistemologyResuscitatedObjectivity2001
+- id: FunkAmericansPoliticsScience2015
+  abstract: >-
+    The public’s political views are strongly linked to attitudes on climate and
+    energy issues but are less important on biomedical, food safety, and space
+    issues.
+  accessed:
+    - year: 2015
+      month: 7
+      day: 2
   author:
-    - family: Scheman
-      given: Naomi
-  citation-key: SchemanEpistemologyResuscitatedObjectivity2001
-  container-title: Engendering rationalities
+    - family: Funk
+      given: Cary
+    - family: Rainie
+      given: Lee
+  citation-key: FunkAmericansPoliticsScience2015
   issued:
-    - year: 2001
-  page: 23-52
-  title: 'Epistemology resuscitated: Objectivity as trustworthiness'
+    - year: 2015
+      month: 7
+      day: 1
+  publisher: Pew Research Center
+  title: Americans, Politics and Science Issues
+  type: report
+  URL: http://www.pewinternet.org/2015/07/01/americans-politics-and-science-issues/
+
+- id: YapFeministRadicalEmpiricism2015
+  abstract: >-
+    Feminist epistemologies consider ways in which gender (among other social
+    factors) influences knowledge. In this article, I want to consider a
+    particular kind of feminist empiricism that has been called feminist radical
+    empiricism (where the empiricism, not the feminism, is radical). I am
+    particularly interested in this view's treatment of values as empirical, and
+    consequently up for revision on the basis of empirical evidence. Proponents
+    of this view cite the fact that it allows us to talk about certain things
+    such as racial and gender equality as objective facts: not just whether we
+    have achieved said equality in our society, but whether we are, in fact, all
+    equal. I will raise the concern that the way in which they model the role of
+    values in epistemology may be a problematic idealization of the
+    open-mindedness of human agents. In some cases, resistance to value-change
+    cannot be diagnosed as a failure to respond adequately to evidence. If so,
+    the strategy of empirically testing our values that some feminist radical
+    empiricists suggest may not be as useful a tool for social change as they
+    think.
+  accessed:
+    - year: 2015
+      month: 11
+      day: 6
+  author:
+    - family: Yap
+      given: Audrey
+  citation-key: YapFeministRadicalEmpiricism2015
+  container-title: Hypatia
+  container-title-short: Hypatia
+  DOI: 10.1111/hypa.12221
+  ISSN: 1527-2001
+  issued:
+    - year: 2015
+      month: 11
+      day: 1
+  language: en
+  license: © by Hypatia, Inc.
+  page: n/a-n/a
+  source: Wiley Online Library
+  title: Feminist Radical Empiricism, Values, and Evidence
   type: article-journal
   URL: >-
-    http://books.google.com/books?hl=en&lr=&id=CLl5HMhRWBsC&oi=fnd&pg=PA23&dq=epistemology+resuscitated+naomi+scheman&ots=2RBRcsu4dg&sig=h7xRsp8flRZFpsFW3rCfCw9R7C4
+    https://www.cambridge.org/core/journals/hypatia/article/abs/feminist-radical-empiricism-values-and-evidence/011BD053CABFAA81484D9F54D7134175
 
 - id: DouglasSciencePolicyValuefree2009
   author:
@@ -449,6 +519,45 @@ references:
   publisher-place: Pittsburgh, Pa
   source: Library of Congress ISBN
   title: Science, policy, and the value-free ideal
+  type: book
+
+- id: LargentVaccineDebateModern2012
+  abstract: >-
+    Since 1990, the number of mandated vaccines has increased dramatically.
+    Today, a fully vaccinated child will have received nearly three dozen
+    vaccinations between birth and age six. Along with the increase in number
+    has come a growing wave of concern among parents about the unintended side
+    effects of vaccines. In Vaccine, Mark A. Largent explains the history of the
+    debate and identifies issues that parents, pediatricians, politicians, and
+    public health officials must address.Nearly 40% of American parents report
+    that they delay or refuse a recommended vaccine for their children. Despite
+    assurances from every mainstream scientific and medical institution, parents
+    continue to be haunted by the question of whether vaccines cause autism. In
+    response, health officials herald vaccines as both safe and vital to the
+    public's health and put programs and regulations in place to encourage
+    parents to follow the recommended vaccine schedule.For Largent, the
+    vaccine-autism debate obscures a constellation of concerns held by many
+    parents, including anxiety about the number of vaccines required (including
+    some for diseases that children are unlikely ever to encounter), unhappiness
+    about the rigorous schedule of vaccines during well-baby visits, and fear of
+    potential side effects, some of them serious and even life-threatening. This
+    book disentangles competing claims, opens the controversy for critical
+    reflection, and provides recommendations for moving forward.
+  author:
+    - family: Largent
+      given: Mark A.
+  citation-key: LargentVaccineDebateModern2012
+  ISBN: 978-1-4214-0607-7
+  issued:
+    - year: 2012
+      month: 7
+      day: 10
+  language: en
+  number-of-pages: '234'
+  publisher: JHU Press
+  source: Google Books
+  title: 'Vaccine: The Debate in Modern America'
+  title-short: Vaccine
   type: book
 
 - id: BiddleClimateSkepticismManufacture2015
@@ -549,115 +658,6 @@ references:
   title-short: Why Popper can’t resolve the debate over global warming
   type: article-journal
   URL: http://pus.sagepub.com/content/early/2016/05/04/0963662516645040
-
-- id: DeweyLogicTheoryInquiry2008
-  abstract: NB pagination key in the critical edition
-  author:
-    - family: Dewey
-      given: John
-  citation-key: DeweyLogicTheoryInquiry2008
-  collection-title: 'John Dewey: The Later Works, 1925-1953'
-  contributor:
-    - family: Nagel
-      given: Ernest
-  editor:
-    - family: Boydston
-      given: Jo Ann
-    - family: Poulos
-      given: Kathleen
-  event-place: Carbondale, IL
-  ISBN: 978-0-8093-2816-1
-  issued:
-    - year: 2008
-  original-date:
-    - year: 1936
-  publisher: Southern Illinois University Press
-  publisher-place: Carbondale, IL
-  title: Logic, the Theory of Inquiry
-  type: book
-  URL: http://books.google.com/books?id=554tAAAAMAAJ&printsec=frontcover
-  volume: '12'
-
-- id: FunkAmericansPoliticsScience2015
-  abstract: >-
-    The public’s political views are strongly linked to attitudes on climate and
-    energy issues but are less important on biomedical, food safety, and space
-    issues.
-  accessed:
-    - year: 2015
-      month: 7
-      day: 2
-  author:
-    - family: Funk
-      given: Cary
-    - family: Rainie
-      given: Lee
-  citation-key: FunkAmericansPoliticsScience2015
-  issued:
-    - year: 2015
-      month: 7
-      day: 1
-  publisher: Pew Research Center
-  title: Americans, Politics and Science Issues
-  type: report
-  URL: http://www.pewinternet.org/2015/07/01/americans-politics-and-science-issues/
-
-- id: LargentVaccineDebateModern2012
-  abstract: >-
-    Since 1990, the number of mandated vaccines has increased dramatically.
-    Today, a fully vaccinated child will have received nearly three dozen
-    vaccinations between birth and age six. Along with the increase in number
-    has come a growing wave of concern among parents about the unintended side
-    effects of vaccines. In Vaccine, Mark A. Largent explains the history of the
-    debate and identifies issues that parents, pediatricians, politicians, and
-    public health officials must address.Nearly 40% of American parents report
-    that they delay or refuse a recommended vaccine for their children. Despite
-    assurances from every mainstream scientific and medical institution, parents
-    continue to be haunted by the question of whether vaccines cause autism. In
-    response, health officials herald vaccines as both safe and vital to the
-    public's health and put programs and regulations in place to encourage
-    parents to follow the recommended vaccine schedule.For Largent, the
-    vaccine-autism debate obscures a constellation of concerns held by many
-    parents, including anxiety about the number of vaccines required (including
-    some for diseases that children are unlikely ever to encounter), unhappiness
-    about the rigorous schedule of vaccines during well-baby visits, and fear of
-    potential side effects, some of them serious and even life-threatening. This
-    book disentangles competing claims, opens the controversy for critical
-    reflection, and provides recommendations for moving forward.
-  author:
-    - family: Largent
-      given: Mark A.
-  citation-key: LargentVaccineDebateModern2012
-  ISBN: 978-1-4214-0607-7
-  issued:
-    - year: 2012
-      month: 7
-      day: 10
-  language: en
-  number-of-pages: '234'
-  publisher: JHU Press
-  source: Google Books
-  title: 'Vaccine: The Debate in Modern America'
-  title-short: Vaccine
-  type: book
-
-- id: HicksNewDirectionScience2014
-  author:
-    - family: Hicks
-      given: Daniel J.
-  citation-key: HicksNewDirectionScience2014
-  container-title: Synthese
-  container-title-short: Synthese
-  DOI: 10.1007/s11229-014-0447-9
-  issue: '14'
-  issued:
-    - year: 2014
-      month: 9
-  page: 3271-3295
-  title: A new direction for science and values
-  type: article-journal
-  URL: http://link.springer.com/10.1007/s11229-014-0447-9
-  volume: '191'
 
 - id: CrasnowFeministPhilosophyScience2013
   abstract: >-
@@ -943,7 +943,7 @@ references:
   container-title: Environmental Communication
   DOI: 10.1080/17524032.2017.1377094
   ISSN: 1752-4032
-  issue: '0'
+  issue: '6'
   issued:
     - year: 2017
       month: 9
@@ -953,7 +953,7 @@ references:
   title: Response by Oreskes to “Beyond Counting Climate Consensus”
   type: article-journal
   URL: http://dx.doi.org/10.1080/17524032.2017.1377094
-  volume: '0'
+  volume: '11'
 
 - id: PearceCountingClimateConsensus2017
   abstract: >-
@@ -2872,6 +2872,35 @@ references:
   URL: >-
     https://www.cambridge.org/core/journals/canadian-journal-of-philosophy/article/sensational-science-archaic-hominin-genetics-and-amplified-inductive-risk/80675A1A574D9BD78A6B7ECA045DC2AC
 
+- id: HuFitIndicesCovariance1998
+  accessed:
+    - year: 2022
+      month: 5
+      day: 7
+  author:
+    - family: Hu
+      given: Li-tze
+    - family: Bentler
+      given: Peter M.
+  citation-key: HuFitIndicesCovariance1998
+  container-title: Psychological Methods
+  container-title-short: Psychological Methods
+  DOI: 10.1037/1082-989X.3.4.424
+  ISSN: 1939-1463, 1082-989X
+  issue: '4'
+  issued:
+    - year: 1998
+  language: en
+  page: 424-453
+  source: DOI.org (Crossref)
+  title: >-
+    Fit indices in covariance structure modeling: Sensitivity to
+    underparameterized model misspecification.
+  title-short: Fit indices in covariance structure modeling
+  type: article-journal
+  URL: http://doi.apa.org/getdoi.cfm?doi=10.1037/1082-989X.3.4.424
+  volume: '3'
+
 - id: CookQuantifyingConsensusAnthropogenic2013
   abstract: >-
     We analyze the evolution of the scientific consensus on anthropogenic global
@@ -3117,35 +3146,6 @@ references:
   type: paper-conference
   URL: >-
     https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.113.8030&rep=rep1&type=pdf
-
-- id: HuFitIndicesCovariance1998
-  accessed:
-    - year: 2022
-      month: 5
-      day: 7
-  author:
-    - family: Hu
-      given: Li-tze
-    - family: Bentler
-      given: Peter M.
-  citation-key: HuFitIndicesCovariance1998
-  container-title: Psychological Methods
-  container-title-short: Psychological Methods
-  DOI: 10.1037/1082-989X.3.4.424
-  ISSN: 1939-1463, 1082-989X
-  issue: '4'
-  issued:
-    - year: 1998
-  language: en
-  page: 424-453
-  source: DOI.org (Crossref)
-  title: >-
-    Fit indices in covariance structure modeling: Sensitivity to
-    underparameterized model misspecification.
-  title-short: Fit indices in covariance structure modeling
-  type: article-journal
-  URL: http://doi.apa.org/getdoi.cfm?doi=10.1037/1082-989X.3.4.424
-  volume: '3'
 
 - id: NavinValuesVaccineRefusal2015
   abstract: >-
