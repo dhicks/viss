@@ -163,7 +163,7 @@ The final items and text are given in the third and fourth columns of @tbl-viss.
 
 # Study 3
 
-The aim of this study was to replicate and extend the relevant components of Study 1 using the finalized VISS items.  Specifically, we were interested in whether and how VISS items might map on to latent variables; *[correlations among items vs. logical relationships; 'upstream' demographic predictors; 'downstream' relationships w/ trust]*
+The aim of this study was to replicate and extend the relevant components of Study 1 using the finalized VISS items.  Specifically, we were interested in whether and how VISS items might map on to latent variables; test *[correlations among items vs. logical relationships; 'upstream' demographic predictors; 'downstream' relationships w/ trust]*
 
 ## Materials
 
