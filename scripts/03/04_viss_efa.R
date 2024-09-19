@@ -137,7 +137,6 @@ efa_labels_df = efa_labels[1:6] |>
 
 
 ## Scores ----
-## TODO: exclude cross-loaded items
 ## Fitted EDAs include a `scores` element with the right dimensions
 ## But since default for `factanal` is `scores = 'none'` it's not clear what this means
 efa_fits[[3]] %>%
@@ -158,15 +157,27 @@ scores = function(this_efa, efa_name = 'test', threshold = 0.3) {
         {(abs(.) > threshold) * (sign(.))} |> 
         zero_xload()
     
+    count_mx = colSums(abs(load_mx)) %>%
+        {1 / .} %>% 
+        {diag(., nrow = length(.))} |> 
+        magrittr::set_colnames(colnames(load_mx))
+    
     dataf_mx = as.matrix(viss_df)
     
     assert_that(all(rownames(load_mx) == colnames(dataf_mx)))
     
-    dataf_mx %*% load_mx |> 
+    dataf_mx %*% (load_mx %*% count_mx) %>%
         as_tibble(rownames = 'prolific_id') |> 
         rename_with(.cols = -prolific_id, 
                     .fn = ~ glue('{.x}_{efa_name}'))
 }
+
+# scores(efa_fits[[3]]) |> 
+#     summarize(across(starts_with('MR'),
+#                      .fns = lst(min, max, mean, sd),
+#                      na.rm = TRUE)) |> 
+#     view()
+
 
 if (!interactive()) {
     efa_scores = imap(efa_fits, scores, threshold = .30) |> 
@@ -176,6 +187,7 @@ if (!interactive()) {
     efa_scores = imap(efa_fits, scores, 
                       threshold = 0.30)
 }
+
 
 ## Big combined loadings table ----
 loadings_to_df = function(fit) {
@@ -311,22 +323,33 @@ tidy(lm_fit) |>
     coord_flip()
 
 ## Regress COSS against each latent variable and extract coefficients ----
-coss_coefs = efa_scores[1:6] |> 
+regression_dfs = efa_scores[1:6] |> 
     map(~ {.x |> 
             inner_join(dataf, by = 'prolific_id') |> 
-            select(starts_with('MR'), coss) %>%
-            lm(coss ~ ., data = .) |> 
+            select(starts_with('MR'), coss)}) |> 
+    map2(efa_labels, ~ rename(..1,
+                              set_names(names(..2), ..2)))
+
+## TODO: scatterplots for each factor against COSS
+regression_dfs[[3]] |> 
+    ggplot(aes(cynicism_3, coss)) +
+    geom_point() +
+    geom_smooth(method = 'lm')
+
+coss_coefs = regression_dfs |> 
+    map(~ {lm(coss ~ ., data = .) |> 
             tidy(conf.int = TRUE)}) |> 
     map(~ filter(.x, term != '(Intercept)')) |> 
     bind_rows() |> 
-    left_join(efa_labels_df, by = 'term')
+    mutate(term = str_remove_all(term, '`'))
 
-## cynicism is consistently negative, ~ -0.2
-## others all negligible
-arrange(coss_coefs, label)
+## TODO: reinterpret
+## cynicism is consistently negative, roughly -0.6 to -1.1
+## textbook is negative 
+arrange(coss_coefs, term)
 
-ggplot(coss_coefs, aes(fct_rev(label), estimate)) +
-    geom_hline(yintercept = c(0, -1/7, 1/7),
+ggplot(coss_coefs, aes(fct_rev(term), estimate)) +
+    geom_hline(yintercept = c(0, 1/7, -1/7),
                linetype = 'dashed') +
     geom_pointrange(aes(ymin = conf.low, 
                         ymax = conf.high)) +

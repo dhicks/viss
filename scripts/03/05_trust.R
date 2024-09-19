@@ -17,7 +17,7 @@ source(here('R', 'vars.R'))
 data_dir = here('data', '03')
 out_dir = here('out', '03')
 
-viss_scores = read_rds(here(data_dir, '03_scores_3.Rds')) |> 
+viss_scores = read_rds(here(data_dir, '04_scores_3.Rds')) |> 
     magrittr::set_colnames(c('prolific_id', 
                              'viss_cynicism', 
                              'viss_textbook', 
@@ -158,16 +158,47 @@ ggplot(dataf) +
                  cols = vars(viss_items[11:19]))
 
 ## VISS factors against trust measures ----
-ggplot(dataf) +
-    geom_autopoint(alpha = .1, position = 'jitter') +
+## TODO: x-axes don't quite align
+viss_coss = ggplot(dataf) +
+    geom_autopoint(alpha = .2, position = 'jitter') +
     stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
     stat_cor(aes(.panel_x, .panel_y,
-                 label = after_stat(r.label)), 
+                 label = after_stat(label)), 
              geom = 'label',
-             label.y = 2, 
+             label.y = 1, 
              digits = 1) +
-    facet_matrix(rows = vars(!!trust_vars),
+    facet_matrix(rows = vars(coss),
                  cols = vars(!!viss_vars))
+viss_coss
+
+coss_hist = dataf |> 
+    ggplot(aes(coss)) +
+    geom_histogram(binwidth = .25) +
+    coord_flip() +
+    labs(x = '')
+
+viss_hist = dataf |> 
+    select(!!viss_vars) |> 
+    pivot_longer(everything(), 
+                 names_to = 'item', 
+                 values_to = 'response', 
+                 names_transform = list(item = fct_inorder)) |> 
+    ggplot(aes(response)) +
+    geom_histogram(binwidth = .5) +
+    labs(x = '') +
+    facet_grid(cols = vars(item), 
+               scales = 'free')
+
+viss_hist + viss_coss + coss_hist +
+    plot_layout(design = 'AAAAD
+                          BBBBC
+                          BBBBC', 
+                axes = 'collect') +
+    labs(caption = 'N = 502')
+
+ggsave(here(out_dir, '05_factors_coss.png'), 
+       height = 3, width = 5, scale = 2,
+       bg = 'white')
 
 ## Regressions ----
 ## NB due to high missingness, exclude `occ_prestige`
