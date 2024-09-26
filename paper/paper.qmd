@@ -88,6 +88,8 @@ There is a substantial body of empirical research on scientific literacy and und
 
 *[Add VFI introduction here
 we're especially interested in the value-free ideal, which is how philosophers understanding traditional objectivity
+
+@DouglasSciencePolicyValuefree2009: social, ethical, and political values should have no influence over the reasoning of scientists, and that scientists should proceed in their work with as little concern as possible for such value (1)
 ]*
 
 
