@@ -2037,6 +2037,7 @@ references:
     - family: Schloerke
       given: Barret
   citation-key: IannoneGtEasilyCreate2022
+  DOI: 10.32614/CRAN.package.gt
   issued:
     - year: 2022
   license: MIT + file LICENSE
