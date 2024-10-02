@@ -42,4 +42,6 @@ floats:
 	cp ../out/03/04_loadings_bymodel.Rds tbl/04_loadings_bymodel.Rds
 	cp ../out/03/06_prompts.Rds tbl/06_prompts.Rds
 	cp ../out/03/05_trust_corr.png img/05_trust_corr.png
+	cp ../out/03/05_interaction.png img/05_interaction.png
+	cp ../out/03/05_inter.Rds tbl/05_inter.Rds
 

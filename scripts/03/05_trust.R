@@ -4,6 +4,7 @@ library(sjlabelled)
 library(ggforce)
 library(ggpubr)
 library(ggeffects)
+library(gtsummary)
 library(gt)
 library(corrr)
 
@@ -27,7 +28,7 @@ dataf = read_rds(here(data_dir, '01_data.Rds')) |>
     left_join(viss_scores, by = 'prolific_id')
 
 
-    
+
 ## Trust measures EDA ----
 ## CoSS ----
 dataf |> 
@@ -200,11 +201,73 @@ ggsave(here(out_dir, '05_factors_coss.png'),
        height = 3, width = 5, scale = 2,
        bg = 'white')
 
+inter_gg = dataf |> 
+    mutate(cyn_binned = cut(viss_cynicism, 
+                            breaks = 4)) |> 
+    ggplot(aes(viss_objectivity, coss, 
+               color = cyn_binned, 
+               fill = cyn_binned,
+               group = cyn_binned)) +
+    geom_point(position = 'jitter', 
+               alpha = .25) +
+    stat_smooth(method = 'lm') +
+    scale_color_viridis_d(end = .8, 
+                          na.translate = FALSE, 
+                          aesthetics = c('color', 'fill'))
+inter_gg
+
+## Putting all three into a single regression, effect of objectivity is not stat. sig. 
+model_1 = lm(coss ~ viss_cynicism + 
+                 viss_textbook + 
+                 viss_objectivity, 
+             data = dataf)
+summary(model_1)
+## Interaction of cynicism w/ objectivity doesn't change anything
+model_2 = lm(coss ~ viss_cynicism + 
+                 viss_textbook + 
+                 viss_objectivity +
+                 viss_cynicism * viss_objectivity, 
+             data = dataf)
+summary(model_2)
+
+dataf$viss_objectivity |> 
+    summary()
+
+inter_reg_gg = predict_response(model_2, 
+                 c('viss_cynicism', 'viss_objectivity'), 
+                 margin = 'empirical') |> 
+    plot() +
+    scale_color_viridis_d(end = .8, 
+                          aesthetics = c('color', 'fill'))
+inter_reg_gg
+
+inter_gg + inter_reg_gg
+
+ggsave(here(out_dir, '05_interaction.png'), 
+       height = 3, width = 6, scale = 1.5, bg = 'white')
+
+inter_gt = list(model_1, model_2) |> 
+    map(tbl_regression) |> 
+    map(add_glance_table, 
+        include = c('r.squared', 
+                    'adj.r.squared', 
+                    'AIC', 
+                    'nobs')) |> 
+    tbl_merge(tab_spanner = c('**Model 1**', '**Model 2**')) |> 
+    modify_table_body(~.x %>% 
+                          arrange(row_type == "glance_statistic"))
+
+inter_gt |> 
+    as_gt() |> 
+    write_rds(here(out_dir, '05_inter.Rds'))
+
 ## Regressions ----
 ## NB due to high missingness, exclude `occ_prestige`
 lm(coss ~ gender + age + religious + rwa.conservatism + rwa.traditionalism + rwa.authoritarianism + osi_score + viss_cynicism + viss_textbook + viss_objectivity, 
    data = dataf) |> 
     summary()
+
+
 
 
 ## Focusing on RWA ----
