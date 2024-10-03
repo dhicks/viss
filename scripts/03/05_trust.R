@@ -202,12 +202,12 @@ ggsave(here(out_dir, '05_factors_coss.png'),
        bg = 'white')
 
 inter_gg = dataf |> 
-    mutate(cyn_binned = cut(viss_cynicism, 
+    mutate(obj_binned = cut(viss_objectivity, 
                             breaks = 4)) |> 
-    ggplot(aes(viss_objectivity, coss, 
-               color = cyn_binned, 
-               fill = cyn_binned,
-               group = cyn_binned)) +
+    ggplot(aes(viss_cynicism, coss, 
+               color = obj_binned, 
+               fill = obj_binned,
+               group = obj_binned)) +
     geom_point(position = 'jitter', 
                alpha = .25) +
     stat_smooth(method = 'lm') +
@@ -230,11 +230,9 @@ model_2 = lm(coss ~ viss_cynicism +
              data = dataf)
 summary(model_2)
 
-dataf$viss_objectivity |> 
-    summary()
-
 inter_reg_gg = predict_response(model_2, 
-                 c('viss_cynicism', 'viss_objectivity'), 
+                 c('viss_cynicism', 
+                   'viss_objectivity [1:7 by=2]'), 
                  margin = 'empirical') |> 
     plot() +
     scale_color_viridis_d(end = .8, 
