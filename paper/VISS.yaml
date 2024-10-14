@@ -1,5 +1,24 @@
 ---
 references:
+- id: AlcoffCommentaryElizabethAndersons2006
+  accessed:
+    - year: 2022
+      month: 10
+      day: 8
+  author:
+    - family: Alcoff
+      given: Linda Martín
+  citation-key: AlcoffCommentaryElizabethAndersons2006
+  container-title: Symposia on Gender, Race and Philosophy
+  issue: '1'
+  issued:
+    - year: 2006
+      month: 1
+  title: Commentary on Elizabeth Anderson’s “Uses of Value Judgments in Science”
+  type: article-journal
+  URL: https://sgrponline.files.wordpress.com/2019/07/alcoff0106-1.pdf
+  volume: '2'
+
 - id: AltenmullerExplainingPolarizedTrust2024
   abstract: >-
     Trust in science is polarized along political lines—but why? We show across
@@ -139,6 +158,23 @@ references:
   URL: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0178043
   volume: '12'
 
+- id: BetzDefenceValueFree2013
+  author:
+    - family: Betz
+      given: Gregor
+  citation-key: BetzDefenceValueFree2013
+  container-title: European Journal for Philosophy of Science
+  container-title-short: Euro Jnl Phil Sci
+  DOI: 10.1007/s13194-012-0062-x
+  issue: '2'
+  issued:
+    - year: 2013
+  page: 207-220
+  title: In defence of the value free ideal
+  type: article-journal
+  URL: http://link.springer.com/10.1007/s13194-012-0062-x
+  volume: '3'
+
 - id: BiddleClimateSkepticismManufacture2015
   abstract: >-
     The aim of this paper is to address the neglected but important problem of
@@ -235,6 +271,91 @@ references:
   type: article-journal
   URL: https://www.sociologicalscience.com/articles-v4-15-353/
   volume: '4'
+
+- id: BradleyUnrepresentativeBigSurveys2021
+  abstract: "Surveys are a crucial tool for understanding public opinion and behaviour, and their accuracy depends on maintaining statistical representativeness of their target populations by minimizing biases from all sources. Increasing data size shrinks confidence intervals but magnifies the effect of survey bias:\_an instance of the Big Data Paradox1. Here we demonstrate this paradox in estimates of first-dose COVID-19 vaccine uptake in US adults from 9 January to 19 May 2021 from two large surveys: Delphi–Facebook2,3 (about 250,000 responses per week) and Census Household Pulse4 (about 75,000 every two weeks). In May 2021, Delphi–Facebook overestimated uptake by 17 percentage points (14–20 percentage points with 5% benchmark imprecision) and Census Household Pulse by 14 (11–17 percentage points with 5% benchmark imprecision), compared to a retroactively updated benchmark the Centers for Disease Control and Prevention published on 26 May 2021. Moreover, their large sample sizes led to miniscule margins of error on the incorrect estimates. By contrast, an Axios–Ipsos\_online panel5 with about 1,000 responses per week following survey research best practices6 provided reliable estimates and uncertainty quantification. We decompose observed error using a recent analytic framework1 to explain the inaccuracy in the three surveys. We\_then analyse the implications for vaccine hesitancy and willingness. We show how a survey of 250,000 respondents can produce an estimate of the\_population mean that is no more accurate than an estimate from a simple random sample of size 10. Our central message is that data quality matters more than data quantity, and that compensating the former with the latter is a mathematically provable losing proposition."
+  accessed:
+    - year: 2021
+      month: 12
+      day: 15
+  author:
+    - family: Bradley
+      given: Valerie C.
+    - family: Kuriwaki
+      given: Shiro
+    - family: Isakov
+      given: Michael
+    - family: Sejdinovic
+      given: Dino
+    - family: Meng
+      given: Xiao-Li
+    - family: Flaxman
+      given: Seth
+  citation-key: BradleyUnrepresentativeBigSurveys2021
+  container-title: Nature
+  DOI: 10.1038/s41586-021-04198-4
+  ISSN: 1476-4687
+  issued:
+    - year: 2021
+      month: 12
+      day: 8
+  language: en
+  license: 2021 The Author(s), under exclusive licence to Springer Nature Limited
+  note: |-
+    Bandiera_abtest: a
+    Cg_type: Nature Research Journals
+    Primary_atype: Research
+    Subject_term: Infectious diseases;Research data;Statistics
+    Subject_term_id: infectious-diseases;research-data;statistics
+  page: 1-6
+  publisher: Nature Publishing Group
+  source: www.nature.com
+  title: Unrepresentative big surveys significantly overestimated US vaccine uptake
+  type: article-journal
+  URL: https://www.nature.com/articles/s41586-021-04198-4
+
+- id: BrennanDemocracy2017
+  abstract: >-
+    A bracingly provocative challenge to one of our most cherished ideas and
+    institutionsMost people believe democracy is a uniquely just form of
+    government. They believe people have the right to an equal share of
+    political power. And they believe that political participation is good for
+    us—it empowers us, helps us get what we want, and tends to make us smarter,
+    more virtuous, and more caring for one another. These are some of our most
+    cherished ideas about democracy. But Jason Brennan says they are all
+    wrong.In this trenchant book, Brennan argues that democracy should be judged
+    by its results—and the results are not good enough. Just as defendants have
+    a right to a fair trial, citizens have a right to competent government. But
+    democracy is the rule of the ignorant and the irrational, and it all too
+    often falls short. Furthermore, no one has a fundamental right to any share
+    of political power, and exercising political power does most of us little
+    good. On the contrary, a wide range of social science research shows that
+    political participation and democratic deliberation actually tend to make
+    people worse—more irrational, biased, and mean. Given this grim picture,
+    Brennan argues that a new system of government—epistocracy, the rule of the
+    knowledgeable—may be better than democracy, and that it's time to experiment
+    and find out.A challenging critique of democracy and the first sustained
+    defense of the rule of the knowledgeable, Against Democracy is essential
+    reading for scholars and students of politics across the
+    disciplines.Featuring a new preface that situates the book within the
+    current political climate and discusses other alternatives beyond
+    epistocracy, Against Democracy is a challenging critique of democracy and
+    the first sustained defense of the rule of the knowledgeable.
+  author:
+    - family: Brennan
+      given: Jason
+  citation-key: BrennanDemocracy2017
+  ISBN: 978-1-4008-8839-9
+  issued:
+    - year: 2017
+      month: 9
+      day: 26
+  language: en
+  number-of-pages: '309'
+  publisher: Princeton University Press
+  source: Google Books
+  title: Against Democracy
+  type: book
 
 - id: BrightBoisDemocraticDefence2017
   abstract: >-
@@ -680,6 +801,72 @@ references:
   type: book
   URL: http://books.google.com/books?id=554tAAAAMAAJ&printsec=frontcover
   volume: '12'
+
+- id: DickermanCounterfactualPredictionNot2020
+  accessed:
+    - year: 2024
+      month: 10
+      day: 2
+  author:
+    - family: Dickerman
+      given: Barbra A.
+    - family: Hernán
+      given: Miguel A.
+  citation-key: DickermanCounterfactualPredictionNot2020
+  container-title: European Journal of Epidemiology
+  container-title-short: Eur J Epidemiol
+  DOI: 10.1007/s10654-020-00659-8
+  ISSN: 1573-7284
+  issue: '7'
+  issued:
+    - year: 2020
+      month: 7
+      day: 1
+  language: en
+  page: 615-617
+  source: Springer Link
+  title: Counterfactual prediction is not only for causal inference
+  type: article-journal
+  URL: https://doi.org/10.1007/s10654-020-00659-8
+  volume: '35'
+
+- id: DiStefanoUnderstandingUsingFactor2009
+  abstract: >-
+    Following an exploratory factor analysis, factor scores may be computed and
+    used in subsequent analyses. Factor scores are composite variables which
+    provide information about an individual's placement on the factor(s). This
+    article discusses popular methods to create factor scores under two
+    different classes: refined and non-refined. Strengths and considerations of
+    the various methods, and for using factor scores in general, are discussed.
+    (Contains 1 table and 3 footnotes.)
+  accessed:
+    - year: 2024
+      month: 8
+      day: 15
+  author:
+    - family: DiStefano
+      given: Christine
+    - family: Zhu
+      given: Min
+    - family: Mindrila
+      given: Diana
+  citation-key: DiStefanoUnderstandingUsingFactor2009
+  container-title: Practical Assessment, Research & Evaluation
+  ISSN: 1531-7714
+  issue: '20'
+  issued:
+    - year: 2009
+      month: 10
+  language: en
+  note: 'ERIC Number: EJ933679'
+  publisher: Dr
+  source: ERIC
+  title: >-
+    Understanding and Using Factor Scores: Considerations for the Applied
+    Researcher
+  title-short: Understanding and Using Factor Scores
+  type: article-journal
+  volume: '14'
 
 - id: DouglasSciencePolicyValuefree2009
   author:
@@ -2186,6 +2373,45 @@ references:
   URL: https://doi.org/10.1080/13669877.2016.1148067
   volume: '20'
 
+- id: KappelProperRoleScience2014
+  author:
+    - family: Kappel
+      given: Klemens
+  citation-key: KappelProperRoleScience2014
+  issued:
+    - year: 2014
+      month: 5
+  language: en
+  source: Zotero
+  title: The Proper Role of Science in Liberal Democracy
+  type: article-journal
+
+- id: KeeterOnlineOptpollsCan2024
+  abstract: >-
+    We examine how an opt-in poll may have unintentionally misled the public
+    about the sensitive issue of Holocaust denial among young Americans.
+  accessed:
+    - year: 2024
+      month: 9
+      day: 9
+  author:
+    - family: Keeter
+      given: Andrew Mercer
+      suffix: Courtney Kennedy and Scott
+  citation-key: KeeterOnlineOptpollsCan2024
+  container-title: Pew Research Center
+  issued:
+    - year: 2024
+      month: 3
+      day: 5
+  language: en-US
+  title: >-
+    Online opt-in polls can produce misleading results, especially for young
+    people and Hispanic adults
+  type: post-weblog
+  URL: >-
+    https://www.pewresearch.org/short-reads/2024/03/05/online-opt-in-polls-can-produce-misleading-results-especially-for-young-people-and-hispanic-adults/
+
 - id: KennedyEvaluation2016Election2018
   abstract: >-
     The 2016 presidential election was a jarring event for polling in the United
@@ -2705,6 +2931,46 @@ references:
   title-short: Science as social knowledge
   type: book
 
+- id: LudeckeGgeffectsCreateTidy2024
+  abstract: >-
+    Compute marginal effects and adjusted predictions from statistical models
+    and returns the result as tidy data frames. These data frames are ready to
+    use with the 'ggplot2'-package. Effects and predictions can be calculated
+    for many different models. Interaction terms, splines and polynomial terms
+    are also supported. The main functions are ggpredict(), ggemmeans() and
+    ggeffect(). There is a generic plot()-method to plot the results using
+    'ggplot2'.
+  accessed:
+    - year: 2024
+      month: 10
+      day: 2
+  author:
+    - family: Lüdecke
+      given: Daniel
+    - family: Aust
+      given: Frederik
+    - family: Crawley
+      given: Sam
+    - family: Ben-Shachar
+      given: Mattan S.
+    - family: Anderson
+      given: Sean C.
+  citation-key: LudeckeGgeffectsCreateTidy2024
+  DOI: 10.32614/CRAN.package.ggeffects
+  issued:
+    - year: 2024
+      month: 9
+      day: 1
+  license: MIT + file LICENSE
+  source: R-Packages
+  title: >-
+    ggeffects: Create Tidy Data Frames of Marginal Effects for 'ggplot' from
+    Model Outputs
+  title-short: ggeffects
+  type: software
+  URL: https://cran.r-project.org/web/packages/ggeffects/index.html
+  version: 1.7.1
+
 - id: LukicDelineatingScientismScience2023
   abstract: >-
     Scientism proposes science to be an all-powerful human enterprise, able to
@@ -2750,6 +3016,111 @@ references:
   title-short: Delineating between scientism and science enthusiasm
   type: article-journal
   URL: https://doi.org/10.1177/09636625231217900
+
+- id: LupiaTrendsUSPublic2024
+  abstract: >-
+    In recent years, many questions have been raised about whether public
+    confidence in science is changing. To clarify recent trends in the public’s
+    confidence and factors that are associated with these feelings, an effort
+    initiated by the National Academies’ Strategic Council for Research
+    Excellence, Integrity, and Trust (the Strategic Council) analyzed findings
+    from multiple survey research organizations. The Strategic Council’s effort,
+    which began in 2022, found that U.S. public confidence in science, the
+    scientific community, and leaders of scientific communities is high relative
+    to other civic, cultural, and governmental institutions for which
+    researchers regularly collect such data. However, confidence in these
+    institutions has fallen during the previous 5 years. Science’s decline,
+    while real, is similar to or less than that in the other groups. A recent
+    study goes into greater detail by exploring public views of science. From
+    these data, we observe that many of the surveyed U.S. public question the
+    extent to which scientists share their values or overcome personal biases
+    when presenting conclusions. At the same time, large majorities agree on
+    certain types of actions that they want scientists to take. For example, 84%
+    respond that it is “somewhat important” or “very important” for scientists
+    to disclose their funders. Ninety-two percent (92%) offer the same responses
+    to scientists “being open to changing their minds based on new evidence.”
+    Collectively, these data clarify how the U.S. public views science and
+    scientists. They also suggest actions that can affect public confidence in
+    science and scientists in the years to come.
+  accessed:
+    - year: 2024
+      month: 8
+      day: 2
+  author:
+    - family: Lupia
+      given: Arthur
+    - family: Allison
+      given: David B.
+    - family: Jamieson
+      given: Kathleen Hall
+    - family: Heimberg
+      given: Jennifer
+    - family: Skipper
+      given: Magdalena
+    - family: Wolf
+      given: Susan M.
+  citation-key: LupiaTrendsUSPublic2024
+  container-title: Proceedings of the National Academy of Sciences
+  DOI: 10.1073/pnas.2319488121
+  issue: '11'
+  issued:
+    - year: 2024
+      month: 3
+      day: 12
+  page: e2319488121
+  publisher: Proceedings of the National Academy of Sciences
+  source: pnas.org (Atypon)
+  title: Trends in US public confidence in science and opportunities for progress
+  type: article-journal
+  URL: https://www.pnas.org/doi/10.1073/pnas.2319488121
+  volume: '121'
+
+- id: LuskDoesDemocracyRequire2021
+  abstract: >-
+    Philosophers now commonly reject the value free ideal for science by arguing
+    that non-epistemic values, including personal or social values, are
+    permissible within the core of scientific research. However, little
+    attention has been paid to the normative political consequences of this
+    position. This paper explores these consequences and shows how political
+    theory is fruitful for proceeding in a world without value-neutral science.
+    I draw attention to an oft-overlooked argument employed by proponents of the
+    value free ideal I dub the “political legitimacy argument.” This argument
+    claims that the value-free ideal follows directly from the foundational
+    principles of liberal democracy. If so, then the use of value-laden
+    scientific information within democratic decision making would be
+    illegitimate on purely political grounds. Despite highlighting this
+    unaddressed and important argument, I show how it can be rejected. By
+    appealing to deliberative democratic theory, I demonstrate scientific
+    information can be value-laden and politically legitimate. The deliberative
+    democratic account I develop is well suited for capturing the intuitions of
+    many opponents of the value free ideal and points to a new set of questions
+    for those interested in values in science.
+  accessed:
+    - year: 2021
+      month: 10
+      day: 5
+  author:
+    - family: Lusk
+      given: Greg
+  citation-key: LuskDoesDemocracyRequire2021
+  container-title: Studies in History and Philosophy of Science Part A
+  container-title-short: Studies in History and Philosophy of Science Part A
+  DOI: 10.1016/j.shpsa.2021.08.009
+  ISSN: 0039-3681
+  issued:
+    - year: 2021
+      month: 12
+      day: 1
+  language: en
+  page: 102-110
+  source: ScienceDirect
+  title: >-
+    Does democracy require value-neutral science? Analyzing the legitimacy of
+    scientific information in the political sphere
+  title-short: Does democracy require value-neutral science?
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0039368121001254
+  volume: '90'
 
 - id: McCrightInfluencePoliticalIdeology2013
   author:
@@ -2856,6 +3227,45 @@ references:
   title-short: The Fight Against Doubt
   type: book
 
+- id: MenonSisypheanScienceWhy2023
+  abstract: >-
+    The value-free ideal in science has been criticised as both unattainable and
+    undesirable. We argue that it can be defended as a practical principle
+    guiding scientific research even if the unattainability and undesirability
+    of a value-free end-state are granted. If a goal is unattainable, then one
+    can separate the desirability of accomplishing the goal from the
+    desirability of pursuing it. We articulate a novel value-free ideal, which
+    holds that scientists should act as if science should be value-free, and we
+    argue that even if a purely value-free science is undesirable, this
+    value-free ideal is desirable to pursue.
+  accessed:
+    - year: 2024
+      month: 9
+      day: 16
+  author:
+    - family: Menon
+      given: Tarun
+    - family: Stegenga
+      given: Jacob
+  citation-key: MenonSisypheanScienceWhy2023
+  container-title: European Journal for Philosophy of Science
+  container-title-short: Euro Jnl Phil Sci
+  DOI: 10.1007/s13194-023-00552-7
+  ISSN: 1879-4920
+  issue: '4'
+  issued:
+    - year: 2023
+      month: 10
+      day: 6
+  language: en
+  page: '48'
+  source: Springer Link
+  title: 'Sisyphean science: why value freedom is worth pursuing'
+  title-short: Sisyphean science
+  type: article-journal
+  URL: https://doi.org/10.1007/s13194-023-00552-7
+  volume: '13'
+
 - id: MercerWhyPopperCan2016
   abstract: >-
     A notable feature in the public framing of debates involving the science of
@@ -2904,6 +3314,49 @@ references:
   title-short: Why Popper can’t resolve the debate over global warming
   type: article-journal
   URL: http://pus.sagepub.com/content/early/2016/05/04/0963662516645040
+
+- id: MetzenObjectivitySharedValues2024
+  abstract: >-
+    This paper deals with the nature of trust in science. Understanding what
+    appropriate trust in science is and why it can reasonably break down is
+    important for improving scientists’ trustworthiness. There are two different
+    ways in which philosophers of science think about trust in science: as based
+    on objectivity or as based on shared values. Some authors argue that
+    objectivity actually grounds mere reliance, not genuine trust. They draw on
+    a distinction that philosophers of trust following Annette Baier have made
+    with respect to interpersonal trust, where genuine trust has some normative
+    element to it that is missing in cases of mere reliance. However, I will
+    show that there are plural forms of trust in science: Both objectivity and
+    shared values ground trust in science in a normative sense. I will link the
+    trust in science debate to the literature on interpersonal trust. This is
+    significant in that, beyond references to Baier, there is little connection
+    between both areas of philosophy. In a pluralist reading, different trust
+    accounts help to identify the normative elements involved in different kinds
+    of trust in science.
+  accessed:
+    - year: 2024
+      month: 2
+      day: 7
+  author:
+    - family: Metzen
+      given: Hanna
+  citation-key: MetzenObjectivitySharedValues2024
+  container-title: Synthese
+  container-title-short: Synthese
+  DOI: 10.1007/s11229-024-04493-3
+  ISSN: 1573-0964
+  issue: '2'
+  issued:
+    - year: 2024
+      month: 2
+      day: 7
+  language: en
+  page: '60'
+  source: Springer Link
+  title: Objectivity, shared values, and trust
+  type: article-journal
+  URL: https://doi.org/10.1007/s11229-024-04493-3
+  volume: '203'
 
 - id: MichaelsDoubtTheirProduct2008
   author:
@@ -2957,6 +3410,47 @@ references:
   URL: https://link.springer.com/article/10.1007/s11229-012-0225-5
   volume: '190'
 
+- id: MitchellPrescribedProscribedValues2004
+  abstract: >-
+    Few people, if any, still argue that science in all its aspects is a
+    value-free endeavor. At the very least, values affect decisions about the
+    choice of research problems to investigate and the uses to which the results
+    of research are applied. But what about the actual doing of science? As
+    Science, Values, and Objectivityreveals, the connections and interactions
+    between values and science are quite complex. The essays in this volume
+    identify the crucial values that play a role in science, distinguish some of
+    the criteria that can be used for value identification, and elaborate the
+    conditions for warranting certain values as necessary or central to the very
+    activity of scientific research. Recently, social constructivists have taken
+    the presence of values within the scientific model to question the basis of
+    objectivity. However, the contributors to Science, Values, and Objectivity
+    recognize that such acknowledgment of the role of values does not negate the
+    fact that objects exist in the world. Objects have the power to constrain
+    our actions and thoughts, though the norms for these thoughts lie in the
+    public, social world. Values may be decried or defended, praised or blamed,
+    but in a world that strives for a modicum of reason, values, too, must be
+    reasoned. Critical assessment of the values that play a role in scientific
+    research is as much a part of doing good science as interpreting data.
+  author:
+    - family: Mitchell
+      given: Sandra D.
+  citation-key: MitchellPrescribedProscribedValues2004
+  container-title: Science, Values, and Objectivity
+  editor:
+    - family: Machamer
+      given: Peter
+    - family: Wolters
+      given: Gereon
+  event-place: Pittsburgh, PA
+  issued:
+    - year: 2004
+  page: 245-55
+  publisher: University of Pittsburgh Press
+  publisher-place: Pittsburgh, PA
+  title: The Prescribed and Proscribed Values in Science Policy
+  type: chapter
+  URL: http://books.google.com/books?id=hM8Vrot7zpUC
+
 - id: MizrahiWhatBadScientism2017
   abstract: >-
     In their attempt to defend philosophy from accusations of uselessness made
@@ -2994,6 +3488,37 @@ references:
   type: article-journal
   URL: https://doi.org/10.1080/02691728.2017.1297505
   volume: '31'
+
+- id: MontuschiUnderstandingWhatPublic2024
+  abstract: |-
+    Abstract
+                What should citizens understand about science to participate in democratic life? Against the prevailing approach, we argue that “what” a public understanding of science is about strongly depends on the specific epistemological nature of the science related issues considered in different contexts and circumstances. We identify three specific categories of such issues and show how, equally, specific models of public understanding are required to address them. Only by endorsing such an alternative approach will citizens arguably be able to form sound opinions about those very issues, as well as to discuss and deliberate rationally about them.
+  accessed:
+    - year: 2024
+      month: 4
+      day: 2
+  author:
+    - family: Montuschi
+      given: Eleonora
+    - family: Bedessem
+      given: Baptiste
+  citation-key: MontuschiUnderstandingWhatPublic2024
+  container-title: Perspectives on Science
+  DOI: 10.1162/posc_a_00603
+  ISSN: 1530-9274
+  issue: '2'
+  issued:
+    - year: 2024
+      month: 4
+      day: 1
+  language: en
+  page: 207-229
+  source: DOI.org (Crossref)
+  title: Understanding What in Public Understanding of Science
+  type: article-journal
+  URL: >-
+    https://direct.mit.edu/posc/article/32/2/207/116504/Understanding-What-in-Public-Understanding-of
+  volume: '32'
 
 - id: MyersConsensusRevisitedQuantifying2021
   abstract: >-
@@ -3446,6 +3971,73 @@ references:
   title: Why Trust Science?
   type: book
 
+- id: ORourkePhilosophicalInterventionCrossdisciplinary2012
+  author:
+    - family: O'Rourke
+      given: Michael
+    - family: Crowley
+      given: StephenJ
+  citation-key: ORourkePhilosophicalInterventionCrossdisciplinary2012
+  container-title: Synthese
+  container-title-short: Synthese
+  DOI: 10.1007/s11229-012-0175-y
+  issued:
+    - year: 2012
+  page: 1-18
+  title: >-
+    Philosophical intervention and cross-disciplinary science: the story of the
+    Toolbox Project
+  type: article-journal
+  URL: http://dx.doi.org/10.1007/s11229-012-0175-y
+
+- id: OttingerRefiningExpertiseHow2013
+  abstract: >-
+    Winner of the 2015 Rachel Carson Prize presented by the Society for Social
+    Studies of ScienceResidentsof a small Louisiana town were sure that the oil
+    refinery next door wasmaking them sick. As part of a campaign demanding
+    relocation away from therefinery, they collected scientific data to prove
+    it. Their campaign ended witha settlement agreement that addressed many of
+    their grievances—but not concernsabout their health. Yet, instead of
+    continuing to collect data, residents beganto let refinery scientists'
+    assertions that their operations did notharm them stand without challenge.
+    What makes a community moveso suddenly from actively challenging to
+    apparently accepting experts'authority?RefiningExpertise arguesthat the
+    answer lies in the way that refinery scientists and engineers
+    definedthemselves as experts. Rather than claiming to be infallible, they
+    beganto portray themselves as responsible—committed to operating safelyand
+    to contributing to the well-being of the community. The volume showsthat by
+    grounding their claims to responsibility in influential ideas fromthe larger
+    culture about what makes good citizens, nice communities, and
+    moralcompanies, refinery scientists made it much harder for residents to
+    challengetheir expertise and thus re-established their authority over
+    scientificquestions related to the refinery's health and environmental
+    effects.GwenOttinger here shows how industrial facilities' current
+    approaches todealing with concerned communities—approaches which leave much
+    room fornegotiation while shielding industry's environmental and health
+    claims fromcritique—effectively undermine not only individual grassroots
+    campaigns butalso environmental justice activism and far-reaching effortsto
+    democratize science. This work drives home the need for both activistsand
+    politically engaged scholars to reconfigure their own activities inresponse,
+    in order to advance community health and robust scientific knowledgeabout
+    it.
+  author:
+    - family: Ottinger
+      given: Gwen
+  citation-key: OttingerRefiningExpertiseHow2013
+  issued:
+    - year: 2013
+      month: 3
+      day: 4
+  language: English
+  number-of-pages: '236'
+  publisher: NYU Press
+  source: Amazon
+  title: >-
+    Refining Expertise: How Responsible Engineers Subvert Environmental Justice
+    Challenges
+  title-short: Refining Expertise
+  type: book
+
 - id: PadillaCorrelationAttenuationDue2012
   abstract: >-
     Issues with correlation attenuation due to measurement error are well
@@ -3697,6 +4289,41 @@ references:
   URL: http://www.sciencedirect.com/science/article/pii/S0039368115000680
   volume: '53'
 
+- id: PotochnikIdealizationAimsScience2017
+  abstract: >-
+    Science is the study of our world, as it is in its messy reality.
+    Nonetheless, science requires idealization to function—if we are to attempt
+    to understand the world, we have to find ways to reduce its complexity. 
+    Idealization and the Aims of Science shows just how crucial idealization is
+    to science and why it matters. Beginning with the acknowledgment of our
+    status as limited human agents trying to make sense of an exceedingly
+    complex world, Angela Potochnik moves on to explain how science aims to
+    depict and make use of causal patterns—a project that makes essential use of
+    idealization. She offers case studies from a number of branches of science
+    to demonstrate the ubiquity of idealization, shows how causal patterns are
+    used to develop scientific explanations, and describes how the necessarily
+    imperfect connection between science and truth leads to researchers’ values
+    influencing their findings. The resulting book is a tour de force, a
+    synthesis of the study of idealization that also offers countless new
+    insights and avenues for future exploration.
+  author:
+    - family: Potochnik
+      given: Angela
+  citation-key: PotochnikIdealizationAimsScience2017
+  event-place: Chicago and London
+  ISBN: 978-0-226-50719-4
+  issued:
+    - year: 2017
+      month: 11
+      day: 17
+  language: en
+  number-of-pages: '263'
+  publisher: University of Chicago Press
+  publisher-place: Chicago and London
+  source: Google Books
+  title: Idealization and the Aims of Science
+  type: book
+
 - id: ProctorGoldenHolocaustOrigins2012
   abstract: >-
     The cigarette is the deadliest artifact in the history of human
@@ -3743,6 +4370,66 @@ references:
   title: 'R: A Language and Environment for Statistical                   Computing'
   type: document
   URL: https://www.r-project.org/
+
+- id: ReichenbachExperiencePredictionAnalysis1938
+  abstract: c90-na/sst
+  accessed:
+    - year: 2017
+      month: 12
+      day: 4
+  author:
+    - family: Reichenbach
+      given: Hans
+  call-number: '1510966'
+  citation-key: ReichenbachExperiencePredictionAnalysis1938
+  event-place: Chicago, IL
+  issued:
+    - year: 1938
+  language: eng
+  number-of-pages: '428'
+  publisher: University of Chicago Press
+  publisher-place: Chicago, IL
+  source: Internet Archive
+  title: >-
+    Experience and prediction: An analysis of the foundations and the structure
+    of knowledge
+  title-short: Experience and prediction;
+  type: book
+  URL: http://archive.org/details/experiencepredic00reic
+
+- id: ReissExpertiseAgreementNature2019
+  abstract: >-
+    Taking some controversial claims philosopher Jason Brennan makes in his book
+    Against Democracy (Brennan 2016) as a starting point, this paper argues in
+    favour of two theses: (1) There is No Such Thing as Superior Political
+    Judgement; (2) There Is No Such Thing as Uncontroversial Social Scientific
+    Knowledge. I conclude that social science experts need to be kept in check,
+    not given more power.
+  accessed:
+    - year: 2019
+      month: 4
+      day: 26
+  author:
+    - family: Reiss
+      given: Julian
+  citation-key: ReissExpertiseAgreementNature2019
+  container-title: Social Epistemology
+  DOI: 10.1080/02691728.2019.1577513
+  ISSN: 0269-1728
+  issue: '2'
+  issued:
+    - year: 2019
+      month: 3
+      day: 4
+  page: 183-192
+  source: Taylor and Francis+NEJM
+  title: >-
+    Expertise, Agreement, and the Nature of Social Scientific Facts or: Against
+    Epistocracy
+  title-short: Expertise, Agreement, and the Nature of Social Scientific Facts or
+  type: article-journal
+  URL: https://doi.org/10.1080/02691728.2019.1577513
+  volume: '33'
 
 - id: RepresentativeSamplesFAQ2022
   accessed:
@@ -3965,6 +4652,71 @@ references:
   URL: https://doi.org/10.1177/1745691616658637
   volume: '11'
 
+- id: SteeleScientistQuaPolicy2012
+  abstract: >-
+    Richard Rudner famously argues that the communication of scientific advice
+    to policy makers involves ethical value judgments. His argument has,
+    however, been rightly criticized. This article revives Rudner’s conclusion,
+    by strengthening both his lines of argument: we generalize his initial
+    assumption regarding the form in which scientists must communicate their
+    results and complete his ‘backup’ argument by appealing to the difference
+    between private and public decisions. Our conclusion that science advisors
+    must, for deep-seated pragmatic reasons, make value judgments is further
+    bolstered by reflections on how the scientific contribution to policy is far
+    less straightforward than the Rudner-style model suggests.
+  accessed:
+    - year: 2015
+      month: 5
+      day: 21
+  author:
+    - family: Steele
+      given: Katie
+  citation-key: SteeleScientistQuaPolicy2012
+  container-title: Philosophy of Science
+  container-title-short: Philosophy of Science
+  DOI: 10.1086/667842
+  ISSN: 0031-8248
+  issue: '5'
+  issued:
+    - year: 2012
+      month: 12
+      day: 1
+  license: Copyright © 2012 Philosophy of Science Association
+  page: 893-904
+  source: JSTOR
+  title: The Scientist qua Policy Advisor Makes Value Judgments
+  type: article-journal
+  URL: http://www.jstor.org/stable/10.1086/667842
+  volume: '79'
+
+- id: SteelScientistsAttitudesScience2017
+  accessed:
+    - year: 2017
+      month: 4
+      day: 23
+  author:
+    - family: Steel
+      given: Daniel
+    - family: Gonnerman
+      given: Chad
+    - family: O'Rourke
+      given: Michael
+  citation-key: SteelScientistsAttitudesScience2017
+  container-title: Studies in History and Philosophy of Science Part A
+  DOI: 10.1016/j.shpsa.2017.04.002
+  ISSN: '00393681'
+  issued:
+    - year: 2017
+      month: 4
+  language: en
+  source: CrossRef
+  title: >-
+    Scientists’ attitudes on science and values: Case studies and survey methods
+    in philosophy of science
+  title-short: Scientists’ attitudes on science and values
+  type: article-journal
+  URL: http://linkinghub.elsevier.com/retrieve/pii/S0039368117301048
+
 - id: ThorpTeachPhilosophyScience2024
   accessed:
     - year: 2024
@@ -4051,6 +4803,187 @@ references:
   type: article-journal
   URL: https://linkinghub.elsevier.com/retrieve/pii/S003936812030162X
   volume: '84'
+
+- id: Veckalov27countryTestCommunicating2024
+  abstract: >-
+    Communicating the scientific consensus that human-caused climate change is
+    real increases climate change beliefs, worry and support for public action
+    in the United States. In this preregistered experiment, we tested two
+    scientific consensus messages, a classic message on the reality of
+    human-caused climate change and an updated message additionally emphasizing
+    scientific agreement that climate change is a crisis. Across online
+    convenience samples from 27 countries (n = 10,527), the classic message
+    substantially reduces misperceptions (d = 0.47, 95% CI (0.41, 0.52)) and
+    slightly increases climate change beliefs (from d = 0.06, 95% CI (0.01,
+    0.11) to d = 0.10, 95% CI (0.04, 0.15)) and worry (d = 0.05, 95% CI (−0.01,
+    0.10)) but not support for public action directly. The updated message is
+    equally effective but provides no added value. Both messages are more
+    effective for audiences with lower message familiarity and higher
+    misperceptions, including those with lower trust in climate scientists and
+    right-leaning ideologies. Overall, scientific consensus messaging is an
+    effective, non-polarizing tool for changing misperceptions, beliefs and
+    worry across different audiences.
+  accessed:
+    - year: 2024
+      month: 9
+      day: 23
+  author:
+    - family: Većkalov
+      given: Bojana
+    - family: Geiger
+      given: Sandra J.
+    - family: Bartoš
+      given: František
+    - family: White
+      given: Mathew P.
+    - family: Rutjens
+      given: Bastiaan T.
+    - family: Harreveld
+      given: Frenk
+      non-dropping-particle: van
+    - family: Stablum
+      given: Federica
+    - family: Akın
+      given: Berkan
+    - family: Aldoh
+      given: Alaa
+    - family: Bai
+      given: Jinhao
+    - family: Berglund
+      given: Frida
+    - family: Bratina Zimic
+      given: Aleša
+    - family: Broyles
+      given: Margaret
+    - family: Catania
+      given: Andrea
+    - family: Chen
+      given: Airu
+    - family: Chorzępa
+      given: Magdalena
+    - family: Farahat
+      given: Eman
+    - family: Götz
+      given: Jakob
+    - family: Hoter-Ishay
+      given: Bat
+    - family: Jordan
+      given: Gesine
+    - family: Joustra
+      given: Siri
+    - family: Klingebiel
+      given: Jonas
+    - family: Krajnc
+      given: Živa
+    - family: Krug
+      given: Antonia
+    - family: Andersen
+      given: Thomas Lind
+    - family: Löloff
+      given: Johanna
+    - family: Natarajan
+      given: Divya
+    - family: Newman-Oktan
+      given: Sasha
+    - family: Niehoff
+      given: Elena
+    - family: Paerels
+      given: Celeste
+    - family: Papirmeister
+      given: Rachel
+    - family: Peregrina
+      given: Steven
+    - family: Pohl
+      given: Felicia
+    - family: Remsö
+      given: Amanda
+    - family: Roh
+      given: Abigail
+    - family: Rusyidi
+      given: Binahayati
+    - family: Schmidt
+      given: Justus
+    - family: Shavgulidze
+      given: Mariam
+    - family: Vellinho Nardin
+      given: Valentina
+    - family: Wang
+      given: Ruixiang
+    - family: Warner
+      given: Kelly
+    - family: Wattier
+      given: Miranda
+    - family: Wong
+      given: Chloe Y.
+    - family: Younssi
+      given: Mariem
+    - family: Ruggeri
+      given: Kai
+    - family: Linden
+      given: Sander
+      non-dropping-particle: van der
+  citation-key: Veckalov27countryTestCommunicating2024
+  container-title: Nature Human Behaviour
+  container-title-short: Nat Hum Behav
+  DOI: 10.1038/s41562-024-01928-2
+  ISSN: 2397-3374
+  issued:
+    - year: 2024
+      month: 8
+      day: 26
+  language: en
+  license: 2024 The Author(s)
+  page: 1-14
+  publisher: Nature Publishing Group
+  source: www.nature.com
+  title: >-
+    A 27-country test of communicating the scientific consensus on climate
+    change
+  type: article-journal
+  URL: https://www.nature.com/articles/s41562-024-01928-2
+
+- id: WagenknechtEmpiricalPhilosophyScience2015a
+  abstract: >-
+    The book examines the emerging approach of using qualitative methods, such
+    as interviews and field observations, in the philosophy of science.
+    Qualitative methods are gaining popularity among philosophers of science as
+    more and more scholars are resorting to empirical work in their study of
+    scientific practices. At the same time, the results produced through
+    empirical work are quite different from those gained through the kind of
+    introspective conceptual analysis more typical of philosophy. This volume
+    explores the benefits and challenges of an empirical philosophy of science
+    and addresses questions such as: What do philosophers gain from empirical
+    work? How can empirical research help to develop philosophical concepts? How
+    do we integrate philosophical frameworks and empirical research? What
+    constraints do we accept when choosing an empirical approach? What
+    constraints does a pronounced theoretical focus impose on empirical work?
+    Nine experts discuss their thoughts and empirical results in the chapters of
+    this book with the aim of providing readers with an answer to these
+    questions. .
+  accessed:
+    - year: 2015
+      month: 10
+      day: 25
+  citation-key: WagenknechtEmpiricalPhilosophyScience2015a
+  editor:
+    - family: Wagenknecht
+      given: Susann
+    - family: Nersessian
+      given: Nancy J
+    - family: Andersen
+      given: Hanne
+  ISBN: 978-3-319-18600-9 978-3-319-18599-6
+  issued:
+    - year: 2015
+  language: English
+  source: Open WorldCat
+  title: >-
+    Empirical philosophy of science: introducing qualitative methods into
+    philosophy of science
+  title-short: Empirical philosophy of science
+  type: book
+  URL: >-
+    http://search.ebscohost.com/login.aspx?direct=true&scope=site&db=nlebk&db=nlabk&AN=1004413
 
 - id: WarrenTrustworthinessTrustCovid192020
   accessed:
@@ -4181,6 +5114,33 @@ references:
     regardless of identity factors
   type: article-journal
   URL: https://doi.org/10.1177/0963662520977700
+
+- id: WickhamTidyverseEasilyInstall2016
+  abstract: >-
+    The 'tidyverse' is a set of packages that work in harmony because they share
+    common data representations and 'API' design. This package is designed to
+    make it easy to install and load multiple 'tidyverse' packages in a single
+    step. Learn more about the 'tidyverse' at <https://www.tidyverse.org>.
+  accessed:
+    - year: 2024
+      month: 9
+      day: 30
+  author:
+    - family: Wickham
+      given: Hadley
+  citation-key: WickhamTidyverseEasilyInstall2016
+  DOI: https://doi.org/10.32614/CRAN.package.tidyverse
+  issued:
+    - year: 2016
+      month: 9
+      day: 9
+  page: 2.0.0
+  publisher: Comprehensive R Archive Network
+  source: DOI.org (Crossref)
+  title: 'tidyverse: Easily Install and Load the ''Tidyverse'''
+  title-short: tidyverse
+  type: software
+  URL: https://CRAN.R-project.org/package=tidyverse
 
 - id: WickhamWelcomeTidyverse2019
   abstract: >-

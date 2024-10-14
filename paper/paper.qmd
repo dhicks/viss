@@ -29,6 +29,7 @@ abstract: "abstract"
 keywords: [keyword1, keyword2, keyword3]
 
 format:
+    html: default
     apaquarto-html: default
     apaquarto-docx: default
     apaquarto-pdf: 
@@ -61,6 +62,13 @@ Research Note (max. 4,000 words and 5 figures or tables)
 
 OA agreement: library covers first $1k, 20% off remaining APC
 -->
+
+*[
+- Cosmo's paragraph
+- check for anonymous review
+- abstract, keywords
+- rearrange, docx output
+]*
 
 ```{r}
 #| label: setup
@@ -162,8 +170,9 @@ The final items and text are given in @tbl-viss.
 #| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA."
 here('paper', 'tbl', '06_prompts.Rds') |>
     read_rds() |>
-    ## So for some reason this modifies the width of text
-    cols_width(id ~ pct(75))
+    ## This is behaving weird and I don't know why
+    cols_width(id ~ pct(10), 
+               text ~ pct(50))
 ```
 
 
@@ -203,10 +212,9 @@ Exploratory data analysis indicated high completion rates (98% or greater) for a
 
 @fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  Rates of agreement were generally not statistically significantly different between studies 1 and 3; and even statistically significant differences were small. The largest difference was for aims.2, with 75% agreement in study 1 and 82% in study 3; followed by pluralism.1, with 19% vs. 26%.  All other differences were 5 percentage points or less in absolute value.  
 
-#### The value-free ideal
+### The value-free ideal
 
-*[no longer discussed in intro, need to introduce here]*
-As discussed in the introduction, the value-free ideal (VFI) plays a significant role in a number of explanations of public scientific controversies put forward by philosophers of science.  VISS contains four items that correspond to the value-free ideal — nonsubj.1 and .2 and vfi.1 and .2.  It also contains four items corresponding to philosophical critiques of this ideal.  *[move these to supplement?]* aims.2 corresponds to the "aims approach" to values in science, which argues that science has non-epistemic aims — such as protecting human health and the environment — and that such aims can legitimate influence all aspects of research *[cite]*.  ir corresponds to the argument from inductive risk.  According to this argument, because and insofar as science has the potential to cause harmful social consequences, it's appropriate to require greater evidence (or allow weaker evidence) based on the severity of those consequences [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021].  stdpt corresponds to standpoint epistemology, a theory associated with feminist, Marxist, and critical race analyses of science *[cites]*.  According to standpoint epistemology, members of marginalized groups can be in a position to better identify and understand oppressive social phenomena than members of privileged groups.  Finally, value.conflict corresponds to an unusual convergence in two philosophical debates, one in feminist philosophy of science and the other in the relationship between science and religion.  Given that oppressive values (such as misogyny and androcentrism) have and continue to influence some lines of scientific research, some feminist philosophers — though certainly not all — argue that these values provide a sufficient grounds for feminists to question or reject the claims coming out of this research *[cites]*.  @PlantingaWhenFaithReason2001 defends a similar position in the context of debates over religion and evolution, arguing that "There is ... a battle between the Christian community and the forces of unbelief," "that important cultural forces such as science are not neutral with respect to this conflict," and so "we Christians must think about the matter at hand from a Christian perspective; we need Theistic Science" (30).  
+As discussed in the introduction, the value-free ideal (VFI) plays a significant role in a number of explanations of public scientific controversies put forward by philosophers of science.  VISS contains four items that correspond to the value-free ideal — nonsubj.1 and .2 and vfi.1 and .2.  It also contains four items corresponding to philosophical critiques of this ideal; see @sec-vfi-crits. 
 
 @fig-vfi shows marginal distributions for these VFI and critiques, along with scatterplots and correlation coefficients for each VFI-critique pair.  Starting with the marginal distributions, we see there is majority agreement with aims.2, ir, stdpt, both nonsubj items, and vfi.1; and majority rejection of value.conflict and vfi.2 (compare @fig-03-likert).  
 
@@ -227,45 +235,13 @@ Parallel analysis suggested retaining four factors, with two factors having an e
 
 Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in @tbl-efa-3, grouped by interpretive label, and @tbl-efa-3-bymodel, grouped by model.  Cross-loading was observed for the items aims.3, fallible.2, pluralism.3, vfi.2, and wait.policy; these items were ignored in factor interpretation.  The only item that did not load onto a latent factor in any model was value.conflict.  
 
-```{=latex}
-\begin{landscape}
-```
-```{r}
-#| label: tbl-efa-3
-#| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors.  Latent factors are grouped by interpretive label across solutions.'
-#| column: page
-here('paper', 'tbl', '04_loadings.Rds') |>
-    read_rds() |>
-    cols_width(starts_with('textbook + c') ~ pct(100/22 + 2)) |>
-    tab_options(table.font.size = 10) |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = list(cells_column_labels(), 
-                               cells_column_spanners()))
-```
-```{r}
-#| label: tbl-efa-3-bymodel
-#| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors. Latent factors are grouped by solution.'
-#| column: page
-here('paper', 'tbl', '04_loadings_bymodel.Rds') |>
-    read_rds() |>
-    cols_width(variable ~ pct(100/22 + 1),
-              everything() ~ pct(100/22 - 1/22)) |>
-    tab_options(table.font.size = 8) |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = list(cells_column_labels(), 
-                               cells_column_spanners()))
-```
-```{=latex}
-\end{landscape}
-```
-
 Examining the loadings for all models indicated consistent loadings of items onto latent factors.  The most consistent, occurring in some form across all six models, was a *textbook* perception of science:  based on unanimity (consensus.2), fixed (fallible.1), and using laboratory experiments (pluralism.1).  The second consistent factor was *cynicism*, which also occurred across all six models; textbook and cynicism items appeared together in the 1-factor model.  The cynicism factor included concerns about conflicts of interest (coi.1 and coi.2) and the idea that the scientific consensus is non-epistemic (consensus.1).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1).  
 
 A third common factor was *objectivity*, with three versions of VFI (nonsubj.1, nonsubj.2, vfi.1).  Models 4-6 included a factor comprising claims about the aims of science (aims.1, aims.2) and the central claim of standpoint epistemology (stdpt).  It's not clear to us how to interpret these factors.  Models 5 and 6 also include two singleton factors, for pluralism.3 ("same strict requirements") and the argument from inductive risk (ir).  
 
 Based on the loadings and factor interpretation, the three-factor solution appears to be the most theoretically coherent.  
 
-## VISS factors and trust
+### VISS factors and trust
 
 To explore potential associations between the latent VISS factors and generalized trust in science, we first calculated discretized or "non-refined" scores [@DiStefanoUnderstandingUsingFactor2009] for each factor across all six fitted FA models, using a threshold of 0.3 and excluding VISS items that loaded onto multiple factors, and subsequently calculating a signed average of the VISS items associated with each factor.  We then fit a multiple regression model for each FA model, regressing CoSS against the discretized FA scores.  Regression coefficients are shown in @fig-trust-coefs; fit statistics for each regression model are provided in @tbl-trust-glance.  
 
@@ -278,11 +254,13 @@ Using ±1/7 as the threshold for practical significance, the regression models f
 
 This project began to develop the Values in Science Scale, an instrument for assessing views of the public on roles for values in science, based on classical and recent work in philosophy of science and HPSTS more broadly.  Factor analysis found theoretically coherent clusters of items that could be treated as subscales; while analyses among VISS items and between subscales and measures of generalized trust in science empirically enrich theoretical discussions in philosophy and other fields.  
 
+The VISS items and text are given in @tbl-viss. 
+
 ## Subscales
 
 VISS comprises 19 items.  Exploratory factor analysis identified 3 interpretable latent factors, which can be treated as subscales, and which we refer to as *cynicism*, VFI or a traditional conception of *objectivity*, and a simplistic *textbook* view of science.  A fourth factor, comprising two claims about the aims of science and standpoint epistemology, was also identified by EFA; though we are not able to offer a satisfying theoretical interpretation of this factor.  
 
-Several of the VISS items that are not included in any of the identified factors/subscales may still be interesting or important in future research.  These include several of the critiques of VFI, for example.  We therefore retain them in VISS *[xref]*, under the heading "not assigned to subscale."  One line of future work might be to expand VISS, developing additional items that can form theoretically coherent subscales with these unassigned items.  
+Several of the VISS items that are not included in any of the identified factors/subscales may still be interesting or important in future research.  These include several of the critiques of VFI, for example.  We therefore retain them in VISS (@tbl-viss), under the heading "not assigned" to a subscale.  One line of future work might be to expand VISS, developing additional items that can form theoretically coherent subscales with these unassigned items.  
 
 ## The value-free ideal and its critiques
 
@@ -456,13 +434,51 @@ here('paper', 'tbl', '04_trust_glance.Rds') |>
     tab_options(latex.use_longtable = TRUE)
 ```
 
+```{=latex}
+\begin{landscape}
+```
+```{r}
+#| label: tbl-efa-3
+#| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors.  Latent factors are grouped by interpretive label across solutions.'
+#| column: page
+here('paper', 'tbl', '04_loadings.Rds') |>
+    read_rds() |>
+    cols_width(starts_with('textbook + c') ~ pct(100/22 + 2)) |>
+    tab_options(table.font.size = 10) |>
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = list(cells_column_labels(), 
+                               cells_column_spanners()))
+```
+```{r}
+#| label: tbl-efa-3-bymodel
+#| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors. Latent factors are grouped by solution.'
+#| column: page
+here('paper', 'tbl', '04_loadings_bymodel.Rds') |>
+    read_rds() |>
+    cols_width(variable ~ pct(100/22 + 1),
+              everything() ~ pct(100/22 - 1/22)) |>
+    tab_options(table.font.size = 8) |>
+    tab_style(style = cell_text(weight = 'bold'), 
+              locations = list(cells_column_labels(), 
+                               cells_column_spanners()))
+```
+```{=latex}
+\end{landscape}
+```
+
+
+# Philosophical critiques of VFI in VISS {#sec-vfi-crits}
+
+VISS contains four items corresponding to philosophical critiques of the value-free ideal. aims.2 corresponds to the "aims approach" to values in science, which argues that science has non-epistemic aims — such as protecting human health and the environment — and that such aims can legitimate influence all aspects of research [@ElliottNonepistemicValuesMultiple2014; @IntemannDistinguishingLegitimateIllegitimate2015; @PotochnikIdealizationAimsScience2017; @HicksWhenVirtuesAre2022].  ir corresponds to the argument from inductive risk.  According to this argument, because and insofar as science has the potential to cause harmful social consequences, it's appropriate to require greater evidence (or allow weaker evidence) based on the severity of those consequences [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021].  stdpt corresponds to standpoint epistemology, a theory associated with feminist, Marxist, and critical race analyses of science [@CrasnowFeministStandpointTheory2014].  According to standpoint epistemology, members of marginalized groups can be in a position to better identify and understand oppressive social phenomena than members of privileged groups.  Finally, value.conflict corresponds to an unusual convergence in two philosophical debates, one in feminist philosophy of science and the other in the relationship between science and religion.  Given that oppressive values (such as misogyny and androcentrism) have and continue to influence some lines of scientific research, some feminist philosophers — though certainly not all — argue that these values provide a sufficient grounds for feminists to question or reject the claims coming out of this research [@AlcoffCommentaryElizabethAndersons2006; @YapFeministRadicalEmpiricism2015].  @PlantingaWhenFaithReason2001 defends a similar position in the context of debates over religion and evolution, arguing that "There is ... a battle between the Christian community and the forces of unbelief," "that important cultural forces such as science are not neutral with respect to this conflict," and so "we Christians must think about the matter at hand from a Christian perspective; we need Theistic Science" (30).  
+
+
 # No evidence for a cynicism-objectivity interaction
 
-One alternative explanation for the observed nearly flat relationship between objectivity and generalized trust in science might be a potential interaction effect between objectivity and cynicism.  Specifically, members of the public who endorse VFI might have very different views of whether scientists generally comply with VFI.  When a respondent endorses VFI and believes that scientists generally comply with it, this explanation would predict high trust.  While a respondent who endorses VFI and believes scientists generally do *not* comply with it would be predicted to have *low* trust.  At the other end of the objectivity scale, respondents who reject VFI would be indifferent to VFI compliance.  In other words, we would expect to see heterogeneous effects of VFI compliance on trust conditional on objectivity.  
+One alternative explanation for the observed, nearly flat relationship between objectivity and generalized trust in science might be a potential interaction effect between objectivity and cynicism.  Specifically, members of the public who endorse VFI might have very different views of whether scientists generally comply with VFI.  When a respondent endorses VFI and believes that scientists generally comply with it, this explanation would predict *high* trust.  While a respondent who endorses VFI and believes scientists generally do *not* comply with it would be predicted to have *low* trust.  At the other end of the objectivity scale, respondents who reject VFI would be indifferent to VFI compliance.  In other words, we would expect to see heterogeneous effects of VFI compliance on trust conditional on objectivity:  a strong effect when objectivity is high, and no effect when objectivity is low.  This alternative explanation, if supported empirically, would be compatible with the common assumption that VFI is important for trust in science.  
 
-In the current VISS, the cynicism factor might be used as a rough proxy for VFI compliance.  This factor focuses on a limited set of values, namely, financial conflicts of interest.  The influence of these values is a sufficient condition for violating VFI, but not necessary; participants might believe that conflicts of interest are not a problem in science (low cynicism) but still believe that VFI is violated by other kinds of value influences.  
+In the current VISS, the cynicism factor might be used as a rough proxy for VFI compliance.  This factor focuses on a limited set of values, namely, financial conflicts of interest.  The influence of these values is a sufficient condition for violating VFI, but not necessary; participants might believe that conflicts of interest are not a significant problem in science (low cynicism) but still believe that VFI is generally violated by other kinds of value influences.  
 
-The interaction between objectivity and cynicism predicted by this alternative explanation does not appear to be supported by the study 3 data; see @tbl-inter and @fig-inter. @tbl-inter shows coefficients for two regression models of CoSS against the FA latent variables from the 3-factor model, respectively, without and with an interaction term between objectivity and cynicism.  The point estimate for the effect of the interaction term is negligible and not statistically significant; the first-order coefficients are all unchanged between specifications; and adjusted $R^2$ and AIC (very, very slightly) favor the non-interacted model.  
+The interaction between objectivity and cynicism predicted by this alternative explanation does not appear to be supported by the study 3 data; see @tbl-inter and @fig-inter. @tbl-inter shows coefficients for two regression models of CoSS against the FA latent variables from the 3-factor model, respectively, without and with an interaction term between objectivity and cynicism.  The point estimate for the effect of the interaction term is negligible and not statistically significant; the coefficients for the non-interaction terms are all unchanged between specifications; and adjusted $R^2$ and AIC (very, very slightly) favor the non-interacted model.  
 
 ```{r}
 #| label: tbl-inter
@@ -471,6 +487,6 @@ here('paper', 'tbl', '05_inter.Rds') |>
     read_rds()
 ```
 
-The left panel of figure @fig-inter shows a conditional scatterplot and univariate regression of CoSS against cynicism scores, stratified by objectivity quartile.  This descriptive plot does not suggest much heterogeneity in the effect of cynicism on generalized trust; *[only the lowest quartile is flat]*.  The right panel shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation were correct, we would expect to see very different slopes in the marginal estimates, leading to substantial differences in predicted generalized trust at the right end of the plot (maximum value of cynicism).  *[instead these predictions are virtually the same]*
+The left panel of figure @fig-inter shows a conditional scatterplot and univariate regression of CoSS against cynicism scores, stratified by objectivity quartile.  This descriptive plot does not suggest much heterogeneity in the effect of cynicism on generalized trust, especially across the upper three quartiles (blue through light green).  The right panel shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation were correct, we would expect to see very different slopes, as higher agreement with objectivity would make participants more sensitive to perceived violations of VFI.  Instead, the slopes are virtually the same.  
 
 ![Conditional scatterplot and estimated marginal effects for an objectivity-cynicism interaction. In both panels, x-axis corresponds to cynicism score, y-axis corresponds to CoSS score, and color corresponds to objectivity score.  Left: scatterplot and separate univariate regressions of CoSS against cynicism, conditional on objectivity quartile.  Right: Empirical/"counterfactual"/average predicted values of CoSS, calculated from model 2 from @tbl-inter.](img/05_interaction.png){#fig-inter}
