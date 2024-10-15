@@ -65,6 +65,7 @@ OA agreement: library covers first $1k, 20% off remaining APC
 
 *[
 - Cosmo's paragraph
+- share w/ Emilio and Joseph
 - check for anonymous review
 - abstract, keywords
 - rearrange, docx output
