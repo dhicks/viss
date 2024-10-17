@@ -12,15 +12,15 @@ author:
             city: Merced
             state: CA
             postal-code: 95343
-    - name: Emilio Lobato
+    - name: Emilio J.C. Lobato
       orcid: 0000-0002-3066-2932
       email: elobato@ucmerced.edu
       affiliations: 
         - ref: ucm
-    - name: Joseph Dad
+    - name: Cosmo Campbell
       affiliations:
         - ref: ucm
-    - name: Cosmo Campbell
+    - name: Joseph Dad
       affiliations:
         - ref: ucm
 
@@ -259,6 +259,14 @@ VISS comprises 19 items.  Exploratory factor analysis identified 3 interpretable
 
 Several of the VISS items that are not included in any of the identified factors/subscales may still be interesting or important in future research.  These include several of the critiques of VFI, for example.  We therefore retain them in VISS (@tbl-viss), under the heading "not assigned" to a subscale.  One line of future work might be to expand VISS, developing additional items that can form theoretically coherent subscales with these unassigned items.  
 
+
+## Limitation
+
+A key limitation of this study is the use of a single opt-in survey platform, Prolific, to recruit participants.  While Prolific offers a "representative sample" option for US adults, EDA of the study 1 data found that the "representative" sample still significantly underrepresented political conservatives and significantly oversampled college graduates.  These subtle forms of unrepresentativeness are a known limitation of opt-in/non-randomization-based survey platforms [@KennedyEvaluation2016Election2018; @BradleyUnrepresentativeBigSurveys2021; @KeeterOnlineOptpollsCan2024].  We hope to secure funding for higher-quality data collection in the future. 
+
+In addition, VISS has been developed solely in the context of the US.  We cannot make any claims that our findings generalize to other countries.  Even bracketing issues of translation, before using VISS in other contexts it might be useful to replicate study 2 and check whether construct validity still obtains. 
+
+
 ## The value-free ideal and its critiques
 
 In study 3, we found that there was no correlation between versions of the value-free ideal — the traditional conception of objectivity — on the one hand, and philosophical criticisms of this ideal, on the other; indeed, a number of respondents indicated that they agreed with both VFI and a critique.  
@@ -278,12 +286,6 @@ In contrast, "cynicism" — a construct comprising concerns about conflicts of i
 
 Across the study 3 sample, generalized trust in science was moderately high (e.g., for CoSS, mean 4.6, median 5.0, on a 1-7 scale); this is in line with larger and more rigorous surveys of generalized trust in science [@LupiaTrendsUSPublic2024; @Veckalov27countryTestCommunicating2024].  So we do not necessarily think that there is an urgent need to increase generalized trust in science among the public as a whole.  However, insofar as there is such a need, our findings suggest that reforming funding structures to reduce conflicts of interest might be more effective than stressing fallibilism or the value-free ideal in science communication [@LupiaTrendsUSPublic2024; @ThorpTeachPhilosophyScience2024].  
 
-
-## Limitation
-
-A key limitation of this study is the use of a single opt-in survey platform, Prolific, to recruit participants.  While Prolific offers a "representative sample" option for US adults, EDA of the study 1 data found that the "representative" sample still significantly underrepresented political conservatives and significantly oversampled college graduates.  These subtle forms of unrepresentativeness are a known limitation of opt-in/non-randomization-based survey platforms [@KennedyEvaluation2016Election2018; @BradleyUnrepresentativeBigSurveys2021; @KeeterOnlineOptpollsCan2024].  We hope to secure funding for higher-quality data collection in the future. 
-
-In addition, VISS has been developed solely in the context of the US.  We cannot make any claims that our findings generalize to other countries.  Even bracketing issues of translation, before using VISS in other contexts it might be useful to replicate study 2 and check whether construct validity still obtains. 
 
 
 
