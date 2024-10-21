@@ -1159,7 +1159,7 @@ references:
       month: 8
       day: 1
   author:
-    - family: Fernandez Pinto
+    - family: Fernández Pinto
       given: Manuela
   citation-key: FernandezPintoCommercialInterestsErosion2020
   container-title: Philosophy of Science
@@ -3940,6 +3940,30 @@ references:
   type: article-journal
   URL: http://www.sciencemag.org/content/306/5702/1686.short
   volume: '306'
+
+- id: OreskesScientificConsensusClimate2017
+  author:
+    - family: Oreskes
+      given: Naomi
+  citation-key: OreskesScientificConsensusClimate2017
+  container-title: 'Climate modelling: philosophical and conceptual issues'
+  editor:
+    - family: Lloyd
+      given: Elisabeth Anne
+    - family: Winsberg
+      given: Eric
+  event-place: Cham
+  ISBN: 978-3-319-65057-9 978-3-319-65058-6
+  issued:
+    - year: 2017
+  language: en
+  note: 'OCLC: 1014115184'
+  publisher: Palgrave MacMillan
+  publisher-place: Cham
+  source: Gemeinsamer Bibliotheksverbund ISBN
+  title: 'The Scientific Consensus on Climate Change: How Do We Know We’re Not Wrong?'
+  type: chapter
+  URL: https://link.springer.com/book/10.1007%2F978-3-319-65058-6
 
 - id: OreskesWhyTrustScience2021
   abstract: >-
