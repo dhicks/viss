@@ -31,12 +31,12 @@ gtsave(prompts_gt, here('out', '03', '06_prompts.pdf'))
 gtsave(prompts_gt, here('out', '03', '06_prompts.tex'))
 
 
-compare_gt =  sheet |> 
+compare_gt = sheet |> 
     select(!subscale) |> 
     mutate(modified = 
                if_else(`original text` != `finalized text` &
                            !is.na(`finalized text`), 
-                       'X', 
+                       '✓', 
                        '')) |> 
     gt() |> 
     sub_missing(missing_text = '') |> 

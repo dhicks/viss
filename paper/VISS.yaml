@@ -4471,6 +4471,100 @@ references:
   URL: >-
     https://web.archive.org/web/20220313050153/https://researcher-help.prolific.co/hc/en-gb/articles/360019238413-Representative-samples-FAQ
 
+- id: RevellePsychProceduresPsychological2024
+  abstract: >-
+    A general purpose toolbox developed originally for personality, psychometric
+    theory and experimental psychology. Functions are primarily for multivariate
+    analysis and scale construction using factor analysis, principal component
+    analysis, cluster analysis and reliability analysis, although others provide
+    basic descriptive statistics. Item Response Theory is done using factor
+    analysis of tetrachoric and polychoric correlations. Functions for analyzing
+    data at multiple levels include within and between group statistics,
+    including correlations and factor analysis. Validation and cross validation
+    of scales developed using basic machine learning algorithms are provided, as
+    are functions for simulating and testing particular item and test
+    structures. Several functions serve as a useful front end for structural
+    equation modeling. Graphical displays of path diagrams, including mediation
+    models, factor analysis and structural equation models are created using
+    basic graphics. Some of the functions are written to support a book on
+    psychometric theory as well as publications in personality research. For
+    more information, see the <https://personality-project.org/r/> web page.
+  accessed:
+    - year: 2024
+      month: 10
+      day: 22
+  author:
+    - family: Revelle
+      given: William
+  citation-key: RevellePsychProceduresPsychological2024
+  issued:
+    - year: 2024
+      month: 6
+      day: 27
+  license: 'GPL-2 | GPL-3 [expanded from: GPL (≥ 2)]'
+  source: R-Packages
+  title: 'psych: Procedures for Psychological, Psychometric, and Personality Research'
+  title-short: psych
+  type: software
+  URL: https://cran.r-project.org/web/packages/psych/index.html
+  version: 2.4.6.26
+
+- id: RosseelLavaanLatentVariable2024
+  abstract: >-
+    Fit a variety of latent variable models, including confirmatory factor
+    analysis, structural equation modeling and latent growth curve models.
+  accessed:
+    - year: 2024
+      month: 10
+      day: 22
+  author:
+    - family: Rosseel
+      given: Yves
+    - family: Jorgensen
+      given: Terrence D.
+    - family: Wilde
+      given: Luc De
+    - family: Oberski
+      given: Daniel
+    - family: Byrnes
+      given: Jarrett
+    - family: Vanbrabant
+      given: Leonard
+    - family: Savalei
+      given: Victoria
+    - family: Merkle
+      given: Ed
+    - family: Hallquist
+      given: Michael
+    - family: Rhemtulla
+      given: Mijke
+    - family: Katsikatsou
+      given: Myrsini
+    - family: Barendse
+      given: Mariska
+    - family: Rockwood
+      given: Nicholas
+    - family: Scharf
+      given: Florian
+    - family: Du
+      given: Han
+    - family: Jamil
+      given: Haziq
+    - family: Classe
+      given: Franz
+  citation-key: RosseelLavaanLatentVariable2024
+  issued:
+    - year: 2024
+      month: 9
+      day: 26
+  license: 'GPL-2 | GPL-3 [expanded from: GPL (≥ 2)]'
+  source: R-Packages
+  title: 'lavaan: Latent Variable Analysis'
+  title-short: lavaan
+  type: software
+  URL: https://cran.r-project.org/web/packages/lavaan/index.html
+  version: 0.6-19
+
 - id: SaffordFollowScientistsHow2021
   abstract: >-
     “Follow the science” became the mantra for responding to COVID-19 pandemic.
