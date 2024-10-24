@@ -6,7 +6,8 @@ all: pdf
 html: $(SOURCE)
 	quarto render $< --to apaquarto-html
 
-pdf: pdf-doc wc
+pdf: $(SOURCE)
+	quarto render $< --to pdf
 
 pdf-man: $(SOURCE)
 	quarto render $< --to apaquarto-pdf \

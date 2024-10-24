@@ -26,9 +26,21 @@ author:
 
 abstract: "abstract"
 
-keywords: [keyword1, keyword2, keyword3]
-
 format:
+    pdf:
+      toc: true
+      number-sections: true
+      link-citations: true
+      pdf-engine: "lualatex"
+      include-in-header:
+        - text: |
+            \usepackage{pdflscape}
+            \usepackage{adjustbox}
+      mainfont: "Times New Roman"
+      fontsize: "12pt"
+      geometry: 
+        - "margin = 1in"
+      linestretch: 1.5
     html: default
     apaquarto-html: default
     apaquarto-docx: default
@@ -43,6 +55,15 @@ format:
     
 bibliography: VISS.yaml
 ---
+
+*[format change: 
+- turn off toc
+- checkmarks showing up? 
+- bib entry formatting
+- cutoff for word count
+- don't echo code chunks
+- reference list location
+]*
 
 <!--
 SCX submission guidelines: <https://journals.sagepub.com/author-instructions/scx>
@@ -169,7 +190,7 @@ The final items and text are given in @tbl-viss.
 here('paper', 'tbl', '06_prompts.Rds') |>
     read_rds() |>
     cols_width(id ~ pct(20), 
-               text ~ pct(30)) |>
+               text ~ pct(60)) |>
     tab_options(latex.use_longtable = TRUE)
 ```
 
