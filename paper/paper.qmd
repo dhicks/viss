@@ -28,15 +28,17 @@ abstract: "abstract"
 
 format:
     pdf:
-      toc: true
+      toc: false
       number-sections: true
       link-citations: true
+      keep-tex: true
       pdf-engine: "lualatex"
       include-in-header:
         - text: |
             \usepackage{pdflscape}
             \usepackage{adjustbox}
-      mainfont: "Times New Roman"
+            %\usepackage{endfloat}
+      mainfont: "FreeSerif"
       fontsize: "12pt"
       geometry: 
         - "margin = 1in"
@@ -54,16 +56,11 @@ format:
         mainfont: "FreeSerif"
     
 bibliography: VISS.yaml
----
+csl: _extensions/wjschne/apaquarto/apa.csl
 
-*[format change: 
-- turn off toc
-- checkmarks showing up? 
-- bib entry formatting
-- cutoff for word count
-- don't echo code chunks
-- reference list location
-]*
+execute: 
+    echo: false
+---
 
 <!--
 SCX submission guidelines: <https://journals.sagepub.com/author-instructions/scx>
@@ -88,8 +85,6 @@ OA agreement: library covers first $1k, 20% off remaining APC
 *[
 - check for anonymous review
 - abstract, keywords
-- longtable? 
-    - when using a label (w/ or w/o a caption), the entire chunk output is wrapped in a `table` environment, which causes the `longtable` to be confined to a single page
 - rearrange, docx output
 - PDF versions of tables
 ]*
@@ -187,6 +182,7 @@ The final items and text are given in @tbl-viss.
 ```{r}
 #| label: tbl-viss
 #| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA."
+#| fig-pos: "t"
 here('paper', 'tbl', '06_prompts.Rds') |>
     read_rds() |>
     cols_width(id ~ pct(20), 
@@ -313,20 +309,20 @@ Across the study 3 sample, generalized trust in science was moderately high (e.g
 
 # References
 
+::: {#refs}
+:::
 
 
-\appendix
 \clearpage
+\appendix
 \pagenumbering{arabic}
 \renewcommand*{\thepage}{S\arabic{page}}
 \renewcommand\thefigure{S\arabic{figure}}    
 \setcounter{figure}{0} 
 \renewcommand\thetable{S\arabic{table}}    
 \setcounter{table}{0}
-<!-- 
 \renewcommand{\thesection}{S\arabic{section}}
 \setcounter{section}{0}
- -->
 
 | 
 | Supporting Information for "Developing Measures of Public Perceptions of Values in Science"
@@ -376,7 +372,7 @@ Value-free ideal
 : These prompts include the value-free ideal, along with another aspect of objectivity — imagination and creativity — and the idea that scientists are especially "objective."  As discussed above, many HPSTS scholars have pointed to a purported mismatch between public expectations of the value-free ideal and the value-laden reality to explain public scientific controversies. 
 
 
-# Study 1 {#sec-study1}
+# Study 1 {.appendix #sec-study1}
 
 ## Materials
 
