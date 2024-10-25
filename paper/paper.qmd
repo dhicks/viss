@@ -86,6 +86,7 @@ OA agreement: library covers first $1k, 20% off remaining APC
 - check for anonymous review
 - abstract, keywords
 - rearrange, docx output
+    - <https://github.com/iagopinal/figure-table-formatter>
 - PDF versions of tables
 ]*
 
@@ -415,6 +416,7 @@ The first identified factor contains six items that cohere around scientistic pe
 #| tbl-cap: 'Factor loadings and communalities from study 1 EFA, six factor solution.'
 here('paper', 'tbl', '03_loadings_gt.Rds') |>
     read_rds() |>
+    tab_options(table.font.size = 10) |>
     cols_width(everything() ~ pct(100/8)) |>
     tab_style(style = cell_text(weight = 'bold'), 
               locations = cells_column_labels())
