@@ -29,10 +29,8 @@ abstract: "abstract"
 format:
     pdf:
       toc: false
-      number-sections: true
-      link-citations: true
       keep-tex: true
-      pdf-engine: "lualatex"
+      pdf-engine: "xelatex"
       include-in-header:
         - text: |
             \usepackage{pdflscape}
@@ -42,7 +40,6 @@ format:
       fontsize: "12pt"
       geometry: 
         - "margin = 1in"
-      linestretch: 1.5
     html: default
     apaquarto-html: default
     apaquarto-docx: default
@@ -54,7 +51,20 @@ format:
             \usepackage{pdflscape}
             \usepackage{adjustbox}
         mainfont: "FreeSerif"
-    
+
+number-sections: true
+link-citations: true
+linestretch: 1.5
+
+crossref:
+  custom:
+    - kind: float
+      key: suppfig
+      latex-env: suppfig
+      reference-prefix: Figure S
+      space-before-numbering: false
+      latex-list-of-description: Supplementary Figure
+
 bibliography: VISS.yaml
 csl: _extensions/wjschne/apaquarto/apa.csl
 
@@ -84,10 +94,11 @@ OA agreement: library covers first $1k, 20% off remaining APC
 
 *[
 - check for anonymous review
-- abstract, keywords
+- abstract (100 words), keywords
 - rearrange, docx output
     - <https://github.com/iagopinal/figure-table-formatter>
 - PDF versions of tables
+- biography page
 ]*
 
 ```{r}
@@ -226,7 +237,7 @@ Exploratory data analysis indicated high completion rates (98% or greater) for a
 
 ![Distribution of responses to VISS items, ordered by total agreement.  Vertical dashed lines indicate 20%, 50%, and 80%.](img/02_likert.png){#fig-03-likert}
 
-@fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  Rates of agreement were generally not statistically significantly different between studies 1 and 3; and even statistically significant differences were small. The largest difference was for aims.2, with 75% agreement in study 1 and 82% in study 3; followed by pluralism.1, with 19% vs. 26%.  All other differences were 5 percentage points or less in absolute value.  
+@suppfig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  Rates of agreement were generally not statistically significantly different between studies 1 and 3; and even statistically significant differences were small. The largest difference was for aims.2, with 75% agreement in study 1 and 82% in study 3; followed by pluralism.1, with 19% vs. 26%.  All other differences were 5 percentage points or less in absolute value.  
 
 ### The value-free ideal
 
@@ -318,9 +329,11 @@ Across the study 3 sample, generalized trust in science was moderately high (e.g
 \appendix
 \pagenumbering{arabic}
 \renewcommand*{\thepage}{S\arabic{page}}
+<!-- 
 \renewcommand\thefigure{S\arabic{figure}}    
 \setcounter{figure}{0} 
-\renewcommand\thetable{S\arabic{table}}    
+ -->  
+\renewcommand\thetable{S\arabic{table}}  
 \setcounter{table}{0}
 \renewcommand{\thesection}{S\arabic{section}}
 \setcounter{section}{0}
@@ -373,7 +386,7 @@ Value-free ideal
 : These prompts include the value-free ideal, along with another aspect of objectivity — imagination and creativity — and the idea that scientists are especially "objective."  As discussed above, many HPSTS scholars have pointed to a purported mismatch between public expectations of the value-free ideal and the value-laden reality to explain public scientific controversies. 
 
 
-# Study 1 {.appendix #sec-study1}
+# Study 1 {#sec-study1}
 
 ## Materials
 
@@ -398,7 +411,7 @@ In particular, because political partisanship plays a significant role in many p
 
 ### Individual item analysis
 
-The distribution of responses to individual items — e.g., acceptance of the value-free ideal — was of key interest in this study.  For the sake of space, we defer this analysis to study 3, which used the finalized, construct validated VISS items.  @fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  
+The distribution of responses to individual items — e.g., acceptance of the value-free ideal — was of key interest in this study.  For the sake of space, we defer this analysis to study 3, which used the finalized, construct validated VISS items.  @suppfig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  
 
 
 ### Factor analysis
@@ -440,9 +453,9 @@ here('paper', 'tbl', '06_compare.Rds') |>
     tab_options(latex.use_longtable = TRUE)
 ```
 
-![Total agreement on VISS items.  Right panel indicates whether the item appeared in study 1, study 3, or both.  In the main panel, point estimates and 95% confidence intervals for rates of total agreement ("somewhat agree" or more).  VISS items are primarily labeled per the finalized versions used in study 3.  Where labels would overlap but the text is different between studies (either due to rewording or relabeling), the version used in study 1 is labeled as '-1'.](img/07_desc_comb.png){#fig-desc-comb}
+![Total agreement on VISS items.  Right panel indicates whether the item appeared in study 1, study 3, or both.  In the main panel, point estimates and 95% confidence intervals for rates of total agreement ("somewhat agree" or more).  VISS items are primarily labeled per the finalized versions used in study 3.  Where labels would overlap but the text is different between studies (either due to rewording or relabeling), the version used in study 1 is labeled as '-1'.](img/07_desc_comb.png){#suppfig-desc-comb}
 
-![Correlations among measures of generalized trust in science from study 3.  In the table, correlations are reported as Pearson's R. In the scatterplots, point locations have been jittered slightly for legibility; blue lines and ribbons represent univariate linear regressions and 95% confidence intervals. `coss`: Credibility of Science Scale [@HartmanModelingAttitudesScience2017]. `gss_science`: A five-valued version of the General Social Survey "trust in institutions" question for the scientific community. `effect`: A question from the Pew Research Center on whether science has had a positive or negative effect on science [@TysonViewsImpactScience2023]. `scientism`: the scientism scale of @LukicDelineatingScientismScience2023.](img/05_trust_corr.png){#fig-trust-corr}
+![Correlations among measures of generalized trust in science from study 3.  In the table, correlations are reported as Pearson's R. In the scatterplots, point locations have been jittered slightly for legibility; blue lines and ribbons represent univariate linear regressions and 95% confidence intervals. `coss`: Credibility of Science Scale [@HartmanModelingAttitudesScience2017]. `gss_science`: A five-valued version of the General Social Survey "trust in institutions" question for the scientific community. `effect`: A question from the Pew Research Center on whether science has had a positive or negative effect on science [@TysonViewsImpactScience2023]. `scientism`: the scientism scale of @LukicDelineatingScientismScience2023.](img/05_trust_corr.png){#suppfig-trust-corr}
 
 ```{r}
 #| label: tbl-trust-glance
@@ -500,7 +513,7 @@ One alternative explanation for the observed, nearly flat relationship between o
 
 In the current VISS, the cynicism factor might be used as a rough proxy for VFI compliance.  This factor focuses on a limited set of values, namely, financial conflicts of interest.  The influence of these values is a sufficient condition for violating VFI, but not necessary; participants might believe that conflicts of interest are not a significant problem in science (low cynicism) but still believe that VFI is generally violated by other kinds of value influences.  
 
-The interaction between objectivity and cynicism predicted by this alternative explanation does not appear to be supported by the study 3 data; see @tbl-inter and @fig-inter. @tbl-inter shows coefficients for two regression models of CoSS against the FA latent variables from the 3-factor model, respectively, without and with an interaction term between objectivity and cynicism.  The point estimate for the effect of the interaction term is negligible and not statistically significant; the coefficients for the non-interaction terms are all unchanged between specifications; and adjusted $R^2$ and AIC (very, very slightly) favor the non-interacted model.  
+The interaction between objectivity and cynicism predicted by this alternative explanation does not appear to be supported by the study 3 data; see @tbl-inter and @suppfig-inter. @tbl-inter shows coefficients for two regression models of CoSS against the FA latent variables from the 3-factor model, respectively, without and with an interaction term between objectivity and cynicism.  The point estimate for the effect of the interaction term is negligible and not statistically significant; the coefficients for the non-interaction terms are all unchanged between specifications; and adjusted $R^2$ and AIC (very, very slightly) favor the non-interacted model.  
 
 ```{r}
 #| label: tbl-inter
@@ -509,6 +522,6 @@ here('paper', 'tbl', '05_inter.Rds') |>
     read_rds()
 ```
 
-The left panel of figure @fig-inter shows a conditional scatterplot and univariate regression of CoSS against cynicism scores, stratified by objectivity quartile.  This descriptive plot does not suggest much heterogeneity in the effect of cynicism on generalized trust, especially across the upper three quartiles (blue through light green).  The right panel shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation were correct, we would expect to see very different slopes, as higher agreement with objectivity would make participants more sensitive to perceived violations of VFI.  Instead, the slopes are virtually the same.  
+The left panel of figure @suppfig-inter shows a conditional scatterplot and univariate regression of CoSS against cynicism scores, stratified by objectivity quartile.  This descriptive plot does not suggest much heterogeneity in the effect of cynicism on generalized trust, especially across the upper three quartiles (blue through light green).  The right panel shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation were correct, we would expect to see very different slopes, as higher agreement with objectivity would make participants more sensitive to perceived violations of VFI.  Instead, the slopes are virtually the same.  
 
-![Conditional scatterplot and estimated marginal effects for an objectivity-cynicism interaction. In both panels, x-axis corresponds to cynicism score, y-axis corresponds to CoSS score, and color corresponds to objectivity score.  Left: scatterplot and separate univariate regressions of CoSS against cynicism, conditional on objectivity quartile.  Right: Empirical/"counterfactual"/average predicted values of CoSS, calculated from model 2 from @tbl-inter.](img/05_interaction.png){#fig-inter}
+![Conditional scatterplot and estimated marginal effects for an objectivity-cynicism interaction. In both panels, x-axis corresponds to cynicism score, y-axis corresponds to CoSS score, and color corresponds to objectivity score.  Left: scatterplot and separate univariate regressions of CoSS against cynicism, conditional on objectivity quartile.  Right: Empirical/"counterfactual"/average predicted values of CoSS, calculated from model 2 from @tbl-inter.](img/05_interaction.png){#suppfig-inter}
