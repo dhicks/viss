@@ -91,6 +91,9 @@ counts_df |>
 ggsave(here(out_dir, '02_likert.png'), 
        height = 10, width = 16, bg = 'white')
 
+ggsave(here(out_dir, '02_likert_tall.png'), 
+       height = 12, width = 10, bg = 'white')
+
 ## "Diverging" style
 # counts_df |> 
 #     filter(!is.na(response)) |> 
