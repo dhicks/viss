@@ -1,7 +1,7 @@
 ---
 title: "Developing Measures of Public Perceptions of Values in Science"
-author: 
-    - name: D. J. Hicks
+authors: 
+    - name: "D. J. Hicks^[<danhicks@ucmerced.ed>]"
       corresponding: true
       orcid: 0000-0001-7945-4416
       email: dhicks4@ucmerced.edu
@@ -14,7 +14,7 @@ author:
             postal-code: 95343
     - name: Emilio J.C. Lobato
       orcid: 0000-0002-3066-2932
-      email: elobato@ucmerced.edu
+      email: emiliol1985@gmail.com
       affiliations: 
         - ref: ucm
     - name: Cosmo Campbell
@@ -23,8 +23,12 @@ author:
     - name: Joseph Dad
       affiliations:
         - ref: ucm
+institute: "University of California, Merced
+            <danhicks@ucmerced.edu>"
 
-abstract: "abstract"
+abstract: "Scholars in the history, philosophy, and social studies of science often explain public scientific controversies by appealing to views of the general public on appropriate roles for values in science. However, evidence that members of the public actually hold these views is limited. This paper presents the Values in Science Scale (VISS), a quantitative survey instrument designed to measure these views. Qualitative methods were used to ensure construct validity among US adults (Study 2). In one notable initial finding using VISS, the value-free ideal (VFI) — a traditional conception of objectivity — is not correlated with generalized trust in science."
+
+acknowledgments: "For feedback on this project, thanks to participants at the 10th Annual Values in Medicine, Science, and Technology Conference at UT Dallas, May 2022, and the Knowledge, Science, and Society conference at UC San Diego, May 2024. In particular, thanks to Magdalena Grohman for suggesting the qualitative approach used in study 2.  Thanks to UC Merced for funding to support EJCL, CC, and JD throughout different stages of this project, and for the survey studies."
 
 format:
     pdf:
@@ -41,16 +45,6 @@ format:
       geometry: 
         - "margin = 1in"
     html: default
-    apaquarto-html: default
-    apaquarto-docx: default
-    apaquarto-pdf: 
-        keep-tex: true
-        pdf-engine: xelatex
-        include-in-header:
-        - text: |
-            \usepackage{pdflscape}
-            \usepackage{adjustbox}
-        mainfont: "FreeSerif"
 
 number-sections: true
 link-citations: true
@@ -92,13 +86,16 @@ Research Note (max. 4,000 words and 5 figures or tables)
 OA agreement: library covers first $1k, 20% off remaining APC
 -->
 
+<!-- 
 *[
-- abstract (100 words), keywords
 - rearrange, docx output
-    - <https://github.com/iagopinal/figure-table-formatter>
 - PDF versions of tables
 - biography page
 ]*
+ -->
+
+| 
+| Keywords: values in science, trust in science, survey instrument, philosophy of science, factor analysis
 
 ```{r}
 #| label: setup
