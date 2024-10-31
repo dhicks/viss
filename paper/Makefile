@@ -1,7 +1,7 @@
 SOURCE = paper.qmd
 split = 23
 
-all: pdf wc
+all: docx
 
 html: $(SOURCE)
 	quarto render $< --to apaquarto-html
