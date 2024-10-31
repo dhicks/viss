@@ -1,36 +1,12 @@
 ---
 title: "Developing Measures of Public Perceptions of Values in Science: The Values in Science Scale"
-authors: 
-    - name: "D. J. Hicks^[<danhicks@ucmerced.ed>]"
-      corresponding: true
-      orcid: 0000-0001-7945-4416
-      email: dhicks4@ucmerced.edu
-      affiliations:
-          - id: ucm
-            name: University of California, Merced
-            address: 5200 N Lake Road
-            city: Merced
-            state: CA
-            postal-code: 95343
-    - name: Emilio J.C. Lobato
-      orcid: 0000-0002-3066-2932
-      email: emiliol1985@gmail.com
-      affiliations: 
-        - ref: ucm
-    - name: Cosmo E. Campbell
-      affiliations:
-        - ref: ucm
-    - name: Joseph Dad
-      affiliations:
-        - ref: ucm
-institute: "University of California, Merced
-            <danhicks@ucmerced.edu>"
 
 abstract: "Scholars in the history, philosophy, and social studies of science often explain public scientific controversies by appealing to views of the general public on appropriate roles for values in science. However, evidence that members of the public actually hold these views is limited. This paper presents the Values in Science Scale (VISS), a quantitative survey instrument designed to measure these views. Qualitative methods were used to ensure construct validity among US adults (Study 2). In one notable initial finding using VISS, the value-free ideal (VFI) — a traditional conception of objectivity — is not correlated with generalized trust in science."
 
 acknowledgments: "For feedback on this project, thanks to participants at the 10th Annual Values in Medicine, Science, and Technology Conference at UT Dallas, May 2022, and the Knowledge, Science, and Society conference at UC San Diego, May 2024. In particular, thanks to Magdalena Grohman for suggesting the qualitative approach used in study 2.  Thanks to UC Merced for funding to support EJCL, CC, and JD throughout different stages of this project, and for the survey studies."
 
 format:
+    docx: default
     pdf:
       toc: false
       keep-tex: true
@@ -58,6 +34,7 @@ crossref:
       reference-prefix: Figure S
       space-before-numbering: false
       latex-list-of-description: Supplementary Figure
+  sec-prefix: "Section S"
 
 bibliography: VISS.yaml
 csl: _extensions/wjschne/apaquarto/apa.csl
@@ -94,7 +71,7 @@ library(gt)
 library(here)
 ```
 
-# Introduction #
+# Introduction {.unnumbered}
 
 Historians, philosophers, and sociologists of science ("HPSTS scholars") who study public scientific controversies often propose explanations for these controversies that refer to views of publics on the relationship (actual or normative) between science, values, and policy.  For example, members of the public may be thought to hold simplistic views of "the scientific method" [@MercerWhyPopperCan2016; @JohnEpistemicTrustEthics2017] or misunderstand the role of consensus and dissent in science [@OreskesScientificConsensusClimate2004; @CookQuantifyingConsensusAnthropogenic2013; @JohnEpistemicTrustEthics2017; @MyersConsensusRevisitedQuantifying2021; for contrast see @SlaterPublicConceptionsScientific2024].  There might be a critical mismatch between the traditional conception of objectivity or "value-free" science, on the one hand, and the value-laden reality of science, on the other [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MetzenObjectivitySharedValues2024].  Or the public might have concerns (justified or not) about technocratic paternalism [@WynneSheepfarmingChernobylCase1989; @JordanTrustworthinessResearchParadigm2011; @LargentVaccineDebateModern2012; @NavinValuesVaccineRefusal2015; @GoldenbergVaccineHesitancyPublic2021], conflicts of interest and "manufacturing doubt" [@OreskesScientificConsensusClimate2004; @FernandezPintoKnowBetterNot2017; @ElliottSciencePolicyTransparency2014; @FernandezPintoCommercialInterestsErosion2020; @GoldenbergVaccineHesitancyPublic2021], or science's historical and contemporary roles in oppression, especially of women and people of color [@SchemanEpistemologyResuscitatedObjectivity2001; @WashingtonMedicalApartheidDark2008; @McHughMoreSkinDeep2011; @NelsonBodySoulBlack2011; @GrasswickUnderstandingEpistemicTrust2018;  @GoldenbergVaccineHesitancyPublic2021].  
 
@@ -102,7 +79,7 @@ However, in the citations above, there is little empirical evidence to support k
 
 The aim of the project reported here was to develop a Values in Science Scale (VISS) that could be used to measure public views on the relationship between science, values, and policy, and thereby test these kinds of claims made by HPSTS scholars.  
 
-# Background and initial development of VISS items
+# Background and initial development of VISS items {.unnumbered}
 
 <!-- For much of the twentieth century, philosophy was understood as a purely non-empirical discipline, strictly separated from history, sociology, and psychology [@ReichenbachExperiencePredictionAnalysis1938] and using either formal methods (logic, probability, game theory) or "armchair" reflection on language.  However, starting in the 1970s, philosophers of science began to engage more closely with sibling empirical fields, giving rise to approaches such as philosophy of science in practice — which often uses ethnographic methods [@WagenknechtEmpiricalPhilosophyScience2015a] — and integrated history and philosophy of science, based on the conviction that "the common goal of understanding of science can be pursued by dual, interdependent means" [@\&HPSOurMissionStatement].  This may explain why contemporary philosophers of science are not shy about basing their analysis on empirical claims about public views of normative relationship between science and society, as discussed in the introduction.   -->
 
@@ -125,14 +102,14 @@ The first two columns of @tbl-compare contain the original items from the first 
 We briefly review the relevant philosophy of science literature for each of the 12 issues/areas in @sec-lit-review.  
 
 
-## Software
+## Software {.unnumbered}
 
 Data cleaning and analysis was conducted in R version 4.1.2 [@RCoreTeamLanguageEnvironmentStatistical2021], with extensive use of the `tidyverse` suite of packages version 1.3.1 [@WickhamTidyverseEasilyInstall2016].  Regression tables were generated using the package `gt` version 0.11.0.9000 [@IannoneGtEasilyCreate2022].  
 
 Anonymized original data and analysis code are available at [redacted]<!-- <https://github.com/dhicks/transparency> -->.  
 
 
-# Study 1
+# Study 1 {.unnumbered}
 
 Study 1 was conducted concurrently with [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  For the sake of space, study 1 is reported in detail in the supplement, @sec-study1. Analysis of individual items and exploratory factor analysis (EFA) uncovered some intriguing patterns, but exhibited poor fit statistics in confirmatory factor analysis (CFA).  
 
@@ -143,9 +120,9 @@ Trying to understand why the argument from inductive risk might be correlated wi
 The research team (at that point comprising [author1] and [author2]) discussed this issue among ourselves and solicited feedback from colleagues at conference presentations of preliminary results.  Based on these discussions, we decided that the next step was a qualitative study to secure construct validity.  
 
 
-# Study 2
+# Study 2 {.unnumbered}
 
-## Materials
+## Materials {.unnumbered}
 
 [author1] selected a short list of 18 items to focus on moving forward.  This selection was based, in part, on the EFA results from study 1:  items that did not load on to any factors were dropped, as were items that loaded on to the scientism factor.  The scientism factor was dropped in part because of overlap with a scale intended to measure scientism specifically [@LukicDelineatingScientismScience2023]; and because we came to believe that, for the purposes of understanding the dynamics of public scientific controversies, scientism could be reduced to the idea that science is especially trustworthy.  
 
@@ -157,7 +134,7 @@ For study 2, besides participant responses to the items, no other data was colle
 
 This study was to determined to be exempt from IRB review under Category 2.(i) by [author1], and self-exempt determination was acknowledged by the [institution] IRB on February 27, 2024 (protocol #[redacted]<!-- UCM2024-30 -->). 
 
-## Data
+## Data {.unnumbered}
 
 Data collection and analysis was conducted iteratively, alternating between collection and analysis, until saturation was reached for all items across two consecutive iterations.  Ultimately, 5 iterations were run, all during March 2024.  
 
@@ -165,35 +142,25 @@ In each iteration, participants were recruited on Prolific.  In iterations 1-3, 
 
 Across 5 iterations, we collected a total of 875 text responses from 141 participants.  
 
-## Analysis
+## Analysis {.unnumbered}
 
 After the quota was achieved for a given iteration, responses were retrieved from Qualtrics in spreadsheet form and analyzed by all authors, first independently and together in weekly lab group meetings.  We focused on responses that indicated confusion or uncertainty, either explicit or implied, and responses that deviated from the intended meaning of the item.  
 
 If qualitative analysis indicated that an item was frequently misinterpreted or regarded as confusing, all authors worked together to develop alternative wording.  This rewording was then used in future iterations.  An item was considered to have achieved "saturation" when all four authors agreed that the responses across two iterations indicated that it was understood by the participants as intended.  
 
-## Results
+## Results {.unnumbered}
 
 The final items and text are given in @tbl-viss. 
 
-```{r}
-#| label: tbl-viss
-#| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA."
-#| fig-pos: "t"
-here('paper', 'tbl', '06_prompts.Rds') |>
-    read_rds() |>
-    cols_width(id ~ pct(20), 
-               text ~ pct(60)) |>
-    tab_options(latex.use_longtable = TRUE)
-```
 
 
 
 
-# Study 3
+# Study 3 {.unnumbered}
 
 The aim of this study was to replicate and extend the relevant components of Study 1 using the finalized VISS items.  Specifically, we were interested in whether and how VISS items might map on to latent variables; how correlations among items might compare to logical relationships (especially logically incompatible claims); "upstream" demographic predictors of latent factors (not reported here); and "downstream" relationships between latent factors and generalized trust in science. 
 
-## Materials
+## Materials {.unnumbered}
 
 After giving informed consent, participants were first asked a commitment question: "We care about the quality of our survey data. For us to get the most accurate measures of your opinions, it is important that you provide thoughtful answers to each question.  Do you commit to providing thoughtful answers to the questions on this survey?"  Responses to this question were not used to include or exclude participants. 
 
@@ -206,41 +173,35 @@ After completing all of the "perceptions of science" blocks, participants were t
 This study was to determined to be exempt from IRB review under Category 2.(i) by [author1], and self-exempt determination was acknowledged by the [institution] IRB on April 11, 2024 (protocol #[redacted]<!-- UCM2024-46 -->). 
 
 
-## Data
+## Data {.unnumbered}
 
 Data collection was conducted on April 16, 2024.  Participants were recruited on Prolific, limited to US adults and with a "representative" sample based on binary sex, age, and trichotomous political affiliation (Democrat, Republic, or Independent).  Note that, at the time, Prolific did not provide an option to balance the sample based on both race-ethnicity and political affiliation.  
 
 We aimed to collect 501 responses.  After removing 11 responses where participants did not finish, our dataset comprised 502 responses.  
 
 
-## Results
+## Results {.unnumbered}
 
 Exploratory data analysis indicated high completion rates (98% or greater) for almost all items on the survey.  The one exception was the measure of occupational prestige [@HughesOccupationalPrestigeStatus2024], which had a completion rate of only 68%.  Further investigation found that these missing values corresponded to "job titles" such as student, unemployed, retired, and homemaker, i.e., respondents who were outside of the labor market.  The seasonally adjusted civil labor force participation rate in the US was 63% in March 2024 (<https://web.archive.org/web/20240703202237/https://www.bls.gov/charts/employment-situation/civilian-labor-force-participation-rate.htm>), and so this sample slightly underrepresented people outside the labor market.  Because of high missingness, we generally did not include the occupational prestige measure in our analysis.  
 
-### Individual item analysis
+### Individual item analysis {.unnumbered}
 
 @fig-03-likert shows the distribution of responses to the VISS items, in descending order by total agreement.  We use 80%/20% of total agreement/disagreement as thresholds for a "near consensus" among respondents.  In study 3, this near consensus appears for four items:  near consensus agreement that the primary aims of science include improving knowledge (aims.1) and understanding threats to human health and the environment (aims.2); and near consensus disagreement that scientists never disagree with each other (consensus.2) and that scientific theories never change (fallible.1).  There is majority agreement with another six VISS items (coi.2, stdpt, vfi.1, ir, nonsubj.1, and nonsubj.2), and majority disagreement with another five (consensus.1, fallible.2, vfi.2, pluralism.1, and value.conflict).  For the idea that scientists use the same strict requirements for evaluating hypotheses (pluralism.3), total disagreement is just shy of a the majority.  
 
-![Distribution of responses to VISS items, ordered by total agreement.  Vertical dashed lines indicate 20%, 50%, and 80%.](img/02_likert.png){#fig-03-likert}
-
 @suppfig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  Rates of agreement were generally not statistically significantly different between studies 1 and 3; and even statistically significant differences were small. The largest difference was for aims.2, with 75% agreement in study 1 and 82% in study 3; followed by pluralism.1, with 19% vs. 26%.  All other differences were 5 percentage points or less in absolute value.  
 
-### The value-free ideal
+### The value-free ideal {.unnumbered}
 
 As discussed in the introduction, the value-free ideal (VFI) plays a significant role in a number of explanations of public scientific controversies put forward by philosophers of science.  VISS contains four items that correspond to the value-free ideal — nonsubj.1 and .2 and vfi.1 and .2.  It also contains four items corresponding to philosophical critiques of this ideal; see @sec-vfi-crits. 
 
 @fig-vfi shows marginal distributions for these VFI and critiques items, along with scatterplots and correlation coefficients for each VFI-critique pair.  Starting with the marginal distributions, we see there is majority agreement with both nonsubj items, and vfi.1 (VFI items) and aims.2, ir, stdpt (critiques); and majority rejection of vfi.2 and value.conflict (compare @fig-03-likert).  
 
-![Marginal distributions and scatterplots for VFI items (rows, y-axes of scatterplots) and critiques of VFI (columns, x-axes of scatterplots).  Lines in each scatterplot are univariate regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree for all items.  Point positions in scatterplots are jittered for legibility.  P-values are calculated for the null that $R  \geq 0$, not adjusted for multiple comparisons.](img/02_vfi.png){#fig-vfi}
-
 While one would expect pairs of versions of VFI and critiques to be fairly strongly negatively correlated — increased acceptance of a critique would be associated with decreased acceptance of VFI — all of these correlations are near 0.  Three pairs do reject the null hypthesis that $R \geq 0$: vfi.1 and ir (R = -0.1, p = 0.01), nonsubj.1 and stdpt (R = -0.1, p = 0.001), and vfi.2 and stdpt (R = -0.1, p = 0.007).  However, 33% of respondents agree (response > 4) with both vfi and ir; and 35% agree with both nonsubj.1 and stdpt.  In the discussion, we offer an interpretation of these flat correlations in terms of Deweyan "habits of thought" rather than logically inconsistent beliefs.  
 
 HPSTS scholars, science communicators, and scientists themselves have often claimed that the value-free ideal provides a foundation for trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024].  The measures of generalized trust in science that we used in study 3 were all moderately correlated with each other; see @fig-trust-coefs.  Here we report results for CoSS [@HartmanModelingAttitudesScience2017], since it has a more fine-grained/continuous range of possible scores than most of the other measures, and in our data had a greater Cronbach's $\alpha = .92$ than the scientism scale ($\alpha = 0.8$).  @fig-trust shows scatterplots and correlation analyses between, on the one hand, the four versions of VFI and the four critiques of VFI, and on the other, CoSS.  The correlations for nonsubj.2 and vfi.1 were not statistically significantly different from zero (R = -0.03, p = 0.5 for both); while correlations for nonsubj.1 and vfi.2 were significantly different from zero but were negative rather than positive (nonsubj.1: R = -0.2, p = $3 \times 10^{-6}$ for the point null $R = 0$; vfi.2: R = -0.2, p = $2 \times 10^{-7}$).  Without adjusting for multiple comparisons, all correlations for the critiques of VFI were significantly different from zero; correlations were positive for aims.2 (R = 0.2, p = $3 \times 10^{-4}$), stdpt (R = 0.2, p = $4 \times 10^{-4}$), and value.conflict (R = 0.1, p = 0.02), but negative for ir (R = -0.3, p = $4 \times 10^{-10}$). 
 
-![Marginal distribution of CoSS (rightmost panels) and scatterplots for VFI items (top row) and critiques of VFI (bottom row) (columns, x-axes of scatterplots) against CoSS scores (y-axes). Lines in each scatterplot are OLS regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/02_trust.png){#fig-trust}
- 
 
-### Factor analysis {#sec-fa}
+### Factor analysis {#sec-fa .unnumbered}
 
 As in study 1, we intended to conduct an EFA and CFA of VISS responses, using the `psych` package (version 2.19) in R [@RevellePsychProceduresPsychological2024].  Because of the smaller sample size, when splitting the sample in half, the Kaiser-Meyer-Olkin measure of sampling adequacy was 0.72, "middling."  We therefore chose to conduct only an EFA, using the whole sample.  With the whole sample, Barlett's test was significant, $\chi^2(18) = 455.74, p = 2.2 \times 10^{-16}$, and the Kaiser-Meyer-Olkin measure of sampling adequacy was slightly higher, 0.78.  
 
@@ -254,36 +215,34 @@ A third common factor was *objectivity*, with three versions of VFI (nonsubj.1, 
 
 Based on the loadings and factor interpretation, the three-factor solution appears to be the most theoretically coherent.  
 
-### VISS factors and trust
+### VISS factors and trust {.unnumbered}
 
 To explore potential associations between the latent VISS factors and generalized trust in science, we first calculated discretized or "non-refined" scores [@DiStefanoUnderstandingUsingFactor2009] for each factor across all six fitted FA models, using a threshold of 0.3 and excluding VISS items that loaded onto multiple factors, and subsequently calculating a signed average of the VISS items associated with each factor.  We then fit a multiple regression model for each FA model, regressing CoSS against the discretized FA scores.  Regression coefficients are shown in @fig-trust-coefs; fit statistics for each regression model are provided in @tbl-trust-glance.  
-
-![Coefficients (point estimates and 95% confidence intervals) for regression models of generalized trust (CoSS) against latent VISS factors.  Factors use the interpretive labels with the model index, e.g., "cynicism_5" is the *cynicism* factor from the 5-factor model.  Dashed lines indicate ±1/7 and 0.  Latent variables scores were calculated as signed averages of component variables (each using a seven-point Likert scale), so that a one-point difference in a latent variable corresponds to an average difference of one point in the component variables. CoSS is calculated as an average of variables that use a seven-point Likert scale.](img/04_trust_coefs.png){#fig-trust-coefs}
 
 Using ±1/7 as the threshold for practical significance, the regression models find a robustly significant effect only for cynicism.  The estimates for textbook are robustly compatible with a practically significant negative effect; but these are only statistically significantly different from -1/7 for the first three FA models.  Similarly, the estimates for the uninterpreted "aims and standpoint" factor are compatible with a positive effect, but only significantly different from 1/7 for a single FA model.  Notably, the objectivity factor is never compatible with a practically significant effect; in other words, there was a robust lack of correlation between the objectivity factor and CoSS. 
 
 
-# General Discussion
+# General Discussion {.unnumbered}
 
 This project began to develop the Values in Science Scale, an instrument for assessing views of the public on roles for values in science, based on classical and recent work in philosophy of science and HPSTS more broadly.  Factor analysis found theoretically coherent clusters of items that could be treated as subscales; while analyses among VISS items and between subscales and measures of generalized trust in science empirically enrich theoretical discussions in philosophy and other fields.  
 
 The VISS items and text are given in @tbl-viss. 
 
-## Subscales
+## Subscales {.unnumbered}
 
 VISS comprises 19 items.  Exploratory factor analysis identified 3 interpretable latent factors, which can be treated as subscales, and which we refer to as *cynicism*, VFI or a traditional conception of *objectivity*, and a simplistic *textbook* view of science.  A fourth factor, comprising two claims about the aims of science and standpoint epistemology, was also identified by EFA; though we are not able to offer a satisfying theoretical interpretation of this factor.  
 
 Several of the VISS items that are not included in any of the identified factors/subscales may still be interesting or important in future research.  These include several of the critiques of VFI, for example.  We therefore retain them in VISS (@tbl-viss), under the heading "not assigned" to a subscale.  One line of future work might be to expand VISS, developing additional items that can form theoretically coherent subscales with these unassigned items.  
 
 
-## Limitation
+## Limitation {.unnumbered}
 
 A key limitation of this study is the use of a single opt-in survey platform, Prolific, to recruit participants.  While Prolific offers a "representative sample" option for US adults, exploratory data analysis of the study 1 data found that the "representative" sample still significantly underrepresented political conservatives and significantly oversampled college graduates.  These subtle forms of unrepresentativeness are a known limitation of opt-in/non-randomization-based survey platforms [@KennedyEvaluation2016Election2018; @BradleyUnrepresentativeBigSurveys2021; @KeeterOnlineOptpollsCan2024].  We hope to secure funding for higher-quality data collection in the future. 
 
 In addition, VISS has been developed solely in the context of the US.  We cannot make any claims that our findings generalize to other countries.  Even bracketing issues of translation, before using VISS in other contexts it might be useful to replicate study 2 and check whether construct validity still obtains. 
 
 
-## The value-free ideal and its critiques
+## The value-free ideal and its critiques {.unnumbered}
 
 In study 3, we found that there was no correlation between versions of the value-free ideal — the traditional conception of objectivity — on the one hand, and philosophical criticisms of this ideal, on the other; indeed, a number of respondents indicated that they agreed with both VFI and a critique.  
 
@@ -294,7 +253,7 @@ On this interpretation, VISS items correspond less to beliefs (occurrent or late
 Working within this Deweyan conceptual framework, one important area for future research will be to understand which tropes are deployed as people navigate different public scientific controversies, and under what circumstances agents might recognize that they are deploying two logically incompatible tropes, that is, when a logical inconsistency becomes a practical inconsistency.  
 
 
-## Values in science and generalized trust
+## Values in science and generalized trust {.unnumbered}
 
 The patterns of correlation in @fig-trust and @fig-trust-coefs challenge the common idea that VFI provides a foundation for trust in science.  Indeed, our findings indicate that trust in science is either independent of or *negatively* associated with VFI.  In the study 3 EFA, the four versions of VFI and wait.policy consistently comprise the "objectivity" latent factor; and this factor is consistently uncorrelated with trust.  This is in line with @HicksValuesDisclosuresTrust2022, who found that disclosing public health values might increase, rather than decrease, trust in the disclosing scientist
 
@@ -305,10 +264,33 @@ Across the study 3 sample, generalized trust in science was moderately high (e.g
 
 
 
-# References
+# References {.unnumbered}
 
 ::: {#refs}
 :::
+
+```{r}
+#| label: tbl-viss
+#| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA."
+#| fig-pos: "t"
+here('paper', 'tbl', '06_prompts.Rds') |>
+    read_rds() |>
+    cols_width(id ~ pct(20), 
+               text ~ pct(60)) |>
+    tab_options(latex.use_longtable = TRUE)
+```
+
+![Distribution of responses to VISS items, ordered by total agreement.  Vertical dashed lines indicate 20%, 50%, and 80%.](img/02_likert.png){#fig-03-likert}
+
+![Marginal distributions and scatterplots for VFI items (rows, y-axes of scatterplots) and critiques of VFI (columns, x-axes of scatterplots).  Lines in each scatterplot are univariate regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree for all items.  Point positions in scatterplots are jittered for legibility.  P-values are calculated for the null that $R  \geq 0$, not adjusted for multiple comparisons.](img/02_vfi.png){#fig-vfi}
+
+![Marginal distribution of CoSS (rightmost panels) and scatterplots for VFI items (top row) and critiques of VFI (bottom row) (columns, x-axes of scatterplots) against CoSS scores (y-axes). Lines in each scatterplot are OLS regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/02_trust.png){#fig-trust}
+ 
+![Coefficients (point estimates and 95% confidence intervals) for regression models of generalized trust (CoSS) against latent VISS factors.  Factors use the interpretive labels with the model index, e.g., "cynicism_5" is the *cynicism* factor from the 5-factor model.  Dashed lines indicate ±1/7 and 0.  Latent variables scores were calculated as signed averages of component variables (each using a seven-point Likert scale), so that a one-point difference in a latent variable corresponds to an average difference of one point in the component variables. CoSS is calculated as an average of variables that use a seven-point Likert scale.](img/04_trust_coefs.png){#fig-trust-coefs}
+
+
+
+
 
 
 \clearpage
