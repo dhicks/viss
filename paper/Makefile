@@ -22,7 +22,7 @@ pdf-jou: $(SOURCE)
 	-M documentmode:jou
 
 docx: $(SOURCE)
-	quarto render $< --to apaquarto-docx
+	quarto render $< --to docx
 
 .PHONY: wc
 wc:
