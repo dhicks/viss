@@ -45,10 +45,8 @@ execute:
 
 <!--
 - trim SI from docx
-- separate SI PDF
 - adjust labels for table xrefs
-- figs in separate files
-- separate table PDF? 
+- figs in separate files?
 -->
 
 <!--
