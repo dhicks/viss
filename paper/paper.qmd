@@ -389,6 +389,7 @@ Value-free ideal
 ref = 100/7
 here('paper', 'tbl', '06_compare.Rds') |>
     read_rds() |> 
+    tab_options(table.font.size = 10) |>
     cols_width(contains('ID') ~ pct(ref), 
                contains('text') ~ pct(2*ref), 
                modified ~ pct(ref)) |>
