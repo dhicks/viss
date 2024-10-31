@@ -17,7 +17,7 @@ authors:
       email: emiliol1985@gmail.com
       affiliations: 
         - ref: ucm
-    - name: Cosmo Campbell
+    - name: Cosmo E. Campbell
       affiliations:
         - ref: ucm
     - name: Joseph Dad
