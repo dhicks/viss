@@ -46,7 +46,7 @@ execute:
 <!--
 - trim SI from docx
 - adjust labels for table xrefs
-- figs in separate files?
+- figs in separate files
 -->
 
 <!--
