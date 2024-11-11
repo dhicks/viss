@@ -1,5 +1,5 @@
 SOURCE = paper.qmd
-split = 30
+split = 23
 
 all: pdf wc
 
@@ -28,6 +28,7 @@ docx: $(SOURCE)
 wc:
 	echo "splitting at page $(split)"
 	qpdf paper.pdf --pages . 1-$(split) -- main.pdf
+	qpdf paper.pdf --pages . $(split)-r1 -- supplement.pdf
 	pdftotext main.pdf - | wc
 
 .PHONY: floats

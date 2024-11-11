@@ -48,7 +48,7 @@ format:
 
 number-sections: true
 link-citations: true
-linestretch: 1.5
+linestretch: 1
 
 crossref:
   custom:
@@ -67,18 +67,6 @@ execute:
 ---
 
 <!--
-SCX submission guidelines: <https://journals.sagepub.com/author-instructions/scx>
-7000-9000 words, including references
-(a) a separate title page file with the names, addresses, telephone numbers, and e-mails of all authors; (b) a separate biography page file of 50 to 80 words for biographical descriptions of each author; and (b) an abstract of not more than 100 words accompanied by approximately 4-5 suggested keywords
-
-tables at end of MS, figures in separate files
-
-anonymous review
-
-cannot accept PDFs(?)
-
-
-
 PUS submission guidelines: <https://journals.sagepub.com/author-instructions/PUS>
 Research Article (max. 8,000 words and 5 figures or tables)
 Research Note (max. 4,000 words and 5 figures or tables)
