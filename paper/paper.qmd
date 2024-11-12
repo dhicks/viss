@@ -1,5 +1,5 @@
 ---
-title: "Developing Measures of Public Perceptions of Values in Science"
+title: "Developing Measures of Public Perceptions of Values in Science: The Values in Science Scale"
 authors: 
     - name: "D. J. Hicks^[<danhicks@ucmerced.ed>]"
       corresponding: true
