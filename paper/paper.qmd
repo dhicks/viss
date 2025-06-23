@@ -292,10 +292,6 @@ here('paper', 'tbl', '06_prompts.Rds') |>
 
 
 
-
-
-
-
 \clearpage
 \appendix
 \pagenumbering{arabic}
