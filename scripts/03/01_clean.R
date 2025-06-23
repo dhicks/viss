@@ -138,6 +138,7 @@ dataf = dataf_raw |>
     ) |> 
     ## Renaming
     ## VISS
+    rename(pluralism.2 = pluralism.3) |> 
     rename_with(~ glue('viss.{.x}'), 
                 .cols = aims.1:wait.policy) |> 
     ## GSS confidence
