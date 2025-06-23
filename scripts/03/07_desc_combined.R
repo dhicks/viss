@@ -5,9 +5,11 @@ library(here)
 library(glue)
 library(patchwork)
 
+## Wording was changed in study 2
 homophones = c('aims.1', 'aims.3', 
                'coi.1', 'consensus.2', 
                'nonsubj.1')
+
 ## study3 = study1
 renumber = c('consensus.1' = 'consensus.3',
              'pluralism.2' = 'pluralism.3',
@@ -26,7 +28,8 @@ dataf_1 = here('data', '01', 'data.Rds') |>
                 .fn = ~ str_c(.x, '-1')) |> 
     rename(all_of(renumber))
 
-count(dataf_1, aims.2)
+dataf_1 |> 
+    select(starts_with('pluralism'))
 
 agree_1 = dataf_1 |>
     group_by(study) |> 
@@ -50,7 +53,8 @@ dataf_3 = here('data', '03', '01_data.Rds') |>
                 .fn = ~ str_remove(.x, 'viss.')) |> 
     mutate(study = 3L)
 
-count(dataf_3, aims.1)
+dataf_3 |> 
+    select(starts_with('pluralism'))
 
 agree_3 = dataf_3 |> 
     group_by(study) |> 

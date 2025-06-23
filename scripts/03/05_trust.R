@@ -15,17 +15,19 @@ library(here)
 
 source(here('R', 'vars.R'))
 
+vars = expr(c(cynicism, textbook, objectivity))
+
 data_dir = here('data', '03')
 out_dir = here('out', '03')
 
-viss_scores = read_rds(here(data_dir, '04_scores_3.Rds')) |> 
+scores = read_rds(here(data_dir, '04_scores_3.Rds')) |> 
     magrittr::set_colnames(c('prolific_id', 
-                             'viss_cynicism', 
-                             'viss_textbook', 
-                             'viss_objectivity'))
+                             'cynicism', 
+                             'textbook', 
+                             'objectivity'))
 
 dataf = read_rds(here(data_dir, '01_data.Rds')) |> 
-    left_join(viss_scores, by = 'prolific_id')
+    left_join(scores, by = 'prolific_id')
 
 
 
@@ -144,23 +146,23 @@ ggplot(dataf) +
 
 ## ViSS items against trust measures ----
 ## These are very hard to read; probably better to use EFA factors
-viss_items = dataf |>
+items = dataf |>
     names() |>
     keep(~ str_detect(.x, 'viss'))
 ggplot(dataf) +
     geom_autopoint(alpha = .1, position = 'jitter') +
     stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
     facet_matrix(rows = vars(!!trust_vars),
-                 cols = vars(viss_items[1:10]))
+                 cols = vars(items[1:10]))
 ggplot(dataf) +
     geom_autopoint(alpha = .1, position = 'jitter') +
     stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
     facet_matrix(rows = vars(!!trust_vars),
-                 cols = vars(viss_items[11:19]))
+                 cols = vars(items[11:19]))
 
 ## VISS factors against trust measures ----
 ## TODO: x-axes don't quite align
-viss_coss = ggplot(dataf) +
+coss = ggplot(dataf) +
     geom_autopoint(alpha = .2, position = 'jitter') +
     stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
     stat_cor(aes(.panel_x, .panel_y,
@@ -169,8 +171,8 @@ viss_coss = ggplot(dataf) +
              label.y = 1, 
              digits = 1) +
     facet_matrix(rows = vars(coss),
-                 cols = vars(!!viss_vars))
-viss_coss
+                 cols = vars(!!vars))
+coss
 
 coss_hist = dataf |> 
     ggplot(aes(coss)) +
@@ -178,8 +180,8 @@ coss_hist = dataf |>
     coord_flip() +
     labs(x = '')
 
-viss_hist = dataf |> 
-    select(!!viss_vars) |> 
+hist = dataf |> 
+    select(!!vars) |> 
     pivot_longer(everything(), 
                  names_to = 'item', 
                  values_to = 'response', 
@@ -190,7 +192,7 @@ viss_hist = dataf |>
     facet_grid(cols = vars(item), 
                scales = 'free')
 
-viss_hist + viss_coss + coss_hist +
+hist + coss + coss_hist +
     plot_layout(design = 'AAAAD
                           BBBBC
                           BBBBC', 
@@ -202,9 +204,9 @@ ggsave(here(out_dir, '05_factors_coss.png'),
        bg = 'white')
 
 inter_gg = dataf |> 
-    mutate(obj_binned = cut(viss_objectivity, 
+    mutate(obj_binned = cut(objectivity, 
                             breaks = 4)) |> 
-    ggplot(aes(viss_cynicism, coss, 
+    ggplot(aes(cynicism, coss, 
                color = obj_binned, 
                fill = obj_binned,
                group = obj_binned)) +
@@ -217,22 +219,22 @@ inter_gg = dataf |>
 inter_gg
 
 ## Putting all three into a single regression, effect of objectivity is not stat. sig. 
-model_1 = lm(coss ~ viss_cynicism + 
-                 viss_textbook + 
-                 viss_objectivity, 
+model_1 = lm(coss ~ cynicism + 
+                 textbook + 
+                 objectivity, 
              data = dataf)
 summary(model_1)
 ## Interaction of cynicism w/ objectivity doesn't change anything
-model_2 = lm(coss ~ viss_cynicism + 
-                 viss_textbook + 
-                 viss_objectivity +
-                 viss_cynicism * viss_objectivity, 
+model_2 = lm(coss ~ cynicism + 
+                    textbook + 
+                    objectivity +
+                    cynicism * objectivity, 
              data = dataf)
 summary(model_2)
 
 inter_reg_gg = predict_response(model_2, 
-                 c('viss_cynicism', 
-                   'viss_objectivity [1:7 by=2]'), 
+                 c('cynicism', 
+                   'objectivity [1:7 by=2]'), 
                  margin = 'empirical') |> 
     plot() +
     scale_color_viridis_d(end = .8, 
@@ -261,7 +263,7 @@ inter_gt |>
 
 ## Regressions ----
 ## NB due to high missingness, exclude `occ_prestige`
-lm(coss ~ gender + age + religious + rwa.conservatism + rwa.traditionalism + rwa.authoritarianism + osi_score + viss_cynicism + viss_textbook + viss_objectivity, 
+lm(coss ~ gender + age + religious + rwa.conservatism + rwa.traditionalism + rwa.authoritarianism + osi_score + cynicism + textbook + objectivity, 
    data = dataf) |> 
     summary()
 

@@ -47,4 +47,5 @@ floats:
 	cp ../out/03/05_interaction.png img/05_interaction.png
 	cp ../out/03/05_inter.Rds tbl/05_inter.Rds
 	cp ../out/03/06_compare.Rds tbl/06_compare.Rds
+	cp ../out/03/05_factors_coss.png img/05_factors_coss.png
 

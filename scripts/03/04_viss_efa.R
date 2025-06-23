@@ -117,19 +117,19 @@ loadings(efa_fits[[4]]) |>
 efa_labels[[4]] = c('MR1_4' = 'textbook_4', 'MR2_4' = 'cynicism_4', 
                     'MR4_4' = 'objectivity_4', 'MR3_4' = '?(aims + stdpt)_4')
 
-## 5: (2) cynicism; (1) textbook + aims.3; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.3
+## 5: (2) cynicism; (1) textbook + aims.3; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.2
 loadings(efa_fits[[5]]) |> 
     print(cutoff = .3)
 efa_labels[[5]] = c('MR2_5' = 'cynicism_5', 'MR1_5' = 'textbook_5', 
                     'MR4_5' = 'objectivity_5', 'MR3_5' = '?(aims + stdpt)_5', 
-                    'MR5_5' = 'pluralism.3_5')
+                    'MR5_5' = 'pluralism.2_5')
 
-## 6: (2) cynicism; (1) textbook; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.3; (6) ir
+## 6: (2) cynicism; (1) textbook; (4) objectivity; (3) ??? (aims + stdpt); (5) pluralism.2; (6) ir
 loadings(efa_fits[[6]]) |> 
     print(cutoff = .3)
 efa_labels[[6]] = c('MR2_6' = 'cynicism_6', 'MR1_6' = 'textbook_6', 
                     'MR4_6' = 'objectivity_6', 'MR3_6' = '?(aims + stdpt)_6',
-                    'MR5_6' = 'pluralism.3_6', 'MR6_6' = 'ir_6')
+                    'MR5_6' = 'pluralism.2_6', 'MR6_6' = 'ir_6')
 
 efa_labels_df = efa_labels[1:6] |> 
     map(enframe, name = 'term', value = 'label') |> 
@@ -144,19 +144,28 @@ efa_fits[[3]] %>%
     str()
 
 ## Discretized / "non-refined" scores
+## Given a binary matrix (0/1), zero out all rows with more than one 1
 zero_xload <- function(mat) {
     rows_to_modify <- which(rowSums(mat) > 1)
     mat[which(rowSums(mat) > 1), ] <- 0
     return(mat)
 }
 
+# efa_fits[[3]] |> 
+#     loadings() |> 
+#     magrittr::set_class('matrix') %>% 
+#     {(abs(.) > .3) * (sign(.))} |> 
+#     zero_xload()
+
 scores = function(this_efa, efa_name = 'test', threshold = 0.3) {
+    ## Discretized loadings matrix, with crossloaded items zeroed out
     load_mx = this_efa |> 
         loadings() |> 
         magrittr::set_class('matrix') %>%
         {(abs(.) > threshold) * (sign(.))} |> 
         zero_xload()
     
+    ## Matrix to divide by the number of items in each factor
     count_mx = colSums(abs(load_mx)) %>%
         {1 / .} %>% 
         {diag(., nrow = length(.))} |> 

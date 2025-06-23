@@ -1109,7 +1109,7 @@ references:
   URL: >-
     http://books.google.ca/books?id=kZOso0FMsrMC&pg=PA39&dq=intitle:Impure+Science+inauthor:epstein&hl=&cd=1&source=gbs_api
 
-- id: EvansWhoDoesnTrust2020
+- id: EvansWhoDoesntTrust2020
   abstract: >-
     The primary tension in public discourse about the U.S. government’s response
     to the coronavirus pandemic has been President Trump’s disagreement with
@@ -1133,7 +1133,7 @@ references:
       given: John H.
     - family: Hargittai
       given: Eszter
-  citation-key: EvansWhoDoesnTrust2020
+  citation-key: EvansWhoDoesntTrust2020
   container-title: Socius
   DOI: 10.1177/2378023120947337
   ISSN: 2378-0231
@@ -1175,6 +1175,60 @@ references:
   title: Commercial Interests and the Erosion of Trust in Science
   type: article-journal
   URL: https://www.journals.uchicago.edu/doi/abs/10.1086/710521
+
+- id: FernandezPintoEpistemicDiversityIndustrial2023
+  abstract: >-
+    Philosophers of science have argued that epistemic diversity is an asset for
+    the production of scientific knowledge, guarding against the effects of
+    biases, among other advantages. The growing privatization of scientific
+    research, on the contrary, has raised important concerns for philosophers of
+    science, especially with respect to the growing sources of biases in
+    research that it seems to promote. Recently, Holman and Bruner (2017) have
+    shown, using a modified version of Zollman (2010) social network model, that
+    an industrial selection bias can emerge in a scientific community, without
+    corrupting any individual scientist, if the community is epistemically
+    diverse. In this paper, we examine the strength of industrial selection
+    using a reinforcement learning model, which simulates the process of
+    industrial decision-making when allocating funding to scientific projects.
+    Contrary to Holman and Bruner’s model, in which the probability of success
+    of the agents when performing an action is given a priori, in our model the
+    industry learns about the success rate of individual scientists and updates
+    the probability of success on each round. The results of our simulations
+    show that even without previous knowledge of the probability of success of
+    an individual scientist, the industry is still able to disrupt scientific
+    consensus. In fact, the more epistemically diverse the scientific community,
+    the easier it is for the industry to move scientific consensus to the
+    opposite conclusion. Interestingly, our model also shows that having a
+    random funding agent seems to effectively counteract industrial selection
+    bias. Accordingly, we consider the random allocation of funding for research
+    projects as a strategy to counteract industrial selection bias, avoiding
+    commercial exploitation of epistemically diverse communities.
+  accessed:
+    - year: 2023
+      month: 5
+      day: 16
+  author:
+    - family: Fernández Pinto
+      given: Manuela
+    - family: Fernández Pinto
+      given: Daniel
+  citation-key: FernandezPintoEpistemicDiversityIndustrial2023
+  container-title: Synthese
+  container-title-short: Synthese
+  DOI: 10.1007/s11229-023-04158-7
+  ISSN: 1573-0964
+  issue: '5'
+  issued:
+    - year: 2023
+      month: 5
+      day: 15
+  language: en
+  page: '182'
+  source: Springer Link
+  title: Epistemic diversity and industrial selection bias
+  type: article-journal
+  URL: https://doi.org/10.1007/s11229-023-04158-7
+  volume: '201'
 
 - id: FernandezPintoKnowBetterNot2017
   accessed:
@@ -1800,6 +1854,63 @@ references:
   type: article-journal
   URL: http://link.springer.com/10.1007/s11229-014-0447-9
   volume: '191'
+
+- id: HicksOpenScienceReplication2023
+  abstract: >-
+    Concerns about a crisis of mass irreplicability across scientific fields
+    (“the replication crisis”) have stimulated a movement for open science,
+    encouraging or even requiring researchers to publish their raw data and
+    analysis code. Recently, a rule at the US Environmental Protection Agency
+    (US EPA) would have imposed a strong open data requirement. The rule
+    prompted significant public discussion about whether open science practices
+    are appropriate for fields of environmental public health. The aims of this
+    paper are to assess (1) whether the replication crisis extends to fields of
+    environmental public health; and (2) in general whether open science
+    requirements can address the replication crisis. There is little empirical
+    evidence for or against mass irreplicability in environmental public health
+    specifically. Without such evidence, strong claims about whether the
+    replication crisis extends to environmental public health — or not — seem
+    premature. By distinguishing three concepts — reproducibility,
+    replicability, and robustness — it is clear that open data initiatives can
+    promote reproducibility and robustness but do little to promote
+    replicability. I conclude by reviewing some of the other benefits of open
+    science, and offer some suggestions for funding streams to mitigate the
+    costs of adoption of open science practices in environmental public health.
+  accessed:
+    - year: 2021
+      month: 7
+      day: 31
+  author:
+    - family: Hicks
+      given: Daniel J.
+  citation-key: HicksOpenScienceReplication2023
+  container-title: Accountability in Research
+  DOI: 10.1080/08989621.2021.1962713
+  ISSN: 0898-9621
+  issue: '1'
+  issued:
+    - year: 2023
+  license: All rights reserved
+  page: 34-62
+  PMID: '34330172'
+  publisher: Taylor & Francis
+  source: Taylor and Francis+NEJM
+  title: Open science, the replication crisis, and environmental public health
+  type: article-journal
+  URL: https://doi.org/10.1080/08989621.2021.1962713
+  volume: '30'
+
+- id: HicksScientificPracticesTheir2012
+  author:
+    - family: Hicks
+      given: Daniel J.
+  citation-key: HicksScientificPracticesTheir2012
+  issued:
+    - year: 2012
+  publisher: U. of Notre Dame
+  source: PhilPapers
+  title: Scientific Practices and Their Social Context
+  type: thesis
 
 - id: HicksValuesDisclosuresTrust2022
   abstract: >-
@@ -3266,7 +3377,7 @@ references:
   URL: https://doi.org/10.1007/s13194-023-00552-7
   volume: '13'
 
-- id: MercerWhyPopperCan2016
+- id: MercerWhyPopperCant2016
   abstract: >-
     A notable feature in the public framing of debates involving the science of
     Anthropogenic Global Warming are appeals to uncritical ‘positivist’ images
@@ -3294,7 +3405,7 @@ references:
   author:
     - family: Mercer
       given: David
-  citation-key: MercerWhyPopperCan2016
+  citation-key: MercerWhyPopperCant2016
   container-title: Public Understanding of Science
   container-title-short: Public Understanding of Science
   DOI: 10.1177/0963662516645040
@@ -3451,7 +3562,7 @@ references:
   type: chapter
   URL: http://books.google.com/books?id=hM8Vrot7zpUC
 
-- id: MizrahiWhatBadScientism2017
+- id: MizrahiWhatsBadScientism2017
   abstract: >-
     In their attempt to defend philosophy from accusations of uselessness made
     by prominent scientists, such as Stephen Hawking, some philosophers respond
@@ -3472,7 +3583,7 @@ references:
   author:
     - family: Mizrahi
       given: Moti
-  citation-key: MizrahiWhatBadScientism2017
+  citation-key: MizrahiWhatsBadScientism2017
   container-title: Social Epistemology
   DOI: 10.1080/02691728.2017.1297505
   ISSN: 0269-1728
@@ -3583,7 +3694,7 @@ references:
   URL: https://doi.org/10.1088/1748-9326/ac2774
   volume: '16'
 
-- id: NadelsonJustDonTrust2014
+- id: NadelsonJustDontTrust2014
   abstract: >-
     Trust in science and scientists can greatly influence consideration of
     scientific developments and activities. Yet, trust is a nebulous construct
@@ -3617,7 +3728,7 @@ references:
       given: Ken
     - family: Husting
       given: Virginia
-  citation-key: NadelsonJustDonTrust2014
+  citation-key: NadelsonJustDontTrust2014
   container-title: School Science and Mathematics
   DOI: 10.1111/ssm.12051
   ISSN: 1949-8594
@@ -4202,60 +4313,6 @@ references:
   title: Data quality of platforms and panels for online behavioral research
   type: article-journal
   URL: https://link.springer.com/10.3758/s13428-021-01694-3
-
-- id: PintoEpistemicDiversityIndustrial2023
-  abstract: >-
-    Philosophers of science have argued that epistemic diversity is an asset for
-    the production of scientific knowledge, guarding against the effects of
-    biases, among other advantages. The growing privatization of scientific
-    research, on the contrary, has raised important concerns for philosophers of
-    science, especially with respect to the growing sources of biases in
-    research that it seems to promote. Recently, Holman and Bruner (2017) have
-    shown, using a modified version of Zollman (2010) social network model, that
-    an industrial selection bias can emerge in a scientific community, without
-    corrupting any individual scientist, if the community is epistemically
-    diverse. In this paper, we examine the strength of industrial selection
-    using a reinforcement learning model, which simulates the process of
-    industrial decision-making when allocating funding to scientific projects.
-    Contrary to Holman and Bruner’s model, in which the probability of success
-    of the agents when performing an action is given a priori, in our model the
-    industry learns about the success rate of individual scientists and updates
-    the probability of success on each round. The results of our simulations
-    show that even without previous knowledge of the probability of success of
-    an individual scientist, the industry is still able to disrupt scientific
-    consensus. In fact, the more epistemically diverse the scientific community,
-    the easier it is for the industry to move scientific consensus to the
-    opposite conclusion. Interestingly, our model also shows that having a
-    random funding agent seems to effectively counteract industrial selection
-    bias. Accordingly, we consider the random allocation of funding for research
-    projects as a strategy to counteract industrial selection bias, avoiding
-    commercial exploitation of epistemically diverse communities.
-  accessed:
-    - year: 2023
-      month: 5
-      day: 16
-  author:
-    - family: Pinto
-      given: Manuela Fernández
-    - family: Pinto
-      given: Daniel Fernández
-  citation-key: PintoEpistemicDiversityIndustrial2023
-  container-title: Synthese
-  container-title-short: Synthese
-  DOI: 10.1007/s11229-023-04158-7
-  ISSN: 1573-0964
-  issue: '5'
-  issued:
-    - year: 2023
-      month: 5
-      day: 15
-  language: en
-  page: '182'
-  source: Springer Link
-  title: Epistemic diversity and industrial selection bias
-  type: article-journal
-  URL: https://doi.org/10.1007/s11229-023-04158-7
-  volume: '201'
 
 - id: PlantingaWhenFaithReason2001
   author:
@@ -4858,6 +4915,40 @@ references:
   type: article-journal
   URL: https://www.science.org/doi/10.1126/science.adp7153
   volume: '384'
+
+- id: TollefsonTrumpsCallGold2025
+  abstract: >-
+    Thousands have signed an open letter against the US president’s latest
+    order, anxious about political interference in science and more.
+  accessed:
+    - year: 2025
+      month: 5
+      day: 29
+  author:
+    - family: Tollefson
+      given: Jeff
+    - family: Garisto
+      given: Dan
+  citation-key: TollefsonTrumpsCallGold2025
+  container-title: Nature
+  DOI: 10.1038/d41586-025-01668-x
+  ISSN: 1476-4687
+  issued:
+    - year: 2025
+      month: 5
+      day: 28
+  language: en
+  license: 2025 Springer Nature Limited
+  note: |-
+    Bandiera_abtest: a
+    Cg_type: News
+    Subject_term: Policy, Politics, Government, Scientific community
+  publisher: Nature Publishing Group
+  source: www.nature.com
+  title: 'Trump’s call for ‘gold standard science’ has prompted an outcry: here’s why'
+  title-short: Trump’s call for ‘gold standard science’ has prompted an outcry
+  type: article-journal
+  URL: https://www.nature.com/articles/d41586-025-01668-x
 
 - id: TysonViewsImpactScience2023
   abstract: >-
