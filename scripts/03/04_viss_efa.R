@@ -4,7 +4,8 @@ library(ggforce)
 library(ggpubr)
 library(broom)
 library(sjlabelled)
-library(gt)
+# library(gt)
+library(tinytable)
 
 library(visdat)
 library(psych)
@@ -212,36 +213,97 @@ loadings_df = efa_fits |>
                              .fn = ~ glue('{.x}_{y}'))) |> 
     reduce(~ full_join(.x, .y, by = 'variable'))
 
-loadings_gt = loadings_df |> 
+loadings_tbl = loadings_df |> 
     pivot_longer(!variable, names_to = 'latent', values_to = 'value') |> 
     # filter(abs(value) > .3) |>
     inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
     select(!latent) |> 
     pivot_wider(names_from = 'label', values_from = 'value', 
                 names_sort = TRUE) |> 
-    relocate(contains('aims.3'), .after = textbook_3) |> 
-    gt() |> 
-    fmt_number(columns = !variable,
-               decimals = 2) |>
-    highlight_cells(cell_select = ~ abs(.) > 0.3) |> 
-    highlight_cells(cell_style = cell_fill('#F0F0F0'), 
-                    cell_select = ~ abs(.) > 0.3) |> 
-    sub_missing(missing_text = '') |> 
-    tab_spanner_delim(delim = '_') |> 
-    tab_style(
-        style = cell_borders(
-            sides = c('left'),
-            # weight = px(.5)
-        ),
-        locations = cells_body(columns = c(2, 5, 10, 11, 15, 17)))
-loadings_gt
+    relocate(contains('aims.3'), .after = textbook_3)
+#     gt() |> 
+#     fmt_number(columns = !variable,
+#                decimals = 2) |>
+#     highlight_cells(cell_select = ~ abs(.) > 0.3) |> 
+#     highlight_cells(cell_style = cell_fill('#F0F0F0'), 
+#                     cell_select = ~ abs(.) > 0.3) |> 
+#     sub_missing(missing_text = '') |> 
+#     tab_spanner_delim(delim = '_') |> 
+#     tab_style(
+#         style = cell_borders(
+#             sides = c('left'),
+#             # weight = px(.5)
+#         ),
+#         locations = cells_body(columns = c(2, 5, 10, 11, 15, 17)))
+# loadings_gt
 
-gtsave(loadings_gt, here(out_dir, '04_loadings.html'))
-gtsave(loadings_gt, here(out_dir, '04_loadings.pdf'))
-write_rds(loadings_gt, here(out_dir, '04_loadings.Rds'))
+loadings_tt = tt(loadings_tbl) |> 
+    format_tt(digits = 2, num_fmt = 'decimal') |> 
+    style_tt(i = loadings_tbl |> 
+                 mutate(variable = 0L) |> 
+                 as.matrix() %>%
+                 {abs(.) > .3}, 
+             bold = TRUE, 
+             background = '#F0F0F0') |> 
+    group_tt(j = '_') |> 
+    style_tt(j = c(2, 5, 10, 11, 15, 17),
+             line = 'l', line_width = .01) |> 
+    theme_tt('resize')
+loadings_tt
+
+# gtsave(loadings_gt, here(out_dir, '04_loadings.html'))
+# gtsave(loadings_gt, here(out_dir, '04_loadings.pdf'))
+# write_rds(loadings_gt, here(out_dir, '04_loadings.Rds'))
+
+save_tt(loadings_tt, here(out_dir, '04_loadings.html'), 
+        overwrite = TRUE)
+save_tt(loadings_tt, here(out_dir, '04_loadings.pdf'), 
+        overwrite = TRUE)
+write_rds(loadings_tt, here(out_dir, '04_loadings.Rds'))
+
 
 ## Loadings table ordered by model
-loadings_bymodel = loadings_df |> 
+# loadings_bymodel = loadings_df |> 
+#     pivot_longer(!variable, names_to = 'latent', values_to = 'value') |> 
+#     # filter(abs(value) > .3) |>
+#     inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
+#     select(!latent) |> 
+#     pivot_wider(names_from = 'label', values_from = 'value', 
+#                 names_sort = TRUE) |> 
+#     relocate(variable, 
+#              ends_with('_1'), 
+#              ends_with('_2'), 
+#              ends_with('_3'), 
+#              ends_with('_4'), 
+#              ends_with('_5'), 
+#              ends_with('_6')) |> 
+#     gt() |> 
+#     fmt_number(columns = !variable,
+#                decimals = 2) |>
+#     highlight_cells(cell_select = ~ abs(.) > 0.3) |> 
+#     highlight_cells(cell_style = cell_fill('#F0F0F0'), 
+#                     cell_select = ~ abs(.) > 0.3) |> 
+#     sub_missing(missing_text = '') |> 
+#     tab_spanner_delim(delim = '_', reverse = TRUE) |> 
+#     tab_style(
+#         style = cell_borders(
+#             sides = c('left'),
+#             # weight = px(.5)
+#         ),
+#         locations = cells_body(columns = c(2, 3, 5, 8, 
+#                                            12, 17)))
+flip_underscore <- function(char_vector) {
+    sapply(char_vector, function(x) {
+        if (grepl("_", x)) {
+            parts <- strsplit(x, "_")[[1]]
+            paste(rev(parts), collapse = "_")
+        } else {
+            x
+        }
+    }, USE.NAMES = FALSE)
+}
+
+bymodel_tbl = loadings_df |> 
     pivot_longer(!variable, names_to = 'latent', values_to = 'value') |> 
     # filter(abs(value) > .3) |>
     inner_join(efa_labels_df, by = c('latent' = 'term')) |> 
@@ -255,26 +317,28 @@ loadings_bymodel = loadings_df |>
              ends_with('_4'), 
              ends_with('_5'), 
              ends_with('_6')) |> 
-    gt() |> 
-    fmt_number(columns = !variable,
-               decimals = 2) |>
-    highlight_cells(cell_select = ~ abs(.) > 0.3) |> 
-    highlight_cells(cell_style = cell_fill('#F0F0F0'), 
-                    cell_select = ~ abs(.) > 0.3) |> 
-    sub_missing(missing_text = '') |> 
-    tab_spanner_delim(delim = '_', reverse = TRUE) |> 
-    tab_style(
-        style = cell_borders(
-            sides = c('left'),
-            # weight = px(.5)
-        ),
-        locations = cells_body(columns = c(2, 3, 5, 8, 
-                                           12, 17)))
-loadings_bymodel
+    rename_with(~ flip_underscore(.))
 
-gtsave(loadings_bymodel, here(out_dir, '04_loadings_bymodel.html'))
-gtsave(loadings_bymodel, here(out_dir, '04_loadings_bymodel.pdf'))
-write_rds(loadings_bymodel, here(out_dir, '04_loadings_bymodel.Rds'))
+bymodel_tt = tt(bymodel_tbl) |> 
+    format_tt(digits = 2, num_fmt = 'decimal') |> 
+    style_tt(i = bymodel_tbl |> 
+                 mutate(variable = 0L) |> 
+                 as.matrix() %>%
+                 {abs(.) > .3}, 
+             bold = TRUE, 
+             background = '#F0F0F0') |> 
+    group_tt(j = '_') |> 
+    style_tt(j = c(2, 3, 5, 8, 12, 17), 
+             line = 'l', line_width = .01) |> 
+    theme_tt('resize')
+
+bymodel_tt
+
+save_tt(bymodel_tt, here(out_dir, '04_loadings_bymodel.html'), 
+        overwrite = TRUE)
+save_tt(bymodel_tt, here(out_dir, '04_loadings_bymodel.pdf'), 
+        overwrite = TRUE)
+write_rds(bymodel_tt, here(out_dir, '04_loadings_bymodel.Rds'))
 
 
 ## Scores and demographics ----
@@ -398,12 +462,16 @@ trust_glance = efa_scores[1:6] |>
             lm(coss ~ ., data = .) |> 
             glance()}) |> 
     bind_rows(.id = 'FA model') |> 
-    gt() |> 
-    fmt_number(columns = !c(p.value, 
-                            df, df.residual, nobs),
-               decimals = 2) |> 
-    fmt_scientific(columns = p.value, 
-                   n_sigfig = 2)
+    tt() |> 
+    format_tt(j = c('r.squared', 
+                    'adj.r.squared', 
+                    'sigma', 
+                    'statistic', 
+                    'logLik', 'AIC', 'BIC', 
+                    'deviance'),
+        digits = 2, num_fmt = 'decimal', num_zero = TRUE) |> 
+    format_tt(j = 'p.value', 
+              digits = 2, num_fmt = 'scientific')
 trust_glance
 write_rds(trust_glance, here(out_dir, '04_trust_glance.Rds'))
 

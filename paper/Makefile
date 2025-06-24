@@ -7,7 +7,7 @@ html: $(SOURCE)
 	quarto render $< --to apaquarto-html
 
 pdf: $(SOURCE)
-	quarto render $< --to pdf
+	quarto render $< --to aft-pdf
 
 pdf-man: $(SOURCE)
 	quarto render $< --to apaquarto-pdf \

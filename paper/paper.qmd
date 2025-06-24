@@ -1,10 +1,10 @@
 ---
 title: "Developing Measures of Public Perceptions of Values in Science: The Values in Science Scale"
 authors: 
-    - name: "D. J. Hicks^[<danhicks@ucmerced.ed>]"
+    - name: "D. J. Hicks"
       corresponding: true
       orcid: 0000-0001-7945-4416
-      email: dhicks4@ucmerced.edu
+      email: danhicks@ucmerced.edu
       affiliations:
           - id: ucm
             name: University of California, Merced
@@ -31,7 +31,7 @@ abstract: "Scholars in the history, philosophy, and social studies of science of
 acknowledgments: "For feedback on this project, thanks to participants at the 10th Annual Values in Medicine, Science, and Technology Conference at UT Dallas, May 2022, and the Knowledge, Science, and Society conference at UC San Diego, May 2024. In particular, thanks to Magdalena Grohman for suggesting the qualitative approach used in study 2.  Thanks to UC Merced for funding to support EJCL, CC, and JD throughout different stages of this project, and for the survey studies."
 
 format:
-    pdf:
+    aft-pdf:
       toc: false
       keep-tex: true
       pdf-engine: "xelatex"
@@ -40,15 +40,19 @@ format:
             \usepackage{pdflscape}
             \usepackage{adjustbox}
             %\usepackage{endfloat}
-      mainfont: "FreeSerif"
-      fontsize: "12pt"
-      geometry: 
-        - "margin = 1in"
+      cite-method: citeproc
+      ## BJPS formatting
+      geometry:
+      #   - margin=1in
+        - margin=1.5in
+      # mainfont: "Times New Roman"
+      # fontsize: "12pt"
+      # linestretch: 1.5
+
     html: default
 
 number-sections: true
 link-citations: true
-linestretch: 1
 
 crossref:
   custom:
@@ -59,12 +63,13 @@ crossref:
       space-before-numbering: false
       latex-list-of-description: Supplementary Figure
 
-bibliography: VISS.yaml
-csl: _extensions/wjschne/apaquarto/apa.csl
+bibliography: "VISS.yaml"
 
 execute: 
     echo: false
 ---
+
+*[todo: checkmark:  ✓ ]*
 
 <!--
 PUS submission guidelines: <https://journals.sagepub.com/author-instructions/PUS>
@@ -92,6 +97,7 @@ library(tidyverse)
 library(knitr)
 library(gt)
 library(here)
+library(tinytable)
 ```
 
 # Introduction #
@@ -447,49 +453,35 @@ For cross-validation purposes, we ran a CFA on the second sub-sample using the f
 
 ![Correlations among measures of generalized trust in science from study 3.  In the table, correlations are reported as Pearson's R. In the scatterplots, point locations have been jittered slightly for legibility; blue lines and ribbons represent univariate linear regressions and 95% confidence intervals. `coss`: Credibility of Science Scale [@HartmanModelingAttitudesScience2017]. `gss_science`: A five-valued version of the General Social Survey "trust in institutions" question for the scientific community. `effect`: A question from the Pew Research Center on whether science has had a positive or negative effect on science [@TysonViewsImpactScience2023]. `scientism`: the scientism scale of @LukicDelineatingScientismScience2023.](img/05_trust_corr.png){#suppfig-trust-corr}
 
+
+```{=latex}
+\begin{landscape}
+```
+```{=latex}
+\end{landscape}
+```
+::: {.landscape}
 ```{r}
 #| label: tbl-trust-glance
 #| tbl-cap: 'Fit statistics for regression models of CoSS against FA latent variables.'
 here('paper', 'tbl', '04_trust_glance.Rds') |>
-    read_rds() |>
-    tab_options(table.font.size = 10) |>
-    opt_row_striping() |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = cells_column_labels()) |> 
-    tab_options(latex.use_longtable = TRUE)
-```
-
-```{=latex}
-\begin{landscape}
+    read_rds()
 ```
 ```{r}
 #| label: tbl-efa-3
 #| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors.  Latent factors are grouped by interpretive label across solutions.'
 #| column: page
 here('paper', 'tbl', '04_loadings.Rds') |>
-    read_rds() |>
-    cols_width(starts_with('textbook + c') ~ pct(100/22 + 2)) |>
-    tab_options(table.font.size = 10) |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = list(cells_column_labels(), 
-                               cells_column_spanners()))
+    read_rds()
 ```
 ```{r}
 #| label: tbl-efa-3-bymodel
 #| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors. Latent factors are grouped by solution.'
 #| column: page
 here('paper', 'tbl', '04_loadings_bymodel.Rds') |>
-    read_rds() |>
-    cols_width(variable ~ pct(100/22 + 1),
-              everything() ~ pct(100/22 - 1/22)) |>
-    tab_options(table.font.size = 8) |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = list(cells_column_labels(), 
-                               cells_column_spanners()))
+    read_rds()
 ```
-```{=latex}
-\end{landscape}
-```
+:::
 
 
 # Philosophical critiques of VFI in VISS {#sec-vfi-crits}
