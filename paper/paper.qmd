@@ -26,9 +26,9 @@ authors:
 institute: "University of California, Merced
             <danhicks@ucmerced.edu>"
 
-abstract: "Scholars in the history, philosophy, and social studies of science often explain public scientific controversies by appealing to views of the general public on appropriate roles for values in science. However, evidence that members of the public actually hold these views is limited. This paper presents the Values in Science Scale (VISS), a quantitative survey instrument designed to measure these views. Qualitative methods were used to ensure construct validity among US adults (Study 2). In one notable initial finding using VISS, the value-free ideal (VFI) — a traditional conception of objectivity — is not correlated with generalized trust in science."
+abstract: "Scholars in the history, philosophy, and social studies of science often explain public scientific controversies by appealing to views of the general public on appropriate roles for values in science. However, evidence that members of the public actually hold these views is limited. This paper presents the Values in Science Scale (VISS), a quantitative survey instrument designed to measure these views. Qualitative methods were used to ensure construct validity among US adults (Study 2). In some notable initial findings using VISS, members of the public endorse both the value-free ideal (VFI) and some influential philosophical critiques of it, and VFI is not correlated with generalized trust in science." 
 
-acknowledgments: "For feedback on this project, thanks to participants at the 10th Annual Values in Medicine, Science, and Technology Conference at UT Dallas, May 2022, and the Knowledge, Science, and Society conference at UC San Diego, May 2024. In particular, thanks to Magdalena Grohman for suggesting the qualitative approach used in study 2.  Thanks to UC Merced for funding to support EJCL, CC, and JD throughout different stages of this project, and for the survey studies."
+acknowledgments: "For feedback on this project, thanks to participants at the 10th Annual Values in Medicine, Science, and Technology Conference at UT Dallas, May 2022, and the Knowledge, Science, and Society conference at UC San Diego, May 2024. In particular, thanks to Magdalena Grohman for suggesting the qualitative approach used in study 2, and Sarah Depaoli for feedback and advice on our use of factor analysis.  Thanks to UC Merced for funding to support EJCL, CC, and JD throughout different stages of this project, and for the survey studies."
 
 format:
     aft-pdf:
@@ -43,11 +43,12 @@ format:
       cite-method: citeproc
       ## BJPS formatting
       geometry:
-      #   - margin=1in
-        - margin=1.5in
-      # mainfont: "Times New Roman"
-      # fontsize: "12pt"
-      # linestretch: 1.5
+        - margin=1in
+      #  - margin=1.5in
+      # mainfont: "FreeSerif"
+      mainfont: "Times New Roman"
+      fontsize: "12pt"
+      linestretch: 1.5
 
     html: default
 
@@ -69,24 +70,6 @@ execute:
     echo: false
 ---
 
-*[todo: checkmark:  ✓ ]*
-
-<!--
-PUS submission guidelines: <https://journals.sagepub.com/author-instructions/PUS>
-Research Article (max. 8,000 words and 5 figures or tables)
-Research Note (max. 4,000 words and 5 figures or tables)
-
-OA agreement: library covers first $1k, 20% off remaining APC
--->
-
-<!-- 
-*[
-- rearrange, docx output
-- PDF versions of tables
-- biography page
-]*
- -->
-
 | 
 | Keywords: values in science, trust in science, survey instrument, philosophy of science, factor analysis
 
@@ -106,7 +89,7 @@ Historians, philosophers, and sociologists of science ("HPSTS scholars") who stu
 
 However, in the citations above, there is little empirical evidence to support key claims that members of the public actually hold the views attributed to them.  Historians have carefully tracked the activities of scientists and industry actors to manipulate perceptions of a scientific consensus on climate change; but assume that public acceptance of climate science or policy depends on these perceptions [@OreskesResponseOreskesCounting2017].  Sociologists of science often provide rich accounts of particular cases, rooted in ethnographic fieldwork [e.g., @WynneSheepfarmingChernobylCase1989; @OttingerRefiningExpertiseHow2013].  But these cases don't obviously generalize to other cases or the general public.  And philosophers frequently provide no empirical evidence at all [@SteelScientistsAttitudesScience2017].  In the best cases, they're explicit about providing theoretically-informed speculation and questions for future empirical research [@KovakaClimateChangeDenial2021].  
 
-The aim of the project reported here was to develop a Values in Science Scale (VISS) that could be used to measure public views on the relationship between science, values, and policy, and thereby test these kinds of claims made by HPSTS scholars.  
+The aim of the project reported here was to develop a Values in Science Scale (VISS) that could be used to measure public views on the relationship between science, values, and policy, and thereby test these kinds of claims made by HPSTS scholars.  In the next section we provide some additional motivation for the project, and discuss the initial development of VISS. We then proceed through the three empirical studies, and conclude with a more philosophical general discussion. 
 
 # Background and initial development of VISS items
 
@@ -115,34 +98,70 @@ The aim of the project reported here was to develop a Values in Science Scale (V
 There is a substantial body of empirical research on scientific literacy and understanding of the nature of science (NOS) among the general public.  However, the instruments used in this research generally focus on "science facts" (e.g., "Electrons are smaller than atoms. True or false?"), scientific reasoning ("Imagine that we roll a fair, six-sided die
 1000 times. Out of 1000 rolls, how many times do you think the die would come up as an even number?"), or research processes and the epistemology of science ("Scientific theories are subject to ongoing testing and revision") [first and second examples from @KahanOrdinaryScienceIntelligence2017; third example from @WeisbergKnowledgeNatureScience2020; see also @HuxsterUnderstandingUnderstandingPublic2017; @SlaterUnderstandingTrustingScience2019].  Much less attention is paid to the relationship between science and society or the role of values in science [@MontuschiUnderstandingWhatPublic2024].  For example, @WeisbergKnowledgeNatureScience2020 used a NOS instrument to study predictors of attitudes to evolution.  In their preregistration document (<https://osf.io/dncj4>), this instrument is characterized more specifically as measuring participant views on the "Epistemology of Science," and none of the 23 items in the instrument cover the relationship between science and society or values in science. 
 
+<!-- 
 Philosophers of science have identified many understandings of the roles of social and political values in science. The value-free ideal (VFI) is one such understanding that has recently seen a lot of discussion in the literature. Douglas gives a nice definition in her book on the value-free ideal: “social, ethical, and political values should have no influence over the reasoning of scientists, and … scientists should proceed in their work with as little concern as possible for such values” [@DouglasSciencePolicyValuefree2009 1]. The essential concern of this view is that the inclusion of social and political values in scientific reasoning will undermine the reliability of science. Proponents of this view might say that these values are irrelevant to the epistemic aims of science and can lead to methodological errors and false conclusions, and because of this VFI is essential for public trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024]. 
+ -->
+ 
+Much of the philosophical literature on values in science has focused on arguments against (and sometimes for) the value-free ideal (VFI). Defenders of VFI argue that non-epistemic values are irrelevant to the epistemic aims of science and can lead to methodological errors and false conclusions, and because of this VFI is essential for public trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024]. 
 
+But does public trust in science depend on VFI?  This is an empirical question, and none of the works just cited provide empirical evidence to answer it, one way or the other. 
 
-
-
-To our knowledge, the only empirical studies of public views on the value-free ideal (VFI) are @ElliottValuesEnvironmentalResearch2017 and @HicksValuesDisclosuresTrust2022, the latter of which is a replication and re-analysis of the former.  In an online survey experiment, @HicksValuesDisclosuresTrust2022 found that disclosing public health values might increase, rather than decrease, trust in the disclosing scientist, conflicting with many claims that VFI supports trust.  
+To our knowledge, the only empirical studies of public views on VFI are @ElliottValuesEnvironmentalResearch2017 and @HicksValuesDisclosuresTrust2022, the latter of which is a replication and re-analysis of the former.  In an online survey experiment, @HicksValuesDisclosuresTrust2022 found that disclosing public health values might increase, rather than decrease, trust in the disclosing scientist, conflicting with many claims that VFI supports trust.  
 
 The current project aimed to fill this gap in the empirical literature by developing a survey instrument to measure views of values and science among the general public: the Values in Science Scale (VISS).  
 
-Initial development of the list was conducted by [author1], a philosopher of science, who developed 3 prompts based on each of 12 different major issues or areas of research in the philosophical literature.  We emphasize that these prompts are theoretically-informed but were not developed to capture *a priori* latent variables.  For example, the three "aims of science" prompts state that the aims of science are knowledge for its own sake, the protection of human health, and economic growth.  We do not expect responses on these items to be strongly correlated, and so do not expect exploratory factor analysis to indicate that they form a "aims of science" latent variable.  Some prompts were based on other instruments [@ORourkePhilosophicalInterventionCrossdisciplinary2012; @WeisbergKnowledgeNatureScience2020] or claims made in scholarly sources [@KovakaClimateChangeDenial2021]; others were written by [author1] to capture a key idea from a line of inquiry or debate within HPSTS.  
+Initial development of the list was conducted by [author1], a philosopher of science, who developed 3 prompts based on each of 12 different major issues or areas of research in the philosophical literature.  Some prompts were based on other instruments [@ORourkePhilosophicalInterventionCrossdisciplinary2012; @WeisbergKnowledgeNatureScience2020] or claims made in scholarly sources [@KovakaClimateChangeDenial2021]; others were written by [author1] to capture a key idea from a line of inquiry or debate within HPSTS.  [author2], a cognitive psychologist, then developed an online survey study design and analysis plan, applying factor analysis techniques (primarily exploratory factor analysis, EFA) to understand the correlational structure of responses to the prompts by members of the general public. We were interested in both responses to individual items and identifying potential latent variables or clusters of items. 
 
 The first two columns of @tbl-compare contain the original items from the first version of VISS. Each item is a declarative sentence of approximately 15-20 words, and participants are asked to agree or disagree with each item on a 5-point Likert scale (later expanded to 7 points).  
 
 We briefly review the relevant philosophy of science literature for each of the 12 issues/areas in @sec-lit-review.  
 
+We emphasize that these prompts are theoretically-informed but were not developed to capture *a priori* latent variables.  For example, the three "aims of science" prompts state that the aims of science are knowledge for its own sake, the protection of human health, and economic growth.  We did not expect responses on these items to be strongly correlated, and so did not expect exploratory factor analysis to indicate that they form a "aims of science" latent variable.  In psychometrics jargon, we were not attempting to develop an instrument to measure a predesignated construct, and were primarily engaged in exploratory rather than confirmatory research. This means that some common elements of psychometric measure development were not relevant to this particular project [@DepaoliSelectingDevelopingAnalyzing2025]. 
+
+At the same time, we were very interested in the construct validity of individual prompts [@EsterlingNecessityConstructExternal2025], that is, that respondents understood the prompts in the same way that we did. We assume that most members of the general public have never encountered ideas like inductive risk or standpoint theory — certainly not by name, and probably not even by content. So our prompts needed to effectively communicate novel ideas to respondents in a single, relatively short sentence. 
+
+To ensure construct validity at the individual item level, we ended up using a mix of quantitative and qualitative methods across the three studies reported here. Study 1 was an initial exploration, using all of the prompts on the original list compiled by [author1] and quantitative methods of exploratory and confirmatory factor analysis. As we discuss below, some of the results of this study suggested potential construct validity issues. Study 2 used qualitative methods, involving all four authors, to check the way respondents were interpreting the prompts and revise their wording to ensure construct validity. Study 3 then returned to quantitative EFA. 
+
+
 
 ## Software
 
-Data cleaning and analysis was conducted in R version 4.1.2 [@RCoreTeamLanguageEnvironmentStatistical2021], with extensive use of the `tidyverse` suite of packages version 1.3.1 [@WickhamTidyverseEasilyInstall2016].  Regression tables were generated using the package `gt` version 0.11.0.9000 [@IannoneGtEasilyCreate2022].  
+In all three studies, data cleaning and analysis was conducted in R version 4.1.2 [@RCoreTeamLanguageEnvironmentStatistical2021], with extensive use of the `tidyverse` suite of packages version 1.3.1 [@WickhamTidyverseEasilyInstall2016].  
 
 Anonymized original data and analysis code are available at [redacted]<!-- <https://github.com/dhicks/transparency> -->.  
 
 
 # Study 1
 
-Study 1 was conducted concurrently with [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  For the sake of space, study 1 is reported in detail in the supplement, @sec-study1. Analysis of individual items and exploratory factor analysis (EFA) uncovered some intriguing patterns, but exhibited poor fit statistics in confirmatory factor analysis (CFA).  
+Study 1 was conducted concurrently with [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  For the sake of space, study 1 is reported in detail in the supplement, @sec-study1-fa. Analysis of individual items and exploratory factor analysis (EFA) uncovered some intriguing patterns, but exhibited poor fit statistics in confirmatory factor analysis (CFA).  
 
-Qualitative review of the six-factor EFA solution also raised concerns about construct validity.  For example, a factor labelled *cynicism* covered a number of items expressing a cynical attitude towards science, with loaded items related to conflicts of interest, the idea that "The consensus of the scientific community is based on social status and prestige rather than evidence," and the idea that "When a scientific theory changes or is revised, it means that the research that went into it initially was flawed."  However, this factor also had the item "Standards of scientific evidence are different in different situations."  We intended this item to articulate the argument from inductive risk [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021], that is, the idea that a hypothesis with serious downstream risks if it turns out to be false — such as a claim that a widely-used pesticide does not cause non-Hodgkins lymphoma — should require significantly more evidence than a hypothesis without such downstream risks — such as a claim about the durability of a certain brand of hiking shoe.  In other words, different standards of evidence can be *appropriately* different in different situations.  
+## Materials
+
+This study used the initial version of the VISS items, as described above and shown in the first two columns of @tbl-compare.  After giving informed consent, participants were presented sequentially with the VISS instrument, the experiment described in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->], a subset of the OSI 2.0 [@KahanOrdinaryScienceIntelligence2017], and a series of demographic questions: age, gender identity and lived gender [questions 2 and 3 of the Multidimensional Sex/Gender Measure (MSGM)\; @BauerTransgenderinclusiveMeasuresSex2017], race-ethnicity, religious affiliation and frequency of attendance, an 8-step political spectrum scale (3 liberal, 1 centrist, 3 conservative, and a write-in option), partisan political affiliation, and highest degree (less than high school; high school or some college; Bachelor's degree or higher).  Questions were presented in random order for the VISS instrument and OSI 2.0 subset.  
+
+The study was approved by the [institution] IRB on August 17, 2021. 
+
+
+## Data
+
+Data collection was conducted October 18-20, 2021.  Participants were recruited using the online survey platform Prolific, and the survey was administered in a web browser using Qualtrics.  Prolific has an option to draw samples that are balanced to be representative by age, binary gender, and a 5-category race variable (taking values Asian, Black, Mixed, Other, and White) for US adults [@RepresentativeSamplesFAQ2022].  A recent analysis found that Prolific produces substantially higher quality data than Amazon Mechanical Turk for online survey studies, though three of the five authors of that analysis are affiliated with Prolific [@PeerDataQualityPlatforms2021].  We aimed to collect 1000 responses.  After removing incomplete responses, our dataset comprised 988 responses. 
+
+## Results
+
+Despite Prolific claiming to provide a "representative" sample, exploratory data analysis indicated that our data are not representative, based on education level and political ideology.  In 2021, about 9% of US adults 25 or older had a less than high school education, and 38% had a Bachelor's degree or higher [@CPSHistoricalTime2022 fig. 2].  Only 1% of our participants reported a less than high school education, and 57% reported a Bachelor's degree or higher.  For political ideology, the General Social Survey has consistently found over several decades that about 30% of US adults identify as liberal, about 30% identify as conservative, and about 40% as moderate [@GSSDataExplorer2022].  Among our participants, liberals (574) heavily outnumber conservatives (248).  Both overrepresentation of college graduates and underrepresentation of conservatives (especially conservatives with strong anti-institutional views) are known issues in public opinion polling [@KennedyEvaluation2016Election2018].  
+
+In particular, because political partisanship plays a significant role in many prominent public scientific controversies [though not all\; @FunkAmericansPoliticsScience2015], we determined that it would be important to validate a finalized VISS across the political spectrum before putting it to use. 
+
+Analysis for study 1 examined both the distribution of responses to individual items and factor analysis (both exploratory and confirmatory). For the sake of space, individual item analysis is deferred entirely to study 3, which used the finalized, construct-validated VISS items.  @suppfig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  
+
+A technical presentation of factor analysis results is given in @sec-study1-fa. Briefly, we examined exploratory factor analysis (EFA) models with three and six latent factors, and focused on the six-factor model as being more easily interpretable. This model covered 29 out of 36 VISS items, and with factors that we labeled as *scientism*, *values in science*, *cynicism*, *power* dynamics within the scientific community, a simplistic *textbook* picture of scientific practice, and the *value-free ideal*. We then turned to confirmatory factor analysis (CFA) of these six factors, using a holdout subset of the data. Unfortunately, quantitative goodness-of-fit measures for the CFA were poor. 
+
+
+## Discussion
+
+This initial EFA study identified six potential factors covering 29 out of the original 36 VISS items.  Most of these factors had clear and intriguing interpretations, such as scientism, cynicism about science, a simplistic "textbook" picture of how science works, and the value-free ideal. 
+
+However, a quantitative check of this six-factor structure using CFA indicated poor fit.  Qualitative review also raised concerns about construct validity.  For example, a factor labelled "cynicism" covered a number of items expressing a cynical attitude towards science, with loaded items related to conflicts of interest, the idea that "The consensus of the scientific community is based on social status and prestige rather than evidence," and the idea that "When a scientific theory changes or is revised, it means that the research that went into it initially was flawed."  However, this factor also had the item "Standards of scientific evidence are different in different situations."  We had intended this item to articulate the argument from inductive risk [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021], that is, the idea that a hypothesis with serious downstream risks if it turns out to be false — such as a claim that a widely-used pesticide does not cause non-Hodgkins lymphoma — should require significantly more evidence than a hypothesis without such downstream risks — such as a claim about the durability of a certain brand of hiking shoe.  In other words, different standards of evidence can be *appropriately* different in different situations.  
 
 Trying to understand why the argument from inductive risk might be correlated with cynical views of science, we realized that some unknowable fraction of participants might have interpreted the item as something like "scientists *inappropriately* manipulate standards of evidence to claim support for convenient claims and suppress inconvenient ones."  This indicated a severe threat to construct validity of at least some VISS items.  We also conjectured that construct validity might be creating a kind of measurement error that was attenuating correlations among the VISS items [@PadillaCorrelationAttenuationDue2012] and thereby weakening the CFA fit statistics.  So addressing construct validity might also improve factor analysis fit.  
 
@@ -157,23 +176,23 @@ The research team (at that point comprising [author1] and [author2]) discussed t
 
 [author3] and [author4] joined the project in January 2024, and all four authors authors together reviewed this shorter list, making initial revisions based on our impressions of which items seemed to be vague or otherwise difficult to understand.  Partway through the iterative data collection and analysis process, a 19th item was added to the list. 
 
-For this study, items were arranged into 3 blocks of 5-7 items each, roughly corresponding to latent variables identified in the study 1 EFA.  In Qualtrics, we prepared a survey in which participants were randomly allocated to a single block.  Participants were presented with the item text, a 5-point agree/disagree Likert scale, and a free text response box. As we were primarily interested, at this stage, in assessing how participants understood the VISS items, between the first and second iterations of data collection the Likert scale was expanded from a 5-point to a 7-point scale in an attempt to facilitate more nuanced comprehension of the items.  They were instructed to "Please indicate how much you agree with each of the following statements. Then, in the text box, please write a few sentences explaining why you answered the way you did." 
+For this study, items were arranged into 3 blocks of 5-7 items each, roughly corresponding to latent variables identified in the study 1 EFA, e.g., a "cynicism" block, a "textbook" block.  In Qualtrics, we prepared a survey in which participants were randomly allocated to a single block.  Participants were presented with the item text, a 5-point agree/disagree Likert scale, and a free text response box, with the instruction to "Please indicate how much you agree with each of the following statements. Then, in the text box, please write a few sentences explaining why you answered the way you did." (Between the first and second iterations of data collection — explained below — the Likert scale was expanded from 5 to 7 points to facilitate more nuanced comprehension of the items.)
 
-For study 2, besides participant responses to the items, no other data was collected or used.  
+For study 2, besides participant responses to the items, no other data was collected or used. 
 
 This study was to determined to be exempt from IRB review under Category 2.(i) by [author1], and self-exempt determination was acknowledged by the [institution] IRB on February 27, 2024 (protocol #[redacted]<!-- UCM2024-30 -->). 
 
 ## Data
 
-Data collection and analysis was conducted iteratively, alternating between collection and analysis, until saturation was reached for all items across two consecutive iterations.  Ultimately, 5 iterations were run, all during March 2024.  
+Data collection and analysis was conducted iteratively: responses were collected, then analyzed, and prompts determined to be either "saturated" (all respondents understood the prompts as intended) or in need of revision, with the next iteration using the revised prompts. Ultimately, 5 iterations were run, all during March 2024.  
 
-In each iteration, participants were recruited on Prolific.  In iterations 1-3, participants had to be adult US residents; no other screeners were used.  We set the target quota for 10 participants per block; except in iteration 3, which had only a single block (a subset of items that had not yet achieved saturation) and for which 15 participants were recruited.  Iterations proceeded until all items had achieved saturation.  Based on study 1, we knew the platform tended to undersample political conservatives and participants with only a high school education.  Because there is significant interest in conservative trust in science — or lack thereof — we wanted to be confident that the VISS would be useful in studying these groups.  We therefore ran two final iterations, one for each of these groups, using all 3 blocks, 10 participants per block, and an additional screener for the target group, to confirm saturation of all items for these subpopulations. 
+In each iteration, participants were recruited on Prolific.  In iterations 1-3, participants had to be adult US residents; no other screeners were used.  We set the target quota for 10 participants per block; except in iteration 3, which had only a single block (a subset of items that had not yet achieved saturation) and for which 15 participants were recruited.  Iterations proceeded until all items had achieved saturation.  Based on study 1, we knew Prolific tended to undersample political conservatives and participants with only a high school education.  Because there is significant interest in conservative trust in science — or lack thereof — we wanted to be confident that the VISS would be useful in studying these groups.  We therefore ran two final iterations, one for each of these groups, using all 3 blocks, 10 participants per block, and an additional screener for the target group, to confirm saturation of all items for these subpopulations. 
 
 Across 5 iterations, we collected a total of 875 text responses from 141 participants.  
 
 ## Analysis
 
-After the quota was achieved for a given iteration, responses were retrieved from Qualtrics in spreadsheet form and analyzed by all authors, first independently and together in weekly lab group meetings.  We focused on responses that indicated confusion or uncertainty, either explicit or implied, and responses that deviated from the intended meaning of the item.  
+After the quota was achieved for a given iteration, responses were retrieved from Qualtrics in spreadsheet form and analyzed by all authors, first independently and then together in weekly lab group meetings.  We focused on responses that indicated confusion or uncertainty, either explicit or implied, and responses that deviated from the intended meaning of the item.  
 
 If qualitative analysis indicated that an item was frequently misinterpreted or regarded as confusing, all authors worked together to develop alternative wording.  This rewording was then used in future iterations.  An item was considered to have achieved "saturation" when all four authors agreed that the responses across two iterations indicated that it was understood by the participants as intended.  
 
@@ -203,9 +222,13 @@ The aim of this study was to replicate and extend the relevant components of Stu
 
 After giving informed consent, participants were first asked a commitment question: "We care about the quality of our survey data. For us to get the most accurate measures of your opinions, it is important that you provide thoughtful answers to each question.  Do you commit to providing thoughtful answers to the questions on this survey?"  Responses to this question were not used to include or exclude participants. 
 
-Participants were then presented with five blocks of "perceptions of science" questions, including the finalized VISS items, a subset of the OSI 2.0 [@KahanOrdinaryScienceIntelligence2017], and three blocks with measures of generalized trust in science (i.e., trust in science generally, rather than trust in particular scientists or scientific institutions): the Credibility of Science Scale [CoSS\; @HartmanModelingAttitudesScience2017], the scientism scale developed by @LukicDelineatingScientismScience2023, and a block of ad hoc questions: A question from the Pew Research Center [@TysonViewsImpactScience2023], "Overall, science has had a(n) ____ effect on society," with options "mostly negative," "equally positive and negative," and "mostly negative," along with variations on the General Social Survey's "confidence in institutions" questions: "Here are some influential institutions in this country. As far as the people running these institutions are concerned, how much confidence would you say that you have in them?"  The response scale had five values, ranging from "None at all" to "A great deal"; and the institutions listed were Colleges and Universities; Congress; Elementary, Middle, and High Schools; Major Companies; Medicine; and Scientific Community.  We considered including a scale designed to test McCright and Dunlap's "anti-reflexivity" thesis [@McCrightInfluencePoliticalIdeology2013], but this was dropped due to survey length/expense. 
+Participants were then presented with five blocks of "perceptions of science" questions, with the order of the blocks randomized and the order of the questions within each block also randomized. These blocks including the finalized VISS items, a subset of the OSI 2.0 [@KahanOrdinaryScienceIntelligence2017], and three blocks with measures of generalized trust in science (i.e., trust in science generally, rather than trust in particular scientists or scientific institutions): 
 
-Questions within each "perceptions of science" block were presented in random order, and the blocks themselves were presented in random order. 
+- the Credibility of Science Scale [CoSS\; @HartmanModelingAttitudesScience2017]
+- the scientism scale developed by @LukicDelineatingScientismScience2023
+- a block of ad hoc questions: A question from the Pew Research Center [@TysonViewsImpactScience2023], "Overall, science has had a(n) ____ effect on society," with options "mostly negative," "equally positive and negative," and "mostly negative," along with variations on the General Social Survey's "confidence in institutions" questions: "Here are some influential institutions in this country. As far as the people running these institutions are concerned, how much confidence would you say that you have in them?"  The response scale had five values, ranging from "None at all" to "A great deal"; and the institutions listed were Colleges and Universities; Congress; Elementary, Middle, and High Schools; Major Companies; Medicine; and Scientific Community.  
+
+We considered including a scale designed to test McCright and Dunlap's "anti-reflexivity" thesis [@McCrightInfluencePoliticalIdeology2013], but this was dropped due to survey length/expense. 
 
 After completing all of the "perceptions of science" blocks, participants were then presented with two blocks of background/demographic questions.  One block used the reduced (18-item) form of the Right Wing Authoritarianism or Authoritarianism-Conservatism-Traditionalism (ACT) scale [@DuckittTripartiteApproachRightWing2010], and the other block contained other demographics: gender identity and lived gender [questions 2 and 3 of the Multidimensional Sex/Gender Measure (MSGM)\; @BauerTransgenderinclusiveMeasuresSex2017], race-ethnicity, religious affiliation and frequency of attendance, an occupation question designed to measure class as occupational prestige [@HughesOccupationalPrestigeStatus2024], and an 8-step political spectrum scale (3 liberal, 1 centrist, 3 conservative, and a write-in option).  Questions were presented in random order for the RWA block but not the other demographics block.  <!-- We considered also including the 7th version of the Social Dominance Orientation scale [SDO~7~\; @HoNatureSocialDominance2015], but this was dropped due to survey length/expense.  -->
 
@@ -237,18 +260,22 @@ As discussed in the introduction, the value-free ideal (VFI) plays a significant
 
 @fig-vfi shows marginal distributions for these VFI and critiques items, along with scatterplots and correlation coefficients for each VFI-critique pair.  Starting with the marginal distributions, we see there is majority agreement with both nonsubj items, and vfi.1 (VFI items) and aims.2, ir, stdpt (critiques); and majority rejection of vfi.2 and value.conflict (compare @fig-03-likert).  
 
-![Marginal distributions and scatterplots for VFI items (rows, y-axes of scatterplots) and critiques of VFI (columns, x-axes of scatterplots).  Lines in each scatterplot are univariate regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree for all items.  Point positions in scatterplots are jittered for legibility.  P-values are calculated for the null that $R  \geq 0$, not adjusted for multiple comparisons.](img/02_vfi.png){#fig-vfi}
+![Marginal distributions and scatterplots for VFI items (rows, y-axes of scatterplots) and critiques of VFI (columns, x-axes of scatterplots).  Lines in each scatterplot are univariable regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree for all items.  Point positions in scatterplots are jittered for legibility.  P-values are calculated for the null that $R  \geq 0$, not adjusted for multiple comparisons.](img/02_vfi.png){#fig-vfi}
 
 While one would expect pairs of versions of VFI and critiques to be fairly strongly negatively correlated — increased acceptance of a critique would be associated with decreased acceptance of VFI — all of these correlations are near 0.  Three pairs do reject the null hypthesis that $R \geq 0$: vfi.1 and ir (R = -0.1, p = 0.01), nonsubj.1 and stdpt (R = -0.1, p = 0.001), and vfi.2 and stdpt (R = -0.1, p = 0.007).  However, 33% of respondents agree (response > 4) with both vfi and ir; and 35% agree with both nonsubj.1 and stdpt.  In the discussion, we offer an interpretation of these flat correlations in terms of Deweyan "habits of thought" rather than logically inconsistent beliefs.  
 
-HPSTS scholars, science communicators, and scientists themselves have often claimed that the value-free ideal provides a foundation for trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024].  The measures of generalized trust in science that we used in study 3 were all moderately correlated with each other; see @fig-trust-coefs.  Here we report results for CoSS [@HartmanModelingAttitudesScience2017], since it has a more fine-grained/continuous range of possible scores than most of the other measures, and in our data had a greater Cronbach's $\alpha = .92$ than the scientism scale ($\alpha = 0.8$).  @fig-trust shows scatterplots and correlation analyses between, on the one hand, the four versions of VFI and the four critiques of VFI, and on the other, CoSS.  The correlations for nonsubj.2 and vfi.1 were not statistically significantly different from zero (R = -0.03, p = 0.5 for both); while correlations for nonsubj.1 and vfi.2 were significantly different from zero but were negative rather than positive (nonsubj.1: R = -0.2, p = $3 \times 10^{-6}$ for the point null $R = 0$; vfi.2: R = -0.2, p = $2 \times 10^{-7}$).  Without adjusting for multiple comparisons, all correlations for the critiques of VFI were significantly different from zero; correlations were positive for aims.2 (R = 0.2, p = $3 \times 10^{-4}$), stdpt (R = 0.2, p = $4 \times 10^{-4}$), and value.conflict (R = 0.1, p = 0.02), but negative for ir (R = -0.3, p = $4 \times 10^{-10}$). 
+HPSTS scholars, science communicators, and scientists themselves have often claimed that the value-free ideal provides a foundation for trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024].  The measures of generalized trust in science that we used in study 3 were all moderately correlated with each other; see @suppfig-trust-corr.  Here we report results for CoSS [@HartmanModelingAttitudesScience2017], since it has a more fine-grained/continuous range of possible scores than most of the other measures, and in our data had a greater Cronbach's $\alpha = .92$ than the scientism scale ($\alpha = 0.8$).  
 
-![Marginal distribution of CoSS (rightmost panels) and scatterplots for VFI items (top row) and critiques of VFI (bottom row) (columns, x-axes of scatterplots) against CoSS scores (y-axes). Lines in each scatterplot are OLS regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/02_trust.png){#fig-trust}
+@fig-trust shows scatterplots and correlation analyses between, on the one hand, the four versions of VFI and the four critiques of VFI, and on the other, CoSS.  The correlations for nonsubj.2 and vfi.1 were not statistically significantly different from zero (R = -0.03, p = 0.5 for both); while correlations for nonsubj.1 and vfi.2 were significantly different from zero but were negative rather than positive (nonsubj.1: R = -0.2, p = $3 \times 10^{-6}$ for the point null $R = 0$; vfi.2: R = -0.2, p = $2 \times 10^{-7}$).  Without adjusting for multiple comparisons, all correlations for the critiques of VFI were significantly different from zero; correlations were positive for aims.2 (R = 0.2, p = $3 \times 10^{-4}$), stdpt (R = 0.2, p = $4 \times 10^{-4}$), and value.conflict (R = 0.1, p = 0.02), but negative for ir (R = -0.3, p = $4 \times 10^{-10}$). 
+
+In short, at the individual item level, there is a notable *absence* of association between the VFI and its critiques, on the one hand, and trust in science, on the other. 
+
+![Marginal distribution of CoSS (rightmost panels) and scatterplots for VFI items (top row) and critiques of VFI (bottom row) (columns, x-axes of scatterplots) against CoSS scores (y-axes). Lines in each scatterplot are univariable regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/02_trust.png){#fig-trust}
  
 
 ### Factor analysis {#sec-fa}
 
-As in study 1, we intended to conduct an EFA and CFA of VISS responses, using the `psych` package (version 2.19) in R [@RevellePsychProceduresPsychological2024].  Because of the smaller sample size, when splitting the sample in half, the Kaiser-Meyer-Olkin measure of sampling adequacy was 0.72, "middling."  We therefore chose to conduct only an EFA, using the whole sample.  With the whole sample, Barlett's test was significant, $\chi^2(18) = 455.74, p = 2.2 \times 10^{-16}$, and the Kaiser-Meyer-Olkin measure of sampling adequacy was slightly higher, 0.78.  
+As in study 1, we intended to conduct an EFA and CFA of VISS responses, using the `psych` package (version 2.19) in R [@RevellePsychProceduresPsychological2024].  Because of the smaller sample size in study 3, when splitting the sample in half, the Kaiser-Meyer-Olkin measure of sampling adequacy was 0.72, "middling."  We therefore chose to conduct only an EFA, using the whole sample.  With the whole sample, Barlett's test was significant, $\chi^2(18) = 455.74, p = 2.2 \times 10^{-16}$, and the Kaiser-Meyer-Olkin measure of sampling adequacy was slightly higher, 0.78.  
 
 Parallel analysis suggested retaining four factors, with two factors having an eigenvalue greater than 1.0.  In the spirit of multiverse analysis [@SteegenIncreasingTransparencyMultiverse2016] we computed solutions with 1 through 6 factors using varimax rotation, analyzing all six solutions in parallel.  In order, the models explained 14% of the variance, followed by 23%, 27%, 32%, 36%, and 37%.  
 
@@ -258,7 +285,7 @@ Examining the loadings for all models indicated consistent loadings of items ont
 
 A third common factor was *objectivity*, with three versions of VFI (nonsubj.1, nonsubj.2, vfi.1).  Models 4-6 included a factor comprising claims about the aims of science (aims.1, aims.2) and the central claim of standpoint epistemology (stdpt).  It's not clear to us how to interpret these factors.  Models 5 and 6 also include two singleton factors, for pluralism.2 ("same strict requirements") and the argument from inductive risk (ir).  
 
-Based on the loadings and factor interpretation, the three-factor solution appears to be the most theoretically coherent.  
+Based on the loadings and factor interpretation, the most theoretically coherent EFA solution comprised three factors: textbook, cynicism, and objectivity. 
 
 ### VISS factors and trust
 
@@ -267,9 +294,11 @@ To explore potential associations between the latent VISS factors and generalize
 ![Coefficients (point estimates and 95% confidence intervals) for regression models of generalized trust (CoSS) against latent VISS factors.  Factors use the interpretive labels with the model index, e.g., "cynicism_5" is the *cynicism* factor from the 5-factor model.  Dashed lines indicate ±1/7 and 0.  Latent variables scores were calculated as signed averages of component variables (each using a seven-point Likert scale), so that a one-point difference in a latent variable corresponds to an average difference of one point in the component variables. CoSS is calculated as an average of variables that use a seven-point Likert scale.](img/04_trust_coefs.png){#fig-trust-coefs}
 
 
-![Marginal distributions and scatterplots for discretized scores from the 3-factor model (x-axes, upper panel) against CoSS (y-axis, right panel). Lines in each scatterplot are OLS regressions with 95% CIs. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/05_factors_coss.png){#fig-factors-coss}
+![Marginal distributions and scatterplots for discretized scores from the 3-factor model (x-axes, upper panel) against CoSS (y-axis, right panel). Lines in each scatterplot are univariable regressions with 95% CIs. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/05_factors_coss.png){#fig-factors-coss}
 
-Using ±1/7 as the threshold for practical significance, the regression models find a robustly significant effect only for cynicism.  The estimates for textbook are robustly compatible with a practically significant negative effect; but these are only statistically significantly different from -1/7 for the first three FA models.  Similarly, the estimates for the uninterpreted "aims and standpoint" factor are compatible with a positive effect, but only significantly different from 1/7 for a single FA model.  Notably, the objectivity factor is never compatible with a practically significant effect; in other words, there was a robust lack of correlation between the objectivity factor and CoSS. 
+Both the VISS items and CoSS use a 7-point response scale, and the scores on the three latent factors have a range of 7 points. So a regression coefficient of 1/7 would mean that two respondents at the extremes of the latent factor — for example, 1 vs. 7 for objectivity — would be expected to differ by 1 point on CoSS. We therefore chose ±1/7 as the threshold for practical significance for the regression models. 
+
+Using this threshold, the regression models find a robust practically significant effect only for cynicism.  The estimates for textbook are robustly compatible with a practically significant negative effect; but these are only statistically significantly different from -1/7 for the first three FA models.  Similarly, the estimates for the uninterpreted "aims and standpoint" factor are compatible with a positive effect, but only significantly different from 1/7 for a single FA model.  Notably, the objectivity factor is never compatible with a practically significant effect; in other words, there was a robust *lack* of correlation between the objectivity factor and CoSS. 
 
 
 # General Discussion
@@ -396,43 +425,18 @@ here('paper', 'tbl', '06_compare.Rds') |>
     tab_options(latex.use_longtable = TRUE)
 ```
 
-# Study 1 {#sec-study1}
-
-## Materials
-
-This study used the initial version of the VISS items, as described above and shown in the first two columns of @tbl-compare.  Data was collected concurrently with the replication study reported in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->]. 
-
-After giving informed consent, participants were presented sequentially with the VISS instrument, the experiment described in [redacted <!-- @HicksValuesDisclosuresTrust2022 -->], a subset of the OSI 2.0 [@KahanOrdinaryScienceIntelligence2017], and a series of demographic questions: age, gender identity and lived gender [questions 2 and 3 of the Multidimensional Sex/Gender Measure (MSGM)\; @BauerTransgenderinclusiveMeasuresSex2017], race-ethnicity, religious affiliation and frequency of attendance, an 8-step political spectrum scale (3 liberal, 1 centrist, 3 conservative, and a write-in option), partisan political affiliation, and highest degree (less than high school; high school or some college; Bachelor's degree or higher).  Questions were presented in random order for the VISS instrument and OSI 2.0 subset.  
-
-The study was approved by the [institution] IRB on August 17, 2021. 
-
-
-## Data
-
-Data collection was conducted October 18-20, 2021.  Participants were recruited using the online survey platform Prolific, and the survey was administered in a web browser using Qualtrics.  Prolific has an option to draw samples that are balanced to be representative by age, binary gender, and a 5-category race variable (taking values Asian, Black, Mixed, Other, and White) for US adults [@RepresentativeSamplesFAQ2022].  A recent analysis found that Prolific produces substantially higher quality data than Amazon Mechanical Turk for online survey studies, though three of the five authors of that analysis are affiliated with Prolific [@PeerDataQualityPlatforms2021].  We aimed to collect 1000 responses.  After removing incomplete responses, our dataset comprised 988 responses. 
-
-
-## Results
-
-Despite Prolific claiming to provide a "representative" sample, exploratory data analysis indicated that our data are not representative, based on education level and political ideology.  In 2021, about 9% of US adults 25 or older had a less than high school education, and 38% had a Bachelor's degree or higher [@CPSHistoricalTime2022 fig. 2].  Only 1% of our participants reported a less than high school education, and 57% reported a Bachelor's degree or higher.  For political ideology, the General Social Survey has consistently found over several decades that about 30% of US adults identify as liberal, about 30% identify as conservative, and about 40% as moderate [@GSSDataExplorer2022].  Among our participants, liberals (574) heavily outnumber conservatives (248).  Both overrepresentation of college graduates and underrepresentation of conservatives (especially conservatives with strong anti-institutional views) are known issues in public opinion polling [@KennedyEvaluation2016Election2018].  
-
-In particular, because political partisanship plays a significant role in many prominent public scientific controversies [though not all\; @FunkAmericansPoliticsScience2015], we determined that it would be important to validate a finalized VISS across the political spectrum before putting it to use. 
-
-
-### Individual item analysis
-
-The distribution of responses to individual items — e.g., acceptance of the value-free ideal — was of key interest in this study.  For the sake of space, we defer this analysis to study 3, which used the finalized, construct validated VISS items.  @suppfig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  
-
-
-### Factor analysis
+# Study 1 factor analysis {#sec-study1-fa}
 
 To examine the underlying dimensionality of the Values in Science scale, we split the sample in half for the purposes of carrying out exploratory factor analysis (EFA) to see what underlying factor structure may be present based on participants' response and confirmatory factor analysis (CFA) to compare models that could be abstracted from the EFA. We created a dummy variable that randomly assigned participants to one of two groups, resulting in two sub-samples of 439 and 467 response sets, respectively. Before conducting the EFA, we checked whether the assumptions necessary for a valid EFA held. Bartlett's test of sphericity was significant, $\chi^2(35) = 307.93, p = 2.20 \times 10^{-45}$. The Kaiser-Meyer-Olkin measure of sampling adequacy was 0.82. The determinant of the correlation matrix was 0.00020, indicating no multicollinearity issues.
 
-We conducted our factor analysis on the first sub-sample using the psych package (version 2.19) in R. Parallel analysis indicated we should retain six factors for an exploratory factor analysis, although only three factors had eigenvalues greater than 1.0. As such, we computed solutions for a three and a six factor solution using varimax rotation, deciding to retain items that had at least |.3| factor loading on only one of the resulting factors. The six-factor solution explained 33% of the variance and was preferred because the resulting factor structure was more easily interpretable than the three factor solution, which only explained 25% of the variance.
+We conducted our factor analysis on the first sub-sample using the `psych` package (version 2.19) in R. Parallel analysis indicated we should retain six factors for an exploratory factor analysis, although only three factors had eigenvalues greater than 1.0. As such, we computed solutions for a three and a six factor solution using varimax rotation, deciding to retain items that had at least |.3| factor loading on only one of the resulting factors. The six-factor solution explained 33% of the variance and was preferred because the resulting factor structure was more easily interpretable than the three factor solution, which only explained 25% of the variance.
 
 This EFA retained 29 out of the original 36 items. All items, factor loadings, and communalities are all shown in @tbl-efa-1. Two items did not load on to any factor (labeled consensus.1 and pluralism.2 in this study); five items were cross-loaded on to 2 factors (labeled nonsubj.3, scientism.2, scientism.3, technocracy.3, and vfi.1 in this study).  
 
 The first identified factor contains six items that cohere around scientistic perceptions of science, elevating the status of science as superior to other knowledge-production efforts.  We labelled this factor *scientism*.  The second factor identified contains three items that emphasize the role of science within society and *values in science*. The third factor contains eight items that, together, appear to represent participants' level of *cynicism* regarding the credibility of scientists and the scientific community. The fourth factor contains three items that tap into participants' perceptions of the social *power* dynamics within the scientific community. The fifth factor identified contains five items that reflect perceptions of science as constrained to a relatively narrow set of methods and practices in order to be counted as science, i.e., a mythological "the" scientific method as presented in a *textbook*. The final factor identified contains four items that appear to tap into perceptions of science in line with the traditional *value-free ideal*. 
+
+For cross-validation purposes, we ran a CFA on the second sub-sample using the factor structure extracted from the EFA. We carried out the CFA with maximum likelihood estimation using the `lavaan` package (version 0.6-10) in R [@RosseelLavaanLatentVariable2024]. Fit indices, unfortunately, revealed the model was insufficient to adequately fit the data, $\chi^2(308) = 981.10, p < .001$, CFI = .622, AGFI = .817, RMSEA = .071, and SRMR = .086. Typically, values exceeding .90 for CFI and AGFI indicate acceptable fit and values below .05 for RMSEA and SRMR indicate acceptable fit (Hu & Bentler, 1999). 
+
 
 ```{r}
 #| label: tbl-efa-1
@@ -445,13 +449,11 @@ here('paper', 'tbl', '03_loadings_gt.Rds') |>
               locations = cells_column_labels())
 ```
 
-For cross-validation purposes, we ran a CFA on the second sub-sample using the factor structure extracted from the EFA. We carried out the CFA with maximum likelihood estimation using the `lavaan` package (version 0.6-10) in R [@RosseelLavaanLatentVariable2024]. Fit indices, unfortunately, revealed the model was insufficient to adequately fit the data, $\chi^2(308) = 981.10, p < .001$, CFI = .622, AGFI = .817, RMSEA = .071, and SRMR = .086. Typically, values exceeding .90 for CFI and AGFI indicate acceptable fit and values below .05 for RMSEA and SRMR indicate acceptable fit (Hu & Bentler, 1999).
-
 
 
 ![Total agreement on VISS items.  Right panel indicates whether the item appeared in study 1, study 3, or both.  In the main panel, point estimates and 95% confidence intervals for rates of total agreement ("somewhat agree" or more).  VISS items are primarily labeled per the finalized versions used in study 3.  Where labels would overlap but the text is different between studies (either due to rewording or relabeling), the version used in study 1 is labeled as '-1'.](img/07_desc_comb.png){#suppfig-desc-comb}
 
-![Correlations among measures of generalized trust in science from study 3.  In the table, correlations are reported as Pearson's R. In the scatterplots, point locations have been jittered slightly for legibility; blue lines and ribbons represent univariate linear regressions and 95% confidence intervals. `coss`: Credibility of Science Scale [@HartmanModelingAttitudesScience2017]. `gss_science`: A five-valued version of the General Social Survey "trust in institutions" question for the scientific community. `effect`: A question from the Pew Research Center on whether science has had a positive or negative effect on science [@TysonViewsImpactScience2023]. `scientism`: the scientism scale of @LukicDelineatingScientismScience2023.](img/05_trust_corr.png){#suppfig-trust-corr}
+![Correlations among measures of generalized trust in science from study 3.  In the table, correlations are reported as Pearson's R. In the scatterplots, point locations have been jittered slightly for legibility; blue lines and ribbons represent univariable linear regressions and 95% confidence intervals. `coss`: Credibility of Science Scale [@HartmanModelingAttitudesScience2017]. `gss_science`: A five-valued version of the General Social Survey "trust in institutions" question for the scientific community. `effect`: A question from the Pew Research Center on whether science has had a positive or negative effect on science [@TysonViewsImpactScience2023]. `scientism`: the scientism scale of @LukicDelineatingScientismScience2023.](img/05_trust_corr.png){#suppfig-trust-corr}
 
 
 ```{=latex}
@@ -504,6 +506,6 @@ here('paper', 'tbl', '05_inter.Rds') |>
     read_rds()
 ```
 
-The left panel of figure @suppfig-inter shows a conditional scatterplot and univariate regression of CoSS against cynicism scores, stratified by objectivity quartile.  This descriptive plot does not suggest much heterogeneity in the effect of cynicism on generalized trust, especially across the upper three quartiles (blue through light green).  The right panel shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation were correct, we would expect to see very different slopes, as higher agreement with objectivity would make participants more sensitive to perceived violations of VFI.  Instead, the slopes are virtually the same.  
+The left panel of figure @suppfig-inter shows a conditional scatterplot and univariable regression of CoSS against cynicism scores, stratified by objectivity quartile.  This descriptive plot does not suggest much heterogeneity in the effect of cynicism on generalized trust, especially across the upper three quartiles (blue through light green).  The right panel shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation were correct, we would expect to see very different slopes, as higher agreement with objectivity would make participants more sensitive to perceived violations of VFI.  Instead, the slopes are virtually the same.  
 
-![Conditional scatterplot and estimated marginal effects for an objectivity-cynicism interaction. In both panels, x-axis corresponds to cynicism score, y-axis corresponds to CoSS score, and color corresponds to objectivity score.  Left: scatterplot and separate univariate regressions of CoSS against cynicism, conditional on objectivity quartile.  Right: Empirical/"counterfactual"/average predicted values of CoSS, calculated from model 2 from @tbl-inter.](img/05_interaction.png){#suppfig-inter}
+![Conditional scatterplot and estimated marginal effects for an objectivity-cynicism interaction. In both panels, x-axis corresponds to cynicism score, y-axis corresponds to CoSS score, and color corresponds to objectivity score.  Left: scatterplot and separate univariable regressions of CoSS against cynicism, conditional on objectivity quartile.  Right: Empirical/"counterfactual"/average predicted values of CoSS, calculated from model 2 from @tbl-inter.](img/05_interaction.png){#suppfig-inter}
