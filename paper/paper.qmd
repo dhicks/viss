@@ -159,7 +159,7 @@ The end result of Study 2 was the current set of VISS items, given in @tbl-viss.
 
 ```{r}
 #| label: tbl-viss
-#| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA."
+#| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA. *[aims.1]*"
 #| fig-pos: "t"
 here('paper', 'tbl', '06_prompts.Rds') |>
     read_rds() |>
@@ -184,6 +184,8 @@ Data was collected via Prolific on April 16, 2024, using an option that balanced
 
 @fig-03-likert shows the distribution of responses to the VISS items, in descending order by total agreement.  We use 80%/20% of total agreement/disagreement as thresholds for a "near consensus" among respondents.  In study 3, this near consensus appears for four items:  near consensus agreement that the primary aims of science include improving knowledge (aims.1) and understanding threats to human health and the environment (aims.2); and near consensus disagreement that scientists never disagree with each other (consensus.2) and that scientific theories never change (fallible.1).  There is majority agreement with another six VISS items (coi.2, stdpt, vfi.1, ir, nonsubj.1, and nonsubj.2), and majority disagreement with another five (consensus.1, fallible.2, vfi.2, pluralism.1, and value.conflict).  For the idea that scientists use the same strict requirements for evaluating hypotheses (pluralism.2), total disagreement is just shy of a the majority.  
 
+*[implications: aims approach, recognize scientific disagreement and fallibilism]*
+
 ::: {.landscape}
 ![Distribution of responses to VISS items, ordered by total agreement.  Vertical dashed lines indicate 20%, 50%, and 80%. *[switch to viridis]*](img/02_likert.png){#fig-03-likert}
 :::
@@ -192,39 +194,45 @@ Data was collected via Prolific on April 16, 2024, using an option that balanced
 
 ### The value-free ideal
 
+As discussed in the introduction, the value-free ideal (VFI) plays a significant role in a number of explanations of public scientific controversies put forward by philosophers of science.  VISS contains four items that correspond to the value-free ideal — nonsubj.1 and .2 and vfi.1 and .2.  *[exposition]*
+
+VISS also contains four items corresponding to philosophical critiques of the value-free ideal. aims.2 corresponds to the "aims approach" to values in science, which argues that science has non-epistemic aims — such as protecting human health and the environment — and that such aims can legitimate influence all aspects of research [@ElliottNonepistemicValuesMultiple2014; @IntemannDistinguishingLegitimateIllegitimate2015; @PotochnikIdealizationAimsScience2017; @HicksWhenVirtuesAre2022].  ir corresponds to the argument from inductive risk.  According to this argument, because and insofar as science has the potential to cause harmful social consequences, it's appropriate to require greater evidence (or allow weaker evidence) based on the severity of those consequences [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021].  stdpt corresponds to standpoint epistemology, a theory associated with feminist, Marxist, and critical race analyses of science [@CrasnowFeministStandpointTheory2014].  According to standpoint epistemology, members of marginalized groups can be in a position to better identify and understand oppressive social phenomena than members of privileged groups.  
+
+Finally, value.conflict corresponds to an unusual convergence in two philosophical debates, one in feminist philosophy of science and the other in the relationship between science and religion.  Given that oppressive values (such as misogyny and androcentrism) have and continue to influence some lines of scientific research, some feminist philosophers — though certainly not all — argue that these values provide a sufficient grounds for feminists to question or reject the claims coming out of this research [@AlcoffCommentaryElizabethAndersons2006; @YapFeministRadicalEmpiricism2015].  @PlantingaWhenFaithReason2001 defends a similar position in the context of debates over religion and evolution, arguing that "There is ... a battle between the Christian community and the forces of unbelief," "that important cultural forces such as science are not neutral with respect to this conflict," and so "we Christians must think about the matter at hand from a Christian perspective; we need Theistic Science" (30). 
+
 *[focus on a single pair here, eg, ir and vfi.1]*
+Here we focus on a single pair of VFI and critique, namely, vfi.1 and ir. See *[figure]*. The top and side panel show the distribution of responses for each item separately. Majorities accepted each item separately, and *[%]* accepted both. The center panel shows the scatterplot of individual responses, a simple linear regression line, and the Pearson correlation coefficient R and a p-value for a test of the null hypothesis that R = 0, i.e., that the two items are uncorrelated. While this test is conventionally statistically significant (R = -0.1, p = 0.01), the correlation is very weak. This weak or null correlation is found across all 16 VFI-critique combinations; see @fig-vfi. 
 
-As discussed in the introduction, the value-free ideal (VFI) plays a significant role in a number of explanations of public scientific controversies put forward by philosophers of science.  VISS contains four items that correspond to the value-free ideal — nonsubj.1 and .2 and vfi.1 and .2.  It also contains four items corresponding to philosophical critiques of this ideal; see @sec-vfi-crits. 
-
-@fig-vfi shows marginal distributions for these VFI and critiques items, along with scatterplots and correlation coefficients for each VFI-critique pair.  Starting with the marginal distributions, we see there is majority agreement with both nonsubj items, and vfi.1 (VFI items) and aims.2, ir, stdpt (critiques); and majority rejection of vfi.2 and value.conflict (compare @fig-03-likert).  
-
-![Marginal distributions and scatterplots for VFI items (rows, y-axes of scatterplots) and critiques of VFI (columns, x-axes of scatterplots).  Lines in each scatterplot are univariable regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree for all items.  Point positions in scatterplots are jittered for legibility.  P-values are calculated for the null that $R  \geq 0$, not adjusted for multiple comparisons.](img/02_vfi.png){#fig-vfi}
-
-While one would expect pairs of versions of VFI and critiques to be fairly strongly negatively correlated — increased acceptance of a critique would be associated with decreased acceptance of VFI — all of these correlations are near 0.  Three pairs do reject the null hypthesis that $R \geq 0$: vfi.1 and ir (R = -0.1, p = 0.01), nonsubj.1 and stdpt (R = -0.1, p = 0.001), and vfi.2 and stdpt (R = -0.1, p = 0.007).  However, 33% of respondents agree (response > 4) with both vfi and ir; and 35% agree with both nonsubj.1 and stdpt.  In the discussion, we offer an interpretation of these flat correlations in terms of Deweyan "habits of thought" rather than logically inconsistent beliefs.  
+This is surprising, because one would expect VFI and its critiques to be fairly strongly negatively correlated: increased acceptance of a critique should generally be associated with rejection of VFI. We consider some potential explanations of this lack of correlation in @sec-vfi-dewey. 
 
 HPSTS scholars, science communicators, and scientists themselves have often claimed that the value-free ideal provides a foundation for trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024].  The measures of generalized trust in science that we used in study 3 were all moderately correlated with each other; see @suppfig-trust-corr.  Here we report results for CoSS [@HartmanModelingAttitudesScience2017], since it has a more fine-grained/continuous range of possible scores than most of the other measures, and in our data had a greater Cronbach's $\alpha = .92$ than the scientism scale ($\alpha = 0.8$).  
 
 *[similarly, just ir and vfi.1 vs. coss]*
-@fig-trust shows scatterplots and correlation analyses between, on the one hand, the four versions of VFI and the four critiques of VFI, and on the other, CoSS.  The correlations for nonsubj.2 and vfi.1 were not statistically significantly different from zero (R = -0.03, p = 0.5 for both); while correlations for nonsubj.1 and vfi.2 were significantly different from zero but were negative rather than positive (nonsubj.1: R = -0.2, p = $3 \times 10^{-6}$ for the point null $R = 0$; vfi.2: R = -0.2, p = $2 \times 10^{-7}$).  Without adjusting for multiple comparisons, all correlations for the critiques of VFI were significantly different from zero; correlations were positive for aims.2 (R = 0.2, p = $3 \times 10^{-4}$), stdpt (R = 0.2, p = $4 \times 10^{-4}$), and value.conflict (R = 0.1, p = 0.02), but negative for ir (R = -0.3, p = $4 \times 10^{-10}$). 
 
-In short, at the individual item level, there is a notable *absence* of association between the VFI and its critiques, on the one hand, and trust in science, on the other. 
+*[fig]* compares vfi.1 and ir to CoSS. The rightmost panel shows the distribution of CoSS scores; *[mean and median]*. Despite claims of a generalized "crisis of trust in science," across surveys most people indicate moderate to high levels of trust *[cites]*. The leftmost panel shows that vfi.1 is not correlated with CoSS (R = -0.03, p = 0.5). The top row of @fig-trust shows that nonsubj.2 is also uncorrelated with CoSS, and there are weak negative correlations for nonsubj.1 and vfi.2, respectively. 
 
-![Marginal distribution of CoSS (rightmost panels) and scatterplots for VFI items (top row) and critiques of VFI (bottom row) (columns, x-axes of scatterplots) against CoSS scores (y-axes). Lines in each scatterplot are univariable regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/02_trust.png){#fig-trust}
- 
+The middle panel of *[fig]* shows that ir — acceptance of a statement of the argument from inductive risk — is weakly negatively correlated with CoSS (R = -0.3, p = 4e-10). In @fig-trust, the bottom row shows other critiques of VFI are weakly positively associated with trust in science. 
+
+In short, at the individual item level, there is a notable *absence* of association between the VFI and its critiques; and between these VISS items and trust in science. 
+
 
 ### Factor analysis {#sec-fa}
 
-As in study 1, we intended to conduct an EFA and CFA of VISS responses, using the `psych` package (version 2.19) in R [@RevellePsychProceduresPsychological2024].  Because of the smaller sample size in study 3, when splitting the sample in half, the Kaiser-Meyer-Olkin measure of sampling adequacy was 0.72, "middling."  We therefore chose to conduct only an EFA, using the whole sample.  With the whole sample, Barlett's test was significant, $\chi^2(18) = 455.74, p = 2.2 \times 10^{-16}$, and the Kaiser-Meyer-Olkin measure of sampling adequacy was slightly higher, 0.78.  
+While we had intended to conduct both exploratory (EFA) and confirmatory factor analysis (CFA) of the responses in study 3, we had too few samples to split the data as required for CFA. We therefore conducted only an EFA, using the whole sample. We considered EFA models with 1-6 latent factors, and working across these models identified three factors that were consistent across almost all models. These three factors are used as the subscales in *[table 1]*. For detailed discussion of EFA results, see @sec-fa-details; factor loadings for all 6 models are reported in @tbl-efa-3 and @tbl-efa-3-bymodel. 
 
-Parallel analysis suggested retaining four factors, with two factors having an eigenvalue greater than 1.0.  In the spirit of multiverse analysis [@SteegenIncreasingTransparencyMultiverse2016] we computed solutions with 1 through 6 factors using varimax rotation, analyzing all six solutions in parallel.  In order, the models explained 14% of the variance, followed by 23%, 27%, 32%, 36%, and 37%.  
+The most consistent factor, occurring in some form across all six models, was a *textbook* perception of science:  based on unanimity (consensus.2), the idea that established science is fixed (fallible.1), and the use of laboratory experiments (pluralism.1).  The second consistent factor was *cynicism*, which also occurred across all six models; textbook and cynicism items appeared together in the 1-factor model.  The cynicism factor included concerns about conflicts of interest (coi.1 and coi.2) and the idea that the scientific consensus is non-epistemic (consensus.1).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1).  
 
-Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in @tbl-efa-3, grouped by interpretive label, and @tbl-efa-3-bymodel, grouped by model.  Cross-loading was observed for the items aims.3, fallible.2, pluralism.2, vfi.2, and wait.policy in at least one model; these items were ignored for factor interpretation and score calculation for models where they were crossloaded.  The only item that did not load onto a latent factor in any model was value.conflict.  
+A third common factor was *objectivity*, with three versions of VFI (nonsubj.1, nonsubj.2, vfi.1). Models 4-6 included a factor comprising claims about the aims of science (aims.1, aims.2) and the central claim of standpoint epistemology (stdpt).  It's not clear to us how to interpret these factors.  Models 5 and 6 also include two singleton factors, for pluralism.2 ("same strict requirements") and the argument from inductive risk (ir). 
 
-Examining the loadings for all models indicated consistent loadings of items onto latent factors.  The most consistent, occurring in some form across all six models, was a *textbook* perception of science:  based on unanimity (consensus.2), fixed (fallible.1), and using laboratory experiments (pluralism.1).  The second consistent factor was *cynicism*, which also occurred across all six models; textbook and cynicism items appeared together in the 1-factor model.  The cynicism factor included concerns about conflicts of interest (coi.1 and coi.2) and the idea that the scientific consensus is non-epistemic (consensus.1).  For models 2 and 3, this factor also had negative loadings for the idea that science has epistemic primary aims (aims.1).  
+In the rest of the analysis reported in the main text, we focus on the 3-factor model. We work with discretized or "non-refined" scores [@DiStefanoUnderstandingUsingFactor2009], meaning each item associated with a factor counts the same, i.e., the score is a simple unweighted average of the associated items. (Because aims.1 has a negative loading on cynicism in this factor, its values are negated, i.e., it is weighted -1 in the average.) Distributions of scores for each factor are shown in *[fig]*
 
-A third common factor was *objectivity*, with three versions of VFI (nonsubj.1, nonsubj.2, vfi.1).  Models 4-6 included a factor comprising claims about the aims of science (aims.1, aims.2) and the central claim of standpoint epistemology (stdpt).  It's not clear to us how to interpret these factors.  Models 5 and 6 also include two singleton factors, for pluralism.2 ("same strict requirements") and the argument from inductive risk (ir).  
+*[fig w/ distribution of VISS scores]*
 
-Based on the loadings and factor interpretation, the most theoretically coherent EFA solution comprised three factors: textbook, cynicism, and objectivity. 
+Calculating factor scores as a simple average lets us interpret textbook and objectivity using the same 7-step disagree-agree scale as the individual items: 4 is the midpoint, 1 is maximal disagreement, 7 is maximal agreement. In *[fig]*, the vast majority of respondents reject the simplistic, textbook picture of science; while a smaller majority accept VFI. 
+
+Cynicism is more difficult to interpret, because one of the five items has a negative weight. The midpoint here would be $\mathfrac{1}{4}(3 \times 4 + -4) = 2 \times 4 / 5 = 1.6$; similarly, the maximum would be 5 and the minimum -1 *[caught an error in zeroing out crossloaded items in 04; need to rerun downstream and make sure they're loading into pdf]*
+
+
 
 ### VISS factors and trust
 
@@ -235,7 +243,7 @@ To explore potential associations between the latent VISS factors and generalize
 ![Coefficients (point estimates and 95% confidence intervals) for regression models of generalized trust (CoSS) against latent VISS factors.  Factors use the interpretive labels with the model index, e.g., "cynicism_5" is the *cynicism* factor from the 5-factor model.  Dashed lines indicate ±1/7 and 0.  Latent variables scores were calculated as signed averages of component variables (each using a seven-point Likert scale), so that a one-point difference in a latent variable corresponds to an average difference of one point in the component variables. CoSS is calculated as an average of variables that use a seven-point Likert scale.](img/04_trust_coefs.png){#fig-trust-coefs}
 
 
-![Marginal distributions and scatterplots for discretized scores from the 3-factor model (x-axes, upper panel) against CoSS (y-axis, right panel). Lines in each scatterplot are univariable regressions with 95% CIs. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/05_factors_coss.png){#fig-factors-coss}
+![Marginal distributions and scatterplots for discretized scores from the 3-factor model (x-axes, upper panel) against CoSS (y-axis, right panel). Lines in each scatterplot are univariable regressions with 95% CIs. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons. *[align x-axes]*](img/05_factors_coss.png){#fig-factors-coss}
 
 Both the VISS items and CoSS use a 7-point response scale, and the scores on the three latent factors have a range of 7 points. So a regression coefficient of 1/7 would mean that two respondents at the extremes of the latent factor — for example, 1 vs. 7 for objectivity — would be expected to differ by 1 point on CoSS. We therefore chose ±1/7 as the threshold for practical significance for the regression models. 
 
@@ -255,10 +263,11 @@ VISS comprises 19 items.  Exploratory factor analysis identified 3 interpretable
 Several of the VISS items that are not included in any of the identified factors/subscales may still be interesting or important in future research.  These include several of the critiques of VFI, for example.  We therefore retain them in VISS (@tbl-viss), under the heading "not assigned" to a subscale.  One line of future work might be to expand VISS, developing additional items that can form theoretically coherent subscales with these unassigned items.  
 
 
-## The value-free ideal and its critiques
+## The value-free ideal and its critiques {#sec-vfi-dewey}
 
 In study 3, we found that there was no correlation between versions of the value-free ideal — the traditional conception of objectivity — on the one hand, and philosophical criticisms of this ideal, on the other; indeed, a number of respondents indicated that they agreed with both VFI and a critique.  
 
+*[more]*
 It may be tempting to explain this as irrationality: these respondents have failed to realize that they hold inconsistent beliefs.  Here we sketch an alternative interpretation, drawing on @HalpernScienceExperienceDeweyan2022 and more generally inspired by the work of philosopher John Dewey.  (We consider and reject an alternative explanation in @sec-cyn-obj.)
 
 On this interpretation, VISS items correspond less to beliefs (occurrent or latent) that participants had prior to the survey, and instead evoke rhetorical tropes — patterns of both speech and thought — that are used to interpret experience.  For example, vfi.1 evokes a common contrast between "science" and the "social," which might be deployed to interpret concerns about "political interference" in science.  Critically, these tropes might be context-specific.  For instance, during the Trump administration, several scientific and advocacy organizations deployed aims.2 — the idea that science aims to protect human health and the environment — to challenge a proposed open science rule at the US Environmental Protection Agency [@HicksWhenVirtuesAre2022].  Then, during the Biden administration, many of these same organizations supported a "scientific integrity" policy that evokes vfi.1 and nonsubj.1 (<https://www.whitehouse.gov/wp-content/uploads/2023/01/01-2023-Framework-for-Federal-Scientific-Integrity-Policy-and-Practice.pdf>).  Similarly, representatives of regulated industries supported the proposed open science rule, but classify in-house regulatory safety studies as "confidential business information" that cannot be released to the public [@MichaelsDoubtTheirProduct2008 ch. 18].  At the level of abstract principle, these positions are logically incompatible.  But, because they're not activated in the same context, there is no "felt doubt" or practical inconsistency.  
@@ -468,23 +477,31 @@ We aimed to collect 501 responses.  After removing 11 responses where participan
 
 Exploratory data analysis indicated high completion rates (98% or greater) for almost all items on the survey.  The one exception was the measure of occupational prestige [@HughesOccupationalPrestigeStatus2024], which had a completion rate of only 68%.  Further investigation found that these missing values corresponded to "job titles" such as student, unemployed, retired, and homemaker, i.e., respondents who were outside of the labor market.  The seasonally adjusted civil labor force participation rate in the US was 63% in March 2024 (<https://web.archive.org/web/20240703202237/https://www.bls.gov/charts/employment-situation/civilian-labor-force-participation-rate.htm>), and so this sample slightly underrepresented people outside the labor market.  Because of this low completion rate, we generally did not include the occupational prestige measure in our analysis.  
 
+### Individual items
 
+![Total agreement on VISS items across both study 1 and 3.  Right panel indicates whether the item appeared in study 1, study 3, or both.  In the main panel, point estimates and 95% confidence intervals for rates of total agreement ("somewhat agree" or more).  VISS items are primarily labeled per the finalized versions used in study 3.  Where labels would overlap but the text is different between studies (either due to rewording or relabeling), the version used in study 1 is labeled as '-1'.](img/07_desc_comb.png){#suppfig-desc-comb}
 
+![Marginal distributions and scatterplots for VFI items (rows, y-axes of scatterplots) and critiques of VFI (columns, x-axes of scatterplots).  Lines in each scatterplot are univariable regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree for all items.  Point positions in scatterplots are jittered for legibility.  P-values are calculated for the null that $R  \geq 0$, not adjusted for multiple comparisons.](img/02_vfi.png){#fig-vfi}
 
+In @fig-vfi, starting with the marginal distributions, we see there is majority agreement with both nonsubj items, and vfi.1 (VFI items) and aims.2, ir, stdpt (critiques); and majority rejection of vfi.2 and value.conflict (compare @fig-03-likert).  
 
-![Total agreement on VISS items.  Right panel indicates whether the item appeared in study 1, study 3, or both.  In the main panel, point estimates and 95% confidence intervals for rates of total agreement ("somewhat agree" or more).  VISS items are primarily labeled per the finalized versions used in study 3.  Where labels would overlap but the text is different between studies (either due to rewording or relabeling), the version used in study 1 is labeled as '-1'.](img/07_desc_comb.png){#suppfig-desc-comb}
+While one would expect pairs of versions of VFI and critiques to be fairly strongly negatively correlated — increased acceptance of a critique would be associated with decreased acceptance of VFI — all of these correlations are near 0.  Three pairs do reject the null hypthesis that $R \geq 0$: vfi.1 and ir (R = -0.1, p = 0.01), nonsubj.1 and stdpt (R = -0.1, p = 0.001), and vfi.2 and stdpt (R = -0.1, p = 0.007).  However, 33% of respondents agree (response > 4) with both vfi and ir; and 35% agree with both nonsubj.1 and stdpt.  
 
 ![Correlations among measures of generalized trust in science from study 3.  In the table, correlations are reported as Pearson's R. In the scatterplots, point locations have been jittered slightly for legibility; blue lines and ribbons represent univariable linear regressions and 95% confidence intervals. `coss`: Credibility of Science Scale [@HartmanModelingAttitudesScience2017]. `gss_science`: A five-valued version of the General Social Survey "trust in institutions" question for the scientific community. `effect`: A question from the Pew Research Center on whether science has had a positive or negative effect on science [@TysonViewsImpactScience2023]. `scientism`: the scientism scale of @LukicDelineatingScientismScience2023.](img/05_trust_corr.png){#suppfig-trust-corr}
 
+@fig-trust shows scatterplots and correlation analyses between, on the one hand, the four versions of VFI and the four critiques of VFI, and on the other, CoSS.  The correlations for nonsubj.2 and vfi.1 were not statistically significantly different from zero (R = -0.03, p = 0.5 for both); while correlations for nonsubj.1 and vfi.2 were significantly different from zero but were negative rather than positive (nonsubj.1: R = -0.2, p = $3 \times 10^{-6}$ for the point null $R = 0$; vfi.2: R = -0.2, p = $2 \times 10^{-7}$).  Without adjusting for multiple comparisons, all correlations for the critiques of VFI were significantly different from zero; correlations were positive for aims.2 (R = 0.2, p = $3 \times 10^{-4}$), stdpt (R = 0.2, p = $4 \times 10^{-4}$), and value.conflict (R = 0.1, p = 0.02), but negative for ir (R = -0.3, p = $4 \times 10^{-10}$). 
+
+![Marginal distribution of CoSS (rightmost panels) and scatterplots for VFI items (top row) and critiques of VFI (bottom row) (columns, x-axes of scatterplots) against CoSS scores (y-axes). Lines in each scatterplot are univariable regressions with 95% CIs.  Response scales are represented numerically, with 1 = strongly disagree, 7 = strongly agree. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons.](img/02_trust.png){#fig-trust}
+ 
+### Factor analysis {#sec-fa-details}
+
+As in study 1, we intended to conduct an EFA and CFA of VISS responses, using the `psych` package (version 2.19) in R [@RevellePsychProceduresPsychological2024].  Because of the smaller sample size in study 3, when splitting the sample in half, the Kaiser-Meyer-Olkin measure of sampling adequacy was 0.72, "middling."  We therefore chose to conduct only an EFA, using the whole sample.  With the whole sample, Barlett's test was significant, $\chi^2(18) = 455.74, p = 2.2 \times 10^{-16}$, and the Kaiser-Meyer-Olkin measure of sampling adequacy was slightly higher, 0.78.  
+
+Parallel analysis suggested retaining four factors, with two factors having an eigenvalue greater than 1.0.  In the spirit of multiverse analysis [@SteegenIncreasingTransparencyMultiverse2016] we computed solutions with 1 through 6 factors using varimax rotation, analyzing all six solutions in parallel.  In order, the models explained 14% of the variance, followed by 23%, 27%, 32%, 36%, and 37%.  
+
+Across all six models, we retained items that had at least |.3| factor loading on at least one resulting factor; loadings for all models are shown in @tbl-efa-3, grouped by interpretive label, and @tbl-efa-3-bymodel, grouped by model.  Cross-loading was observed for the items aims.3, fallible.2, pluralism.2, vfi.2, and wait.policy in at least one model; these items were ignored for factor interpretation and score calculation for models where they were crossloaded.  The only item that did not load onto a latent factor in any model was value.conflict.  
 
 ::: {.landscape}
-```{r}
-#| label: tbl-trust-glance
-#| tbl-cap: 'Fit statistics for regression models of CoSS against FA latent variables.'
-# here('paper', 'tbl', '04_trust_glance.Rds') |>
-#    read_rds()
-message('placeholder')
-```
 ```{r}
 #| label: tbl-efa-3
 #| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors.  Latent factors are grouped by interpretive label across solutions.'
@@ -501,14 +518,16 @@ message('placeholder')
 #    read_rds()
 message('placeholder')
 ```
+```{r}
+#| label: tbl-trust-glance
+#| tbl-cap: 'Fit statistics for regression models of CoSS against FA latent variables.'
+# here('paper', 'tbl', '04_trust_glance.Rds') |>
+#    read_rds()
+message('placeholder')
+```
 :::
 
 
-# Philosophical critiques of VFI in VISS {#sec-vfi-crits}
-
-*[move to main text? initial development?]*
-
-VISS contains four items corresponding to philosophical critiques of the value-free ideal. aims.2 corresponds to the "aims approach" to values in science, which argues that science has non-epistemic aims — such as protecting human health and the environment — and that such aims can legitimate influence all aspects of research [@ElliottNonepistemicValuesMultiple2014; @IntemannDistinguishingLegitimateIllegitimate2015; @PotochnikIdealizationAimsScience2017; @HicksWhenVirtuesAre2022].  ir corresponds to the argument from inductive risk.  According to this argument, because and insofar as science has the potential to cause harmful social consequences, it's appropriate to require greater evidence (or allow weaker evidence) based on the severity of those consequences [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021].  stdpt corresponds to standpoint epistemology, a theory associated with feminist, Marxist, and critical race analyses of science [@CrasnowFeministStandpointTheory2014].  According to standpoint epistemology, members of marginalized groups can be in a position to better identify and understand oppressive social phenomena than members of privileged groups.  Finally, value.conflict corresponds to an unusual convergence in two philosophical debates, one in feminist philosophy of science and the other in the relationship between science and religion.  Given that oppressive values (such as misogyny and androcentrism) have and continue to influence some lines of scientific research, some feminist philosophers — though certainly not all — argue that these values provide a sufficient grounds for feminists to question or reject the claims coming out of this research [@AlcoffCommentaryElizabethAndersons2006; @YapFeministRadicalEmpiricism2015].  @PlantingaWhenFaithReason2001 defends a similar position in the context of debates over religion and evolution, arguing that "There is ... a battle between the Christian community and the forces of unbelief," "that important cultural forces such as science are not neutral with respect to this conflict," and so "we Christians must think about the matter at hand from a Christian perspective; we need Theistic Science" (30).  
 
 
 # No evidence for a cynicism-objectivity interaction {#sec-cyn-obj}
