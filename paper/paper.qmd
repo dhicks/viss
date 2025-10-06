@@ -198,18 +198,19 @@ VISS also contains four items corresponding to philosophical critiques of the va
 
 Finally, value.conflict corresponds to an unusual convergence in two philosophical debates, one in feminist philosophy of science and the other in the relationship between science and religion.  Given that oppressive values (such as misogyny and androcentrism) have and continue to influence some lines of scientific research, some feminist philosophers — though certainly not all — argue that these values provide a sufficient grounds for feminists to question or reject the claims coming out of this research [@AlcoffCommentaryElizabethAndersons2006; @YapFeministRadicalEmpiricism2015].  @PlantingaWhenFaithReason2001 defends a similar position in the context of debates over religion and evolution, arguing that "There is ... a battle between the Christian community and the forces of unbelief," "that important cultural forces such as science are not neutral with respect to this conflict," and so "we Christians must think about the matter at hand from a Christian perspective; we need Theistic Science" (30). 
 
-*[focus on a single pair here, eg, ir and vfi.1]*
-Here we focus on a single pair of VFI and critique, namely, vfi.1 and ir. See *[03-focal.png]*. The top and side panel show the distribution of responses for each item separately. Majorities accepted each item separately (response > 4), and 33% accepted both. The center panel shows the scatterplot of individual responses, a simple linear regression line, and the Pearson correlation coefficient R and a p-value for a test of the null hypothesis that R = 0, i.e., that the two items are uncorrelated. While this test is conventionally statistically significant (R = -0.1, p = 0.01), the correlation is very weak. This weak or null correlation is found across all 16 VFI-critique combinations; see @fig-vfi. 
+Here we focus on a single pair of VFI and critique, namely, vfi.1 and ir. See @fig-vfi-focal. The top and side panel show the distribution of responses for each item separately. Majorities accepted each item separately (response > 4), and 33% accepted both. The center panel shows the scatterplot of individual responses, a simple linear regression line, and the Pearson correlation coefficient R and a p-value for a test of the null hypothesis that R = 0, i.e., that the two items are uncorrelated. While this test is conventionally statistically significant (R = -0.1, p = 0.01), the correlation is very weak. This weak or null correlation is found across all 16 VFI-critique combinations; see @fig-vfi. 
 
-![fig 03-focal.png]
+![Marginal distributions and scatterplot for two VISS items, vfi.1 (a statement of the value-free ideal) and ir (a statement of the argument from inductive risk, a critique of VFI). Blue line in the scatterplot is a univariable regression with 95% CI, and inset box reports Pearson correlation coefficient $R$ and p-value for the test of the null hypothesis that $R = 0$. Point positions in scatterplots are jittered for legibility.](img/03_focal.png){#fig-vfi-focal}
 
 A priori, one would expect VFI and its critiques to be fairly strongly negatively correlated: increased acceptance of a critique should generally be associated with rejection of VFI. It's therefore surprising that they were generally not correlated at all.  We consider some potential explanations of this lack of correlation in @sec-vfi-dewey. 
 
 HPSTS scholars, science communicators, and scientists themselves have often claimed that the value-free ideal provides a foundation for trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024].  The measures of generalized trust in science that we used in study 3 were all moderately correlated with each other; see @suppfig-trust-corr.  Here we report results for CoSS [@HartmanModelingAttitudesScience2017], since it has a more fine-grained/continuous range of possible scores than most of the other measures, and in our data had a greater Cronbach's $\alpha = .92$ than the scientism scale ($\alpha = 0.8$).  
 
-*[03_trust_focal]* compares vfi.1 and ir to CoSS. The rightmost panel shows the distribution of CoSS scores; the mean was 4.6 and the median was 5 on a 1-7 scale. Despite claims of a generalized "crisis of trust in science," across surveys most people indicate moderate to high levels of trust *[cites]*. The leftmost panel shows that vfi.1 is not correlated with CoSS (R = -0.03, p = 0.5). The top row of @fig-trust shows that nonsubj.2 is also uncorrelated with CoSS, and there are weak negative correlations for nonsubj.1 and vfi.2, respectively. 
+@fig-trust-focal compares vfi.1 and ir to CoSS. The rightmost panel shows the distribution of CoSS scores; the mean was 4.6 and the median was 5 on a 1-7 scale. Despite claims of a generalized "crisis of trust in science," across surveys most people indicate moderate to high levels of trust [@LupiaTrendsUSPublic2024; @Veckalov27countryTestCommunicating2024]. The leftmost panel shows that vfi.1 is not correlated with CoSS (R = -0.03, p = 0.5). The top row of @fig-trust shows that nonsubj.2 is also uncorrelated with CoSS, and there are weak negative correlations for nonsubj.1 and vfi.2, respectively. 
 
-The middle panel of *[03_trust_focal]* shows that ir — acceptance of a statement of the argument from inductive risk — is weakly negatively correlated with CoSS (R = -0.3, p = 4e-10). In @fig-trust, the bottom row shows other critiques of VFI are weakly positively associated with trust in science. 
+![Marginal distribution of CoSS (rightmost panel) and scatterplots for vfi.1 (leftmost) and ir (center) against CoSS scores. Lines in each scatterplot are univariable regressions with 95% CIs, and inset boxes report Pearson correlation $R$ and p-values for the null that $R = 0$. Point positions in scatterplots are jittered for legibility.](img/03_trust_focal.png){#fig-trust-focal}
+
+The middle panel of @fig-trust-focal shows that ir — acceptance of a statement of the argument from inductive risk — is weakly negatively correlated with CoSS (R = -0.3, p = 4e-10). In @fig-trust, the bottom row shows that other critiques of VFI are weakly positively associated with trust in science. 
 
 In short, at the individual item level, there is a notable *absence* of association between the VFI and its critiques; and between these VISS items and trust in science. 
 
@@ -222,11 +223,11 @@ The most consistent factor, occurring in some form across all six models, was a 
 
 A third common factor was *objectivity*, with three versions of VFI (nonsubj.1, nonsubj.2, vfi.1). Models 4-6 included a factor comprising claims about the aims of science (aims.1, aims.2) and the central claim of standpoint epistemology (stdpt).  It's not clear to us how to interpret these factors.  Models 5 and 6 also include two singleton factors, for pluralism.2 ("same strict requirements") and the argument from inductive risk (ir). 
 
-In the rest of the analysis reported in the main text, we focus on the 3-factor model. We work with discretized or "non-refined" scores [@DiStefanoUnderstandingUsingFactor2009], meaning each item associated with a factor counts the same, i.e., the score is a simple unweighted average of the associated items. (Because aims.1 has a negative loading on cynicism in this factor, its values are negated, i.e., it is weighted -1 in the average.) Distributions of scores for each factor are shown in *[fig]*
+In the rest of the analysis reported in the main text, we focus on the 3-factor model. We work with discretized or "non-refined" scores [@DiStefanoUnderstandingUsingFactor2009], meaning each item associated with a factor counts the same, i.e., the score is a simple unweighted average of the associated items. (Because aims.1 has a negative loading on cynicism in this factor, its values are negated, i.e., it is weighted -1 in the average.) Distributions of scores for each factor are shown in the top row of @fig-factors-coss.
 
-*[fig w/ distribution of VISS scores]*
+![Marginal distributions and scatterplots for discretized scores from the 3-factor model (x-axes, upper panel) against CoSS (y-axis, right panel). Lines in each scatterplot are univariable regressions with 95% CIs. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons. *[align x-axes]*](img/05_factors_coss.png){#fig-factors-coss}
 
-Calculating factor scores as a simple average lets us interpret textbook and objectivity using the same 7-step disagree-agree scale as the individual items: 4 is the midpoint, 1 is maximal disagreement, 7 is maximal agreement. In *[fig]*, the vast majority of respondents reject the simplistic, textbook picture of science; while a smaller majority accept VFI. 
+Calculating factor scores as a simple average lets us interpret textbook and objectivity using the same 7-step disagree-agree scale as the individual items: 4 is the midpoint, 1 is maximal disagreement, 7 is maximal agreement. In @fig-factors-coss, the vast majority of respondents reject the simplistic, textbook picture of science; while a smaller majority accept VFI. 
 
 Cynicism is slightly more complicated to interpret, because one of the five items has a negative weight. The midpoint here would be $\frac{1}{4}(3 \times 4 + -4) = 2 \times 4 / 4 = 2$; use a similar calculation, the maximum would be 5 and the minimum -1. Only a small minority has a cynicism score greater than 2. 
 
@@ -236,16 +237,13 @@ All together, while objectivity is a majority view, cynicism and textbook are mi
 
 ### VISS factors and trust
 
-*[focus on coss]*
+To explore potential associations between the latent VISS factors and generalized trust in science, we fit two kinds of regression models. 
 
-To explore potential associations between the latent VISS factors and generalized trust in science, we fit a multiple regression model for each FA model, regressing CoSS against the discretized FA scores.  Regression coefficients are shown in @fig-trust-coefs; fit statistics for each regression model are provided in @tbl-trust-glance.  @fig-factors-coss shows scatterplots, marginal distributions, and univariable regressions of CoSS against the discretized scores from the 3-factor model. 
+Univariable regression models consider the relationship between just two variables at a time. The scatterplot panels of @fig-factors-coss show univariable regressions for each factor against CoSS separately. There is statistically significant negative relationship for each factor; but this relationship is much weaker for objectivity than textbook and, especially, cynicism. 
+
+Multivariable or multiple regression models statistically adjust for and thereby try to separate the relationships across multiple predictors at once [@MorrisseyMultipleRegressionNot2018].  For @fig-trust-coefs, we fit multiple regression models of CoSS against discretized scores for all of the factors in each EFA model. (The postfix on each factor indicates which model it came from. Fit statistics for each model are provided in @tbl-trust-glance.)  @fig-trust-coefs shows the coefficient estimates with 95% confidence intervals for each factor. To aid interpretation, we set a threshold for ±1/7 for practical significance, so that a shift from one end of the factor scale to the other would correspond to a 1-point difference in CoSS's 7-point scale. 
 
 ![Coefficients (point estimates and 95% confidence intervals) for regression models of generalized trust (CoSS) against latent VISS factors.  Factors use the interpretive labels with the model index, e.g., "cynicism_5" is the *cynicism* factor from the 5-factor model.  Dashed lines indicate ±1/7 and 0.  Latent variables scores were calculated as signed averages of component variables (each using a seven-point Likert scale), so that a one-point difference in a latent variable corresponds to an average difference of one point in the component variables. CoSS is calculated as an average of variables that use a seven-point Likert scale.](img/04_trust_coefs.png){#fig-trust-coefs}
-
-
-![Marginal distributions and scatterplots for discretized scores from the 3-factor model (x-axes, upper panel) against CoSS (y-axis, right panel). Lines in each scatterplot are univariable regressions with 95% CIs. Point positions in scatterplots are jittered for legibility. P-values are calculated for the null that $R = 0$, not adjusted for multiple comparisons. *[align x-axes]*](img/05_factors_coss.png){#fig-factors-coss}
-
-Both the VISS items and CoSS use a 7-point response scale, and the scores on the three latent factors have a range of 7 points. So a regression coefficient of 1/7 would mean that two respondents at the extremes of the latent factor — for example, 1 vs. 7 for objectivity — would be expected to differ by 1 point on CoSS. We therefore chose ±1/7 as the threshold for practical significance for the regression models. 
 
 Using this threshold, the regression models find a robust practically significant effect only for cynicism.  The estimates for textbook are robustly compatible with a practically significant negative effect; but these are only statistically significantly different from -1/7 for the first three FA models.  Similarly, the estimates for the uninterpreted "aims and standpoint" factor are compatible with a positive effect, but only significantly different from 1/7 for a single FA model.  Notably, the objectivity factor is never compatible with a practically significant effect; in other words, there was a robust *lack* of correlation between the objectivity factor and CoSS. 
 
@@ -277,11 +275,28 @@ Working within this Deweyan conceptual framework, one important area for future 
 
 ## Values in science and generalized trust
 
-The patterns of correlation in @fig-trust, @fig-trust-coefs, and @fig-factors-coss challenge the common idea that VFI provides a foundation for trust in science.  Indeed, our findings indicate that trust in science is either independent of or *negatively* associated with VFI.  In the study 3 EFA, the four versions of VFI and wait.policy consistently comprise the "objectivity" latent factor; and this factor is consistently uncorrelated with trust.  This is in line with @HicksValuesDisclosuresTrust2022, who found that disclosing public health values might increase, rather than decrease, trust in the disclosing scientist
+The patterns of correlation in @fig-trust, @fig-trust-coefs, and @fig-factors-coss challenge the common idea that VFI provides a foundation for trust in science.  Indeed, our findings indicate that trust in science is either independent of or *negatively* associated with VFI.  In the study 3 EFA, three of the four versions of VFI consistently comprise the "objectivity" latent factor; and this factor is consistently uncorrelated with trust.  This is in line with @HicksValuesDisclosuresTrust2022, who found that disclosing public health values might increase, rather than decrease, trust in the disclosing scientist
 
 In contrast, "cynicism" — a construct comprising concerns about conflicts of interest, a sense that scientific consensus is not epistemic, and the belief that revisions to scientific theory indicate flawed research — was consistently negatively correlated with trust.  We note that, given cynicism, reduced trust in science would be warranted.  That is, insofar as it were the case that science was rife with conflicts of interest, prestige effects, and flawed research, then science would be less trustworthy.  
 
-Across the study 3 sample, generalized trust in science was moderately high (e.g., for CoSS, mean 4.6, median 5.0, on a 1-7 scale); this is in line with larger and more rigorous surveys of generalized trust in science [@LupiaTrendsUSPublic2024; @Veckalov27countryTestCommunicating2024].  So we do not necessarily think that there is an urgent need to increase generalized trust in science among the public as a whole.  However, insofar as there is such a need, our findings suggest that reforming funding structures to reduce conflicts of interest might be more effective than stressing fallibilism or the value-free ideal in science communication [@LupiaTrendsUSPublic2024; @ThorpTeachPhilosophyScience2024].  
+These findings suggest that objectivity — the value-free ideal — does not play a role in general trust in science, and instead that cynicism — concerns about things like conflicts of interest — is more important. 
+
+One alternative explanation might be a potential interaction effect between objectivity and cynicism.  Specifically, members of the public who endorse VFI might have very different views of whether scientists generally *comply* with VFI.  When a respondent endorses VFI and believes that scientists generally violate with it, this explanation would predict *lower* trust.  While a respondent who endorses VFI and believes scientists generally do *not* violate with it would be predicted to have *higher* trust.  At the other end of the objectivity scale, respondents who reject VFI would be indifferent to VFI violations.  In other words, we would expect to see heterogeneous effects of objectivity (VFI acceptance) on trust conditional on (perceived) VFI violations; see figure @fig-inter-model. Then, averaging across (perceived) VFI violations, the positive effect of objectivity on one end could "cancel out" the negative effect on the other hand, with no overall effect of objectivity on trust. 
+
+![Abstract interaction model between objectivity and trust in science.](img/interaction.pdf){#fig-inter-model width=40%}
+
+This alternative explanation, if supported empirically, would be compatible with both the regression analysis above and the common assumption that VFI is important for trust in science.  
+
+In the current VISS, the cynicism factor might be used as a rough proxy for VFI violations.  This factor focuses on a limited set of value influences, namely, financial conflicts of interest.  The influence of these values is a sufficient condition for violating VFI, but not necessary: participants might believe that conflicts of interest are not a significant problem in science (low cynicism) but also believe that VFI is generally violated by other kinds of value influences (for example, racist or anti-racist values). 
+
+The interaction between objectivity and cynicism predicted by this alternative explanation does not appear to be supported by the study 3 data; see @fig-inter and @tbl-inter. The left panel of figure @fig-inter shows a conditional scatterplot and univariable regression of CoSS against cynicism scores, stratified by objectivity quartile.  Based on the model in @fig-inter-model, we would expect the lowest-quartile objectivity regression line to be much flatter than the highest-quartile line. But all of the regression lines in @fig-inter have about the same slope. 
+
+The right panel of @fig-inter shows the same interaction model reported in a slightly different way. It shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation of @fig-inter-model were correct, we would again expect to see very different slopes, as higher agreement with objectivity would make participants more sensitive to perceived violations of VFI.  Instead, the slopes are virtually the same.  
+
+![Conditional scatterplot and estimated marginal effects for an objectivity-cynicism interaction. In both panels, x-axis corresponds to cynicism score, y-axis corresponds to CoSS score, and color corresponds to objectivity score.  Left: scatterplot and separate univariable regressions of CoSS against cynicism, conditional on objectivity quartile.  Right: Empirical/"counterfactual"/average predicted values of CoSS, calculated from model 2 from @tbl-inter.](img/05_interaction.png){#fig-inter}
+
+@tbl-inter makes the same point more quantitatively. This table shows coefficients for two regression models of CoSS against the FA latent variables from the 3-factor model, respectively, without and with an interaction term between objectivity and cynicism.  The point estimate for the effect of the interaction term is negligible and not statistically significant; the coefficients for the non-interaction terms are all unchanged between specifications; and adjusted $R^2$ and AIC (very, very slightly) favor the non-interacted model.  
+
 
 ## Limitation
 
@@ -290,6 +305,23 @@ A key limitation of this study is the use of a single opt-in survey platform, Pr
 In addition, VISS has been developed solely in the context of the US.  We cannot make any claims that our findings generalize to other countries.  Even bracketing issues of translation, before using VISS in other contexts it might be useful to replicate study 2 and check whether construct validity still obtains. 
 
 
+
+# Conclusion: Implications for science communication
+
+In response to a perceived crisis of trust in science, science communicators, practicing scientists, and others have argued for interventions that stress scientific fallibilism, the practical benefits of science, and compliance with the value-free ideal [@LupiaTrendsUSPublic2024; @ThorpTeachPhilosophyScience2024]. These arguments assume, sometimes explicitly and sometimes implicitly, that (a) there is a widespread loss of trust in science, and (b) public misunderstanding of the philosophy of science and/or (perceived) violations of VFI are important drivers of this loss of trust. 
+
+While the present study did not simulate a science communication context, our results challenge both assumptions. 
+
+In study 3, generalized trust in science was moderately high (e.g., for CoSS, mean 4.6, median 5.0, on a 1-7 scale); this is in line with larger and more rigorous surveys of generalized trust in science [@LupiaTrendsUSPublic2024; @Veckalov27countryTestCommunicating2024]. *[details]* *[long-term divergence at extremes of political spectrum; specific groups distrust specific fields of science on specific issues]* 
+
+*[individual item analysis indicates that supermajorities recognize fallibilism, the role of consensus *[Miller]*, certain kinds of practical aims; and majorities accept certain roles for values]*
+
+*[objectivity is majority position, but may be less a stable belief than analytical frame deployed opportunistically]* *[above, note that VFI crits don't load negatively on to objectivity factor]*
+
+*[field-specific cynicism and importance of addressing actual and perceived COIs]*
+So we do not necessarily think that there is an urgent need to increase generalized trust in science among the public as a whole.  However, insofar as there is such a need, our findings suggest that reforming funding structures to reduce conflicts of interest might be more effective than stressing fallibilism or the value-free ideal in science communication .  
+
+*[xrefs to suppfigs]*
 
 
 
@@ -525,18 +557,6 @@ here('paper', 'tbl', '04_trust_glance.Rds') |>
 :::
 
 
-
-
-# No evidence for a cynicism-objectivity interaction {#sec-cyn-obj}
-
-*[move to main text]*
-
-One alternative explanation for the observed, nearly flat relationship between objectivity and generalized trust in science might be a potential interaction effect between objectivity and cynicism.  Specifically, members of the public who endorse VFI might have very different views of whether scientists generally comply with VFI.  When a respondent endorses VFI and believes that scientists generally comply with it, this explanation would predict *high* trust.  While a respondent who endorses VFI and believes scientists generally do *not* comply with it would be predicted to have *low* trust.  At the other end of the objectivity scale, respondents who reject VFI would be indifferent to VFI compliance.  In other words, we would expect to see heterogeneous effects of VFI compliance on trust conditional on objectivity:  a strong effect when objectivity is high, and no effect when objectivity is low.  This alternative explanation, if supported empirically, would be compatible with the common assumption that VFI is important for trust in science.  
-
-In the current VISS, the cynicism factor might be used as a rough proxy for VFI compliance.  This factor focuses on a limited set of values, namely, financial conflicts of interest.  The influence of these values is a sufficient condition for violating VFI, but not necessary; participants might believe that conflicts of interest are not a significant problem in science (low cynicism) but still believe that VFI is generally violated by other kinds of value influences.  
-
-The interaction between objectivity and cynicism predicted by this alternative explanation does not appear to be supported by the study 3 data; see @tbl-inter and @suppfig-inter. @tbl-inter shows coefficients for two regression models of CoSS against the FA latent variables from the 3-factor model, respectively, without and with an interaction term between objectivity and cynicism.  The point estimate for the effect of the interaction term is negligible and not statistically significant; the coefficients for the non-interaction terms are all unchanged between specifications; and adjusted $R^2$ and AIC (very, very slightly) favor the non-interacted model.  
-
 ```{r}
 #| label: tbl-inter
 #| tbl-cap: 'Coefficients and fit statistics for regression model of CoSS against FA latent variables, 3-factor model.'
@@ -544,6 +564,3 @@ here('paper', 'tbl', '05_inter.Rds') |>
     read_rds()
 ```
 
-The left panel of figure @suppfig-inter shows a conditional scatterplot and univariable regression of CoSS against cynicism scores, stratified by objectivity quartile.  This descriptive plot does not suggest much heterogeneity in the effect of cynicism on generalized trust, especially across the upper three quartiles (blue through light green).  The right panel shows "empirical," "counterfactual," or average predicted values of CoSS [@DickermanCounterfactualPredictionNot2020], across values of cynicism and objectivity.  These estimates were calculated from the interaction regression model (model 2 from @tbl-inter) using the `ggeffects` package version 1.5.2 [@LudeckeGgeffectsCreateTidy2024].  If the alternative explanation were correct, we would expect to see very different slopes, as higher agreement with objectivity would make participants more sensitive to perceived violations of VFI.  Instead, the slopes are virtually the same.  
-
-![Conditional scatterplot and estimated marginal effects for an objectivity-cynicism interaction. In both panels, x-axis corresponds to cynicism score, y-axis corresponds to CoSS score, and color corresponds to objectivity score.  Left: scatterplot and separate univariable regressions of CoSS against cynicism, conditional on objectivity quartile.  Right: Empirical/"counterfactual"/average predicted values of CoSS, calculated from model 2 from @tbl-inter.](img/05_interaction.png){#suppfig-inter}
