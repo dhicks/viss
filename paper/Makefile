@@ -1,5 +1,5 @@
 SOURCE = paper.qmd
-split = 23
+split = 21
 
 all: floats pdf wc
 
