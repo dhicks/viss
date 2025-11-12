@@ -473,14 +473,14 @@ scores_df |>
 lm_fit = lm(
       cynicism ~
             gender +
-                  race_ethnicity +
-                  age +
-                  religious +
-                  politics +
-                  rwa.authoritarianism +
-                  rwa.conservatism +
-                  rwa.traditionalism +
-                  osi_score,
+            race_ethnicity +
+            age +
+            religious +
+            politics +
+            rwa.authoritarianism +
+            rwa.conservatism +
+            rwa.traditionalism +
+            osi_score,
       data = scores_df
 )
 

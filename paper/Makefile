@@ -33,9 +33,9 @@ wc:
 
 # .PHONY: floats
 # floats: 
-# 	cp ../out/03/02_likert.png img/02_likert.png
-# 	cp ../out/03/02_trust.png img/02_trust.png
-# 	cp ../out/03/02_vfi.png img/02_vfi.png
+# 	cp ../out/03/03_likert.png img/03_likert.png
+# 	cp ../out/03/03_trust.png img/03_trust.png
+# 	cp ../out/03/03_vfi.png img/03_vfi.png
 # 	cp ../out/03/07_desc_comb.png img/07_desc_comb.png
 # 	cp ../out/03/04_trust_coefs.png img/04_trust_coefs.png
 # 	cp ../out/03/04_trust_glance.Rds tbl/04_trust_glance.Rds
@@ -51,7 +51,7 @@ wc:
 # 	cp ../out/03/03_focal.png img/03_focal.png
 
 .PHONY: floats
-floats: img/02_likert.png img/02_trust.png img/02_vfi.png \
+floats: img/03_likert.png img/03_trust.png img/03_vfi.png \
         img/07_desc_comb.png img/04_trust_coefs.png img/05_trust_corr.png \
         img/05_interaction.png img/05_factors_coss.png img/03_focal.png \
         img/03_trust_focal.png \
@@ -59,9 +59,9 @@ floats: img/02_likert.png img/02_trust.png img/02_vfi.png \
         tbl/04_loadings_bymodel.Rds tbl/06_prompts.Rds tbl/05_inter.Rds \
         tbl/06_compare.Rds
 
-img/02_likert.png: ../out/03/02_likert.png
-img/02_trust.png: ../out/03/02_trust.png
-img/02_vfi.png: ../out/03/02_vfi.png
+img/03_likert.png: ../out/03/03_likert.png
+img/03_trust.png: ../out/03/03_trust.png
+img/03_vfi.png: ../out/03/03_vfi.png
 img/07_desc_comb.png: ../out/03/07_desc_comb.png
 img/04_trust_coefs.png: ../out/03/04_trust_coefs.png
 img/05_trust_corr.png: ../out/03/05_trust_corr.png

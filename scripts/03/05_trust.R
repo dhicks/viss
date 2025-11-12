@@ -243,8 +243,8 @@ inter_gg
 model_1 = lm(
       coss ~
             cynicism +
-                  textbook +
-                  objectivity,
+            textbook +
+            objectivity,
       data = dataf
 )
 summary(model_1)
@@ -252,9 +252,9 @@ summary(model_1)
 model_2 = lm(
       coss ~
             cynicism +
-                  textbook +
-                  objectivity +
-                  cynicism * objectivity,
+            textbook +
+            objectivity +
+            cynicism * objectivity,
       data = dataf
 )
 summary(model_2)
@@ -299,15 +299,15 @@ inter_gt |>
 lm(
       coss ~
             gender +
-                  age +
-                  religious +
-                  rwa.conservatism +
-                  rwa.traditionalism +
-                  rwa.authoritarianism +
-                  osi_score +
-                  cynicism +
-                  textbook +
-                  objectivity,
+            age +
+            religious +
+            rwa.conservatism +
+            rwa.traditionalism +
+            rwa.authoritarianism +
+            osi_score +
+            cynicism +
+            textbook +
+            objectivity,
       data = dataf
 ) |>
       summary()
