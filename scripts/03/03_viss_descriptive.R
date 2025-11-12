@@ -63,7 +63,7 @@ counts_df |>
       ungroup() |>
       mutate(prompt_wrap = fct_reorder(prompt_wrap, agree)) |>
       ggplot(aes(prompt_wrap, share, fill = response)) +
-      geom_col(color = 'black', size = .25) +
+      geom_col(color = 'black', linewidth = .25) +
       geom_hline(yintercept = c(.2, .5, .8), linetype = 'dashed') +
       scale_x_discrete(
             guide = guide_axis(n.dodge = 2),
@@ -98,10 +98,10 @@ counts_df |>
             )
       )
 
-ggsave(here(out_dir, '02_likert.png'), height = 10, width = 16, bg = 'white')
+ggsave(here(out_dir, '03_likert.png'), height = 10, width = 16, bg = 'white')
 
 ggsave(
-      here(out_dir, '02_likert_tall.png'),
+      here(out_dir, '03_likert_tall.png'),
       height = 12,
       width = 10,
       bg = 'white'
@@ -155,7 +155,7 @@ topbottom = agreement_df |>
       select(group, agree_share, item, prompt) |>
       mutate(item = str_remove(item, 'viss.'))
 
-write_rds(topbottom, here(out_dir, '02_topbottom.Rds'))
+write_rds(topbottom, here(out_dir, '03_topbottom.Rds'))
 
 topbottom_gt = topbottom |>
       group_by(group) |>
@@ -176,8 +176,8 @@ topbottom_gt = topbottom |>
       )
 topbottom_gt
 
-gtsave(topbottom_gt, here(out_dir, '02_topbottom.tex'))
-gtsave(topbottom_gt, here(out_dir, '02_topbottom.pdf'))
+gtsave(topbottom_gt, here(out_dir, '03_topbottom.tex'))
+gtsave(topbottom_gt, here(out_dir, '03_topbottom.pdf'))
 
 ## COI ----
 coi_plot = {
@@ -196,7 +196,7 @@ coi_plot = {
 coi_plot
 
 ggsave(
-      here(out_dir, '02_coi.png'),
+      here(out_dir, '03_coi.png'),
       coi_plot,
       height = 4,
       width = 4,
@@ -212,7 +212,7 @@ ggplot(viss_df) +
       stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
       stat_cor(
             aes(.panel_x, .panel_y, label = after_stat(label)),
-            alternative = 'less',
+            alternative = 'two.sided',
             geom = 'label',
             label.y = 1,
             digits = 1
@@ -225,7 +225,7 @@ center_gg = ggplot(viss_df) +
       stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
       stat_cor(
             aes(.panel_x, .panel_y, label = after_stat(label)),
-            alternative = 'less',
+            alternative = 'two.sided',
             geom = 'label',
             label.y = 1,
             digits = 1
@@ -260,7 +260,7 @@ design =
      BBBBC'
 top_gg + center_gg + side_gg + plot_layout(design = design)
 
-ggsave(here(out_dir, '02_vfi.png'), height = 16, width = 16, bg = 'white')
+ggsave(here(out_dir, '03_vfi.png'), height = 16, width = 16, bg = 'white')
 
 ## Focal version: just vfi.1 vs. ir
 focal_design =
@@ -273,7 +273,7 @@ list(
             geom_point(position = 'jitter', alpha = .2) +
             stat_smooth(method = 'lm') +
             stat_cor(
-                  alternative = 'less',
+                  alternative = 'two.sided',
                   geom = 'label',
                   label.y = 1,
                   digits = 1
@@ -371,7 +371,7 @@ trust_hist_gg = dataf |>
 trust_hist_gg
 
 # vfi_trust_gg + trust_hist_gg + plot_layout(widths = c(length(c(vfi, crits)), 1))
-# ggsave(here(out_dir, '02_trust.png'),
+# ggsave(here(out_dir, '03_trust.png'),
 #        height = 2, width = length(c(vfi, crits)) + 1, bg = 'white', scale = 1.5)
 
 coss_plot(vfi) +
