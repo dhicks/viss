@@ -71,14 +71,27 @@ counts_df |>
             labels = \(x) {
                   label_wrap_gen()(x) %>%
                         gsub('\\n', '<br>', x = .)
-            }
+            },
       ) +
-      scale_y_continuous(labels = scales::percent_format()) +
-      scale_fill_brewer(palette = 'RdBu') +
+      scale_y_continuous(
+            labels = scales::percent_format(),
+            sec.axis = dup_axis()
+      ) +
+      scale_fill_brewer(
+            palette = 'RdBu',
+            aesthetics = c('fill'),
+            # guide = guide_legend(position = 'bottom', nrow = 1, reverse = TRUE)
+            guide = 'none'
+      ) +
       ## Extend axis ticks to left-dodged boxes
       ## NB modify yend to adjust length of tick
       ## <https://stackoverflow.com/questions/78722254/ggplot-extending-axis-ticks-and-putting-boxes-around-axis-items?noredirect=1#comment138794892_78722254>
-      coord_flip(clip = 'off', ylim = c(0, NA), expand = FALSE) +
+      coord_flip(
+            clip = 'off',
+            xlim = c(0.5, 19.5),
+            ylim = c(0, 1),
+            expand = FALSE
+      ) +
       annotate(
             'segment',
             y = 0,
@@ -88,15 +101,48 @@ counts_df |>
             linewidth = .5
       ) +
       theme(
-            legend.position = 'bottom',
-            plot.margin = margin(15, 10, 10, 10),
+            plot.margin = margin(40, 15, 40, 10),
             axis.text.y = element_markdown(
                   box.color = 'black',
                   linetype = 1,
                   padding = unit(2, 'pt'),
                   linewidth = .25
             )
-      )
+      ) +
+      ## Direct label fills
+      geom_label(
+            data = tibble(
+                  x = 20.5,
+                  y = c(.2, .65, .89),
+                  label = c('Strongly agree', 'Agree', 'Somewhat agree'),
+                  color = c('white', 'white', 'black')
+            ),
+            aes(x = x, y = y, label = label, color = color, fill = label),
+            size = 5,
+            hjust = .5,
+            label.padding = unit(.5, 'lines'),
+            inherit.aes = FALSE,
+            show.legend = FALSE
+      ) +
+      geom_label(
+            data = tibble(
+                  x = -.5,
+                  y = c(.8, .35, .11),
+                  label = c(
+                        'Strongly disagree',
+                        'Disagree',
+                        'Somewhat disagree'
+                  ),
+                  color = c('white', 'white', 'black')
+            ),
+            aes(x = x, y = y, label = label, color = color, fill = label),
+            size = 5,
+            hjust = .5,
+            label.padding = unit(.5, 'lines'),
+            inherit.aes = FALSE,
+            show.legend = FALSE
+      ) +
+      scale_color_identity()
 
 ggsave(here(out_dir, '03_likert.png'), height = 10, width = 16, bg = 'white')
 
