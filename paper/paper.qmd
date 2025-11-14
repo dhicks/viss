@@ -83,7 +83,7 @@ However, in the citations above, there is little empirical evidence to support k
 There is a substantial body of empirical research on scientific literacy and understanding of the nature of science (NOS) among the general public.  However, the instruments used in this research generally focus on "science facts" (e.g., "Electrons are smaller than atoms. True or false?"), scientific reasoning ("Imagine that we roll a fair, six-sided die
 1000 times. Out of 1000 rolls, how many times do you think the die would come up as an even number?"), or research processes and the epistemology of science ("Scientific theories are subject to ongoing testing and revision") [first and second examples from @KahanOrdinaryScienceIntelligence2017; third example from @WeisbergKnowledgeNatureScience2020; see also @HuxsterUnderstandingUnderstandingPublic2017; @SlaterUnderstandingTrustingScience2019].  Much less attention is paid to the relationship between science and society or the role of values in science [@MontuschiUnderstandingWhatPublic2024].  For example, @WeisbergKnowledgeNatureScience2020 used a NOS instrument to study predictors of attitudes to evolution.  In their preregistration document (<https://osf.io/dncj4>), this instrument is characterized more specifically as measuring participant views on the "Epistemology of Science," and none of the 23 items in the instrument cover the relationship between science and society or values in science. 
 
-Similarly, there is a substantial empirical literature on public trust in science. This literature often considers the role of religion, political affiliation, and various interventions (e.g., how scientists present themselves) in shaping trust in science. And some instruments for measuring trust are based on the work of feminist ethicist Annette Baier *[cites]*. But otherwise the trust in science literature has not significantly engaged with the kinds of issues explored in recent philosophical work on science and values. 
+Similarly, there is a substantial empirical literature on public trust in science. This literature often considers the role of religion, political affiliation, and various interventions (e.g., how scientists present themselves) in shaping trust in science. And some instruments for measuring trust in science have been based on the work of feminist ethicist Annette Baier [@HendriksMeasuringLaypeoplesTrust2015]. But otherwise the trust in science literature has not significantly engaged with the kinds of issues explored in recent philosophical work on science and values. 
 
 For example, much of the philosophical literature on values in science has focused on arguments against (and sometimes for) the value-free ideal (VFI). Defenders of VFI argue that non-epistemic values are irrelevant to the epistemic aims of science and can lead to methodological errors and false conclusions, and because of this VFI is essential for public trust in science [@BrightBoisDemocraticDefence2017; @HavstadNeutralityRelevancePrescription2017; @JohnEpistemicTrustEthics2017; @FernandezPintoLegitimizingValuesRegulatory2019; @KovakaClimateChangeDenial2021; @HolmanNewDemarcationProblem2022; @MenonSisypheanScienceWhy2023; @MetzenObjectivitySharedValues2024]. 
 
@@ -119,7 +119,7 @@ At the same time, we were very interested in the construct validity of individua
 
 ## Developmental studies (Studies 1 and 2)
 
-We conducted three empirical studies to develop and begin to validate the VISS, using a mix of quantitative and qualitative methods. To keep this paper accessible for a general philosophical audience, we provide a detailed discussion of the methods and statistical analysis for each study in the supplement. *[xrefs]* We discuss studies 1 and 2 here briefly, and study 3 in more detail in the next section. 
+We conducted three empirical studies to develop and begin to validate the VISS, using a mix of quantitative and qualitative methods. To keep this paper accessible for a general philosophical audience, we provide a detailed discussion of the methods and statistical analysis for each study in the supplement [@sec-supp-study1; @sec-supp-study2; @sec-supp-study3].  We discuss studies 1 and 2 here briefly, and study 3 in more detail in the next section. 
 
 ### Study 1
 
@@ -127,7 +127,7 @@ Study 1 was an initial exploration, using all of the prompts on the original lis
 
 In all three studies, data cleaning and analysis was conducted in R version 4.1.2 [@RCoreTeamLanguageEnvironmentStatistical2021], with extensive use of the `tidyverse` suite of packages version 1.3.1 [@WickhamTidyverseEasilyInstall2016].  Anonymized original data and analysis code are available at [redacted]<!-- <https://github.com/dhicks/transparency> -->.  
 
-Study 1 used the online survey platform Prolific to collect *[n]* responses to the initial version of VISS in October 2021. Our EFA focused on a model with six latent factors. This model covered 29 out of 36 initial VISS items. Most of the factors had clear and intriguing interpretations — appearing to measure (acceptance of) scientism, cynicism about science, a simplistic "textbook" picture of how science works, and the value-free ideal — while the other two were more difficult to interpret. 
+Study 1 used the online survey platform Prolific to collect 988 responses to the initial version of VISS in October 2021. Our EFA focused on a model with six latent factors. This model covered 29 out of 36 initial VISS items. Most of the factors had clear and intriguing interpretations — appearing to measure (acceptance of) scientism, cynicism about science, a simplistic "textbook" picture of how science works, and the value-free ideal — while the other two were more difficult to interpret. 
 
 However, a quantitative check of this six-factor structure using CFA indicated poor fit.  Qualitative review also raised concerns about construct validity.  For example, a factor we labelled "cynicism" covered a number of items expressing a cynical attitude towards science, with loaded items related to conflicts of interest, the idea that "The consensus of the scientific community is based on social status and prestige rather than evidence," and the idea that "When a scientific theory changes or is revised, it means that the research that went into it initially was flawed."  But this factor also included the item "Standards of scientific evidence are different in different situations."  We had intended this item to articulate the argument from inductive risk [@DouglasSciencePolicyValuefree2009; @HavstadSensationalScienceArchaic2021], that is, the idea that a hypothesis with serious downstream risks if it turns out to be false — such as a claim that a widely-used herbicide does not cause non-Hodgkins lymphoma — should require significantly more evidence than a hypothesis without such downstream risks — such as a claim about the durability of a certain brand of hiking shoe.  In other words, different standards of evidence can be *appropriately* different in different situations.  
 
@@ -149,7 +149,7 @@ The end result of Study 2 was the current set of VISS items, given in @tbl-viss.
 
 ```{r}
 #| label: tbl-viss
-#| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA. *[but which model? aims.1 vs. ir]*"
+#| tbl-cap: "Finalized VISS items. Subscales are based on study 3 EFA, 3-factor solution. aims.1 is reverse-coded in the cynicism subscale." 
 #| fig-pos: "t"
 here('paper', 'tbl', '06_prompts.Rds') |>
     read_rds() |>
@@ -175,7 +175,7 @@ Data was collected via Prolific on April 16, 2024, using an option that balanced
 *[implications: aims approach, recognize scientific disagreement and fallibilism]*
 
 ::: {.landscape}
-![Distribution of responses to VISS items, ordered by total agreement.  Vertical dashed lines indicate 20%, 50%, and 80%. *[ggpattern]*](img/03_likert.png){#fig-03-likert}
+![Distribution of responses to VISS items, ordered by total agreement.  Vertical dashed lines indicate 20%, 50%, and 80%.](img/03_likert.png){#fig-03-likert}
 :::
 
 @fig-desc-comb compares rates of agreement ("somewhat agree" or more) for all VISS items across studies 1 and 3.  Rates of agreement were generally not statistically significantly different between studies 1 and 3; and even statistically significant differences were small. The largest difference was for aims.2, with 75% agreement in study 1 and 82% in study 3; followed by pluralism.1, with 19% vs. 26%.  All other differences were 5 percentage points or less in absolute value.  
@@ -394,7 +394,7 @@ here('paper', 'tbl', '06_compare.Rds') |>
     tab_options(latex.use_longtable = TRUE)
 ```
 
-# Study 1
+# Study 1 {#sec-supp-study1}
 
 Study 1 was conducted concurrently with [redacted <!-- @HicksValuesDisclosuresTrust2022 -->].  For the sake of space, study 1 is reported in detail in the supplement, @sec-study1-fa. Analysis of individual items and exploratory factor analysis (EFA) uncovered some intriguing patterns, but exhibited poor fit statistics in confirmatory factor analysis (CFA).  
 
@@ -440,7 +440,7 @@ here('paper', 'tbl', '03_loadings_gt.Rds') |>
 
 
 
-# Study 2
+# Study 2 {#sec-supp-study2}
 
 ## Materials
 
@@ -465,7 +465,7 @@ After the quota was achieved for a given iteration, responses were retrieved fro
 If qualitative analysis indicated that an item was frequently misinterpreted or regarded as confusing, all authors worked together to develop alternative wording.  This rewording was then used in future iterations.  An item was considered to have achieved "saturation" when all four authors agreed that the responses across two iterations indicated that it was understood by the participants as intended.  
 
 
-# Study 3
+# Study 3 {#sec-supp-study3}
 
 ## Materials
 

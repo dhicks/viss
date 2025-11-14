@@ -144,7 +144,13 @@ counts_df |>
       ) +
       scale_color_identity()
 
-ggsave(here(out_dir, '03_likert.png'), height = 10, width = 16, bg = 'white')
+ggsave(
+      here(out_dir, '03_likert.png'),
+      height = 10,
+      width = 16,
+      bg = 'white',
+      dpi = 450
+)
 
 ggsave(
       here(out_dir, '03_likert_tall.png'),
