@@ -170,45 +170,46 @@ ggplot(dataf) +
       facet_matrix(rows = vars(!!trust_vars), cols = vars(items[11:19]))
 
 ## VISS factors against trust measures ----
-## TODO: x-axes don't quite align
-coss = ggplot(dataf) +
-      geom_autopoint(alpha = .2, position = 'jitter') +
-      stat_smooth(aes(.panel_x, .panel_y), method = 'lm') +
+coss_long_df = dataf |>
+      select(!!vars, coss) |>
+      pivot_longer(
+            !coss,
+            names_to = 'item',
+            values_to = 'response',
+            names_transform = list(item = fct_inorder)
+      )
+
+coss = ggplot(coss_long_df, aes(response, coss, group = item)) +
+      geom_point(alpha = .2, position = 'jitter') +
+      stat_smooth(method = 'lm') +
       stat_cor(
-            aes(.panel_x, .panel_y, label = after_stat(label)),
+            aes(label = after_stat(label)),
             geom = 'label',
             label.y = 1,
             digits = 1
       ) +
-      facet_matrix(rows = vars(coss), cols = vars(!!vars))
+      facet_wrap(vars(item), scales = 'fixed') +
+      scale_x_continuous(breaks = scales::pretty_breaks(), limits = c(-1, 7)) +
+      ylim(1, 7)
 coss
 
 coss_hist = dataf |>
-      ggplot(aes(coss)) +
-      geom_histogram(binwidth = .25) +
-      coord_flip() +
-      labs(x = '')
+      ggplot(aes(y = coss)) +
+      geom_histogram(binwidth = .25, orientation = 'y') +
+      ylim(1, 7)
 
-hist = dataf |>
-      select(!!vars) |>
-      pivot_longer(
-            everything(),
-            names_to = 'item',
-            values_to = 'response',
-            names_transform = list(item = fct_inorder)
-      ) |>
-      ggplot(aes(response)) +
+hist = ggplot(coss_long_df, aes(response)) +
       geom_histogram(binwidth = .5) +
-      labs(x = '') +
-      facet_grid(cols = vars(item), scales = 'free')
+      facet_wrap(vars(item), scales = 'fixed') +
+      scale_x_continuous(breaks = scales::pretty_breaks(), limits = c(-1, 7))
 
 hist +
       coss +
       coss_hist +
       plot_layout(
-            design = 'AAAAD
-                          BBBBC
-                          BBBBC',
+            design = 'AAAAAAAADD
+                      BBBBBBBBCC
+                      BBBBBBBBCC',
             axes = 'collect'
       ) +
       labs(caption = 'N = 502')
@@ -216,7 +217,7 @@ hist +
 ggsave(
       here(out_dir, '05_factors_coss.png'),
       height = 3,
-      width = 5,
+      width = 6,
       scale = 2,
       bg = 'white'
 )
