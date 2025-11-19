@@ -82,7 +82,7 @@ references:
     - year: 2004
   language: en
   license: 2004 by Hypatia, Inc.
-  page: 1-24
+  page: 1–24
   source: Wiley Online Library
   title: >-
     Uses of Value Judgments in Science: A General Argument, with Lessons from a
@@ -169,7 +169,7 @@ references:
   issue: '2'
   issued:
     - year: 2013
-  page: 207-220
+  page: 207–220
   title: In defence of the value free ideal
   type: article-journal
   URL: http://link.springer.com/10.1007/s13194-012-0062-x
@@ -215,7 +215,7 @@ references:
       month: 6
       day: 19
   language: en
-  page: 261-278
+  page: 261–278
   source: link.springer.com.proxy1.lib.uwo.ca
   title: >-
     Climate skepticism and the manufacture of doubt: can dissent in science be
@@ -260,7 +260,7 @@ references:
   issued:
     - year: 2017
   language: en
-  page: 353-393
+  page: 353–393
   source: DOI.org (Crossref)
   title: >-
     Improving the Measurement of Shared Cultural Schemas with Correlational
@@ -307,7 +307,7 @@ references:
     Primary_atype: Research
     Subject_term: Infectious diseases;Research data;Statistics
     Subject_term_id: infectious-diseases;research-data;statistics
-  page: 1-6
+  page: 1–6
   publisher: Nature Publishing Group
   source: www.nature.com
   title: Unrepresentative big surveys significantly overestimated US vaccine uptake
@@ -379,7 +379,7 @@ references:
       month: 3
       day: 4
   language: en
-  page: 1-19
+  page: 1–19
   source: link-springer-com.proxy1.lib.uwo.ca
   title: Du Bois’ democratic defence of the value free ideal
   type: article-journal
@@ -415,7 +415,7 @@ references:
     - year: 2016
       month: 11
       day: 1
-  page: 67-94
+  page: 67–94
   source: MIT Press Journals
   title: The Disconnect Problem, Scientific Authority, and Climate Policy
   type: article-journal
@@ -561,7 +561,7 @@ references:
   issue: '1'
   issued:
     - year: 2020
-  page: 5-37
+  page: 5–37
   source: DOI.org (Crossref)
   title: Using Values as Evidence When There’s Evidence for Your Values
   type: article-journal
@@ -664,7 +664,7 @@ references:
       month: 1
       day: 24
   language: en
-  page: 165-192
+  page: 165–192
   publisher: MIT Press
   source: Google Books
   title: >-
@@ -702,7 +702,7 @@ references:
       month: 4
       day: 1
   language: en
-  page: 413-423
+  page: 413–423
   source: Wiley Online Library
   title: 'Feminist Philosophy of Science: Values and Objectivity'
   title-short: Feminist Philosophy of Science
@@ -723,7 +723,7 @@ references:
       given: Eleanora
   issued:
     - year: 2014
-  page: 145-161
+  page: 145–161
   publisher: Oxford University Press
   title: Feminist Standpoint Theory
   type: chapter
@@ -754,6 +754,35 @@ references:
   title: Biden Administration Announces Rules Aimed at Expanding Electric Vehicles
   type: article-newspaper
   URL: https://www.nytimes.com/2024/03/20/climate/biden-phase-out-gas-cars.html
+
+- id: DepaoliSelectingDevelopingAnalyzing2025
+  author:
+    - family: Depaoli
+      given: Sarah
+    - family: Liu
+      given: Ren
+  citation-key: DepaoliSelectingDevelopingAnalyzing2025
+  container-title: The Sage Handbook of Health Psychology
+  edition: 2e
+  editor:
+    - family: Brown
+      given: Katherine
+    - family: Cheng
+      given: Cecilia
+    - family: Hagger
+      given: Martin
+    - family: Hamilton
+      given: Kyra
+    - family: Sutton
+      given: Stephen R
+  ISBN: 978-1-5297-9197-6
+  issued:
+    - year: 2025
+  language: en
+  publisher: SAGE Publications Ltd
+  source: Zotero
+  title: Selecting, Developing, and Analyzing Measures in Health Psychology
+  type: chapter
 
 - id: DeweyHumanNatureConduct2008
   author:
@@ -823,7 +852,7 @@ references:
       month: 7
       day: 1
   language: en
-  page: 615-617
+  page: 615–617
   source: Springer Link
   title: Counterfactual prediction is not only for causal inference
   type: article-journal
@@ -926,7 +955,7 @@ references:
   issued:
     - year: 2010
   language: en
-  page: 685-715
+  page: 685–715
   source: Wiley Online Library
   title: >-
     A Tripartite Approach to Right-Wing Authoritarianism: The
@@ -1000,7 +1029,7 @@ references:
   issue: '1'
   issued:
     - year: 2014
-  page: 1-21
+  page: 1–21
   title: Nonepistemic Values and the Multiple Goals of Science
   type: article-journal
   URL: http://www.jstor.org/stable/info/10.1086/674345
@@ -1109,6 +1138,61 @@ references:
   URL: >-
     http://books.google.ca/books?id=kZOso0FMsrMC&pg=PA39&dq=intitle:Impure+Science+inauthor:epstein&hl=&cd=1&source=gbs_api
 
+- id: EsterlingNecessityConstructExternal2025
+  abstract: >-
+    The Credibility Revolution advances internally valid research designs
+    intended to identify causal effects from quantitative data. The ensuing
+    emphasis on internal validity, however, has enabled a neglect of construct
+    and external validity. We show that ignoring construct and external validity
+    within identification strategies undermines the Credibility Revolution’s own
+    goal of understanding causality deductively. Without assumptions regarding
+    construct validity, one cannot accurately label the cause or outcome.
+    Without assumptions regarding external validity, one cannot label the
+    conditions enabling the cause to have an effect. If any of the assumptions
+    regarding internal, construct, and external validity are missing, the claim
+    is not deductively supported. The critical role of theoretical and
+    substantive knowledge in deductive causal inference is illuminated by making
+    such assumptions explicit. This article critically reviews approaches to
+    identification in causal inference while developing a framework called
+    causal specification . Causal specification augments existing identification
+    strategies to enable and justify deductive, generalized claims about causes
+    and effects. In the process, we review a variety of developments in the
+    philosophy of science and causality and interdisciplinary social science
+    methodology.
+  accessed:
+    - year: 2025
+      month: 3
+      day: 3
+  author:
+    - family: Esterling
+      given: Kevin M.
+    - family: Brady
+      given: David
+    - family: Schwitzgebel
+      given: Eric
+  citation-key: EsterlingNecessityConstructExternal2025
+  container-title: Journal of Causal Inference
+  DOI: 10.1515/jci-2024-0002
+  ISSN: 2193-3685
+  issue: '1'
+  issued:
+    - year: 2025
+      month: 1
+      day: 1
+  language: en
+  license: >-
+    De Gruyter expressly reserves the right to use all content for commercial
+    text and data mining within the meaning of Section 44b of the German
+    Copyright Act.
+  publisher: De Gruyter
+  source: www.degruyter.com
+  title: >-
+    The necessity of construct and external validity for deductive causal
+    inference
+  type: article-journal
+  URL: https://www.degruyter.com/document/doi/10.1515/jci-2024-0002/html
+  volume: '13'
+
 - id: EvansWhoDoesntTrust2020
   abstract: >-
     The primary tension in public discourse about the U.S. government’s response
@@ -1152,6 +1236,55 @@ references:
   type: article-journal
   URL: https://doi.org/10.1177/2378023120947337
   volume: '6'
+
+- id: FarrellAnalyticalDemocraticTheory2023
+  abstract: >-
+    A prominent and publicly influential literature challenges the quality of
+    democratic decision making, drawing on political science findings with
+    specific claims about the ubiquity of cognitive bias to lament citizens’
+    incompetence. A competing literature in democratic theory defends the wisdom
+    of crowds, drawing on a cluster of models in support of the capacity of
+    ordinary citizens to produce correct outcomes. In this Letter, we draw on
+    recent findings in psychology to demonstrate that the former literature is
+    based on outdated and erroneous claims and that the latter is overly
+    sanguine about the circumstances that yield reliable collective decision
+    making. By contrast, “interactionist” scholarship shows how individual-level
+    biases are not devastating for group problem solving, given appropriate
+    conditions. This provides possible microfoundations for a broader research
+    agenda similar to that implemented by Elinor Ostrom and her colleagues on
+    common-good provision, investigating how different group structures are
+    associated with both success and failure in democratic decision making. This
+    agenda would have implications for both democratic theory and democratic
+    practice.
+  accessed:
+    - year: 2023
+      month: 3
+      day: 25
+  author:
+    - family: Farrell
+      given: Henry
+    - family: Mercier
+      given: Hugo
+    - family: Schwartzberg
+      given: Melissa
+  citation-key: FarrellAnalyticalDemocraticTheory2023
+  container-title: American Political Science Review
+  DOI: 10.1017/S0003055422000715
+  ISSN: 0003-0554, 1537-5943
+  issue: '2'
+  issued:
+    - year: 2023
+      month: 5
+  language: en
+  page: 767–772
+  publisher: Cambridge University Press
+  source: Cambridge University Press
+  title: 'Analytical Democratic Theory: A Microfoundational Approach'
+  title-short: Analytical Democratic Theory
+  type: article-journal
+  URL: >-
+    https://www.cambridge.org/core/journals/american-political-science-review/article/analytical-democratic-theory-a-microfoundational-approach/739A9A928A99A47994E4585059B03398
+  volume: '117'
 
 - id: FernandezPintoCommercialInterestsErosion2020
   accessed:
@@ -1247,7 +1380,7 @@ references:
     - year: 2017
       month: 5
       day: 11
-  page: 53-72
+  page: 53–72
   source: sciencetechnologystudies.journal.fi
   title: To Know or Better Not to
   type: article-journal
@@ -1341,7 +1474,7 @@ references:
       month: 7
       day: 1
   language: en
-  page: 444-473
+  page: 444–473
   source: CrossRef
   title: >-
     Undone Science: Charting Social Movement and Civil Society Challenges to
@@ -1470,7 +1603,7 @@ references:
       month: 12
       day: 1
   license: Copyright © 1983 American Sociological Association
-  page: 781-795
+  page: 781–795
   source: JSTOR
   title: >-
     Boundary-Work and the Demarcation of Science from Non-Science: Strains and
@@ -1552,7 +1685,7 @@ references:
     - year: 2018
       month: 11
   language: en
-  page: 69-91
+  page: 69–91
   source: Cambridge Core
   title: Understanding Epistemic Trust Injustices and Their Harms
   type: article-journal
@@ -1575,6 +1708,49 @@ references:
   type: webpage
   URL: >-
     https://web.archive.org/web/20220629231111/https://gssdataexplorer.norc.org/variables/178/vshow
+
+- id: HaidtEmotionalDogIts2001
+  abstract: >-
+    Research on moral judgment has been dominated by rationalist models, in
+    which moral judgment is thought to be caused by moral reasoning. The author
+    gives 4 reasons for considering the hypothesis that moral reasoning does not
+    cause moral judgment; rather, moral reasoning is usually a post hoc
+    construction, generated after a judgment has been reached. The social
+    intuitionist model is presented as an alternative to rationalist models. The
+    model is a social model in that it deemphasizes the private reasoning done
+    by individuals and emphasizes instead the importance of social and cultural
+    influences. The model is an intuitionist model in that it states that moral
+    judgment is generally the result of quick, automatic evaluations
+    (intuitions). The model is more consistent than rationalist models with
+    recent findings in social, cultural, evolutionary, and biological
+    psychology, as well as in anthropology and primatology. (PsycINFO Database
+    Record (c) 2013 APA, all rights reserved)(journal abstract)
+  accessed:
+    - year: 2016
+      month: 2
+      day: 1
+  author:
+    - family: Haidt
+      given: Jonathan
+  citation-key: HaidtEmotionalDogIts2001
+  container-title: Psychological Review
+  DOI: http://dx.doi.org/10.1037/0033-295X.108.4.814
+  ISSN: 0033-295X
+  issue: '4'
+  issued:
+    - year: 2001
+      month: 10
+  language: English
+  license: © American Psychological Association 2001
+  page: 814–834
+  source: ProQuest
+  title: >-
+    The emotional dog and its rational tail: A social intuitionist approach to
+    moral judgment.
+  title-short: The emotional dog and its rational tail
+  type: article-journal
+  URL: https://psycnet.apa.org/doiLanding?doi=10.1037%2F0033-295X.108.4.814
+  volume: '108'
 
 - id: HalpernScienceExperienceDeweyan2022
   abstract: |-
@@ -1599,7 +1775,7 @@ references:
       month: 8
       day: 1
   language: en
-  page: 621-656
+  page: 621–656
   source: DOI.org (Crossref)
   title: 'Science as Experience: A Deweyan Model of Science Communication'
   title-short: Science as Experience
@@ -1665,7 +1841,7 @@ references:
       month: 11
       day: 2
   language: en
-  page: 358-371
+  page: 358–371
   source: DOI.org (Crossref)
   title: >-
     Modeling Attitudes Toward Science: Development and Validation of the
@@ -1686,7 +1862,7 @@ references:
   issue: '4'
   issued:
     - year: 2017
-  page: 303-324
+  page: 303–324
   source: Google Scholar
   title: Neutrality, Relevance, Prescription, and the IPCC
   type: article-journal
@@ -1726,7 +1902,7 @@ references:
       month: 7
       day: 22
   language: en
-  page: 1-26
+  page: 1–26
   publisher: Cambridge University Press
   source: Cambridge University Press
   title: Sensational Science, Archaic Hominin Genetics, and Amplified Inductive Risk
@@ -1775,7 +1951,7 @@ references:
       month: 4
       day: 1
   language: en
-  page: 15-29
+  page: 15–29
   source: ScienceDirect
   title: >-
     What do different beliefs tell us? An examination of factual, opinion-based,
@@ -1849,7 +2025,7 @@ references:
   issued:
     - year: 2014
       month: 9
-  page: 3271-3295
+  page: 3271–3295
   title: A new direction for science and values
   type: article-journal
   URL: http://link.springer.com/10.1007/s11229-014-0447-9
@@ -1891,7 +2067,7 @@ references:
   issued:
     - year: 2023
   license: All rights reserved
-  page: 34-62
+  page: 34–62
   PMID: '34330172'
   publisher: Taylor & Francis
   source: Taylor and Francis+NEJM
@@ -1999,6 +2175,41 @@ references:
   URL: https://journals.publishing.umich.edu/ptpbio/article/id/2629/
   volume: '14'
 
+- id: HidalgoMultivariateMultivariableRegression2013
+  abstract: >-
+    The terms multivariate and multivariable are often used interchangeably in
+    the public health literature. However, these terms actually represent 2 very
+    distinct types of analyses. We define the 2 types of analysis and assess the
+    prevalence of use of the statistical term multivariate in a 1-year span of
+    articles published in the American Journal of Public Health. Our goal is to
+    make a clear distinction and to identify the nuances that make these types
+    of analyses so distinct from one another.
+  accessed:
+    - year: 2025
+      month: 11
+      day: 12
+  author:
+    - family: Hidalgo
+      given: Bertha
+    - family: Goodman
+      given: Melody
+  citation-key: HidalgoMultivariateMultivariableRegression2013
+  container-title: American Journal of Public Health
+  container-title-short: Am J Public Health
+  DOI: 10.2105/AJPH.2012.300897
+  ISSN: 0090-0036
+  issue: '1'
+  issued:
+    - year: 2013
+      month: 1
+  page: 39–40
+  publisher: American Public Health Association
+  source: ajph.aphapublications.org (Atypon)
+  title: Multivariate or Multivariable Regression?
+  type: article-journal
+  URL: https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2012.300897
+  volume: '103'
+
 - id: HolmanExperimentationIndustrialSelection2017
   author:
     - family: Holman
@@ -2052,7 +2263,7 @@ references:
       month: 2
       day: 1
   language: en
-  page: 211-220
+  page: 211–220
   source: ScienceDirect
   title: The new demarcation problem
   type: article-journal
@@ -2160,7 +2371,7 @@ references:
   license: © 2015, American Psychological Association
   note: (US)
   number-of-pages: 1003-1028
-  page: 1003-1028
+  page: 1003–1028
   publisher: American Psychological Association
   publisher-place: Washington, US
   source: ProQuest
@@ -2191,7 +2402,7 @@ references:
   issued:
     - year: 1998
   language: en
-  page: 424-453
+  page: 424–453
   source: DOI.org (Crossref)
   title: >-
     Fit indices in covariance structure modeling: Sensitivity to
@@ -2383,7 +2594,7 @@ references:
     - year: 2015
       month: 5
   language: en
-  page: 217-32
+  page: 217–32
   source: link.springer.com
   title: >-
     Distinguishing between legitimate and illegitimate values in climate
@@ -2409,7 +2620,7 @@ references:
     - year: 2017
       month: 12
       day: 8
-  page: 75-87
+  page: 75–87
   source: Taylor and Francis+NEJM
   title: >-
     Epistemic trust and the ethics of science communication: against
@@ -2435,12 +2646,45 @@ references:
   ISBN: 978-0-19-539511-2
   issued:
     - year: 2011
-  page: 170-190
+  page: 170–190
   publisher: Oxford University Press
   title: 'The Trustworthiness of Research: The Paradigm of Community-Based Research'
   type: chapter
   URL: >-
     http://books.google.ca/books?id=ZvqLRu30ipsC&pg=PA149&dq=intitle:Shifting+Ground+inauthor:scheman&hl=&cd=1&source=gbs_api
+
+- id: KahanCulturalCognitionScientific2011
+  abstract: >-
+    Why do members of the public disagree – sharply and persistently – about
+    facts on which expert scientists largely agree? We designed a study to test
+    a distinctive explanation: the cultural cognition of scientific consensus.
+    The ‘cultural cognition of risk’ refers to the tendency of individuals to
+    form risk perceptions that are congenial to their values. The study presents
+    both correlational and experimental evidence confirming that cultural
+    cognition shapes individuals’ beliefs about the existence of scientific
+    consensus, and the process by which they form such beliefs, relating to
+    climate change, the disposal of nuclear wastes, and the effect of permitting
+    concealed possession of handguns. The implications of this dynamic for
+    science communication and public policy‐making are discussed.
+  author:
+    - family: Kahan
+      given: Dan M
+    - family: Jenkins Smith
+      given: Hank
+    - family: Braman
+      given: Donald
+  citation-key: KahanCulturalCognitionScientific2011
+  container-title: Journal of Risk Research
+  container-title-short: Journal of Risk Research
+  DOI: 10.1080/13669877.2010.511246
+  issue: '2'
+  issued:
+    - year: 2011
+  page: 147–174
+  title: Cultural cognition of scientific consensus
+  type: article-journal
+  URL: http://www.tandfonline.com/doi/abs/10.1080/13669877.2010.511246
+  volume: '14'
 
 - id: KahanOrdinaryScienceIntelligence2017
   abstract: >-
@@ -2587,12 +2831,58 @@ references:
     - year: 2018
       month: 3
       day: 6
-  page: 1-33
+  page: 1–33
   source: Silverchair
   title: An Evaluation of the 2016 Election Polls in the United States
   type: article-journal
   URL: https://doi.org/10.1093/poq/nfx047
   volume: '82'
+
+- id: KleinDataFrameTheory2007
+  author:
+    - family: Klein
+      given: Gary
+    - family: Phillips
+      given: Jennifer K.
+    - family: Rall
+      given: Erica L.
+    - family: Peluso
+      given: Deborah A.
+  citation-key: KleinDataFrameTheory2007
+  container-title: >-
+    Expertise Out of Context: Proceedings of the Sixth International Conference
+    on Naturalistic Decision Making
+  editor:
+    - family: Hoffman
+      given: Robert R.
+  ISBN: 978-1-136-67963-6
+  issued:
+    - year: 2007
+      month: 5
+      day: 22
+  language: en
+  publisher: Psychology Press
+  source: Google Books
+  title: A Data–Frame Theory of Sensemaking
+  type: chapter
+
+- id: KouranyPhilosophyScienceFeminism2010
+  author:
+    - family: Kourany
+      given: Janet A.
+  call-number: Q130 .K684 2010
+  citation-key: KouranyPhilosophyScienceFeminism2010
+  collection-title: Studies in feminist philosophy
+  event-place: Oxford ; New York
+  ISBN: 978-0-19-973261-6 978-0-19-973262-3
+  issued:
+    - year: 2010
+  number-of-pages: '149'
+  publisher: Oxford University Press
+  publisher-place: Oxford ; New York
+  source: Library of Congress ISBN
+  title: Philosophy of science after feminism
+  type: book
 
 - id: KovakaClimateChangeDenial2021
   abstract: >-
@@ -2625,7 +2915,7 @@ references:
     - year: 2021
       month: 3
   language: en
-  page: 2355-2374
+  page: 2355–2374
   source: Springer Link
   title: Climate change denial and beliefs about science
   type: article-journal
@@ -2672,7 +2962,7 @@ references:
     - year: 2019
       month: 12
       day: 31
-  page: 817-836
+  page: 817–836
   source: Silverchair
   title: Trends—Americans’ Trust in Science and Scientists
   type: article-journal
@@ -2732,7 +3022,7 @@ references:
   ISBN: 94-009-7057-9
   issued:
     - year: 1983
-  page: 111-127
+  page: 111–127
   publisher: Springer Netherlands
   title: The Demise of the Demarcation Problem
   type: chapter
@@ -2793,7 +3083,7 @@ references:
   issue: '2'
   issued:
     - year: 2011
-  page: 247-261
+  page: 247–261
   title: >-
     Those Who Have the Gold Make the Evidence: How the Pharmaceutical Industry
     Biases the Outcomes of Clinical Trials of Medications
@@ -2967,7 +3257,7 @@ references:
   issue: '3'
   issued:
     - year: 1995
-  page: 351-381
+  page: 351–381
   source: JSTOR
   title: Objectivity and the Double Standard for Feminist Epistemologies
   type: article-journal
@@ -3013,7 +3303,7 @@ references:
   language: en
   license: 2008 Springer Science + Business Media, LLC
   number: '3'
-  page: 290-298
+  page: 290–298
   publisher: BioMed Central
   source: evolution-outreach.biomedcentral.com
   title: >-
@@ -3223,7 +3513,7 @@ references:
       month: 12
       day: 1
   language: en
-  page: 102-110
+  page: 102–110
   source: ScienceDirect
   title: >-
     Does democracy require value-neutral science? Analyzing the legitimacy of
@@ -3283,7 +3573,7 @@ references:
   ISBN: 978-1-4020-6835-5
   issued:
     - year: 2011
-  page: 183-204
+  page: 183–204
   publisher: Springer
   title: >-
     More Than Skin Deep: Situated Communities and Agent Orange in the Aluoi
@@ -3426,6 +3716,25 @@ references:
   type: article-journal
   URL: http://pus.sagepub.com/content/early/2016/05/04/0963662516645040
 
+- id: MercierEnigmaReason2017
+  author:
+    - family: Mercier
+      given: Hugo
+    - family: Sperber
+      given: Dan
+  citation-key: MercierEnigmaReason2017
+  event-place: Cambridge, Massachusetts
+  ISBN: 978-0-674-23782-7 978-0-674-36830-9
+  issued:
+    - year: 2017
+  language: eng
+  number-of-pages: '396'
+  publisher: Harvard University Press
+  publisher-place: Cambridge, Massachusetts
+  source: K10plus ISBN
+  title: The enigma of reason
+  type: book
+
 - id: MetzenObjectivitySharedValues2024
   abstract: >-
     This paper deals with the nature of trust in science. Understanding what
@@ -3511,7 +3820,7 @@ references:
       month: 5
       day: 1
   language: en
-  page: 1293-1316
+  page: 1293–1316
   source: link-springer-com.proxy1.lib.uwo.ca
   title: >-
     When is consensus knowledge based? Distinguishing shared knowledge from mere
@@ -3555,7 +3864,7 @@ references:
   event-place: Pittsburgh, PA
   issued:
     - year: 2004
-  page: 245-55
+  page: 245–55
   publisher: University of Pittsburgh Press
   publisher-place: Pittsburgh, PA
   title: The Prescribed and Proscribed Values in Science Policy
@@ -3592,7 +3901,7 @@ references:
     - year: 2017
       month: 7
       day: 4
-  page: 351-367
+  page: 351–367
   publisher: Routledge
   source: Taylor and Francis+NEJM
   title: What’s so bad about scientism?
@@ -3623,13 +3932,33 @@ references:
       month: 4
       day: 1
   language: en
-  page: 207-229
+  page: 207–229
   source: DOI.org (Crossref)
   title: Understanding What in Public Understanding of Science
   type: article-journal
   URL: >-
     https://direct.mit.edu/posc/article/32/2/207/116504/Understanding-What-in-Public-Understanding-of
   volume: '32'
+
+- id: MorrisseyMultipleRegressionNot2018
+  author:
+    - family: Morrissey
+      given: Michael B.
+    - family: Ruxton
+      given: Graeme D.
+  citation-key: MorrisseyMultipleRegressionNot2018
+  container-title: Philosophy, Theory, and Practice in Biology
+  DOI: http://dx.doi.org/10.3998/ptpbio.16039257.0010.003
+  ISSN: 2475-3025
+  issued:
+    - year: 2018
+  title: >-
+    Multiple Regression Is Not Multiple Regressions: The Meaning of Multiple
+    Regression and the Non-Problem of Collinearity
+  title-short: Multiple Regression Is Not Multiple Regressions
+  type: article-journal
+  URL: http://hdl.handle.net/2027/spo.16039257.0010.003
+  volume: '10'
 
 - id: MyersConsensusRevisitedQuantifying2021
   abstract: >-
@@ -3737,7 +4066,7 @@ references:
     - year: 2014
   language: en
   license: © 2014 School Science and Mathematics Association
-  page: 76-86
+  page: 76–86
   source: Wiley Online Library
   title: >-
     I Just Don't Trust Them: The Development and Validation of an Assessment
@@ -3876,7 +4205,7 @@ references:
     - year: 2011
       month: 7
       day: 1
-  page: 1373-1405
+  page: 1373–1405
   publisher: Routledge
   source: Taylor and Francis+NEJM
   title: >-
@@ -3886,6 +4215,46 @@ references:
   type: article-journal
   URL: https://doi.org/10.1080/09500693.2010.511297
   volume: '33'
+
+- id: NyhanWhenCorrectionsFail2010
+  abstract: >-
+    An extensive literature addresses citizen ignorance, but very little
+    research focuses on misperceptions. Can these false or unsubstantiated
+    beliefs about politics be corrected? Previous studies have not tested the
+    efficacy of corrections in a realistic format. We conducted four experiments
+    in which subjects read mock news articles that included either a misleading
+    claim from a politician, or a misleading claim and a correction. Results
+    indicate that corrections frequently fail to reduce misperceptions among the
+    targeted ideological group. We also document several instances of a
+    "backfire effect" in which corrections actually increase misperceptions
+    among the group in question.
+  accessed:
+    - year: 2025
+      month: 11
+      day: 17
+  author:
+    - family: Nyhan
+      given: Brendan
+    - family: Reifler
+      given: Jason
+  citation-key: NyhanWhenCorrectionsFail2010
+  container-title: Political Behavior
+  container-title-short: Polit Behav
+  DOI: 10.1007/s11109-010-9112-2
+  ISSN: 0190-9320, 1573-6687
+  issue: '2'
+  issued:
+    - year: 2010
+      month: 6
+  language: en
+  license: http://www.springer.com/tdm
+  page: 303–330
+  source: DOI.org (Crossref)
+  title: 'When Corrections Fail: The Persistence of Political Misperceptions'
+  title-short: When Corrections Fail
+  type: article-journal
+  URL: http://link.springer.com/10.1007/s11109-010-9112-2
+  volume: '32'
 
 - id: OConnorMisinformationAgeHow2019
   abstract: >-
@@ -3958,7 +4327,7 @@ references:
       month: 9
       day: 1
   language: en
-  page: 189-206
+  page: 189–206
   publisher: SAGE Publications Inc
   source: SAGE Journals
   title: 'Rise of the Trumpenvolk: Populism in the 2016 Election'
@@ -4023,7 +4392,7 @@ references:
     - year: 2017
       month: 9
       day: 28
-  page: 1-2
+  page: 1–2
   source: Taylor and Francis+NEJM
   title: Response by Oreskes to “Beyond Counting Climate Consensus”
   type: article-journal
@@ -4118,7 +4487,7 @@ references:
   DOI: 10.1007/s11229-012-0175-y
   issued:
     - year: 2012
-  page: 1-18
+  page: 1–18
   title: >-
     Philosophical intervention and cross-disciplinary science: the story of the
     Toolbox Project
@@ -4209,7 +4578,7 @@ references:
       month: 10
       day: 1
   language: en
-  page: 827-846
+  page: 827–846
   source: SAGE Journals
   title: >-
     Correlation Attenuation Due to Measurement Error: A New Approach Using the
@@ -4256,7 +4625,7 @@ references:
     - year: 2017
       month: 7
       day: 23
-  page: 1-8
+  page: 1–8
   source: tandfonline.com (Atypon)
   title: Beyond Counting Climate Consensus
   type: article-journal
@@ -4363,7 +4732,7 @@ references:
   issued:
     - year: 2015
       month: 10
-  page: 71-80
+  page: 71–80
   source: ScienceDirect
   title: The diverse aims of science
   type: article-journal
@@ -4502,7 +4871,7 @@ references:
     - year: 2019
       month: 3
       day: 4
-  page: 183-192
+  page: 183–192
   source: Taylor and Francis+NEJM
   title: >-
     Expertise, Agreement, and the Nature of Social Scientific Facts or: Against
@@ -4676,7 +5045,7 @@ references:
   container-title: Engendering rationalities
   issued:
     - year: 2001
-  page: 23-52
+  page: 23–52
   title: 'Epistemology resuscitated: Objectivity as trustworthiness'
   type: article-journal
   URL: >-
@@ -4706,7 +5075,7 @@ references:
   issued:
     - year: 2021
   language: en
-  page: 570-580
+  page: 570–580
   source: journal.r-project.org
   title: Reproducible Summary Tables with the gtsummary Package
   type: article-journal
@@ -4749,7 +5118,7 @@ references:
       month: 3
       day: 1
   language: en
-  page: 1043-1064
+  page: 1043–1064
   source: Springer Link
   title: Public Conceptions of Scientific Consensus
   type: article-journal
@@ -4778,7 +5147,7 @@ references:
     - year: 2019
       month: 6
   language: en
-  page: 247-261
+  page: 247–261
   source: DOI.org (Crossref)
   title: Understanding and Trusting Science
   type: article-journal
@@ -4820,7 +5189,7 @@ references:
       month: 9
       day: 1
   language: en
-  page: 702-712
+  page: 702–712
   source: SAGE Journals
   title: Increasing Transparency Through a Multiverse Analysis
   type: article-journal
@@ -4857,7 +5226,7 @@ references:
       month: 12
       day: 1
   license: Copyright © 2012 Philosophy of Science Association
-  page: 893-904
+  page: 893–904
   source: JSTOR
   title: The Scientist qua Policy Advisor Makes Value Judgments
   type: article-journal
@@ -4908,7 +5277,7 @@ references:
     - year: 2024
       month: 4
       day: 12
-  page: 141-141
+  page: 141–141
   publisher: American Association for the Advancement of Science
   source: science.org (Atypon)
   title: Teach philosophy of science
@@ -4949,6 +5318,31 @@ references:
   title-short: Trump’s call for ‘gold standard science’ has prompted an outcry
   type: article-journal
   URL: https://www.nature.com/articles/d41586-025-01668-x
+
+- id: TysonPublicTrustScientists2024
+  abstract: >-
+    Americans’ trust in scientists is slightly higher than it was last year, but
+    remains lower than before the COVID-19 pandemic.
+  accessed:
+    - year: 2025
+      month: 11
+      day: 19
+  author:
+    - family: Tyson
+      given: Alec
+    - family: Kennedy
+      given: Brian
+  citation-key: TysonPublicTrustScientists2024
+  issued:
+    - year: 2024
+      month: 11
+      day: 14
+  language: en-US
+  publisher: Pew Research Center
+  title: Public Trust in Scientists and Views on Their Role in Policymaking
+  type: report
+  URL: >-
+    https://www.pewresearch.org/science/2024/11/14/public-trust-in-scientists-and-views-on-their-role-in-policymaking/
 
 - id: TysonViewsImpactScience2023
   abstract: >-
@@ -5006,7 +5400,7 @@ references:
     - year: 2020
       month: 12
   language: en
-  page: 75-83
+  page: 75–83
   source: DOI.org (Crossref)
   title: Countering medical nihilism by reconnecting facts and values
   type: article-journal
@@ -5142,7 +5536,7 @@ references:
       day: 26
   language: en
   license: 2024 The Author(s)
-  page: 1-14
+  page: 1–14
   publisher: Nature Publishing Group
   source: www.nature.com
   title: >-
@@ -5449,7 +5843,7 @@ references:
       given: Alison
   issued:
     - year: 2007
-  page: 58-86
+  page: 58–86
   publisher: Oxford University Press
   title: >-
     Coming to terms with the values of science: Insights from feminist science
@@ -5468,7 +5862,7 @@ references:
   issue: '2'
   issued:
     - year: 1989
-  page: 10-39
+  page: 10–39
   title: >-
     Sheepfarming after Chernobyl: A Case Study in Communicating Scientific
     Information

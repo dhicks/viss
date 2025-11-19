@@ -253,14 +253,12 @@ if (!interactive()) {
 #     select(-prolific_id) |>
 #     cor(use = 'pairwise.complete')
 # efa_scores |>
-#     pluck(3) |>
-#     rename(cynicism = MR2_3,
-#            textbook = MR1_3,
-#            objectivity = MR3_3) |>
-#     ggplot(aes(cynicism, objectivity)) +
-#     geom_point(position = 'jitter') +
-#     geom_smooth(method = 'lm') +
-#     geom_smooth(color = 'red')
+#       pluck(3) |>
+#       rename(cynicism = MR2_3, textbook = MR1_3, objectivity = MR3_3) |>
+#       ggplot(aes(cynicism, textbook)) +
+#       geom_point(position = 'jitter') +
+#       geom_smooth(method = 'lm') +
+#       geom_smooth(color = 'red')
 
 ## Big combined loadings table ----
 loadings_to_df = function(fit) {
