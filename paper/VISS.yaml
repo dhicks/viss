@@ -1693,6 +1693,46 @@ references:
     https://www.cambridge.org/core/journals/royal-institute-of-philosophy-supplements/article/understanding-epistemic-trust-injustices-and-their-harms/F95E3B4AF30573ADBEAE8F0759302AE7
   volume: '84'
 
+- id: GreenlandAidScientificInference2021
+  abstract: >-
+    We have elsewhere reviewed proposals to reform terminology and improve
+    interpretations of conventional statistics by emphasizing logical and
+    information concepts over probability concepts. We here give detailed
+    reasons and methods for reinterpreting statistics (including but not limited
+    to) P-values and interval estimates in unconditional terms, which describe
+    compatibility of observations with an entire set of analysis assumptions,
+    rather than just a narrow target hypothesis. Such reinterpretations help
+    avoid overconfident inferences whenever there is uncertainty about the
+    assumptions used to derive and compute the statistical results. Examples of
+    such assumptions include not only standard statistical modeling assumptions,
+    but also assumptions about absence of systematic errors, protocol
+    violations, and data corruption. Unconditional descriptions introduce
+    uncertainty about such assumptions directly into statistical presentations
+    of results, rather than leaving that only to the informal discussion that
+    ensues. We thus view unconditional description as a vital component of good
+    statistical training and presentation.
+  accessed:
+    - year: 2021
+      month: 5
+      day: 4
+  author:
+    - family: Greenland
+      given: Sander
+    - family: Rafi
+      given: Zad
+  citation-key: GreenlandAidScientificInference2021
+  container-title: arXiv:1909.08583 [q-bio, stat]
+  issued:
+    - year: 2021
+      month: 2
+      day: 27
+  source: arXiv.org
+  title: >-
+    To Aid Scientific Inference, Emphasize Unconditional Descriptions of
+    Statistics
+  type: article-journal
+  URL: http://arxiv.org/abs/1909.08583
+
 - id: GSSDataExplorer2022
   accessed:
     - year: 2022
@@ -3028,6 +3068,55 @@ references:
   type: chapter
   URL: http://dx.doi.org/10.1007/978-94-009-7055-7_6
   volume: '76'
+
+- id: LeeEthicsRareBird2019
+  abstract: >-
+    Engineering ethics cannot be reduced to the ethics of individual engineers
+    but must be considered in situ, within the sociocultural and environmental
+    contexts of a research or design project. We studied teams in academic
+    engineering research laboratories and how they understood and practiced
+    ethics in their own work. Problems arise for ethnographic methods for
+    researching this aspect of engineering ethics; namely, voluntary ethics
+    discussions rarely occurred in the lab. In our field site, we observed many
+    spontaneous discussions, but engineering ethics issues were not among the
+    topics discussed. Ethical decision-making seemed to be like a rare, shy
+    species of bird, hard to spot, requiring methods to flush it out of hiding
+    or attract it. We adapted structured interview and facilitated discussion
+    protocols to accomplish this. Success was modest. The problem lies both in
+    engineering culture and in the methodological difficulties in studying
+    situated, distributed ethical deliberation and responsibility.
+  accessed:
+    - year: 2025
+      month: 10
+      day: 1
+  author:
+    - family: Lee
+      given: Eun Ah
+    - family: Gans
+      given: Nicholas R.
+    - family: Grohman
+      given: Magdalena G.
+    - family: Brown
+      given: Matthew J.
+  citation-key: LeeEthicsRareBird2019
+  container-title: Journal of Responsible Innovation
+  DOI: 10.1080/23299460.2019.1605823
+  ISSN: 2329-9460
+  issue: '3'
+  issued:
+    - year: 2019
+      month: 9
+      day: 2
+  page: 284–304
+  publisher: Routledge
+  source: Taylor and Francis+NEJM
+  title: >-
+    Ethics as a rare bird: a challenge for situated studies of ethics in the
+    engineering lab
+  title-short: Ethics as a rare bird
+  type: article-journal
+  URL: https://doi.org/10.1080/23299460.2019.1605823
+  volume: '6'
 
 - id: LeePartyPolarizationTrust2021
   abstract: >-
@@ -4805,6 +4894,69 @@ references:
     Abolition
   title-short: Golden Holocaust
   type: book
+
+- id: RafiSemanticCognitiveTools2020
+  abstract: >-
+    Background: Researchers often misinterpret and misrepresent statistical
+    outputs. This abuse has led to a large literature on modification or
+    replacement of testing thresholds and P-values with confidence intervals,
+    Bayes factors, and other devices. Because the core problems appear cognitive
+    rather than statistical, we review some simple methods to aid researchers in
+    interpreting statistical outputs. These methods emphasize logical and
+    information concepts over probability, and thus may be more robust to common
+    misinterpretations than are traditional descriptions.
+
+    Methods: We use the Shannon transform of the P-value p, also known as the
+    binary surprisal or S-value s = −log2(p), to provide a measure of the
+    information supplied by the testing procedure, and to help calibrate
+    intuitions against simple physical experiments like coin tossing. We also
+    use tables or graphs of test statistics for alternative hypotheses, and
+    interval estimates for different percentile levels, to thwart fallacies
+    arising from arbitrary dichotomies. Finally, we reinterpret P-values and
+    interval estimates in unconditional terms, which describe compatibility of
+    data with the entire set of analysis assumptions. We illustrate these
+    methods with a reanalysis of data from an existing record-based cohort
+    study.
+
+    Conclusions: In line with other recent recommendations, we advise that
+    teaching materials and research reports discuss P-values as measures of
+    compatibility rather than significance, compute P-values for alternative
+    hypotheses whenever they are computed for null hypotheses, and interpret
+    interval estimates as showing values of high compatibility with data, rather
+    than regions of confidence. Our recommendations emphasize cognitive devices
+    for displaying the compatibility of the observed data with various
+    hypotheses of interest, rather than focusing on single hypothesis tests or
+    interval estimates. We believe these simple reforms are well worth the minor
+    effort they require.
+  accessed:
+    - year: 2021
+      month: 9
+      day: 22
+  author:
+    - family: Rafi
+      given: Zad
+    - family: Greenland
+      given: Sander
+  citation-key: RafiSemanticCognitiveTools2020
+  container-title: BMC Medical Research Methodology
+  container-title-short: BMC Med Res Methodol
+  DOI: 10.1186/s12874-020-01105-9
+  ISSN: 1471-2288
+  issue: '1'
+  issued:
+    - year: 2020
+      month: 12
+  language: en
+  page: '244'
+  source: DOI.org (Crossref)
+  title: >-
+    Semantic and cognitive tools to aid statistical science: replace confidence
+    and significance by compatibility and surprise
+  title-short: Semantic and cognitive tools to aid statistical science
+  type: article-journal
+  URL: >-
+    https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-020-01105-9
+  volume: '20'
 
 - id: RCoreTeamLanguageEnvironmentStatistical2021
   accessed:
