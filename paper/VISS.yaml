@@ -474,7 +474,6 @@ references:
     - year: 2022
       month: 2
       day: 20
-  publisher-place: Michigan State University
   title: Trust, Expertise and Scientific Authority in Democracy
   type: speech
   URL: https://www.youtube.com/watch?v=y3XeP6e646g
@@ -818,7 +817,6 @@ references:
       given: Jo Ann
     - family: Poulos
       given: Kathleen
-  event-place: Carbondale, IL
   ISBN: 978-0-8093-2816-1
   issued:
     - year: 2008
@@ -903,7 +901,6 @@ references:
       given: Heather E.
   call-number: Q175.5 .D68 2009
   citation-key: DouglasSciencePolicyValuefree2009
-  event-place: Pittsburgh, Pa
   ISBN: 978-0-8229-6026-3
   issued:
     - year: 2009
@@ -1126,7 +1123,6 @@ references:
       given: Steven
   citation-key: EpsteinImpureScience1996
   collection-title: AIDS, Activism, and the Politics of Knowledge
-  event-place: Berkeley, Los Angeles, and Oxford
   ISBN: 978-0-520-21445-3
   issued:
     - year: 1996
@@ -1780,7 +1776,7 @@ references:
   issued:
     - year: 2001
       month: 10
-  language: English
+  language: en
   license: © American Psychological Association 2001
   page: 814–834
   source: ProQuest
@@ -1830,7 +1826,6 @@ references:
       given: Sandra G.
   call-number: Q130 .H37 1991
   citation-key: HardingWhoseScienceWhose1991
-  event-place: Ithaca, N.Y
   ISBN: 978-0-8014-2513-4 978-0-8014-9746-9
   issued:
     - year: 1991
@@ -2202,7 +2197,7 @@ references:
     - year: 2022
       month: 4
       day: 28
-  language: eng
+  language: en
   license: All rights reserved
   number: '0'
   publisher: Michigan Publishing
@@ -2401,13 +2396,12 @@ references:
   citation-key: HoNatureSocialDominance2015
   container-title: Journal of Personality and Social Psychology
   DOI: 10.1037/pspi0000033
-  event-place: Washington, US
   ISSN: 0022-3514
   issue: '6'
   issued:
     - year: 2015
       month: 12
-  language: English
+  language: en
   license: © 2015, American Psychological Association
   note: (US)
   number-of-pages: 1003-1028
@@ -2913,7 +2907,6 @@ references:
   call-number: Q130 .K684 2010
   citation-key: KouranyPhilosophyScienceFeminism2010
   collection-title: Studies in feminist philosophy
-  event-place: Oxford ; New York
   ISBN: 978-0-19-973261-6 978-0-19-973262-3
   issued:
     - year: 2010
@@ -3201,7 +3194,6 @@ references:
     - family: Ebenezer
       given: Jazlin
   citation-key: LiangStudentUnderstandingScience2006
-  event-place: San Francisco, CA
   event-title: >-
     Annual Conference of the National Association for Research in Science
     Teaching (NARST)
@@ -3294,7 +3286,6 @@ references:
       given: Elisabeth Anne
     - family: Winsberg
       given: Eric
-  event-place: Cham
   ISBN: 978-3-319-65057-9 978-3-319-65058-6
   issued:
     - year: 2017
@@ -3409,7 +3400,6 @@ references:
       given: Helen E.
   call-number: Q175 .L655 1990
   citation-key: LonginoScienceSocialKnowledge1990
-  event-place: Princeton, N.J
   ISBN: 978-0-691-07342-2 978-0-691-02051-8
   issued:
     - year: 1990
@@ -3812,11 +3802,10 @@ references:
     - family: Sperber
       given: Dan
   citation-key: MercierEnigmaReason2017
-  event-place: Cambridge, Massachusetts
   ISBN: 978-0-674-23782-7 978-0-674-36830-9
   issued:
     - year: 2017
-  language: eng
+  language: en
   number-of-pages: '396'
   publisher: Harvard University Press
   publisher-place: Cambridge, Massachusetts
@@ -3872,11 +3861,10 @@ references:
     - family: Michaels
       given: David
   citation-key: MichaelsDoubtTheirProduct2008
-  event-place: Oxford
   ISBN: 978-0-19-530067-3 0-19-530067-X 978-0-19-530067-3
   issued:
     - year: 2008
-  language: eng
+  language: en
   number-of-pages: '372'
   publisher: Oxford Univ. Press
   publisher-place: Oxford
@@ -3950,7 +3938,6 @@ references:
       given: Peter
     - family: Wolters
       given: Gereon
-  event-place: Pittsburgh, PA
   issued:
     - year: 2004
   page: 245–55
@@ -4451,7 +4438,6 @@ references:
     - family: Conway
       given: Erik M.
   citation-key: OreskesMerchantsDoubtHow2011
-  event-place: New York, NY, USA
   ISBN: 978-1-4088-2877-9
   issued:
     - year: 2011
@@ -4521,7 +4507,6 @@ references:
       given: Elisabeth Anne
     - family: Winsberg
       given: Eric
-  event-place: Cham
   ISBN: 978-3-319-65057-9 978-3-319-65058-6
   issued:
     - year: 2017
@@ -4554,12 +4539,11 @@ references:
   citation-key: OreskesWhyTrustScience2021
   ISBN: 978-0-691-21226-5
   issued:
-    - year: 2021
-      month: 4
-      day: 6
+    - year: 2019
   language: en
   number-of-pages: '386'
   publisher: Princeton University Press
+  publisher-place: Princeton, N.J.
   source: Google Books
   title: Why Trust Science?
   type: book
@@ -4621,7 +4605,7 @@ references:
     - year: 2013
       month: 3
       day: 4
-  language: English
+  language: en
   number-of-pages: '236'
   publisher: NYU Press
   source: Amazon
@@ -4849,7 +4833,6 @@ references:
     - family: Potochnik
       given: Angela
   citation-key: PotochnikIdealizationAimsScience2017
-  event-place: Chicago and London
   ISBN: 978-0-226-50719-4
   issued:
     - year: 2017
@@ -4984,10 +4967,9 @@ references:
       given: Hans
   call-number: '1510966'
   citation-key: ReichenbachExperiencePredictionAnalysis1938
-  event-place: Chicago, IL
   issued:
     - year: 1938
-  language: eng
+  language: en
   number-of-pages: '428'
   publisher: University of Chicago Press
   publisher-place: Chicago, IL
@@ -5730,7 +5712,7 @@ references:
   ISBN: 978-3-319-18600-9 978-3-319-18599-6
   issued:
     - year: 2015
-  language: English
+  language: en
   source: Open WorldCat
   title: >-
     Empirical philosophy of science: introducing qualitative methods into

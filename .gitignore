@@ -26,7 +26,13 @@ out/
 
 paper/*PUS
 paper/*SciComm
+paper/*BJPS
 paper/comments
 paper/paper_files
 *.pdf
 *.tex
+paper/aft.cls
+paper/te.bst
+paper/viss.md
+
+USR folder
