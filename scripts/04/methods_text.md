@@ -98,5 +98,6 @@ cited as `@RosseelLavaanLatentVariable2024`); MacCallum, Widaman, Zhang & Hong (
 table (`out/04/02_rules_of_thumb.html`) also cites Boomsma (1985), Bentler & Chou (1987),
 Jackson (2003), and Kline (2016) — add these if the table is included.
 
-*Figure for the supplement:* `out/04/01_power_curve.png` (power vs. N for each free
-parameter, with the 0.80 reference line). Stage it into `paper/img/` if it goes in the paper.
+*Figure for the supplement:* `out/04/01_diagnostics.png` (three stacked panels — power,
+parameter bias, and CI coverage vs. N for each free parameter, with the acceptance
+thresholds as dashed lines). Stage it into `paper/img/` if it goes in the paper.

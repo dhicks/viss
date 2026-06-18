@@ -61,7 +61,8 @@
 ##   01_pop_syntax.txt     population model with baked-in parameter values
 ##   01_power_summary.Rds  per-(n, parameter) summary tibble
 ##   01_power_summary.csv  same, human-readable
-##   01_power_curve.png    power vs. n for the parameters of interest
+##   01_diagnostics.png    power, parameter bias, and CI coverage vs. n for the
+##                         parameters of interest, with acceptance thresholds
 ##   Printed to console: the recommended N and the binding parameters.
 ## =============================================================================
 
@@ -94,20 +95,29 @@ pop_spec = '
 '
 
 viss_df = here(data_dir, '01_data.Rds') |>
-  read_rds() |>
-  select(starts_with('viss')) |>
-  rename_with(~ str_remove(.x, 'viss.')) |>
-  ## keep only the items in the 3-factor model
-  select(
-    consensus.2, fallible.1, pluralism.1,
-    coi.1, coi.2, consensus.1, aims.1,
-    nonsubj.1, nonsubj.2, vfi.1
-  )
+      read_rds() |>
+      select(starts_with('viss')) |>
+      rename_with(~ str_remove(.x, 'viss.')) |>
+      ## keep only the items in the 3-factor model
+      select(
+            consensus.2,
+            fallible.1,
+            pluralism.1,
+            coi.1,
+            coi.2,
+            consensus.1,
+            aims.1,
+            nonsubj.1,
+            nonsubj.2,
+            vfi.1
+      )
 
 ## Default marker-variable scaling: orientation fixed, no cross-rep sign-flips.
 pop_fit = cfa(pop_spec, data = viss_df)
-assert_that(lavInspect(pop_fit, 'converged'),
-            msg = 'Population CFA on Study 3 data did not converge.')
+assert_that(
+      lavInspect(pop_fit, 'converged'),
+      msg = 'Population CFA on Study 3 data did not converge.'
+)
 
 #' Build lavaan syntax with population parameter values baked in as fixed
 #' coefficients, so simulateData() draws from the Study 3 estimates.
@@ -115,14 +125,14 @@ assert_that(lavInspect(pop_fit, 'converged'),
 #' @param fit a fitted lavaan object
 #' @return a length-1 character vector of lavaan model syntax
 build_pop_syntax = function(fit) {
-  pe = parameterEstimates(fit)
-  loadings = pe |>
-    filter(op == '=~') |>
-    transmute(line = glue('{lhs} =~ {round(est, 4)}*{rhs}'))
-  vars = pe |>
-    filter(op == '~~') |>
-    transmute(line = glue('{lhs} ~~ {round(est, 4)}*{rhs}'))
-  str_c(c(loadings$line, vars$line), collapse = '\n')
+      pe = parameterEstimates(fit)
+      loadings = pe |>
+            filter(op == '=~') |>
+            transmute(line = glue('{lhs} =~ {round(est, 4)}*{rhs}'))
+      vars = pe |>
+            filter(op == '~~') |>
+            transmute(line = glue('{lhs} ~~ {round(est, 4)}*{rhs}'))
+      str_c(c(loadings$line, vars$line), collapse = '\n')
 }
 
 pop_syntax = build_pop_syntax(pop_fit)
@@ -132,24 +142,33 @@ write_lines(pop_syntax, here(out_dir, '01_pop_syntax.txt'))
 ## "Parameters of interest" = freely estimated loadings (markers are fixed) and
 ## the three factor covariances. These bind power hardest.
 pop_values = parameterEstimates(pop_fit) |>
-  filter(op %in% c('=~', '~~')) |>
-  transmute(
-    param = as.character(glue('{lhs}{op}{rhs}')),
-    lhs, op, rhs,
-    pop = est,
-    is_free = se > 0,                       # markers have se == 0 (fixed)
-    type = case_when(
-      op == '=~' ~ 'loading',
-      op == '~~' & lhs == rhs & lhs %in% c('textbook', 'cynicism', 'objectivity') ~ 'factor variance',
-      op == '~~' & lhs == rhs ~ 'residual variance',
-      op == '~~' & lhs != rhs ~ 'factor covariance'
-    ),
-    of_interest = is_free & type %in% c('loading', 'factor covariance')
-  )
+      filter(op %in% c('=~', '~~')) |>
+      transmute(
+            param = as.character(glue('{lhs}{op}{rhs}')),
+            lhs,
+            op,
+            rhs,
+            pop = est,
+            is_free = se > 0, # markers have se == 0 (fixed)
+            type = case_when(
+                  op == '=~' ~ 'loading',
+                  op == '~~' &
+                        lhs == rhs &
+                        lhs %in%
+                              c(
+                                    'textbook',
+                                    'cynicism',
+                                    'objectivity'
+                              ) ~ 'factor variance',
+                  op == '~~' & lhs == rhs ~ 'residual variance',
+                  op == '~~' & lhs != rhs ~ 'factor covariance'
+            ),
+            of_interest = is_free & type %in% c('loading', 'factor covariance')
+      )
 
 interest_params = pop_values |>
-  filter(of_interest) |>
-  pull(param)
+      filter(of_interest) |>
+      pull(param)
 
 ## Monte Carlo engine ----
 
@@ -159,32 +178,40 @@ interest_params = pop_values |>
 #' @param n integer sample size
 #' @return a tibble, one row per model parameter
 sim_once = function(n) {
-  dat = simulateData(pop_syntax, sample.nobs = n)
-  fit = tryCatch(
-    cfa(pop_spec, data = dat),
-    error = function(e) NULL,
-    warning = function(w) suppressWarnings(cfa(pop_spec, data = dat))
-  )
+      dat = simulateData(pop_syntax, sample.nobs = n)
+      fit = tryCatch(
+            cfa(pop_spec, data = dat),
+            error = function(e) NULL,
+            warning = function(w) suppressWarnings(cfa(pop_spec, data = dat))
+      )
 
-  if (is.null(fit) || !lavInspect(fit, 'converged')) {
-    return(tibble(param = NA_character_, converged = FALSE, admissible = FALSE))
-  }
+      if (is.null(fit) || !lavInspect(fit, 'converged')) {
+            return(tibble(
+                  param = NA_character_,
+                  converged = FALSE,
+                  admissible = FALSE
+            ))
+      }
 
-  pe = parameterEstimates(fit)
-  ## admissible = no negative variances (Heywood case)
-  admissible = pe |>
-    filter(op == '~~', lhs == rhs) |>
-    pull(est) |>
-    (\(v) all(v > 0))()
+      pe = parameterEstimates(fit)
+      ## admissible = no negative variances (Heywood case)
+      admissible = pe |>
+            filter(op == '~~', lhs == rhs) |>
+            pull(est) |>
+            (\(v) all(v > 0))()
 
-  pe |>
-    filter(op %in% c('=~', '~~')) |>
-    transmute(
-      param = as.character(glue('{lhs}{op}{rhs}')),
-      est, se, pvalue, ci.lower, ci.upper,
-      converged = TRUE,
-      admissible = admissible
-    )
+      pe |>
+            filter(op %in% c('=~', '~~')) |>
+            transmute(
+                  param = as.character(glue('{lhs}{op}{rhs}')),
+                  est,
+                  se,
+                  pvalue,
+                  ci.lower,
+                  ci.upper,
+                  converged = TRUE,
+                  admissible = admissible
+            )
 }
 
 ## Run across the grid (parallel, with a sequential fallback) ----
@@ -201,65 +228,73 @@ jobs = expand_grid(n = n_grid, rep = seq_len(n_reps))
 
 n_workers = max(1, availableCores() - 1)
 can_parallel = tryCatch(
-  {
-    plan(multisession, workers = n_workers)
-    identical(value(future(TRUE)), TRUE)   # force a worker to actually run
-  },
-  error = function(e) FALSE
+      {
+            plan(multisession, workers = n_workers)
+            identical(value(future(TRUE)), TRUE) # force a worker to actually run
+      },
+      error = function(e) FALSE
 )
 if (!can_parallel) {
-  plan(sequential)
-  n_workers = 1L
-  cli_alert_warning('Parallel workers unavailable; running sequentially.')
+      plan(sequential)
+      n_workers = 1L
+      cli_alert_warning('Parallel workers unavailable; running sequentially.')
 }
 on.exit(plan(sequential), add = TRUE)
 cli_alert_info('Running {nrow(jobs)} simulations on {n_workers} worker(s)')
 
 set.seed(base_seed)
 raw = future_map2(
-  jobs$n, jobs$rep,
-  ~ sim_once(.x) |> mutate(n = .x, rep = .y),
-  .options = furrr_options(
-    seed = TRUE,
-    packages = c('lavaan', 'dplyr', 'tibble', 'stringr', 'glue', 'tidyr'),
-    globals = c('sim_once', 'pop_spec', 'pop_syntax')
-  ),
-  .progress = TRUE
+      jobs$n,
+      jobs$rep,
+      ~ sim_once(.x) |> mutate(n = .x, rep = .y),
+      .options = furrr_options(
+            seed = TRUE,
+            packages = c(
+                  'lavaan',
+                  'dplyr',
+                  'tibble',
+                  'stringr',
+                  'glue',
+                  'tidyr'
+            ),
+            globals = c('sim_once', 'pop_spec', 'pop_syntax')
+      ),
+      .progress = TRUE
 ) |>
-  list_rbind()
+      list_rbind()
 
 plan(sequential)
 
 ## Summarize ----
 ## Per-rep convergence/admissibility (one flag per replication)
 rep_flags = raw |>
-  distinct(n, rep, converged, admissible)
+      distinct(n, rep, converged, admissible)
 
 conv_summary = rep_flags |>
-  group_by(n) |>
-  summarize(
-    conv_rate = mean(converged),
-    admiss_rate = mean(converged & admissible),
-    .groups = 'drop'
-  )
+      group_by(n) |>
+      summarize(
+            conv_rate = mean(converged),
+            admiss_rate = mean(converged & admissible),
+            .groups = 'drop'
+      )
 
 ## Per-parameter summary, using only converged + admissible reps
 power_summary = raw |>
-  filter(converged, admissible, !is.na(param)) |>
-  inner_join(pop_values, by = 'param') |>
-  group_by(n, param, type, of_interest, pop) |>
-  summarize(
-    mean_est = mean(est),
-    emp_se = sd(est),                                  # empirical SE = SD of estimates
-    mean_se = mean(se),                                # average estimated SE
-    bias_pct = 100 * (mean(est) - first(pop)) / first(pop),
-    se_bias_pct = 100 * (mean(se) - sd(est)) / sd(est),
-    coverage = mean(ci.lower <= first(pop) & first(pop) <= ci.upper),
-    power = mean(pvalue < 0.05),
-    .groups = 'drop'
-  ) |>
-  left_join(conv_summary, by = 'n') |>
-  arrange(n, param)
+      filter(converged, admissible, !is.na(param)) |>
+      inner_join(pop_values, by = 'param') |>
+      group_by(n, param, type, of_interest, pop) |>
+      summarize(
+            mean_est = mean(est),
+            emp_se = sd(est), # empirical SE = SD of estimates
+            mean_se = mean(se), # average estimated SE
+            bias_pct = 100 * (mean(est) - first(pop)) / first(pop),
+            se_bias_pct = 100 * (mean(se) - sd(est)) / sd(est),
+            coverage = mean(ci.lower <= first(pop) & first(pop) <= ci.upper),
+            power = mean(pvalue < 0.05),
+            .groups = 'drop'
+      ) |>
+      left_join(conv_summary, by = 'n') |>
+      arrange(n, param)
 
 write_rds(power_summary, here(out_dir, '01_power_summary.Rds'))
 write_csv(power_summary, here(out_dir, '01_power_summary.csv'))
@@ -267,63 +302,108 @@ write_csv(power_summary, here(out_dir, '01_power_summary.csv'))
 ## Recommended N ----
 ## Smallest n meeting all acceptance criteria for the parameters of interest.
 criteria_by_n = power_summary |>
-  filter(of_interest) |>
-  group_by(n) |>
-  summarize(
-    conv_ok = first(admiss_rate) >= 0.95,
-    bias_ok = all(abs(bias_pct) <= 10),
-    se_bias_ok = all(abs(se_bias_pct) <= 10),
-    coverage_ok = all(coverage >= 0.91 & coverage <= 0.98),
-    power_ok = all(power >= 0.80),
-    min_power = min(power),
-    .groups = 'drop'
-  ) |>
-  mutate(all_ok = conv_ok & bias_ok & se_bias_ok & coverage_ok & power_ok)
+      filter(of_interest) |>
+      group_by(n) |>
+      summarize(
+            conv_ok = first(admiss_rate) >= 0.95,
+            bias_ok = all(abs(bias_pct) <= 10),
+            se_bias_ok = all(abs(se_bias_pct) <= 10),
+            coverage_ok = all(coverage >= 0.91 & coverage <= 0.98),
+            power_ok = all(power >= 0.80),
+            min_power = min(power),
+            .groups = 'drop'
+      ) |>
+      mutate(all_ok = conv_ok & bias_ok & se_bias_ok & coverage_ok & power_ok)
 
 recommended_n = criteria_by_n |>
-  filter(all_ok) |>
-  slice_min(n, n = 1) |>
-  pull(n)
+      filter(all_ok) |>
+      slice_min(n, n = 1) |>
+      pull(n)
 
 recommended_n = if (length(recommended_n) == 0) NA_integer_ else recommended_n
 
-## Power curve figure ----
-power_plot = power_summary |>
-  filter(of_interest) |>
-  mutate(label = str_replace(param, '=~', ': ') |> str_replace('~~', ' <-> ')) |>
-  ggplot(aes(n, power, color = type, group = param)) +
-  geom_hline(yintercept = 0.80, linetype = 'dashed') +
-  geom_line(alpha = 0.8) +
-  geom_point(size = 1) +
-  scale_color_manual(values = c('loading' = '#2166ac',
-                                'factor covariance' = '#d73027')) +
-  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, 0.2)) +
-  scale_x_continuous(breaks = n_grid) +
-  labs(
-    x = 'Sample size (n)',
-    y = 'Power (P[parameter significant at .05])',
-    color = NULL,
-    title = 'CFA power by sample size, finalized 3-factor VISS model',
-    subtitle = 'Each line is one freely estimated parameter; dashed line is .80'
-  ) +
-  theme(legend.position = 'bottom')
+## Diagnostics figure ----
+## One stacked panel per acceptance metric (power, parameter bias, CI coverage),
+## each line a freely estimated parameter, with the relevant acceptance
+## thresholds as dashed reference lines.
+metric_levels = c('Power', 'Parameter bias (%)', 'CI coverage')
 
-ggsave(here(out_dir, '01_power_curve.png'), power_plot,
-       width = 7, height = 5, dpi = 250, bg = 'white')
+diag_long = power_summary |>
+      filter(of_interest) |>
+      select(n, param, type, power, bias_pct, coverage) |>
+      pivot_longer(
+            c(power, bias_pct, coverage),
+            names_to = 'metric',
+            values_to = 'value'
+      ) |>
+      mutate(
+            metric = recode(
+                  metric,
+                  power = 'Power',
+                  bias_pct = 'Parameter bias (%)',
+                  coverage = 'CI coverage'
+            ) |>
+                  factor(levels = metric_levels)
+      )
+
+## acceptance thresholds, one row per reference line per facet
+diag_refs = tribble(
+      ~metric              , ~yintercept ,
+      'Power'              ,   0.80      ,
+      'Parameter bias (%)' ,  10         ,
+      'Parameter bias (%)' , -10         ,
+      'CI coverage'        ,   0.91      ,
+      'CI coverage'        ,   0.98
+) |>
+      mutate(metric = factor(metric, levels = metric_levels))
+
+diag_plot = diag_long |>
+      ggplot(aes(n, value, color = type, group = param)) +
+      geom_hline(
+            data = diag_refs,
+            aes(yintercept = yintercept),
+            linetype = 'dashed'
+      ) +
+      geom_line(alpha = 0.8) +
+      geom_point(size = 1) +
+      facet_wrap(vars(metric), ncol = 1, scales = 'free_y') +
+      scale_color_manual(
+            values = c('loading' = '#2166ac', 'factor covariance' = '#d73027')
+      ) +
+      scale_x_continuous(breaks = n_grid) +
+      labs(
+            x = 'Sample size (n)',
+            y = NULL,
+            color = NULL,
+            title = 'CFA simulation diagnostics by sample size, finalized 3-factor VISS model',
+            subtitle = 'Each line is one freely estimated parameter; dashed lines are acceptance thresholds'
+      ) +
+      theme(legend.position = 'bottom')
+
+ggsave(
+      here(out_dir, '01_diagnostics.png'),
+      diag_plot,
+      width = 7,
+      height = 9,
+      dpi = 250,
+      bg = 'white'
+)
 
 ## Report ----
 cli_h1('Results')
 print(criteria_by_n)
 if (is.na(recommended_n)) {
-  cli_alert_warning(
-    'No sample size in the grid met all criteria. Extend n_grid upward.'
-  )
+      cli_alert_warning(
+            'No sample size in the grid met all criteria. Extend n_grid upward.'
+      )
 } else {
-  binding = power_summary |>
-    filter(n == recommended_n, of_interest) |>
-    slice_min(power, n = 3) |>
-    transmute(param, power = round(power, 3))
-  cli_alert_success('Recommended Study 4 N = {recommended_n}')
-  cli_alert_info('Binding (lowest-power) parameters at n = {recommended_n}:')
-  print(binding)
+      binding = power_summary |>
+            filter(n >= recommended_n, of_interest) |>
+            transmute(n, param, power = round(power, 3)) |>
+            pivot_wider(names_from = n, values_from = power)
+      cli_alert_success('Recommended Study 4 N = {recommended_n}')
+      cli_alert_info(
+            'Power by sample size N:'
+      )
+      print(binding)
 }
