@@ -161,11 +161,12 @@ The end result of Study 2 was the current set of VISS items, given in @tbl-viss.
 #| tbl-cap: "Finalized VISS items" 
 #| fig-pos: "t"
 here('paper', 'tbl', '06_prompts.Rds') |>
-    read_rds() |>
-    cols_width(id ~ pct(20), 
-               text ~ pct(60)) |>
-    tab_source_note('Subscales are based on study 3 EFA, 3-factor solution. aims.1 is reverse-coded in the cynicism subscale.') |>
-    tab_options(latex.use_longtable = TRUE)
+      read_rds() |>
+      cols_width(id ~ pct(20), text ~ pct(60)) |>
+      tab_source_note(
+            'Subscales are based on study 3 EFA, 3-factor solution. aims.1 is reverse-coded in the cynicism subscale.'
+      ) |>
+      tab_options(latex.use_longtable = TRUE)
 ```
 
 
@@ -383,17 +384,21 @@ Value-free ideal
 ```{r}
 #| label: tbl-compare
 #| tbl-cap: 'Development of VISS items. Original item IDs and text as used in Study 1; finalized item IDs and text as refined in Study 2.  Column "modified" indicates that the text was modified in the course of Study 2.'
-ref = 100/7
+ref = 100 / 7
 here('paper', 'tbl', '06_compare.Rds') |>
-    read_rds() |> 
-    tab_options(table.font.size = 10) |>
-    cols_width(contains('ID') ~ pct(ref), 
-               contains('text') ~ pct(2*ref), 
-               modified ~ pct(ref)) |>
-    opt_row_striping() |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = cells_column_labels()) |> 
-    tab_options(latex.use_longtable = TRUE)
+      read_rds() |>
+      tab_options(table.font.size = 10) |>
+      cols_width(
+            contains('ID') ~ pct(ref),
+            contains('text') ~ pct(2 * ref),
+            modified ~ pct(ref)
+      ) |>
+      opt_row_striping() |>
+      tab_style(
+            style = cell_text(weight = 'bold'),
+            locations = cells_column_labels()
+      ) |>
+      tab_options(latex.use_longtable = TRUE)
 ```
 
 # Study 1 {#sec-supp-study1}
@@ -433,11 +438,13 @@ For cross-validation purposes, we ran a CFA on the second sub-sample using the f
 #| label: tbl-efa-1
 #| tbl-cap: 'Factor loadings and communalities from study 1 EFA, six factor solution.'
 here('paper', 'tbl', '03_loadings_gt.Rds') |>
-    read_rds() |>
-    tab_options(table.font.size = 10) |>
-    cols_width(everything() ~ pct(100/8)) |>
-    tab_style(style = cell_text(weight = 'bold'), 
-              locations = cells_column_labels())
+      read_rds() |>
+      tab_options(table.font.size = 10) |>
+      cols_width(everything() ~ pct(100 / 8)) |>
+      tab_style(
+            style = cell_text(weight = 'bold'),
+            locations = cells_column_labels()
+      )
 ```
 
 
@@ -529,16 +536,16 @@ Throughout both the main text and supplement, we work with discretized or "non-r
 #| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors.  Latent factors are grouped by interpretive label across solutions.'
 #| column: page
 here('paper', 'tbl', '04_loadings.Rds') |>
-   read_rds() |>
-   theme_latex(resize_direction = 'down')
+      read_rds() |>
+      theme_latex(resize_direction = 'down')
 ```
 ```{r}
 #| label: tbl-efa-3-bymodel
 #| tbl-cap: 'Factor loadings from study 3 EFA, solutions for 1-6 factors. Latent factors are grouped by solution.'
 #| column: page
 here('paper', 'tbl', '04_loadings_bymodel.Rds') |>
-   read_rds() |>
-   theme_latex(resize_direction = 'down')
+      read_rds() |>
+      theme_latex(resize_direction = 'down')
 ```
 
 ### No evidence for an objectivity-cynicism interaction {#sec-obj-cyn}
@@ -565,12 +572,12 @@ All together, the objectivity-cynicism interaction model is not supported here.
 #| label: tbl-trust-glance
 #| tbl-cap: 'Fit statistics for regression models of CoSS against FA latent variables.'
 here('paper', 'tbl', '04_trust_glance.Rds') |>
-   read_rds()  |>
-   theme_latex(resize_direction = 'down')
+      read_rds() |>
+      theme_latex(resize_direction = 'down')
 ```
 ```{r}
 #| label: tbl-inter
 #| tbl-cap: 'Coefficients and fit statistics for regression model of CoSS against FA latent variables, 3-factor model.'
 here('paper', 'tbl', '05_inter.Rds') |>
-    read_rds()
+      read_rds()
 ```
