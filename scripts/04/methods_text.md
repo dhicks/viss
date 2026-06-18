@@ -76,14 +76,14 @@ confidence-interval coverage fell in [0.91, 0.98]; and power (the probability of
 being significant at α = .05) was at least 0.80.
 
 *Results.* All criteria were first satisfied at N = 400, where the rate of convergent,
-admissible solutions was 0.998 and minimum power across the parameters of interest was 0.83.
+admissible solutions was 0.997 and minimum power across the parameters of interest was 0.83.
 The binding parameters were the inter-factor correlations — in particular the
 cynicism–objectivity correlation (power 0.83 at N = 400) — which is expected given their
 modest magnitude. At smaller samples the model frequently produced inadmissible solutions
-(e.g., the admissibility rate was 0.88 at N = 150 and 0.94 at N = 200), and power for the
-factor correlations was below 0.80 (e.g., 0.70 for the binding parameter at N = 300). At the
-largest sample examined (N = 500), parameter bias was at most 3.3% and coverage ranged from
-0.93 to 0.95, confirming that the data-generating and fitted models agreed. These simulation
+(e.g., the admissibility rate was 0.87 at N = 150 and 0.95 at N = 200), and power for the
+factor correlations was below 0.80 (e.g., 0.72 for the binding parameter at N = 300). At the
+largest sample examined (N = 500), parameter bias was at most 2.1% and coverage ranged from
+0.93 to 0.96, confirming that the data-generating and fitted models agreed. These simulation
 results are consistent with, and slightly above, conventional rules of thumb (Table S\ref),
 which place the minimum sample size for a model with 23 free parameters and ten indicators at
 roughly 200–460; the upper end is appropriate here because several VISS items have low

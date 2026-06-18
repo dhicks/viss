@@ -67,6 +67,7 @@
 
 library(tidyverse)
 library(lavaan)
+library(furrr)
 library(here)
 library(glue)
 library(cli)
@@ -186,26 +187,48 @@ sim_once = function(n) {
     )
 }
 
-#' Run n_reps simulations at one sample size.
-run_n = function(n, n_reps, seed) {
-  cli_alert_info('Simulating n = {n} ({n_reps} reps)')
-  set.seed(seed)
-  map(
-    seq_len(n_reps),
-    ~ sim_once(n),
-    .progress = glue('n = {n}')
-  ) |>
-    list_rbind(names_to = 'rep') |>
-    mutate(n = n)
-}
-
-## Run across the grid ----
+## Run across the grid (parallel, with a sequential fallback) ----
+## Every (n, rep) is flattened into one job list and mapped at once, so workers
+## stay busy across sample sizes rather than idling between them. We probe
+## whether parallel workers can actually launch (some sandboxed sessions block
+## the sockets multisession needs) and fall back to sequential if not. Because
+## furrr_options(seed = TRUE) draws parallel-safe L'Ecuyer streams from the
+## set.seed() below, the results are reproducible *and identical* whether this
+## runs in parallel or sequentially.
 cli_h1('Monte Carlo CFA power analysis')
-raw = imap(
-  n_grid,
-  ~ run_n(.x, n_reps, seed = base_seed + .y)
+
+jobs = expand_grid(n = n_grid, rep = seq_len(n_reps))
+
+n_workers = max(1, availableCores() - 1)
+can_parallel = tryCatch(
+  {
+    plan(multisession, workers = n_workers)
+    identical(value(future(TRUE)), TRUE)   # force a worker to actually run
+  },
+  error = function(e) FALSE
+)
+if (!can_parallel) {
+  plan(sequential)
+  n_workers = 1L
+  cli_alert_warning('Parallel workers unavailable; running sequentially.')
+}
+on.exit(plan(sequential), add = TRUE)
+cli_alert_info('Running {nrow(jobs)} simulations on {n_workers} worker(s)')
+
+set.seed(base_seed)
+raw = future_map2(
+  jobs$n, jobs$rep,
+  ~ sim_once(.x) |> mutate(n = .x, rep = .y),
+  .options = furrr_options(
+    seed = TRUE,
+    packages = c('lavaan', 'dplyr', 'tibble', 'stringr', 'glue', 'tidyr'),
+    globals = c('sim_once', 'pop_spec', 'pop_syntax')
+  ),
+  .progress = TRUE
 ) |>
   list_rbind()
+
+plan(sequential)
 
 ## Summarize ----
 ## Per-rep convergence/admissibility (one flag per replication)
